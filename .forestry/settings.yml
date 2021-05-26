@@ -16,7 +16,7 @@ sections:
   label: Components
 - type: document
   path: _includes/head.html
-  label: Site settings
+  label: Site info
 - type: document
   path: _includes/header.html
   label: Header
