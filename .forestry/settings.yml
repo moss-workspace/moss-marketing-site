@@ -5,9 +5,12 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
+  path: _includes/head.html
+  label: Site settings
+  match: "**/*"
+- type: document
   path: index.markdown
   label: Home
-  match: "**/*"
 - type: jekyll-pages
   label: All pages
   create: documents
