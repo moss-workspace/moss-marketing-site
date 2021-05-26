@@ -4,8 +4,12 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: index.markdown
+  label: Home
+  match: "**/*"
 - type: jekyll-pages
-  label: Pages
+  label: All pages
   create: documents
 upload_dir: uploads
 public_path: "/uploads"
