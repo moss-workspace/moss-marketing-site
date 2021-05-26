@@ -8,7 +8,7 @@ sections:
   label: Pages
 - type: document
   path: index.markdown
-  label: Home
+  label: Landing
 - type: jekyll-pages
   label: All pages
   create: documents
