@@ -12,3 +12,5 @@ fields:
     required: false
   label: Sign up button
   description: Enter the text for the sign up button
+pages:
+- _includes/header.html
