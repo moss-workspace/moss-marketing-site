@@ -48,3 +48,5 @@ fields:
     labelField: 
   label: Link
   description: Add external links
+pages:
+- _includes/footer.html
