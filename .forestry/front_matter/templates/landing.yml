@@ -202,11 +202,15 @@ fields:
         required: false
       label: URL
       description: Enter the url to redirect to
-    - name: open_in_new_window
+    - name: open_in_new_tab
       type: boolean
-      label: Open in new window
-      description: Toggle "on" to open the link in a new window
+      label: Open in new tab
+      description: Should this open in a new tab?
       default: true
+    - name: social_icon
+      type: boolean
+      label: Social icon
+      description: Does this need a social icon?
     config:
       min: 
       max: 
