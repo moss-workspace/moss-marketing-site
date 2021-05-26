@@ -4,13 +4,6 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: document
-  path: _includes/head.html
-  label: Site settings
-- type: document
-  path: _includes/header.html
-  label: Header
-  match: "**/*"
 - type: heading
   label: Pages
 - type: document
@@ -19,6 +12,19 @@ sections:
 - type: jekyll-pages
   label: All pages
   create: documents
+- type: heading
+  label: Components
+- type: document
+  path: _includes/head.html
+  label: Site settings
+- type: document
+  path: _includes/header.html
+  label: Header
+  match: "**/*"
+- type: document
+  path: _includes/footer.html
+  label: Footer
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
