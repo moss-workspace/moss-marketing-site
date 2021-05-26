@@ -8,3 +8,5 @@ fields:
     maxSize: 64
   label: Header video
   description: Remember that the header video crops automatically to the screen size!
+pages:
+- index.markdown
