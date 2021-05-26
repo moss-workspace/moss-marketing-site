@@ -1,0 +1,127 @@
+// Colors
+////////////////////////////////////////////////////////////////////////////////
+$white: #fcfcfc;
+$light-gray-1: #f0f0f0;
+$light-gray-2: #e8e8e8;
+$light-gray-3: #d9d9d9;
+$light-gray-4: #cdcdcd;
+$dark-gray-1: #999999;
+$dark-gray-2: #626262;
+$dark-gray-3: #454545;
+$dark-gray-4: #2b2b2b;
+$black: #121212;
+
+$blue: #5989f3;
+$mid-blue: #6394fd;
+$light-blue: #6d9cfe;
+
+$red: #f5513b;
+$mid-red: #f5d4cf;
+$light-red: #f5ebe7;
+
+// Units
+////////////////////////////////////////////////////////////////////////////////
+
+// Convert pixels to REM
+$html-font-size: 16px;
+html {
+  font-size: $html-font-size;
+}
+
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+// Spacing
+$list-x-padding: 12px;
+
+// Set gutter between items
+// If 'Gap' for flexbox gets wide spread browser support, it might be better
+@mixin gap($value) {
+  > * + * {
+    margin-left: $value;
+  }
+}
+
+@mixin gap-vertical($value) {
+  > * + * {
+    margin-top: $value;
+  }
+}
+
+// Transition
+////////////////////////////////////////////////////////////////////////////////
+@mixin transition($prop, $time, $ease) {
+  -webkit-transition: $prop $time $ease;
+  -moz-transition: $prop $time $ease;
+  -o-transition: $prop $time $ease;
+  transition: $prop $time $ease;
+}
+
+@mixin fade() {
+  @include transition(all, 0.09s, ease);
+  &:active {
+    transition: none;
+  }
+}
+
+@mixin fade-bg() {
+  @include transition(background-color, 0.09s, ease);
+  &:active {
+    transition: none;
+  }
+}
+
+@mixin fade-in() {
+  opacity: 0;
+  animation: fade-in 0.09s ease-in-out both;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+// Shadows
+////////////////////////////////////////////////////////////////////////////////
+@mixin shadow-toast() {
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.05);
+}
+
+@mixin shadow-menu() {
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+@mixin shadow-icon() {
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25),
+    0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+// Breakpoints
+////////////////////////////////////////////////////////////////////////////////
+$breakpoints: (
+  sm: 575px,
+  md: 750px,
+  lg: 900px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+@mixin media-breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

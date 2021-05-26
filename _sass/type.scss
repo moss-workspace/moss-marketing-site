@@ -1,0 +1,114 @@
+@import "variables";
+
+// Typography
+////////////////////////////////////////////////////////////////////////////////
+@font-face {
+  font-family: "Lab Grotesque";
+  font-weight: 500;
+  src: url("/assets/fonts/LabGrotesque-Bold.woff2") format("woff2"),
+    url("/assets/fonts/LabGrotesque-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lab Grotesque";
+  font-weight: 400;
+  src: url("/assets/fonts/LabGrotesque-Regular.woff2") format("woff2"),
+    url("/assets/fonts/LabGrotesque-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lab Grotesque";
+  font-weight: 300;
+  src: url("/assets/fonts/LabGrotesque-Light.woff2") format("woff2"),
+    url("/assets/fonts/LabGrotesque-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lab Grotesque";
+  font-weight: 200;
+  src: url("/assets/fonts/LabGrotesque-Thin.woff2") format("woff2"),
+    url("/assets/fonts/LabGrotesque-Thin.woff") format("woff");
+}
+
+@mixin xl {
+  font-weight: 200;
+  font-size: rem(60px);
+  line-height: rem(62px);
+  letter-spacing: -0.01em;
+}
+
+@mixin h1 {
+  font-weight: 200;
+  font-size: rem(46px);
+  line-height: rem(48px);
+  letter-spacing: -0.01em;
+  @include media-breakpoint("sm") {
+    font-size: rem(40px);
+    line-height: rem(42px);
+  }
+}
+
+@mixin h2 {
+  font-weight: 300;
+  font-size: rem(22px);
+  line-height: rem(26px);
+  @include media-breakpoint("sm") {
+    font-size: rem(16px);
+    line-height: rem(20px);
+  }
+}
+
+@mixin h3 {
+  font-weight: 300;
+  font-size: rem(13px);
+  line-height: rem(16px);
+}
+
+@mixin p {
+  font-weight: 300;
+  font-size: rem(11px);
+  line-height: rem(12px);
+}
+
+@mixin small-text {
+  font-weight: 400;
+  font-size: rem(8px);
+  line-height: rem(12px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+* {
+  font-family: "Lab Grotesque", "Helvetica", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  @include h1;
+  color: $dark-gray-4;
+}
+
+h2 {
+  @include h2;
+  color: $dark-gray-1;
+}
+
+h3 {
+  @include h3;
+  color: $dark-gray-3;
+}
+
+p {
+  @include p;
+  color: $dark-gray-3;
+  &--bold {
+    font-weight: bold;
+  }
+}
+
+.small {
+  @include small-text;
+  color: $dark-gray-1;
+}

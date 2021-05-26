@@ -1,0 +1,248 @@
+@import "variables";
+@import "type";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: $light-gray-1;
+  height: 100%;
+}
+
+.input-button {
+  display: flex;
+  width: 100%;
+  @include gap(5px);
+  > div {
+    position: relative;
+  }
+  input {
+    flex: 1;
+  }
+  button {
+    flex: 0;
+  }
+}
+
+.clear {
+  margin: 0 !important;
+  padding: 0;
+}
+
+button,
+input {
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+// Button
+////////////////////////////////////////////////////////////////////////////////
+.button {
+  @include fade-bg;
+  @include p;
+  line-height: rem(11px);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  text-decoration: none;
+  white-space: nowrap;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  button,
+  img,
+  .icon {
+    flex-grow: 0;
+  }
+
+  p,
+  a,
+  span {
+    flex: 1;
+    line-height: rem(11px);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  // Colors
+  &--white {
+    background: $white;
+    color: $dark-gray-2;
+    border: 1px solid $light-gray-2;
+
+    &:hover {
+      background: $light-gray-1;
+    }
+
+    &:active {
+      background: $light-gray-2;
+    }
+  }
+
+  &--gray-1 {
+    background: $light-gray-1;
+    border: 1px solid $light-gray-3;
+    color: $dark-gray-2;
+
+    &:hover {
+      background: $light-gray-2;
+    }
+
+    &:active {
+      background: $light-gray-3;
+    }
+  }
+
+  &--gray-2 {
+    background: $light-gray-2;
+    border: 1px solid $light-gray-4;
+    color: $dark-gray-2;
+
+    &:hover {
+      background: $light-gray-3;
+    }
+
+    &:active {
+      background: $light-gray-4;
+    }
+  }
+
+  &--tool-active {
+    background: $light-gray-2;
+    color: $dark-gray-2;
+  }
+
+  &--blue {
+    color: $white;
+    background: $light-blue;
+    border: 1px solid $blue;
+
+    &:hover {
+      background: $mid-blue;
+    }
+
+    &:active {
+      background: $blue;
+    }
+  }
+
+  &--floating {
+    @include shadow-toast;
+  }
+
+  &--borderless {
+    border: 0;
+  }
+
+  // Size
+  &--full {
+    width: 100%;
+  }
+
+  &--large {
+    @include h3;
+    height: 40px;
+    padding: 0 12px;
+    @include gap(12px);
+  }
+
+  &--medium {
+    height: 28px;
+    padding: 0 8px;
+    @include gap(5px);
+  }
+
+  &--small {
+    height: 22px;
+    padding: 0 5px;
+    @include gap(5px);
+  }
+
+  &--tiny {
+    height: 16px;
+    padding: 0 2px;
+    @include gap(2px);
+  }
+
+  &--circle {
+    border-radius: 50%;
+    padding: 8px;
+  }
+
+  > img,
+  > span {
+    // https://stackoverflow.com/a/7196517
+    // remove default spacing underneath
+    vertical-align: middle;
+  }
+}
+
+// Input
+////////////////////////////////////////////////////////////////////////////////
+
+.input {
+  @include fade;
+  background: $white;
+  box-shadow: none;
+  color: $dark-gray-3;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border: 1px solid $light-gray-2;
+  width: 100%;
+
+  &:hover {
+    border-color: $light-gray-3;
+  }
+
+  &:focus {
+    border-color: $light-gray-4;
+  }
+
+  &::placeholder {
+    color: $dark-gray-1;
+  }
+
+  &:disabled {
+    color: $dark-gray-1;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      border-color: $light-gray-1;
+    }
+  }
+
+  &--large {
+    @include h3;
+    padding: 0 16px;
+    height: 48px;
+  }
+
+  &--medium {
+    @include p;
+    padding: 0 8px;
+    height: 28px;
+  }
+
+  &--full {
+    width: 100%;
+  }
+}
