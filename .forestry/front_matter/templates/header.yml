@@ -2,10 +2,17 @@
 label: Header
 hide_body: true
 fields:
+- name: logo
+  type: file
+  config:
+    maxSize: 64
+  label: Logo
+  description: Select a logo file
 - name: weather
   type: boolean
   label: Weather
   description: Toggle the weather display on &amp; off
+  default: true
 - name: sign_up_button
   type: text
   config:
