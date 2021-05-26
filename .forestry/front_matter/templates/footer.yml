@@ -1,4 +1,50 @@
 ---
 label: Footer
 hide_body: true
-fields: []
+fields:
+- name: logo
+  type: file
+  config:
+    maxSize: 64
+  label: Logo
+  description: Select a logo file
+- name: legal
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Legal
+  description: Enter any legal info (no more than three lines)
+- name: link
+  type: field_group_list
+  fields:
+  - name: text
+    type: text
+    config:
+      required: false
+    label: Text
+    description: Enter the link text
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+    description: Enter the URL
+  - name: social
+    type: boolean
+    label: Social
+    description: Does this need a social icon?
+  - name: open_in_new_tab
+    type: boolean
+    label: Open in new tab
+    description: Should this open in a new tab?
+    default: true
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Link
+  description: Add external links
