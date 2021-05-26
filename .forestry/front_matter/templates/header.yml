@@ -1,4 +1,14 @@
 ---
 label: Header
 hide_body: true
-fields: []
+fields:
+- name: weather
+  type: boolean
+  label: Weather
+  description: Toggle the weather display on &amp; off
+- name: sign_up_button
+  type: text
+  config:
+    required: false
+  label: Sign up button
+  description: Enter the text for the sign up button
