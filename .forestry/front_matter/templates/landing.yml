@@ -35,6 +35,186 @@ fields:
     description: Select three images
   description: The first section
   label: Desktop section
+- name: files_section
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: Enter your title
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+    description: Enter your body text
+  - name: file_images
+    type: image_gallery
+    config: {}
+    label: File images
+    description: 'Select images to be displayed as images from the desktop. Note:
+      the actual file name will be displayed.'
+  - name: messages
+    type: list
+    config:
+      use_select: false
+      min: 
+      max: 
+    label: Messages
+    description: Enter text for messages. Colors will alternate.
+  - name: images
+    type: image_gallery
+    config: {}
+    label: Images
+    description: Select images
+  label: Files section
+  description: The second section
+- name: creativity_section
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: Enter your title
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+    description: Enter your body text
+  - name: background_color
+    type: color
+    label: Background color
+    config:
+      required: false
+      color_format: Hex
+    description: Choose the background color
+  label: Creativity section
+  description: The third section
+- name: why_section
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: Enter your title
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+    description: Enter your body text
+  - name: large_images
+    type: image_gallery
+    config: {}
+    label: Large images
+    description: Select two large images for the sides
+  - name: small_images
+    type: image_gallery
+    config: {}
+    label: Small images
+    description: Select two small images
+  label: Why section
+  description: The fourth section
+- name: final_section
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: Enter your title
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+    description: Enter your body text
+  - name: animation
+    type: file
+    config:
+      maxSize: 64
+    label: Animation
+    description: Select a video for the animation
+  label: Final section
+  description: The fifth section
+- name: sign_up
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: Enter your title
+  - name: placeholder
+    type: text
+    config:
+      required: false
+    label: Placeholder
+    description: Enter placeholder text for the email field
+  - name: button
+    type: text
+    config:
+      required: false
+    label: Button
+    description: Enter text for the sign up button
+  - name: links
+    type: field_group_list
+    fields:
+    - name: text
+      type: text
+      config:
+        required: false
+      label: Text
+      description: Enter the text of the link
+    - name: url
+      type: text
+      config:
+        required: false
+      label: URL
+      description: Enter the url to redirect to
+    - name: open_in_new_window
+      type: boolean
+      label: Open in new window
+      description: Toggle "on" to open the link in a new window
+      default: true
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Links
+    description: Enter links
+  label: Sign up
+  description: The sign up area
 pages:
 - index.markdown
 - index.markdown
