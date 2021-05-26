@@ -1,4 +1,10 @@
 ---
 label: landing
 hide_body: true
-fields: []
+fields:
+- name: header_video
+  type: file
+  config:
+    maxSize: 64
+  label: Header video
+  description: Remember that the header video crops automatically to the screen size!
