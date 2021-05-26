@@ -1,5 +1,5 @@
 ---
-label: landing
+label: Landing
 hide_body: true
 fields:
 - name: header_video
@@ -8,5 +8,27 @@ fields:
     maxSize: 64
   label: Header video
   description: Remember that the header video crops automatically to the screen size!
+- name: desktop_title
+  type: text
+  config:
+    required: false
+  label: Desktop title
+  description: Enter your title.
+- name: desktop_body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Desktop body
+  description: Enter your body text
+- name: desktop_images
+  type: image_gallery
+  config: {}
+  label: Desktop images
+  description: Select three images for the desktop section
 pages:
+- index.markdown
 - index.markdown
