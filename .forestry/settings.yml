@@ -7,7 +7,12 @@ sections:
 - type: document
   path: _includes/head.html
   label: Site settings
+- type: document
+  path: _includes/header.html
+  label: Header
   match: "**/*"
+- type: heading
+  label: Pages
 - type: document
   path: index.markdown
   label: Home
