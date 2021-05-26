@@ -35,22 +35,6 @@ fields:
     description: Select three images
   description: The first section
   label: Desktop section
-- name: files_title
-  type: text
-  config:
-    required: false
-  label: Files title
-  description: Enter your title
-- name: files_body
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Files body
-  description: Enter your body text
 pages:
 - index.markdown
 - index.markdown
