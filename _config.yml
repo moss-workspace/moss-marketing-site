@@ -32,6 +32,10 @@ footer:
     Moss workspace, inc.
     All rights reserved
   links:
+  - text: Instagram
+    url: https://www.instagram.com/mossworkspace/
+    open_in_new_tab: true
+    social_icon: true
   - text: Twitter
     url: https://twitter.com/mossworkspace
     open_in_new_tab: true
