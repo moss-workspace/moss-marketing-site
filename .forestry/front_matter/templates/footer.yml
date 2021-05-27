@@ -50,3 +50,4 @@ fields:
   description: Add external links
 pages:
 - _includes/footer.html
+- index.markdown

@@ -30,5 +30,8 @@ sign_up:
   placeholder: ''
   button: ''
   links: []
+logo: ''
+legal: ''
+link: []
 
 ---
