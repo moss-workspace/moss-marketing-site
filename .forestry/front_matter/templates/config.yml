@@ -118,4 +118,3 @@ fields:
   description: Choose how the site-wide footer displays
 pages:
 - _config.yml
-- index.markdown
