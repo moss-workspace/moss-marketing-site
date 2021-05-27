@@ -32,7 +32,7 @@ fields:
   name: exclude
   label: exclude
   hidden: true
-- name: header_settings
+- name: header
   type: field_group
   config: {}
   fields:
@@ -62,7 +62,7 @@ fields:
       required: false
     label: Button
     description: Enter the text for the sign up button
-  label: Header settings
+  label: Header
   description: Choose how the site-wide header displays
 - name: footer
   type: field_group
