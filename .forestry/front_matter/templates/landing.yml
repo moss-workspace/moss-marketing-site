@@ -112,13 +112,6 @@ fields:
         format: markdown
     label: Body
     description: Enter your body text
-  - name: background_color
-    type: color
-    label: Background color
-    config:
-      required: false
-      color_format: Hex
-    description: Choose the background color
   label: Creativity section
   description: The third section
 - name: why_section
