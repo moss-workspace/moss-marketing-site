@@ -1,5 +1,6 @@
 ---
 layout: landing
+permalink: "/"
 header_video: ""
 desktop_section:
   title: The desktop.
