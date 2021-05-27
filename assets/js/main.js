@@ -16,6 +16,7 @@ $(window).scroll(function () {
   $(".desktop__image").each(function (index) {
     toggleDesktopImage($(this), index);
   });
+  toggleBackground($("#creativity"));
 });
 
 // Hero
@@ -37,15 +38,37 @@ function toggleDesktopImage(element, index) {
     elementHeight = element.outerHeight(),
     windowHeight = $(window).height(),
     windowScroll = $(this).scrollTop(),
-    offset = 100;
+    offsetPercent = 0.1;
 
   if (index == 2) {
-    offset = 250;
+    offsetPercent = 0.25;
   }
+
+  var offset = windowHeight * offsetPercent;
 
   if (windowScroll > elementTop + elementHeight - windowHeight + offset) {
     element.addClass("visible");
   } else {
     element.removeClass("visible");
+  }
+}
+
+// Creativity
+////////////////////////////////////////////////////////////////////////////////
+function toggleBackground(element) {
+  var elementTop = element.offset().top,
+    elementHeight = element.outerHeight(),
+    windowHeight = $(window).height(),
+    windowScroll = $(this).scrollTop();
+
+  if (
+    windowScroll > elementTop &&
+    windowScroll < elementTop + elementHeight - windowHeight
+  ) {
+    $("body").addClass("dark");
+    $("#creativity").addClass("show-text");
+  } else {
+    $("body").removeClass("dark");
+    $("#creativity").removeClass("show-text");
   }
 }

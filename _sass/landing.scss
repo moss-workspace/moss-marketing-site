@@ -27,6 +27,7 @@ header {
   position: -webkit-sticky;
   top: 0;
   z-index: 900;
+  @include fade-in;
 }
 
 // Hero
@@ -84,5 +85,25 @@ header {
   }
 }
 
-// Desktop
+// Creativity
 ////////////////////////////////////////////////////////////////////////////////
+.creativity {
+  height: 200vh;
+  position: relative;
+  @include fade-in;
+  .textblock {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &__title,
+    &__body {
+      color: $white;
+    }
+  }
+  &.show-text {
+    .textblock {
+      opacity: 1;
+    }
+  }
+}
