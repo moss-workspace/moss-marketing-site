@@ -42,10 +42,18 @@ final_section:
     and iterate together in one place.
   animation: "/uploads/screen-shot-2021-05-12-at-6-59-1.png"
 sign_up:
-  title: ''
-  placeholder: ''
-  button: ''
-  links: []
+  title: "Try it early \U0001F331"
+  placeholder: Enter your work email
+  button: Join the waitlist
+  links:
+  - text: Work with us ↗
+    url: ''
+    open_in_new_tab: true
+    social_icon: false
+  - text: Watch the video ↗
+    url: https://vimeo.com/472490067/524a565895
+    open_in_new_tab: true
+    social_icon: false
 logo: ''
 legal: ''
 link: []
