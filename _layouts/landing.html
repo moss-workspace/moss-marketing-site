@@ -2,24 +2,20 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <section class="hero">
-      <div class="hero__video">
-        <video
-          src="{{ page.hero_video.landscape }}"
-          class="hero__video--landscape"
-          autoplay
-          loop
-          mute
-        />
-        <video
-          src="{{ page.hero_video.portrait }}"
-          class="hero__video--portrait"
-          autoplay
-          loop
-          mute
-        />
-      </div>
-    </section>
+    <div class="hero">
+      <video
+        class="hero__video"
+        id="hero__video--landscape"
+        autoplay
+        muted
+        loop
+      >
+        <source src="{{ page.hero_video.landscape }}" type="video/mp4" />
+      </video>
+      <video class="hero__video" id="hero__video--portrait" autoplay muted loop>
+        <source src="{{ page.hero_video.portrait }}" type="video/mp4" />
+      </video>
+    </div>
 
     {% include header.html %}
 

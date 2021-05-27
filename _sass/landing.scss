@@ -20,11 +20,23 @@ section {
   }
 }
 
+// Header
+////////////////////////////////////////////////////////////////////////////////
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 900;
+}
+
 // Hero
 ////////////////////////////////////////////////////////////////////////////////
-.hero__video {
-  video {
-    width: 100%;
+.hero {
+  display: flex;
+  .hero__video {
+    object-fit: cover;
+    width: 100vw;
+    height: calc(100vh - 60px);
   }
 }
 
@@ -71,3 +83,6 @@ section {
     }
   }
 }
+
+// Desktop
+////////////////////////////////////////////////////////////////////////////////
