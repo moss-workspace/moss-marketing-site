@@ -2,6 +2,12 @@
 label: Landing
 hide_body: true
 fields:
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: Permalink
+  description: The URL extension for this page
 - name: header_video
   type: file
   config:
