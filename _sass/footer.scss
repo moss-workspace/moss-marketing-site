@@ -1,0 +1,30 @@
+@import "variables";
+
+footer {
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  .footer__left {
+    display: flex;
+    align-items: center;
+
+    * {
+      display: inline-block;
+    }
+
+    &__logo {
+      height: 100%;
+      width: auto;
+      padding-right: 16px;
+    }
+  }
+  .footer__right {
+    text-align: right;
+    a {
+      text-decoration: none;
+      &:hover {
+        color: $dark-gray-2;
+      }
+    }
+  }
+}

@@ -2,14 +2,15 @@
   <div class="header__left">
     <img src="{{ site.header.logo }}" class="header__left__logo" />
     {% if site.header.weather %}
-    <h4 class="header__left__weather">
+    <div class="small header__left__weather">
       <!-- TODO: input weather API from openweathermaps (add field in CMS for location) -->
-      Weather goes here
-    </h4>
+      Weather goes here<br />
+      it's 2 lines
+    </div>
     {% endif%}
   </div>
   <div class="header__right">
-    <button class="button button-gray">
+    <button class="button button--gray button--medium">
       {{ site.header.button }}
     </button>
   </div>

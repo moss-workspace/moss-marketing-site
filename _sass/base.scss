@@ -11,6 +11,13 @@ body {
   font-style: normal;
 }
 
+// General
+////////////////////////////////////////////////////////////////////////////////
+header,
+footer {
+  padding: 16px;
+}
+
 .input-button {
   display: flex;
   width: 100%;

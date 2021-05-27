@@ -4,9 +4,7 @@
 
 // General
 ////////////////////////////////////////////////////////////////////////////////
-section,
-header,
-footer {
+section {
   margin: 0 60px;
   @include break-below("sm") {
     margin: 0 16px;
@@ -36,14 +34,18 @@ footer {
   width: 90%;
   margin: 0 auto;
   height: 100vh;
+  max-height: 80vw;
   position: relative;
+  @include break-below("md") {
+    width: 100%;
+  }
   .desktop__image {
     width: 40%;
     height: auto;
     position: absolute;
     top: 50%;
     opacity: 0;
-    @include fade();
+    @include transition(opacity, 0.09s, ease);
     &.visible {
       opacity: 1;
     }
@@ -58,9 +60,14 @@ footer {
       transform: translateY(-50%);
     }
     &:nth-child(3) {
-      width: 45%;
       right: 0;
       transform: translateY(-45%);
+    }
+    @include break-below("md") {
+      width: 50%;
+    }
+    @include break-below("sm") {
+      width: 60%;
     }
   }
 }

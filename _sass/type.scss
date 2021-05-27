@@ -81,6 +81,7 @@
 }
 
 @mixin small-text {
+  font-family: "Lab Grotesque", "Helvetica", sans-serif;
   font-weight: 400;
   font-size: rem(8px);
   line-height: rem(12px);

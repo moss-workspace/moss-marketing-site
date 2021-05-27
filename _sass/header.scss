@@ -1,0 +1,19 @@
+header {
+  height: 28px;
+  display: flex;
+  justify-content: space-between;
+  .header__left {
+    display: flex;
+    align-items: center;
+
+    * {
+      display: inline-block;
+    }
+
+    &__logo {
+      height: 100%;
+      width: auto;
+      padding-right: 16px;
+    }
+  }
+}
