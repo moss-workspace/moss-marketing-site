@@ -21,9 +21,9 @@ exclude:
 - vendor/ruby/
 header_settings:
   weather: true
-  logo: ''
-  weather_location: ''
-  button: ''
+  logo: "/uploads/moss-icon-small__rgb.svg"
+  weather_location: Brooklyn, NY
+  button: "✍️  Sign up"
 tagline: Where ideas grow
 footer:
   logo: ''
