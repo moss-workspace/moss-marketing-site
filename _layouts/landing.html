@@ -4,7 +4,20 @@
   <body>
     <section class="hero">
       <div class="hero__video">
-        <video src="{{ page.hero_video }}" autoplay loop mute />
+        <video
+          src="{{ page.hero_video.landscape }}"
+          class="hero__video--landscape"
+          autoplay
+          loop
+          mute
+        />
+        <video
+          src="{{ page.hero_video.portrait }}"
+          class="hero__video--portrait"
+          autoplay
+          loop
+          mute
+        />
       </div>
     </section>
 
@@ -21,7 +34,11 @@
       </div>
       <div class="desktop__images">
         {% for image in page.desktop_section.images %}
-        <img src="{{ image }}" class="desktop__image" />
+        <img
+          src="{{ image }}"
+          class="desktop__image"
+          id="desktop__image--{{ forloop.index }}"
+        />
         {% endfor %}
       </div>
     </section>
@@ -31,17 +48,17 @@
         <h1 class="textblock__title">
           {{ page.files_section.title }}
         </h1>
-        <p class="textblock__body">
-          {{ page.files_section.body }}
+        <p class="textblock__body files__body--1">
+          {{ page.files_section.body_1 }}
+        </p>
+        <p class="textblock__body files__body--2">
+          {{ page.files_section.body_2 }}
         </p>
       </div>
       <!-- TODO: add stack code once design is final -->
     </section>
 
-    <section
-      class="creativity"
-      style="background-color: {{ background_color}};"
-    >
+    <section class="creativity">
       <div class="textblock">
         <h1 class="textblock__title">
           {{ page.creativity_section.title }}
@@ -61,11 +78,11 @@
           {{ page.why_section.body }}
         </p>
       </div>
-      <div class="why__images--large">
-        {% for image in why_section.large_images %}
-        <img src="image" class="why__image--large preview" />
-        {% endfor %}
-      </div>
+      <img
+        src="{{ page.why_section.large_image }}"
+        class="why__image--large preview"
+      />
+      <video src="{{ page.why_section.video }}" autoplay loop muted />
       <div class="why__images--small">
         {% for image in why_section.small_images %}
         <img src="image" class="why__image--small preview" />
@@ -76,10 +93,10 @@
     <section class="final">
       <div class="textblock">
         <h1 class="textblock__title">
-          {{ page.why_section.title }}
+          {{ page.final_section.title }}
         </h1>
         <p class="textblock__body">
-          {{ page.why_section.body }}
+          {{ page.final_section.body }}
         </p>
       </div>
       <div class="final__animation">
@@ -88,10 +105,12 @@
     </section>
 
     <section class="tagline">
-      <h1 class="section__title">
-        {{ site.tagline }}
-      </h1>
-      <img src="" class="tagline__logo" />
+      <div class="textblock">
+        <h1 class="textblock__title">
+          {{ site.tagline }}
+        </h1>
+        <img src="" class="tagline__logo" />
+      </div>
     </section>
 
     <section class="signup">

@@ -2,6 +2,15 @@
 
 // Typography
 ////////////////////////////////////////////////////////////////////////////////
+
+// Import fonts
+@font-face {
+  font-family: "Gascogne";
+  font-weight: 100;
+  src: url("/assets/fonts/GascogneTSXLight.woff2") format("woff2"),
+    url("/assets/fonts/GascogneTSXLight.woff") format("woff");
+}
+
 @font-face {
   font-family: "Lab Grotesque";
   font-weight: 500;
@@ -30,44 +39,45 @@
     url("/assets/fonts/LabGrotesque-Thin.woff") format("woff");
 }
 
-@mixin xl {
-  font-weight: 200;
-  font-size: rem(60px);
-  line-height: rem(62px);
-  letter-spacing: -0.01em;
-}
-
+// Style mixins
 @mixin h1 {
-  font-weight: 200;
-  font-size: rem(46px);
+  font-family: "Gascogne", "Times", serif;
+  font-weight: 100;
+  font-size: rem(42px);
   line-height: rem(48px);
-  letter-spacing: -0.01em;
-  @include media-breakpoint("sm") {
-    font-size: rem(40px);
-    line-height: rem(42px);
+  @include break-below("sm") {
+    font-size: rem(26px);
+    line-height: rem(30px);
   }
 }
 
 @mixin h2 {
+  font-family: "Lab Grotesque", "Helvetica", sans-serif;
   font-weight: 300;
   font-size: rem(22px);
   line-height: rem(26px);
-  @include media-breakpoint("sm") {
+  @include break-below("sm") {
     font-size: rem(16px);
     line-height: rem(20px);
   }
 }
 
 @mixin h3 {
+  font-family: "Lab Grotesque", "Helvetica", sans-serif;
   font-weight: 300;
-  font-size: rem(13px);
-  line-height: rem(16px);
+  font-size: rem(8px);
+  line-height: rem(12px);
 }
 
 @mixin p {
+  font-family: "Lab Grotesque", "Helvetica", sans-serif;
   font-weight: 300;
-  font-size: rem(11px);
-  line-height: rem(12px);
+  font-size: rem(18px);
+  line-height: rem(22px);
+  @include break-below("sm") {
+    font-size: rem(13px);
+    line-height: rem(16px);
+  }
 }
 
 @mixin small-text {
@@ -76,13 +86,6 @@
   line-height: rem(12px);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-}
-
-* {
-  font-family: "Lab Grotesque", "Helvetica", sans-serif;
-  font-style: normal;
-  margin: 0;
-  padding: 0;
 }
 
 h1 {

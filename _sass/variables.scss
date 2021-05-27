@@ -108,14 +108,12 @@ $list-x-padding: 12px;
 // Breakpoints
 ////////////////////////////////////////////////////////////////////////////////
 $breakpoints: (
-  sm: 575px,
+  sm: 400px,
   md: 750px,
   lg: 900px,
-  xl: 1200px,
-  xxl: 1400px,
 ) !default;
 
-@mixin media-breakpoint($breakpoint) {
+@mixin break-below($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media (max-width: map-get($breakpoints, $breakpoint)) {
       @content;
@@ -123,5 +121,50 @@ $breakpoints: (
   } @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Grid
+////////////////////////////////////////////////////////////////////////////////
+$grid-count: 6;
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat($grid-count, 1fr);
+  grid-column-gap: 16px;
+  @include break-below("sm") {
+    grid-column-gap: 8px;
+  }
+}
+
+.grid {
+  @include grid;
+}
+
+@for $i from 1 through $grid-count {
+  .col-#{$i} {
+    grid-column: span #{$i};
+  }
+  @each $breakpoint, $value in $breakpoints {
+    .col-#{$breakpoint}-#{$i} {
+      @include break-below($breakpoint) {
+        grid-column: span #{$i};
+      }
+    }
+  }
+}
+
+@for $i from 1 through $grid-count {
+  @for $j from 1 through $grid-count {
+    .col-#{$i}-#{$j} {
+      grid-column: #{$j} / span #{$i};
+    }
+    @each $breakpoint, $value in $breakpoints {
+      .col-#{$breakpoint}-#{$i}-#{$j} {
+        @include break-below($breakpoint) {
+          grid-column: #{$j} / span #{$i};
+        }
+      }
+    }
   }
 }

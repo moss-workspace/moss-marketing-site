@@ -1,3 +1,66 @@
 @import "variables";
 @import "type";
 @import "base";
+
+// General
+////////////////////////////////////////////////////////////////////////////////
+section,
+header,
+footer {
+  margin: 0 60px;
+  @include break-below("sm") {
+    margin: 0 16px;
+  }
+}
+
+.textblock {
+  @include grid;
+  .textblock__title,
+  .textblock__body {
+    @extend .col-2-3;
+    @extend .col-md-4-2;
+  }
+}
+
+// Hero
+////////////////////////////////////////////////////////////////////////////////
+.hero__video {
+  video {
+    width: 100%;
+  }
+}
+
+// Desktop
+////////////////////////////////////////////////////////////////////////////////
+.desktop__images {
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+  .desktop__image {
+    width: 40%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    @include fade();
+    &.visible {
+      opacity: 1;
+    }
+    &:first-child {
+      left: 0;
+      transform: translateY(-80%);
+    }
+    &:nth-child(2) {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transform: translateY(-50%);
+    }
+    &:nth-child(3) {
+      width: 45%;
+      right: 0;
+      transform: translateY(-45%);
+    }
+  }
+}

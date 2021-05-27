@@ -8,6 +8,7 @@ body {
   box-sizing: border-box;
   background-color: $light-gray-1;
   height: 100%;
+  font-style: normal;
 }
 
 .input-button {
@@ -197,7 +198,6 @@ input {
 
 // Input
 ////////////////////////////////////////////////////////////////////////////////
-
 .input {
   @include fade;
   background: $white;

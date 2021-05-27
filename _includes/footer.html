@@ -7,7 +7,7 @@
   </div>
   <div class="footer__right">
     {% for link in site.footer.links %}
-    <h4 class="footer__right__link">
+    <div class="footer__right__link small">
       {% if link.open_in_new_tab %}
       <a href="{{ link.url }}" target="_blank">
         {% if link.social_icon %}
@@ -21,7 +21,7 @@
         {% endif %} {{ link.text }}
       </a>
       {% endif %}
-    </h4>
+    </div>
     {% endfor %}
   </div>
 </footer>
