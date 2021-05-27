@@ -8,7 +8,7 @@ desktop_section:
   images:
   - "/uploads/unnamed-1.gif"
   - "/uploads/classic-mac-os-1999-system-9-system-folder.png"
-  - "/uploads/screen-shot-2021-05-25-at-12-34-41-pm.png"
+  - "/uploads/screen-shot-2021-05-25-at-12-34-32-pm.png"
 files_section:
   title: Files. Folders. Function.
   body: ''
