@@ -36,9 +36,11 @@ why_section:
   large_image: ''
   video: ''
 final_section:
-  title: ''
-  body: ''
-  animation: ''
+  title: Moss transforms the desktop from a rigid, siloed system into an open and
+    collaborative digital environment.
+  body: A workflow tool as fluid as creativity itself. Where you can organize, experiment,
+    and iterate together in one place.
+  animation: "/uploads/screen-shot-2021-05-12-at-6-59-1.png"
 sign_up:
   title: ''
   placeholder: ''
