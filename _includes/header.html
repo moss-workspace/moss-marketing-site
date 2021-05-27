@@ -1,18 +1,16 @@
----
-weather: true
-sign_up_button: ""
----
-
 <header>
   <div class="header__left">
-    <img src="{{ page.logo }}" class="header__left__logo" />
+    <img src="{{ site.header.logo }}" class="header__left__logo" />
+    {% if site.header.weather %}
     <h4 class="header__left__weather">
       <!-- TODO: input weather API from openweathermaps (add field in CMS for location) -->
+      Weather goes here
     </h4>
+    {% endif%}
   </div>
   <div class="header__right">
     <button class="button button-gray">
-      {{ page.sign_up_button }}
+      {{ site.header.button }}
     </button>
   </div>
 </header>
