@@ -1,9 +1,36 @@
 ---
-logo: ''
+logo: ""
 legal: |-
   © 2021
   Moss workspace, inc.
   All rights reserved
 link: []
-
 ---
+
+<footer>
+  <div class="footer__left">
+    <img src="{{ page.logo }}" class="footer__left__logo" />
+    <h4 class="footer__left__legal">
+      {{ page.legal }}
+    </h4>
+  </div>
+  <div class="footer__right">
+    {% for link in page.link %}
+    <h4 class="footer__right__link">
+      {% if link.open_in_new_tab == true %}
+      <a href="{{ link.url }}" target="_blank">
+        {% if link.social_icon == true %}
+        <i class="fab fa-{{ link.text | downcase }}"></i>
+        {% endif %} {{ link.text }}
+      </a>
+      {% else %}
+      <a href="{{ link.url }}">
+        {% if link.social_icon == true %}
+        <i class="fab fa-{{ link.text | downcase }}"></i>
+        {% endif %} {{ link.text }}
+      </a>
+      {% endif %}
+    </h4>
+    {% endfor %}
+  </div>
+</footer>

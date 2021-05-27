@@ -2,6 +2,194 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    {% include header.html %} {{ content }} {% include footer.html %}
+    <section class="section__hero">
+      <div class="section__hero--video">
+        <video src="{{ page.hero_video }}" autoplay loop mute />
+      </div>
+    </section>
+
+    {% include header.html %}
+
+    <section class="section__desktop">
+      <div class="section__text">
+        <h1 class="section__title">
+          {{ page.desktop_section.title }}
+        </h1>
+        <p class="section__body">
+          {{ page.desktop_section.body }}
+        </p>
+      </div>
+      <div class="section__desktop__images">
+        {% for image in page.desktop_section.images %}
+        <img src="{{ image }}" class="section__desktop__image" />
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="section__files">
+      <div class="section__text">
+        <h1 class="section__title">
+          {{ page.files_section.title }}
+        </h1>
+        <p class="section__body">
+          {{ page.files_section.body }}
+        </p>
+      </div>
+      <!-- TODO: add stack code once design is final -->
+    </section>
+
+    <section
+      class="section__creativity"
+      style="background-color: {{ background_color}};"
+    >
+      <div class="section__text">
+        <h1 class="section__title">
+          {{ page.creativity_section.title }}
+        </h1>
+        <p class="section__body">
+          {{ page.creativity_section.body }}
+        </p>
+      </div>
+    </section>
+
+    <section class="section__why">
+      <div class="section__text">
+        <h1 class="section__title">
+          {{ page.why_section.title }}
+        </h1>
+        <p class="section__body">
+          {{ page.why_section.body }}
+        </p>
+      </div>
+      <div class="section__why__images--large">
+        {% for image in why_section.large_images %}
+        <img src="image" class="section__why__image preview" />
+        {% endfor %}
+      </div>
+      <div class="section__why__images--small">
+        {% for image in why_section.small_images %}
+        <img src="image" class="section__why__image preview" />
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="section__final">
+      <div class="section__text">
+        <h1 class="section__title">
+          {{ page.why_section.title }}
+        </h1>
+        <p class="section__body">
+          {{ page.why_section.body }}
+        </p>
+      </div>
+      <div class="section__final__animation">
+        <video src="{{ page.final_section.animation}}" autoplay loop mute />
+      </div>
+    </section>
+
+    <section class="section__tagline">
+      <h1 class="section__title">
+        Where ideas grow.
+      </h1>
+      <img src="" class="section__tagline__logo" />
+    </section>
+
+    <section class="section__signup">
+      <div class="section__text">
+        <h1 class="section__title">
+          {{ page.why_section.title }}
+        </h1>
+        <div class="section__signup__form">
+          <!-- Begin Mailchimp Signup Form -->
+          <form
+            action="https://mossworkspace.us10.list-manage.com/subscribe/post?u=44f846c1fad05ba9941d6e233&amp;id=06ce143339"
+            method="post"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            class="validate"
+            target="_blank"
+            novalidate
+          >
+            <div class="input-button email-input" id="mc_embed_signup_scroll">
+              <input
+                type="email"
+                value=""
+                name="EMAIL"
+                required
+                target="_blank"
+                placeholder="{{ page.sign_up.placeholder }}"
+                class="validate input input--medium"
+                id="mce-EMAIL"
+              />
+              <!-- hidden checkbox to assign to waitlist -->
+              <input
+                type="checkbox"
+                value="1"
+                name="group[35993][1]"
+                id="mce-group[35993]-35993-0"
+                checked
+                style="display: none;"
+              />
+              <!-- mc responses -->
+              <div id="mce-responses" class="clear">
+                <div
+                  class="response toast button button--medium button--white"
+                  id="mce-error-response"
+                  style="display: none;"
+                ></div>
+                <div
+                  class="response toast button button--medium button--white"
+                  id="mce-success-response"
+                  style="display: none;"
+                ></div>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div
+                style="position: absolute; left: -5000px;"
+                aria-hidden="true"
+              >
+                <input
+                  type="text"
+                  name="b_44f846c1fad05ba9941d6e233_06ce143339"
+                  tabindex="-1"
+                  value=""
+                />
+              </div>
+              <button
+                type="submit"
+                id="mc-embedded-subscribe"
+                class="button button--blue button--medium"
+              >
+                {{ page.sign_up.button }}
+              </button>
+            </div>
+            <script
+              type="text/javascript"
+              src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+            ></script>
+            <script type="text/javascript">
+              (function ($) {
+                window.fnames = new Array();
+                window.ftypes = new Array();
+                fnames[0] = "EMAIL";
+                ftypes[0] = "email";
+                fnames[1] = "FNAME";
+                ftypes[1] = "text";
+                fnames[2] = "LNAME";
+                ftypes[2] = "text";
+                fnames[3] = "ADDRESS";
+                ftypes[3] = "address";
+                fnames[4] = "PHONE";
+                ftypes[4] = "phone";
+              })(jQuery);
+              var $mcj = jQuery.noConflict(true);
+            </script>
+          </form>
+          <!--End mc_embed_signup-->
+        </div>
+      </div>
+    </section>
+
+    {% include footer.html %}
   </body>
 </html>

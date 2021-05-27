@@ -1,5 +1,18 @@
 ---
 weather: true
-sign_up_button: ''
-
+sign_up_button: ""
 ---
+
+<header>
+  <div class="header__left">
+    <img src="{{ page.logo }}" class="header__left__logo" />
+    <h4 class="header__left__weather">
+      <!-- TODO: input weather API from openweathermaps (add field in CMS for location) -->
+    </h4>
+  </div>
+  <div class="header__right">
+    <button class="button button-gray">
+      {{ page.sign_up_button }}
+    </button>
+  </div>
+</header>
