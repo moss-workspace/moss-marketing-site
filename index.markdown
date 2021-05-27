@@ -21,8 +21,9 @@ files_section:
   body_2: But what if your work was never meant for the cubicle? What if your process
     doesn’t fit neatly into a box, but rather demands thinking outside of one?
 creativity_section:
-  title: ''
-  body: ''
+  title: What about creativity?
+  body: The creative process is messy, and fragile. It requires cultivation. Care.
+    Room to grow. A space designed specifically for it, not in spite of it.
   background_color: ''
 why_section:
   title: ''
