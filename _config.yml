@@ -31,4 +31,8 @@ footer:
     © 2021
     Moss workspace, inc.
     All rights reserved
-  links: []
+  links:
+  - text: Twitter
+    url: https://twitter.com/mossworkspace
+    open_in_new_tab: true
+    social_icon: true
