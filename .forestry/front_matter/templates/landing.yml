@@ -8,12 +8,24 @@ fields:
     required: false
   label: Permalink
   description: The URL extension for this page
-- name: header_video
-  type: file
-  config:
-    maxSize: 64
-  label: Header video
-  description: Remember that the header video crops automatically to the screen size!
+- name: hero_video
+  type: field_group
+  config: {}
+  fields:
+  - name: portrait
+    type: file
+    config:
+      maxSize: 64
+    label: Portrait
+    description: Choose a portrait version of the video
+  - name: landscape
+    type: file
+    config:
+      maxSize: 64
+    label: Landscape
+    description: Choose a landscape version of the video
+  label: Hero video
+  description: Choose a hero video
 - name: desktop_section
   type: field_group
   config: {}
