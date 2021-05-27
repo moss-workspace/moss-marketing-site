@@ -26,10 +26,15 @@ creativity_section:
     Room to grow. A space designed specifically for it, not in spite of it.
   background_color: ''
 why_section:
-  title: ''
-  body: ''
+  title: 'That’s why we’re building Moss. '
+  body: |-
+    No more office-work. No more sifting, sorting, digging. No more asking where, why and what. the. fuck.
+
+    No more missing out on the unexpected chemistry that happens when everything is at your fingertips. No more workarounds to compensate for a workspace that was never even made for us.
   large_images: []
   small_images: []
+  large_image: ''
+  video: ''
 final_section:
   title: ''
   body: ''
