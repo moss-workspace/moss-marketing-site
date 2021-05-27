@@ -52,5 +52,21 @@ link: []
 hero_video:
   portrait: ''
   landscape: "/uploads/whereideasgrow_01_compress-preview.mp4"
+header:
+  weather: true
+  logo: ''
+  weather_location: ''
+  button: ''
+title: ''
+tagline: ''
+description: ''
+email: ''
+baseurl: ''
+url: ''
+exclude: []
+footer:
+  logo: ''
+  legal: ''
+  links: []
 
 ---
