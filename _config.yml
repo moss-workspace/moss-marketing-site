@@ -26,6 +26,9 @@ header_settings:
   button: "✍️  Sign up"
 tagline: Where ideas grow
 footer:
-  logo: ''
-  legal: ''
+  logo: "/uploads/moss-icon-small__rgb.svg"
+  legal: |-
+    © 2021
+    Moss workspace, inc.
+    All rights reserved
   links: []
