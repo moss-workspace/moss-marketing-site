@@ -13,11 +13,10 @@ sections:
   label: All pages
   create: documents
 - type: heading
-  label: Components
+  label: Data
 - type: document
   path: _config.yml
   label: Site settings
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
