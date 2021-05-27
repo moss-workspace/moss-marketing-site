@@ -4,25 +4,111 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
-- type: text
-  name: email
-  label: email
+  label: Title
+  description: The name of your site
+- name: tagline
+  type: text
+  config:
+    required: false
+  label: Tagline
+  description: Enter a short tagline for your site
 - type: textarea
   name: description
-  label: description
+  label: Description
+  description: What's your site for?
+- type: text
+  name: email
+  label: Email
+  description: A good contact email
 - type: text
   name: baseurl
-  label: baseurl
+  label: Base URL
+  description: The base URL of your site
 - type: text
   name: url
-  label: url
-- type: text
-  name: twitter_username
-  label: twitter_username
-- type: text
-  name: github_username
-  label: github_username
+  label: URL
+  description: 'The actual URL of your site (ex: site.com/blog)'
 - type: list
   name: exclude
   label: exclude
+  hidden: true
+- name: header_settings
+  type: field_group
+  config: {}
+  fields:
+  - name: logo
+    type: file
+    config:
+      maxSize: 64
+    label: Logo
+    description: Choose a logo file
+  - name: weather
+    type: boolean
+    label: Weather
+    description: Do you want to display the weather?
+    default: true
+  - name: weather_location
+    type: text
+    config:
+      required: false
+    label: Weather location
+    showOnly:
+      field: weather
+      value: true
+    description: Which location do you want to show weather for?
+  - name: button
+    type: text
+    config:
+      required: false
+    label: Button
+    description: Enter the text for the sign up button
+  label: Header settings
+  description: Choose how the site-wide header displays
+- name: footer
+  type: field_group
+  config: {}
+  fields:
+  - name: logo
+    type: file
+    config:
+      maxSize: 64
+    label: Logo
+    description: Choose a logo file
+  - name: legal
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Legal
+    description: Enter legal info (no more than 3 lines)
+  - name: links
+    type: field_group_list
+    fields:
+    - name: text
+      type: text
+      config:
+        required: false
+      label: Text
+      description: Enter the link text
+    - name: url
+      type: text
+      config:
+        required: false
+      label: URL
+      description: Enter the URL
+    - name: open_in_new_tab
+      type: boolean
+      label: Open in new tab
+      description: Open the link in a new tab?
+      default: true
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Links
+    description: 'Create links for the footer '
+  label: Footer
+  description: Choose how the site-wide footer displays
