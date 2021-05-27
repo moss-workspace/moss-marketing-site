@@ -51,7 +51,7 @@ fields:
       required: false
     label: Title
     description: Enter your title
-  - name: body
+  - name: body_1
     type: textarea
     default: ''
     config:
@@ -59,8 +59,18 @@ fields:
       wysiwyg: false
       schema:
         format: markdown
-    label: Body
+    label: Body 1
     description: Enter your body text
+  - name: body_2
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body 2
+    description: Enter the second piece of body text
   - name: file_images
     type: image_gallery
     config: {}
