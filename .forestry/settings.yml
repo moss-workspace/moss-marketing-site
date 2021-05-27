@@ -15,14 +15,9 @@ sections:
 - type: heading
   label: Components
 - type: document
-  path: _includes/head.html
-  label: Site info
-- type: document
-  path: _includes/header.html
-  label: Header
-- type: document
-  path: _includes/footer.html
-  label: Footer
+  path: _config.yml
+  label: Site settings
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
