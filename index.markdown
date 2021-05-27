@@ -6,9 +6,9 @@ desktop_section:
   title: The desktop.
   body: Home to work as we know it, not much has changed since it was first introduced.
   images:
-  - "/uploads/screen-shot-2021-05-25-at-12-34-41-pm.png"
   - "/uploads/unnamed-1.gif"
   - "/uploads/classic-mac-os-1999-system-9-system-folder.png"
+  - "/uploads/screen-shot-2021-05-25-at-12-34-41-pm.png"
 files_section:
   title: Files. Folders. Function.
   body: ''
