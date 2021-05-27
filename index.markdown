@@ -49,5 +49,8 @@ sign_up:
 logo: ''
 legal: ''
 link: []
+hero_video:
+  portrait: ''
+  landscape: "/uploads/whereideasgrow_01_compress-preview.mp4"
 
 ---
