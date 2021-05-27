@@ -134,11 +134,18 @@ fields:
         format: markdown
     label: Body
     description: Enter your body text
-  - name: large_images
-    type: image_gallery
-    config: {}
-    label: Large images
-    description: Select two large images for the sides
+  - name: large_image
+    type: file
+    config:
+      maxSize: 64
+    label: Large image
+    description: Select a large image for the left margin
+  - name: video
+    type: file
+    config:
+      maxSize: 64
+    description: Select a video for the right margin
+    label: Video
   - name: small_images
     type: image_gallery
     config: {}
