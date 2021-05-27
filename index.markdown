@@ -10,11 +10,16 @@ desktop_section:
   - "/uploads/unnamed-1.gif"
   - "/uploads/classic-mac-os-1999-system-9-system-folder.png"
 files_section:
-  title: ''
+  title: Files. Folders. Function.
   body: ''
   file_images: []
   messages: []
   images: []
+  body_1: 'It was designed to emulate the office, and with it – office-work. Sifting
+    and sorting. Emptying the trash. A rote process built for rote tasks. After 40
+    years we’ve universally accepted this workspace as status-quo. '
+  body_2: But what if your work was never meant for the cubicle? What if your process
+    doesn’t fit neatly into a box, but rather demands thinking outside of one?
 creativity_section:
   title: ''
   body: ''
