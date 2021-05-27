@@ -104,6 +104,10 @@ fields:
       label: Open in new tab
       description: Open the link in a new tab?
       default: true
+    - name: social_icon
+      type: boolean
+      label: Social icon
+      description: Do you want to display a social icon with this link?
     config:
       min: 
       max: 
