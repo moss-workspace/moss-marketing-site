@@ -1,31 +1,30 @@
 ---
 title: Moss
 email: team@mossworkspace.com
-description:
-  A workflow tool as fluid as creativity itself, Moss clarifies the inherently
+description: A workflow tool as fluid as creativity itself, Moss clarifies the inherently
   messy creative process by consolidating assets and inspiration into a single visual
   workspace.
-baseurl: ""
-url: ""
+baseurl: ''
+url: ''
 twitter_username: jekyllrb
 github_username: jekyll
 exclude:
-  - ".sass-cache/"
-  - ".jekyll-cache/"
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+- ".sass-cache/"
+- ".jekyll-cache/"
+- gemfiles/
+- Gemfile
+- Gemfile.lock
+- node_modules/
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/
 tagline: Where ideas grow
 header:
-  logo: ""
-  weather: false
-  weather_location: ""
-  button: ""
+  logo: ''
+  weather: true
+  weather_location: Brooklyn, NY
+  button: "✍️  Sign up"
 footer:
   logo: "/uploads/moss-icon-small__rgb.svg"
   legal: |-
@@ -33,15 +32,15 @@ footer:
     Moss workspace, inc.
     All rights reserved
   links:
-    - text: Privacy Policy
-      url: https://www.notion.so/Privacy-a27b700b29334cf4a8984039f3595879
-      open_in_new_tab: true
-      social_icon: false
-    - text: Instagram
-      url: https://www.instagram.com/mossworkspace/
-      open_in_new_tab: true
-      social_icon: true
-    - text: Twitter
-      url: https://twitter.com/mossworkspace
-      open_in_new_tab: true
-      social_icon: true
+  - text: Privacy Policy
+    url: https://www.notion.so/Privacy-a27b700b29334cf4a8984039f3595879
+    open_in_new_tab: true
+    social_icon: false
+  - text: Instagram
+    url: https://www.instagram.com/mossworkspace/
+    open_in_new_tab: true
+    social_icon: true
+  - text: Twitter
+    url: https://twitter.com/mossworkspace
+    open_in_new_tab: true
+    social_icon: true
