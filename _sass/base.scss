@@ -50,7 +50,7 @@ input {
 ////////////////////////////////////////////////////////////////////////////////
 .button {
   @include fade-bg;
-  @include p;
+  font-size: rem(11px);
   line-height: rem(11px);
 
   display: inline-flex;
@@ -133,11 +133,6 @@ input {
     }
   }
 
-  &--tool-active {
-    background: $light-gray-2;
-    color: $dark-gray-2;
-  }
-
   &--blue {
     color: $white;
     background: $light-blue;
@@ -197,8 +192,6 @@ input {
 
   > img,
   > span {
-    // https://stackoverflow.com/a/7196517
-    // remove default spacing underneath
     vertical-align: middle;
   }
 }

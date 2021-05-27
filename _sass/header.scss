@@ -6,12 +6,8 @@ header {
     display: flex;
     align-items: center;
 
-    * {
-      display: inline-block;
-    }
-
-    &__logo {
-      height: 100%;
+    .header__left__logo {
+      height: 28px;
       width: auto;
       padding-right: 16px;
     }

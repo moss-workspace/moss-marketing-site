@@ -8,20 +8,20 @@ footer {
     display: flex;
     align-items: center;
 
-    * {
-      display: inline-block;
-    }
-
-    &__logo {
+    .footer__left__logo {
       height: 100%;
       width: auto;
       padding-right: 16px;
+    }
+    .footer__left__legal {
+      flex-shrink: 0;
     }
   }
   .footer__right {
     text-align: right;
     a {
       text-decoration: none;
+      color: $dark-gray-1;
       &:hover {
         color: $dark-gray-2;
       }
