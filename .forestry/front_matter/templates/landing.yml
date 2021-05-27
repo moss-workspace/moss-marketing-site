@@ -12,18 +12,18 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: portrait
-    type: file
-    config:
-      maxSize: 64
-    label: Portrait
-    description: Choose a portrait version of the video
   - name: landscape
     type: file
     config:
       maxSize: 64
     label: Landscape
     description: Choose a landscape version of the video
+  - name: portrait
+    type: file
+    config:
+      maxSize: 64
+    label: Portrait
+    description: Choose a portrait version of the video
   label: Hero video
   description: Choose a hero video
 - name: desktop_section
