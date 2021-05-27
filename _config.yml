@@ -32,6 +32,10 @@ footer:
     Moss workspace, inc.
     All rights reserved
   links:
+  - text: Privacy Policy
+    url: https://www.notion.so/Privacy-a27b700b29334cf4a8984039f3595879
+    open_in_new_tab: true
+    social_icon: false
   - text: Instagram
     url: https://www.instagram.com/mossworkspace/
     open_in_new_tab: true
