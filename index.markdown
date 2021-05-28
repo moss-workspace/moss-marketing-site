@@ -58,5 +58,9 @@ sign_up:
     url: https://vimeo.com/472490067/524a565895
     open_in_new_tab: true
     social_icon: false
+  body: |-
+    We're working with early testers to make sure our workspace works for you.
+
+    We’ll be sending out early copies throughout 2021, so put your name down on the waitlist and follow us for updates.
 
 ---
