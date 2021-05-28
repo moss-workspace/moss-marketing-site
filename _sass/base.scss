@@ -59,7 +59,7 @@ input {
 ////////////////////////////////////////////////////////////////////////////////
 .button {
   @include fade-bg;
-  font-size: rem(11px);
+  @extend p;
   line-height: rem(11px);
 
   display: inline-flex;
@@ -117,7 +117,7 @@ input {
   &--gray-1 {
     background: $light-gray-1;
     border: 1px solid $light-gray-3;
-    color: $dark-gray-2;
+    color: $dark-gray-3;
 
     &:hover {
       background: $light-gray-2;
@@ -170,7 +170,7 @@ input {
   }
 
   &--large {
-    @include h3;
+    @extend h3;
     height: 40px;
     padding: 0 12px;
     @include gap(12px);
@@ -240,13 +240,13 @@ input {
   }
 
   &--large {
-    @include h3;
+    @extend h3;
     padding: 0 16px;
     height: 48px;
   }
 
   &--medium {
-    @include p;
+    @extend p;
     padding: 0 8px;
     height: 28px;
   }

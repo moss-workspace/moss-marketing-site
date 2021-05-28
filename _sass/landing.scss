@@ -4,19 +4,15 @@
 
 // General
 ////////////////////////////////////////////////////////////////////////////////
-section {
-  margin: 0 60px;
-  @include break-below("sm") {
-    margin: 0 16px;
-  }
-}
-
 .textblock {
-  @include grid;
-  .textblock__title,
-  .textblock__body {
-    @extend .col-2-3;
-    @extend .col-md-4-2;
+  margin: 0 auto;
+  max-width: 450px;
+  width: 40%;
+  @include break-below("md") {
+    width: 60%;
+  }
+  @include break-below("sm") {
+    width: 80%;
   }
 }
 
@@ -44,13 +40,16 @@ header {
 // Desktop
 ////////////////////////////////////////////////////////////////////////////////
 .desktop__images {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   height: 100vh;
   max-height: 80vw;
   position: relative;
   @include break-below("md") {
-    width: 100%;
+    width: 90%;
+  }
+  @include break-below("sm") {
+    width: 95%;
   }
   .desktop__image {
     width: 40%;
@@ -58,23 +57,35 @@ header {
     position: absolute;
     top: 50%;
     opacity: 0;
-    @include transition(opacity, 0.09s, ease);
+    -webkit-transition: opacity 0.09s ease, transform 0.25s ease;
+    -moz-transition: opacity 0.09s ease, transform 0.25s ease;
+    -o-transition: opacity 0.09s ease, transform 0.25s ease;
+    transition: opacity 0.09s ease, transform 0.25s ease;
     &.visible {
       opacity: 1;
     }
     &:first-child {
       left: 0;
-      transform: translateY(-80%);
+      transform: translateY(-70%);
+      &.visible {
+        transform: translateY(-80%);
+      }
     }
     &:nth-child(2) {
       left: 0;
       right: 0;
       margin: 0 auto;
-      transform: translateY(-50%);
+      transform: translateY(-40%);
+      &.visible {
+        transform: translateY(-50%);
+      }
     }
     &:nth-child(3) {
       right: 0;
-      transform: translateY(-45%);
+      transform: translateY(-35%);
+      &.visible {
+        transform: translateY(-45%);
+      }
     }
     @include break-below("md") {
       width: 50%;
@@ -94,6 +105,8 @@ header {
   .textblock {
     opacity: 0;
     position: absolute;
+    left: 0;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
     &__title,

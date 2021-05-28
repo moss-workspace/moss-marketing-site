@@ -41,7 +41,7 @@ function toggleDesktopImage(element, index) {
     offsetPercent = 0.1;
 
   if (index == 2) {
-    offsetPercent = 0.25;
+    offsetPercent = 0.18;
   }
 
   var offset = windowHeight * offsetPercent;
