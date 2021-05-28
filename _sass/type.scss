@@ -45,7 +45,7 @@ h1 {
   font-weight: 100;
   font-size: rem(42px);
   line-height: rem(48px);
-  @include break-below("sm") {
+  @include break-below("md") {
     font-size: rem(26px);
     line-height: rem(30px);
   }

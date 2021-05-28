@@ -68,11 +68,10 @@ function toggleBackground(element) {
     windowHeight = $(window).height(),
     scrollTop = $(window).scrollTop();
 
-  if (scrollTop > elementTop + elementHeight) {
+  if (scrollTop > elementTop + elementHeight - windowHeight) {
     $("body").addClass("white");
     $("body").removeClass("dark");
     $("#creativity").removeClass("show-text");
-    console.log("white");
   } else if (
     scrollTop < elementTop + elementHeight - windowHeight &&
     scrollTop > elementTop
@@ -80,11 +79,9 @@ function toggleBackground(element) {
     $("body").addClass("dark");
     $("body").removeClass("white");
     $("#creativity").addClass("show-text");
-    console.log("black");
   } else {
     $("body").removeClass("dark");
     $("#creativity").removeClass("show-text");
-    console.log("gray");
   }
 }
 
@@ -98,11 +95,13 @@ function parallax(element) {
     diff = scrollTop - elementTop,
     pos = Math.round(diff / element.attr("speed"));
 
-  // only parallax when in view
-  if (
-    scrollTop + windowHeight >= elementTop &&
-    scrollTop < elementTop + elementHeight
-  ) {
-    element.css("transform", "translateY(" + pos + "px)");
-  }
+  element.css("transform", "translateY(" + pos + "px)");
+
+  // uncomment to only parallax when in view
+  // if (
+  //   scrollTop + windowHeight >= elementTop &&
+  //   scrollTop < elementTop + elementHeight
+  // ) {
+  //   element.css("transform", "translateY(" + pos + "px)");
+  // }
 }

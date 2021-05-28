@@ -87,9 +87,8 @@
             />
           </div>
         </div>
-        <!-- TODO: add autoplay (took out so I don't lose my mind staring at it) -->
         <div class="why__video--wrapper preview parallax" speed="5">
-          <video class="why__video" muted loop>
+          <video class="why__video" autoplay muted loop>
             <source src="{{ page.why_section.video}}" type="video/mp4" />
           </video>
           <div class="preview__icons">
@@ -130,7 +129,7 @@
       </div>
       <div class="final__animation">
         <video autoplay muted loop>
-          <source src="{{ page.final_section.animation}}" type="video/mp4" />
+          <source src="{{ page.final_section.animation }}" type="video/mp4" />
         </video>
       </div>
     </section>
@@ -140,7 +139,7 @@
         <h1 class="textblock__title">
           {{ site.tagline }}
         </h1>
-        <img src="" class="tagline__logo" />
+        <img class="tagline__logo" src="{{ site.footer.logo }}" />
       </div>
     </section>
 

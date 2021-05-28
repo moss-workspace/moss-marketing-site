@@ -10,7 +10,6 @@ body {
   font-style: normal;
   box-sizing: border-box;
   @include fade-in;
-
   .dark {
     background-color: $black;
     header {
@@ -20,6 +19,10 @@ body {
   }
   .white {
     background-color: $white;
+    header {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }
 
