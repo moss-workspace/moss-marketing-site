@@ -203,6 +203,16 @@ fields:
       required: false
     label: Title
     description: Enter your title
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+    description: Enter your body text
   - name: placeholder
     type: text
     config:
