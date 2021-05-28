@@ -29,7 +29,7 @@
         </h2>
       </div>
       <div class="desktop__images">
-        {% for image in page.desktop_section.images %}
+        {% for image in page.desktop_section.images limit:3 %}
         <img
           src="{{ image }}"
           class="desktop__image"
@@ -74,15 +74,18 @@
           {{ page.why_section.body }}
         </h2>
       </div>
-      <img
-        src="{{ page.why_section.large_image }}"
-        class="why__image--large preview"
-      />
-      <video src="{{ page.why_section.video }}" autoplay loop muted />
-      <div class="why__images--small">
-        {% for image in why_section.small_images %}
-        <img src="image" class="why__image--small preview" />
-        {% endfor %}
+      <div class="why__parallax--container">
+        <div class="why__image--large preview parallax" speed="2">
+          <img src="{{ page.why_section.large_image }}" />
+        </div>
+        <!-- <video autoplay muted loop>
+          <source src="{{ page.why_section.video}}" type="video/mp4" />
+        </video> -->
+        <div class="why__images--small">
+          {% for image in page.why_section.small_images limit:2 %}
+          <img class="why__image--small preview" src="image" />
+          {% endfor %}
+        </div>
       </div>
     </section>
 
@@ -96,7 +99,9 @@
         </h2>
       </div>
       <div class="final__animation">
-        <video src="{{ page.final_section.animation}}" autoplay loop mute />
+        <video autoplay muted loop>
+          <source src="{{ page.final_section.animation}}" type="video/mp4" />
+        </video>
       </div>
     </section>
 

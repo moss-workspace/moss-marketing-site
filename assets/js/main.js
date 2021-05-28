@@ -17,6 +17,9 @@ $(window).scroll(function () {
     toggleDesktopImage($(this), index);
   });
   toggleBackground($("#creativity"));
+  $(".parallax").each(function () {
+    parallax($(this));
+  });
 });
 
 // Hero
@@ -37,7 +40,7 @@ function toggleDesktopImage(element, index) {
   var elementTop = element.offset().top,
     elementHeight = element.outerHeight(),
     windowHeight = $(window).height(),
-    windowScroll = $(this).scrollTop(),
+    scrollTop = $(this).scrollTop(),
     offsetPercent = 0.1;
 
   if (index == 2) {
@@ -46,7 +49,7 @@ function toggleDesktopImage(element, index) {
 
   var offset = windowHeight * offsetPercent;
 
-  if (windowScroll > elementTop + elementHeight - windowHeight + offset) {
+  if (scrollTop > elementTop + elementHeight - windowHeight + offset) {
     element.addClass("visible");
   } else {
     element.removeClass("visible");
@@ -59,16 +62,35 @@ function toggleBackground(element) {
   var elementTop = element.offset().top,
     elementHeight = element.outerHeight(),
     windowHeight = $(window).height(),
-    windowScroll = $(this).scrollTop();
+    scrollTop = $(window).scrollTop();
 
   if (
-    windowScroll > elementTop &&
-    windowScroll < elementTop + elementHeight - windowHeight
+    scrollTop > elementTop &&
+    scrollTop < elementTop + elementHeight - windowHeight
   ) {
     $("body").addClass("dark");
     $("#creativity").addClass("show-text");
   } else {
     $("body").removeClass("dark");
     $("#creativity").removeClass("show-text");
+  }
+}
+
+// Parallax
+////////////////////////////////////////////////////////////////////////////////
+function parallax(element) {
+  var elementTop = element.offset().top,
+    elementHeight = element.outerHeight(),
+    windowHeight = $(window).height(),
+    scrollTop = $(window).scrollTop(),
+    diff = scrollTop - elementTop,
+    pos = Math.round(diff / element.attr("speed"));
+
+  // only parallax when in view
+  if (
+    scrollTop + windowHeight >= elementTop &&
+    scrollTop < elementTop + elementHeight
+  ) {
+    element.css("transform", "translateY(" + pos + "px)");
   }
 }
