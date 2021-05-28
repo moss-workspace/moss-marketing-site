@@ -72,10 +72,7 @@ function toggleBackground(element) {
     $("body").addClass("white");
     $("body").removeClass("dark");
     $("#creativity").removeClass("show-text");
-  } else if (
-    scrollTop < elementTop + elementHeight - windowHeight &&
-    scrollTop > elementTop
-  ) {
+  } else if (scrollTop > elementTop) {
     $("body").addClass("dark");
     $("body").removeClass("white");
     $("#creativity").addClass("show-text");
