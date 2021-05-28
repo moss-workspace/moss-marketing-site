@@ -44,7 +44,7 @@ final_section:
     collaborative digital environment.
   body: A workflow tool as fluid as creativity itself. Where you can organize, experiment,
     and iterate together in one place.
-  animation: "/uploads/screen-shot-2021-05-12-at-6-59-1.png"
+  animation: "/uploads/whereideasgrow_01_compress-preview.mp4"
 sign_up:
   title: "Try it early \U0001F331"
   placeholder: Enter your work email
