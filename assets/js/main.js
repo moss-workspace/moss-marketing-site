@@ -64,15 +64,23 @@ function toggleBackground(element) {
     windowHeight = $(window).height(),
     scrollTop = $(window).scrollTop();
 
-  if (
-    scrollTop > elementTop &&
-    scrollTop < elementTop + elementHeight - windowHeight
+  if (scrollTop > elementTop + elementHeight) {
+    $("body").addClass("white");
+    $("body").removeClass("dark");
+    $("#creativity").removeClass("show-text");
+    console.log("white");
+  } else if (
+    scrollTop < elementTop + elementHeight - windowHeight &&
+    scrollTop > elementTop
   ) {
     $("body").addClass("dark");
+    $("body").removeClass("white");
     $("#creativity").addClass("show-text");
+    console.log("black");
   } else {
     $("body").removeClass("dark");
     $("#creativity").removeClass("show-text");
+    console.log("gray");
   }
 }
 

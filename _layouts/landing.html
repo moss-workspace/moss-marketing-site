@@ -78,9 +78,12 @@
         <div class="why__image--large preview parallax" speed="2">
           <img src="{{ page.why_section.large_image }}" />
         </div>
-        <!-- <video autoplay muted loop>
-          <source src="{{ page.why_section.video}}" type="video/mp4" />
-        </video> -->
+        <!-- todo: add autoplay (took out so I don't lose my mind staring at it) -->
+        <div class="why__video preview parallax" speed="4">
+          <video muted loop>
+            <source src="{{ page.why_section.video}}" type="video/mp4" />
+          </video>
+        </div>
         <div class="why__images--small">
           {% for image in page.why_section.small_images limit:2 %}
           <img class="why__image--small preview" src="image" />
@@ -117,7 +120,7 @@
     <section class="signup">
       <div class="textblock">
         <h1 class="textblock__title">
-          {{ page.why_section.title }}
+          {{ page.sign_up.title }}
         </h1>
         <div class="signup__form">
           {% include signup_form.html %}
