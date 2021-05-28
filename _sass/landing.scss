@@ -123,6 +123,32 @@ header {
 
 // Why
 ////////////////////////////////////////////////////////////////////////////////
+.preview {
+  .preview__icons {
+    .preview__icon {
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      padding: 5px;
+      &--image {
+        float: left;
+        padding-left: 0;
+      }
+      &--link {
+        float: right;
+        @include fade-bg;
+        &:hover {
+          cursor: pointer;
+          background-color: $light-gray-1;
+        }
+        &:active {
+          background-color: $light-gray-2;
+        }
+      }
+    }
+  }
+}
+
 .why {
   height: 200vh;
   position: relative;
@@ -137,26 +163,40 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    .why__image--large {
-      overflow: hidden;
+    .why__image--large--wrapper {
       position: absolute;
       width: 10%;
       height: 50%;
-      top: 20%;
+      top: 30%;
       left: 0;
-      img {
+      .why__image--large {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
     }
-    .why__video {
-      overflow: hidden;
+    .why__video--wrapper {
       position: absolute;
       width: 15%;
       height: 50%;
       top: 10%;
       right: 0;
-      video {
+      .why__video {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
+      }
+    }
+    .why__images--small {
+      position: absolute;
+      height: auto;
+      top: 10%;
+      left: 50%;
+      .why__image--small {
+        display: inline-block;
+        &:first-child {
+          padding-right: 16px;
+        }
       }
     }
   }
@@ -165,4 +205,10 @@ header {
 // Final
 ////////////////////////////////////////////////////////////////////////////////
 .final {
+}
+
+// Signup
+////////////////////////////////////////////////////////////////////////////////
+.signup {
+  background-color: $light-gray-1;
 }

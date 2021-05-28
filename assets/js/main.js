@@ -43,8 +43,12 @@ function toggleDesktopImage(element, index) {
     scrollTop = $(this).scrollTop(),
     offsetPercent = 0.1;
 
+  if (index == 1) {
+    offsetPercent = 0.05;
+  }
+
   if (index == 2) {
-    offsetPercent = 0.18;
+    offsetPercent = 0.2;
   }
 
   var offset = windowHeight * offsetPercent;

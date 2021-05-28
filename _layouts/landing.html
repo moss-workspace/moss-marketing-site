@@ -75,18 +75,45 @@
         </h2>
       </div>
       <div class="why__parallax--container">
-        <div class="why__image--large preview parallax" speed="2">
-          <img src="{{ page.why_section.large_image }}" />
+        <div class="why__image--large--wrapper preview parallax" speed="2">
+          <img
+            class="why__image--large"
+            src="{{ page.why_section.large_image }}"
+          />
+          <div class="preview__icons">
+            <img
+              class="preview__icon preview__icon--link"
+              src="/assets/icons/link-linked_blue.svg"
+            />
+          </div>
         </div>
-        <!-- todo: add autoplay (took out so I don't lose my mind staring at it) -->
-        <div class="why__video preview parallax" speed="4">
-          <video muted loop>
+        <!-- TODO: add autoplay (took out so I don't lose my mind staring at it) -->
+        <div class="why__video--wrapper preview parallax" speed="5">
+          <video class="why__video" muted loop>
             <source src="{{ page.why_section.video}}" type="video/mp4" />
           </video>
+          <div class="preview__icons">
+            <img
+              class="preview__icon preview__icon--image"
+              src="/assets/icons/file-image_darkGray2.svg"
+            />
+          </div>
         </div>
         <div class="why__images--small">
           {% for image in page.why_section.small_images limit:2 %}
-          <img class="why__image--small preview" src="image" />
+          <div class="why__image--small preview">
+            <img src="{{ image }}" />
+            <div class="preview__icons">
+              <img
+                class="preview__icon preview__icon--image"
+                src="/assets/icons/file-image_darkGray2.svg"
+              />
+              <img
+                class="preview__icon preview__icon--link"
+                src="/assets/icons/link-linked_blue.svg"
+              />
+            </div>
+          </div>
           {% endfor %}
         </div>
       </div>
@@ -126,8 +153,7 @@
           {% include signup_form.html %}
         </div>
       </div>
+      {% include footer.html %}
     </section>
-
-    {% include footer.html %}
   </body>
 </html>
