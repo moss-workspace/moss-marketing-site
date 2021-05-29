@@ -46,6 +46,7 @@ files_section:
   - "/uploads/pexels-cottonbro-4505469.jpg"
   - "/uploads/pexels-cottonbro-4505458.jpg"
   - "/uploads/pexels-cottonbro-4503732.jpg"
+  file_manager: "/uploads/screen-shot-2021-04-14-at-11-42-37-pm.png"
 creativity_section:
   title: What about creativity?
   body: The creative process is messy, and fragile. It requires cultivation. Care.
