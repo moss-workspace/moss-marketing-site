@@ -16,11 +16,42 @@ $(window).scroll(function () {
   $(".reveal").each(function () {
     reveal($(this));
   });
-  toggleBackground($("#creativity"));
+
   $(".parallax").each(function () {
     parallax($(this));
   });
+
+  sizeStack($("#files__stack"));
+
+  toggleBackground($("#creativity"));
 });
+
+// Animations
+////////////////////////////////////////////////////////////////////////////////
+function reveal(element) {
+  var elementTop = element.offset().top,
+    elementHeight = element.outerHeight(),
+    windowHeight = $(window).height(),
+    scrollTop = $(this).scrollTop(),
+    offset = windowHeight * element.attr("offset");
+
+  if (scrollTop > elementTop + elementHeight - windowHeight + offset) {
+    element.addClass("visible");
+  } else {
+    element.removeClass("visible");
+  }
+}
+
+function parallax(element) {
+  var elementTop = element.offset().top,
+    elementHeight = element.outerHeight(),
+    windowHeight = $(window).height(),
+    scrollTop = $(window).scrollTop(),
+    diff = scrollTop - elementTop,
+    pos = Math.round(diff / element.attr("speed"));
+
+  element.css("transform", "translateY(" + pos + "px)");
+}
 
 // Hero
 ////////////////////////////////////////////////////////////////////////////////
@@ -34,19 +65,18 @@ function sizeHeroVideo() {
   }
 }
 
-// Desktop
+// Files
 ////////////////////////////////////////////////////////////////////////////////
-function reveal(element) {
+function sizeStack(element) {
   var elementTop = element.offset().top,
     elementHeight = element.outerHeight(),
     windowHeight = $(window).height(),
-    scrollTop = $(this).scrollTop(),
-    offset = windowHeight * element.attr("offset");
+    scrollTop = $(window).scrollTop();
 
-  if (scrollTop > elementTop + elementHeight - windowHeight + offset) {
-    element.addClass("visible");
+  if (scrollTop > elementTop + elementHeight - windowHeight) {
+    $(".files__stack__content").addClass("shrink");
   } else {
-    element.removeClass("visible");
+    $(".files__stack__content").removeClass("shrink");
   }
 }
 
@@ -70,25 +100,4 @@ function toggleBackground(element) {
     $("body").removeClass("dark");
     $("#creativity").removeClass("show-text");
   }
-}
-
-// Parallax
-////////////////////////////////////////////////////////////////////////////////
-function parallax(element) {
-  var elementTop = element.offset().top,
-    elementHeight = element.outerHeight(),
-    windowHeight = $(window).height(),
-    scrollTop = $(window).scrollTop(),
-    diff = scrollTop - elementTop,
-    pos = Math.round(diff / element.attr("speed"));
-
-  element.css("transform", "translateY(" + pos + "px)");
-
-  // uncomment to only parallax when in view
-  // if (
-  //   scrollTop + windowHeight >= elementTop &&
-  //   scrollTop < elementTop + elementHeight
-  // ) {
-  //   element.css("transform", "translateY(" + pos + "px)");
-  // }
 }

@@ -61,7 +61,37 @@
       </div>
 
       <div class="files__stack__wrapper">
-        <div class="files__stack"></div>
+        <div class="files__stack" id="files__stack">
+          <div class="files__stack__content">
+            <div class="stack__files">
+              {% for file in page.files_section.desktop_files%}
+              <div
+                class="stack__file reveal"
+                offset="{{ forloop.index | times: 0.01 }}"
+              >
+                <img class="stack__file__image" src="{{ file }}" />
+                <p class="stack__file__name">
+                  {{ file | split: '/' | last }}
+                </p>
+              </div>
+              {% endfor %}
+            </div>
+
+            <div class="stack__images">
+              {% for image in page.files_section.images %}
+              <div
+                class="stack__image reveal"
+                offset="{{ forloop.index | times: 0.05 }}"
+              >
+                <img class="stack__file__image" src="{{ image }}" />
+                <p class="stack__file__name">
+                  {{ image | split: '/' | last }}
+                </p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
