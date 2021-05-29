@@ -26,7 +26,8 @@ files_section:
     years we’ve universally accepted this workspace as status-quo. '
   body_2: But what if your work was never meant for the cubicle? What if your process
     doesn’t fit neatly into a box, but rather demands thinking outside of one?
-  desktop_images: []
+  desktop_images:
+  - {}
   notifications:
   - sender: Creative director
     message: Are these from Pinterest?
@@ -34,6 +35,15 @@ files_section:
   - sender: Designer
     message: I think that’s a screenshot from Instagram.
     icon: "/uploads/slack_icon-1.svg"
+  desktop_files:
+  - "/uploads/pexels-ylanite-koppens-776656.jpg"
+  - "/uploads/pexels-tetyana-kovyrina-1692984.jpg"
+  - "/uploads/pexels-magda-ehlers-1289845.jpg"
+  - "/uploads/pexels-karolina-grabowska-4622253.jpg"
+  - "/uploads/pexels-engin-akyurt-1438404.jpg"
+  - "/uploads/pexels-cottonbro-4505469.jpg"
+  - "/uploads/pexels-cottonbro-4505458.jpg"
+  - "/uploads/pexels-cottonbro-4503732.jpg"
 creativity_section:
   title: What about creativity?
   body: The creative process is messy, and fragile. It requires cultivation. Care.
