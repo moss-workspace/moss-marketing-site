@@ -83,12 +83,48 @@ fields:
         format: markdown
     label: Body 2
     description: Enter the second piece of body text
-  - name: file_images
-    type: image_gallery
-    config: {}
-    label: File images
-    description: 'Select images to be displayed as images from the desktop. Note:
-      the actual file name will be displayed.'
+  - name: desktop_images
+    type: field_group_list
+    fields:
+    - name: file_name
+      type: text
+      config:
+        required: false
+      label: File name
+      description: Enter the file name
+    - name: image
+      type: file
+      config:
+        maxSize: 64
+      label: Image
+      description: Choose the thumbnail image
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Desktop images
+    description: Enter images to display as files on a desktop
+  - name: images
+    type: field_group_list
+    fields:
+    - name: file_name
+      type: text
+      config:
+        required: false
+      label: File name
+      description: Enter the file name
+    - name: image
+      type: file
+      config:
+        maxSize: 64
+      label: Image
+      description: Choose an image for the thumbnail
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Images
+    description: Choose images to be displayed in windows
   - name: messages
     type: list
     config:
@@ -96,12 +132,34 @@ fields:
       min: 
       max: 
     label: Messages
-    description: Enter text for messages. Colors will alternate.
-  - name: images
-    type: image_gallery
-    config: {}
-    label: Images
-    description: Select images
+    description: Enter messages (colors will alternate)
+  - name: notifications
+    type: field_group_list
+    fields:
+    - name: sender
+      type: text
+      config:
+        required: false
+      label: Sender
+      description: Enter the senders name
+    - name: message
+      type: text
+      config:
+        required: false
+      label: Message
+      description: Enter the message
+    - name: icon
+      type: file
+      config:
+        maxSize: 64
+      label: Icon
+      description: Choose an image for the notification icon
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Notifications
+    description: Create notifications
   label: Files section
   description: The second section
 - name: creativity_section
