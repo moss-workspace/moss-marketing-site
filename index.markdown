@@ -15,13 +15,22 @@ files_section:
   title: Files. Folders. Function.
   body: ''
   file_images: []
-  messages: []
+  messages:
+  - Where are those references you pulled?
+  - just throw them in the deck, presentation in 5
+  - I have 15 Photoshop files here, how do you want to do this?
+  - Which folder are you working out of?
   images: []
   body_1: 'It was designed to emulate the office, and with it – office-work. Sifting
     and sorting. Emptying the trash. A rote process built for rote tasks. After 40
     years we’ve universally accepted this workspace as status-quo. '
   body_2: But what if your work was never meant for the cubicle? What if your process
     doesn’t fit neatly into a box, but rather demands thinking outside of one?
+  desktop_images: []
+  notifications:
+  - sender: Creative director
+    message: Are these from Pinterest?
+    icon: "/uploads/slack_icon.svg"
 creativity_section:
   title: What about creativity?
   body: The creative process is messy, and fragile. It requires cultivation. Care.
