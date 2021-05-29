@@ -20,7 +20,7 @@ sections:
 - type: directory
   path: uploads
   label: Media
-  create: none
+  create: documents
   match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
