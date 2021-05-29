@@ -83,48 +83,26 @@ fields:
         format: markdown
     label: Body 2
     description: Enter the second piece of body text
-  - name: desktop_images
-    type: field_group_list
-    fields:
-    - name: file_name
-      type: text
-      config:
-        required: false
-      label: File name
-      description: Enter the file name
-    - name: image
-      type: file
-      config:
-        maxSize: 64
-      label: Image
-      description: Choose the thumbnail image
-    config:
-      min: 
-      max: 
-      labelField: 
-    label: Desktop images
-    description: Enter images to display as files on a desktop
+  - name: desktop_files
+    type: image_gallery
+    config: {}
+    label: Desktop files
+    description: 'Upload files to display as images on a desktop (Note: actual file
+      name will be displayed.'
   - name: images
-    type: field_group_list
-    fields:
-    - name: file_name
-      type: text
-      config:
-        required: false
-      label: File name
-      description: Enter the file name
-    - name: image
-      type: file
-      config:
-        maxSize: 64
-      label: Image
-      description: Choose an image for the thumbnail
+    type: image_gallery
+    config: {}
+    label: Images
+    description: 'Upload files to display as images in windows (Note: actual file
+      name will be displayed.'
+  - name: messages
+    type: list
     config:
+      use_select: false
       min: 
       max: 
-      labelField: 
-    label: Images
-    description: Choose images to be displayed in windows
+    label: Messages
+    description: Enter messages (colors will alternate)
   - name: notifications
     type: field_group_list
     fields:
@@ -152,14 +130,6 @@ fields:
       labelField: 
     label: Notifications
     description: Create notifications
-  - name: messages
-    type: list
-    config:
-      use_select: false
-      min: 
-      max: 
-    label: Messages
-    description: Enter messages (colors will alternate)
   label: Files section
   description: The second section
 - name: creativity_section
