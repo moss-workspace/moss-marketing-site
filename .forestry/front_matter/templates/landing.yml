@@ -125,14 +125,6 @@ fields:
       labelField: 
     label: Images
     description: Choose images to be displayed in windows
-  - name: messages
-    type: list
-    config:
-      use_select: false
-      min: 
-      max: 
-    label: Messages
-    description: Enter messages (colors will alternate)
   - name: notifications
     type: field_group_list
     fields:
@@ -160,6 +152,14 @@ fields:
       labelField: 
     label: Notifications
     description: Create notifications
+  - name: messages
+    type: list
+    config:
+      use_select: false
+      min: 
+      max: 
+    label: Messages
+    description: Enter messages (colors will alternate)
   label: Files section
   description: The second section
 - name: creativity_section
