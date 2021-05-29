@@ -28,6 +28,9 @@ files_section:
     doesn’t fit neatly into a box, but rather demands thinking outside of one?
   desktop_images: []
   notifications:
+  - sender: Designer
+    message: I think that’s a screenshot from Instagram.
+    icon: "/uploads/slack_icon-1.svg"
   - sender: Creative director
     message: Are these from Pinterest?
     icon: "/uploads/slack_icon.svg"
