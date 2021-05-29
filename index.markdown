@@ -20,7 +20,9 @@ files_section:
   - just throw them in the deck, presentation in 5
   - I have 15 Photoshop files here, how do you want to do this?
   - Which folder are you working out of?
-  images: []
+  images:
+  - "/uploads/rv-an417_cubicl_p_20140509201519.jpg"
+  - "/uploads/s0436228_sc7.jpg"
   body_1: 'It was designed to emulate the office, and with it – office-work. Sifting
     and sorting. Emptying the trash. A rote process built for rote tasks. After 40
     years we’ve universally accepted this workspace as status-quo. '
