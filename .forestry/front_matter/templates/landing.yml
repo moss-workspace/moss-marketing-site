@@ -95,6 +95,12 @@ fields:
     label: Images
     description: 'Upload files to display as images in windows (Note: actual file
       name will be displayed.'
+  - name: file_manager
+    type: file
+    config:
+      maxSize: 64
+    label: File manager
+    description: Choose an image to represent a file manager
   - name: messages
     type: list
     config:
