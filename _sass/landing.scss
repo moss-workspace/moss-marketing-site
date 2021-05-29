@@ -5,14 +5,18 @@
 // General
 ////////////////////////////////////////////////////////////////////////////////
 .textblock {
-  margin: 0 auto;
+  margin: 100px auto;
   max-width: 450px;
-  width: 40%;
+  width: 40vw;
   @include break-below("md") {
-    width: 60%;
+    width: 50vw;
   }
   @include break-below("sm") {
-    width: 80%;
+    width: 60vw;
+  }
+  &__title {
+    margin-bottom: 16px;
+    margin-top: 0;
   }
 }
 
@@ -24,6 +28,7 @@ header {
   top: 0;
   z-index: 900;
   @include fade-in;
+  margin-bottom: 200px;
 }
 
 // Hero
@@ -40,19 +45,18 @@ header {
 // Desktop
 ////////////////////////////////////////////////////////////////////////////////
 .desktop__images {
-  width: 80%;
-  margin: 0 auto;
+  width: 75vw;
   height: 100vh;
-  max-height: 80vw;
+  max-height: 100vw;
+  margin: 0 auto;
   position: relative;
   @include break-below("md") {
-    width: 90%;
+    width: 85vw;
   }
   @include break-below("sm") {
-    width: 95%;
+    width: 95vw;
   }
   .desktop__image {
-    width: 40%;
     height: auto;
     position: absolute;
     top: 50%;
@@ -61,6 +65,13 @@ header {
     -moz-transition: opacity 0.09s ease, transform 0.25s ease;
     -o-transition: opacity 0.09s ease, transform 0.25s ease;
     transition: opacity 0.09s ease, transform 0.25s ease;
+    width: 30vw;
+    @include break-below("md") {
+      width: 40vw;
+    }
+    @include break-below("sm") {
+      width: 50vw;
+    }
     &.visible {
       opacity: 1;
     }
@@ -87,28 +98,17 @@ header {
         transform: translateY(-45%);
       }
     }
-    @include break-below("md") {
-      width: 50%;
-    }
-    @include break-below("sm") {
-      width: 60%;
-    }
   }
 }
 
 // Creativity
 ////////////////////////////////////////////////////////////////////////////////
 .creativity {
-  height: 200vh;
-  position: relative;
   @include fade-in;
   .textblock {
+    margin: 100vh auto;
     opacity: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+
     &__title,
     &__body {
       color: $white;
@@ -171,10 +171,15 @@ header {
     height: 100%;
     .why__image--large--wrapper {
       position: absolute;
-      width: 10%;
-      height: 50%;
-      top: 30%;
+      width: 10vw;
+      height: 120vh;
+      top: 40vh;
       left: 0;
+      @include break-below("md") {
+        width: 10vw;
+        height: 80vh;
+        top: 20vh;
+      }
       .why__image--large {
         width: 100%;
         height: 100%;
@@ -183,10 +188,15 @@ header {
     }
     .why__video--wrapper {
       position: absolute;
-      width: 15%;
-      height: 50%;
-      top: 10%;
+      width: 15vw;
+      height: 80vh;
+      top: 10vh;
       right: 0;
+      @include break-below("md") {
+        width: 10vw;
+        height: 60vh;
+        top: 0;
+      }
       .why__video {
         width: 100%;
         height: 100%;
@@ -196,12 +206,23 @@ header {
     .why__images--small {
       position: absolute;
       height: auto;
-      top: 10%;
-      left: 50%;
-      .why__image--small {
-        display: inline-block;
+      top: 10vh;
+      left: 50vw;
+      max-width: 25vw;
+      display: flex;
+      @include break-below("md") {
+        top: -10vh;
+        left: 40vw;
+        max-width: 30vw;
+      }
+      .why__image--small--wrapper {
+        width: 50vw;
+        .why__image--small {
+          width: 100%;
+          height: auto;
+        }
         &:first-child {
-          padding-right: 16px;
+          padding-right: 8px;
         }
       }
     }
@@ -215,18 +236,18 @@ header {
   max-height: 80vw;
   margin: 0 auto;
   position: relative;
-  width: 50%;
+  width: 50vw;
   @include break-below("md") {
-    width: 70%;
+    width: 70vw;
   }
   @include break-below("2m") {
-    width: 90%;
+    width: 90vw;
   }
   video {
     position: absolute;
+    width: 100%;
     top: 50%;
     transform: translateY(-50%);
-    width: 100%;
   }
 }
 
@@ -234,7 +255,6 @@ header {
 ////////////////////////////////////////////////////////////////////////////////
 .tagline {
   height: 100vh;
-  max-height: 80vw;
   position: relative;
   .textblock {
     text-align: center;
@@ -257,21 +277,21 @@ header {
 // Signup
 ////////////////////////////////////////////////////////////////////////////////
 .signup {
-  background-color: $light-gray-1;
   height: 100vh;
-  max-height: 80vw;
   position: relative;
   .textblock {
-    text-align: center;
+    max-width: 300px;
     position: absolute;
     left: 0;
     right: 0;
-    top: 30%;
-  }
-  footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    &__body {
+      @include h3;
+      margin-bottom: 36px;
+    }
+    .email-input input:first-child {
+      margin-bottom: 8px;
+    }
   }
 }

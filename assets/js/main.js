@@ -68,11 +68,11 @@ function toggleBackground(element) {
     windowHeight = $(window).height(),
     scrollTop = $(window).scrollTop();
 
-  if (scrollTop > elementTop + elementHeight - windowHeight) {
+  if (scrollTop > elementTop + elementHeight) {
     $("body").addClass("white");
     $("body").removeClass("dark");
     $("#creativity").removeClass("show-text");
-  } else if (scrollTop > elementTop) {
+  } else if (scrollTop > elementTop - windowHeight) {
     $("body").addClass("dark");
     $("body").removeClass("white");
     $("#creativity").addClass("show-text");

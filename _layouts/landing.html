@@ -94,14 +94,14 @@
           <div class="preview__icons">
             <img
               class="preview__icon preview__icon--image"
-              src="/assets/icons/file-image_darkGray2.svg"
+              src="/assets/icons/file-video_darkGray2.svg"
             />
           </div>
         </div>
         <div class="why__images--small">
           {% for image in page.why_section.small_images limit:2 %}
-          <div class="why__image--small preview">
-            <img src="{{ image }}" />
+          <div class="why__image--small--wrapper preview">
+            <img class="why__image--small" src="{{ image }}" />
             <div class="preview__icons">
               <img
                 class="preview__icon preview__icon--image"
@@ -148,11 +148,15 @@
         <h1 class="textblock__title">
           {{ page.sign_up.title }}
         </h1>
+        <h2 class="textblock__body">
+          {{ page.sign_up.body | newline_to_br }}
+        </h2>
         <div class="signup__form">
           {% include signup_form.html %}
         </div>
       </div>
-      {% include footer.html %}
     </section>
+
+    {% include footer.html %}
   </body>
 </html>

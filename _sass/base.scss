@@ -65,7 +65,7 @@ input {
 ////////////////////////////////////////////////////////////////////////////////
 .button {
   @include fade-bg;
-  @extend p;
+  @include p;
   line-height: rem(11px);
 
   display: inline-flex;
@@ -176,7 +176,7 @@ input {
   }
 
   &--large {
-    @extend h3;
+    @include h3;
     height: 40px;
     padding: 0 12px;
     @include gap(12px);
@@ -246,13 +246,13 @@ input {
   }
 
   &--large {
-    @extend h3;
+    @include h3;
     padding: 0 16px;
     height: 48px;
   }
 
   &--medium {
-    @extend p;
+    @include p;
     padding: 0 8px;
     height: 28px;
   }
