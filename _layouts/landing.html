@@ -29,13 +29,21 @@
         </h2>
       </div>
       <div class="desktop__images">
-        {% for image in page.desktop_section.images limit:3 %}
         <img
-          src="{{ image }}"
-          class="desktop__image"
-          id="desktop__image--{{ forloop.index }}"
+          src="{{ page.desktop_section.images[0] }}"
+          class="desktop__image reveal"
+          offset=".1"
         />
-        {% endfor %}
+        <img
+          src="{{ page.desktop_section.images[1] }}"
+          class="desktop__image reveal"
+          offset=".05"
+        />
+        <img
+          src="{{ page.desktop_section.images[2] }}"
+          class="desktop__image reveal"
+          offset=".2"
+        />
       </div>
     </section>
 
@@ -51,7 +59,10 @@
           {{ page.files_section.body_2 }}
         </h2>
       </div>
-      <!-- TODO: add stack code once design is final -->
+
+      <div class="files__stack__wrapper">
+        <div class="files__stack"></div>
+      </div>
     </section>
 
     <section class="creativity" id="creativity">

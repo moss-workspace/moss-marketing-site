@@ -20,6 +20,18 @@
   }
 }
 
+.reveal {
+  opacity: 0;
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.parallax {
+  //transition transform to smooth out jitter
+  @include transition(transform, 0.05s, linear);
+}
+
 // Header
 ////////////////////////////////////////////////////////////////////////////////
 header {
@@ -28,7 +40,6 @@ header {
   top: 0;
   z-index: 900;
   @include fade-in;
-  margin-bottom: 200px;
 }
 
 // Hero
@@ -44,60 +55,76 @@ header {
 
 // Desktop
 ////////////////////////////////////////////////////////////////////////////////
-.desktop__images {
-  width: 75vw;
-  height: 100vh;
-  max-height: 100vw;
-  margin: 0 auto;
-  position: relative;
-  @include break-below("md") {
-    width: 85vw;
-  }
-  @include break-below("sm") {
-    width: 95vw;
-  }
-  .desktop__image {
-    height: auto;
-    position: absolute;
-    top: 50%;
-    opacity: 0;
-    -webkit-transition: opacity 0.09s ease, transform 0.25s ease;
-    -moz-transition: opacity 0.09s ease, transform 0.25s ease;
-    -o-transition: opacity 0.09s ease, transform 0.25s ease;
-    transition: opacity 0.09s ease, transform 0.25s ease;
-    width: 30vw;
+.desktop {
+  margin-top: 200px;
+
+  .desktop__images {
+    width: 75vw;
+    height: 100vh;
+    max-height: 100vw;
+    margin: 0 auto;
+    position: relative;
     @include break-below("md") {
-      width: 40vw;
+      width: 85vw;
     }
     @include break-below("sm") {
-      width: 50vw;
+      width: 95vw;
     }
-    &.visible {
-      opacity: 1;
-    }
-    &:first-child {
-      left: 0;
-      transform: translateY(-70%);
+    .desktop__image {
+      height: auto;
+      position: absolute;
+      top: 50%;
+      -webkit-transition: opacity 0.09s ease, transform 0.25s ease;
+      -moz-transition: opacity 0.09s ease, transform 0.25s ease;
+      -o-transition: opacity 0.09s ease, transform 0.25s ease;
+      transition: opacity 0.09s ease, transform 0.25s ease;
+      width: 30vw;
+      @include break-below("md") {
+        width: 40vw;
+      }
+      @include break-below("sm") {
+        width: 50vw;
+      }
       &.visible {
-        transform: translateY(-80%);
+        opacity: 1;
+      }
+      &:first-child {
+        left: 0;
+        transform: translateY(-70%);
+        &.visible {
+          transform: translateY(-80%);
+        }
+      }
+      &:nth-child(2) {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: translateY(-40%);
+        &.visible {
+          transform: translateY(-50%);
+        }
+      }
+      &:nth-child(3) {
+        right: 0;
+        transform: translateY(-35%);
+        &.visible {
+          transform: translateY(-45%);
+        }
       }
     }
-    &:nth-child(2) {
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      transform: translateY(-40%);
-      &.visible {
-        transform: translateY(-50%);
-      }
-    }
-    &:nth-child(3) {
-      right: 0;
-      transform: translateY(-35%);
-      &.visible {
-        transform: translateY(-45%);
-      }
-    }
+  }
+}
+
+// Files
+////////////////////////////////////////////////////////////////////////////////
+.files__stack__wrapper {
+  height: 200vh;
+  position: relative;
+  .files__stack {
+    height: 100vh;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
   }
 }
 
@@ -123,11 +150,6 @@ header {
 
 // Why
 ////////////////////////////////////////////////////////////////////////////////
-.parallax {
-  //transition transform to smooth out jitter
-  @include transition(transform, 0.05s, linear);
-}
-
 .preview {
   .preview__icons {
     .preview__icon {
@@ -240,7 +262,7 @@ header {
   @include break-below("md") {
     width: 70vw;
   }
-  @include break-below("2m") {
+  @include break-below("sm") {
     width: 90vw;
   }
   video {

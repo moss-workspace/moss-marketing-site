@@ -13,8 +13,8 @@ $(window).resize(function () {
 // Scroll
 ////////////////////////////////////////////////////////////////////////////////
 $(window).scroll(function () {
-  $(".desktop__image").each(function (index) {
-    toggleDesktopImage($(this), index);
+  $(".reveal").each(function () {
+    reveal($(this));
   });
   toggleBackground($("#creativity"));
   $(".parallax").each(function () {
@@ -36,22 +36,12 @@ function sizeHeroVideo() {
 
 // Desktop
 ////////////////////////////////////////////////////////////////////////////////
-function toggleDesktopImage(element, index) {
+function reveal(element) {
   var elementTop = element.offset().top,
     elementHeight = element.outerHeight(),
     windowHeight = $(window).height(),
     scrollTop = $(this).scrollTop(),
-    offsetPercent = 0.1;
-
-  if (index == 1) {
-    offsetPercent = 0.05;
-  }
-
-  if (index == 2) {
-    offsetPercent = 0.2;
-  }
-
-  var offset = windowHeight * offsetPercent;
+    offset = windowHeight * element.attr("offset");
 
   if (scrollTop > elementTop + elementHeight - windowHeight + offset) {
     element.addClass("visible");
