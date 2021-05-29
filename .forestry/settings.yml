@@ -17,6 +17,11 @@ sections:
 - type: document
   path: _config.yml
   label: Site settings
+- type: directory
+  path: uploads
+  label: Media
+  create: none
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
