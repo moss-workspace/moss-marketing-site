@@ -12,7 +12,8 @@ $(window).resize(function () {
 
 // Scroll
 ////////////////////////////////////////////////////////////////////////////////
-$(window).scroll(function () {
+var lastScrollTop = 0;
+$(window).scroll(function (event) {
   $(".reveal").each(function () {
     reveal($(this));
   });
@@ -27,6 +28,14 @@ $(window).scroll(function () {
 
   sizeStack();
   toggleBackground();
+
+  var scrollTop = $(this).scrollTop();
+  if (scrollTop < lastScrollTop) {
+    $("header").addClass("down");
+  } else {
+    $("header").removeClass("down");
+  }
+  lastScrollTop = scrollTop;
 });
 
 // Animations
@@ -109,20 +118,18 @@ function toggleBackground() {
 
   if (scrollTop > $("#signup").offset().top - windowHeight / 2) {
     $("body").removeClass("white");
-    console.log("gray");
   } else if (scrollTop > elementTop + elementHeight) {
     $("body").addClass("white");
     $("body").removeClass("dark");
     $("#creativity").removeClass("show-text");
-    console.log("white");
   } else if (scrollTop > elementTop - windowHeight) {
     $("body").addClass("dark");
     $("body").removeClass("white");
+    $("header").addClass("light");
     $("#creativity").addClass("show-text");
-    console.log("black");
   } else {
     $("body").removeClass("dark");
+    $("header").removeClass("light");
     $("#creativity").removeClass("show-text");
-    console.log("gray");
   }
 }

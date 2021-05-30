@@ -1,6 +1,13 @@
 <header>
   <div class="header__left">
-    <img src="{{ site.header.logo }}" class="header__left__logo" />
+    <img
+      src="{{ site.header.logo }}"
+      class="header__left__logo header__logo--dark"
+    />
+    <img
+      src="{{ site.header.logo_light }}"
+      class="header__left__logo header__logo--light"
+    />
     {% if site.header.weather %}
     <div class="small header__left__weather">
       <!-- TODO: input weather API from openweathermaps (add field in CMS for location) -->

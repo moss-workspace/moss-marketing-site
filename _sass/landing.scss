@@ -37,9 +37,13 @@
 header {
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: -60px;
   z-index: 900;
   @include fade-in;
+  @include transition(top, 0.2s, ease);
+  &.down {
+    top: 0;
+  }
 }
 
 // Hero

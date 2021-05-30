@@ -5,11 +5,21 @@ header {
   .header__left {
     display: flex;
     align-items: center;
-
     &__logo {
       height: 28px;
       width: auto;
       padding-right: 16px;
+    }
+    .header__logo--light {
+      display: none;
+    }
+  }
+  &.light {
+    .header__logo--dark {
+      display: none;
+    }
+    .header__logo--light {
+      display: block;
     }
   }
 }
