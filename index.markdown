@@ -52,6 +52,9 @@ files_section:
   - "/uploads/screen-shot-2021-04-14-at-11-42-37-pm.png"
   - "/uploads/unnamed-1.gif"
   file_list:
+  - name: export_full-res_final_FINAL.tiff
+    size: 32MB
+    type: TIFF image
   - name: photo-1621966447384-1c397069ed75.png
     size: 3.6MB
     type: PNG image
