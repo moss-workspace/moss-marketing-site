@@ -17,6 +17,10 @@ $(window).scroll(function () {
     reveal($(this));
   });
 
+  $(".stack").each(function () {
+    stack($(this));
+  });
+
   $(".parallax").each(function () {
     parallax($(this));
   });
@@ -40,6 +44,13 @@ function reveal(element) {
   } else {
     element.removeClass("visible");
   }
+}
+
+function stack(element) {
+  var elementTop = element.offset().top,
+    elementHeight = element.outerHeight(),
+    windowHeight = $(window).height(),
+    scrollTop = $(window).scrollTop();
 }
 
 function parallax(element) {

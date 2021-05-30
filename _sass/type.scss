@@ -39,6 +39,10 @@
     url("/assets/fonts/LabGrotesque-Thin.woff") format("woff");
 }
 
+* {
+  font-family: "Lab Grotesque", "Helvetica", sans-serif;
+}
+
 // Mixins
 @mixin h1 {
   font-family: "Gascogne", "Times", serif;
