@@ -116,8 +116,22 @@ header {
 }
 
 // Files
-// The stack gets very complex, has it's own scss file: "stack.scss"
+// The stacked content gets very complex & has it's own scss file: "stack.scss"
 ////////////////////////////////////////////////////////////////////////////////
+.files {
+  padding-top: 20vh;
+  position: relative;
+  .textblock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 600;
+  }
+  .files__body--2 {
+    margin-top: 200px;
+  }
+}
 
 // Creativity
 ////////////////////////////////////////////////////////////////////////////////

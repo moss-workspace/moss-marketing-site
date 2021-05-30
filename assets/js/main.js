@@ -47,10 +47,17 @@ function reveal(element) {
 }
 
 function stack(element) {
-  var elementTop = element.offset().top,
-    elementHeight = element.outerHeight(),
-    windowHeight = $(window).height(),
-    scrollTop = $(window).scrollTop();
+  var wrapperTop = $("#files__stack__wrapper").offset().top,
+    wrapperHeight = $("#files__stack__wrapper").outerHeight(),
+    elementZ = element.css("z-index"),
+    scrollTop = $(window).scrollTop(),
+    offset = (wrapperHeight / 2) * (elementZ / 600);
+
+  if (scrollTop > wrapperTop + offset) {
+    element.addClass("visible");
+  } else {
+    element.removeClass("visible");
+  }
 }
 
 function parallax(element) {
