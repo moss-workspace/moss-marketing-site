@@ -48,9 +48,9 @@ files_section:
   - "/uploads/pexels-cottonbro-4503732.jpg"
   file_manager: "/uploads/screen-shot-2021-04-14-at-11-42-37-pm.png"
   screenshots:
+  - "/uploads/screen-shot-2021-04-14-at-11-42-37-pm.png"
   - "/uploads/classic-mac-os-1999-system-9-system-folder.png"
   - "/uploads/unnamed-1.gif"
-  - "/uploads/screen-shot-2021-04-14-at-11-42-37-pm.png"
   file_list:
   - name: new_comp--eport.jpg
     size: 12.6MB
