@@ -42,6 +42,12 @@ fields:
       maxSize: 64
     label: Logo
     description: Choose a logo file
+  - name: logo_light
+    type: file
+    config:
+      maxSize: 64
+    label: Logo light
+    description: Choose a light logo for dark mode
   - name: weather
     type: boolean
     label: Weather
