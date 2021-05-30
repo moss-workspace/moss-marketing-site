@@ -59,7 +59,7 @@ files_section:
     size: 452KB
     type: PNG image
   - name: export_full-res_final_FINAL.tiff
-    size: 32MB
+    size: 32.7MB
     type: TIFF image
   - name: photo-1621966447384-1c397069ed75.png
     size: 3.6MB
