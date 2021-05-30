@@ -25,9 +25,8 @@ $(window).scroll(function () {
     parallax($(this));
   });
 
-  sizeStack($("#files__stack"));
-
-  toggleBackground($("#creativity"));
+  sizeStack();
+  toggleBackground();
 });
 
 // Animations
@@ -86,7 +85,8 @@ function sizeHeroVideo() {
 // Files
 ////////////////////////////////////////////////////////////////////////////////
 function sizeStack(element) {
-  var elementTop = element.offset().top,
+  var element = $("#files__stack"),
+    elementTop = element.offset().top,
     elementHeight = element.outerHeight(),
     windowHeight = $(window).height(),
     scrollTop = $(window).scrollTop();
@@ -98,24 +98,31 @@ function sizeStack(element) {
   }
 }
 
-// Creativity
+// Background
 ////////////////////////////////////////////////////////////////////////////////
-function toggleBackground(element) {
-  var elementTop = element.offset().top,
+function toggleBackground() {
+  var element = $("#creativity"),
+    elementTop = element.offset().top,
     elementHeight = element.outerHeight(),
     windowHeight = $(window).height(),
     scrollTop = $(window).scrollTop();
 
-  if (scrollTop > elementTop + elementHeight) {
+  if (scrollTop > $("#signup").offset().top - windowHeight / 2) {
+    $("body").removeClass("white");
+    console.log("gray");
+  } else if (scrollTop > elementTop + elementHeight) {
     $("body").addClass("white");
     $("body").removeClass("dark");
     $("#creativity").removeClass("show-text");
+    console.log("white");
   } else if (scrollTop > elementTop - windowHeight) {
     $("body").addClass("dark");
     $("body").removeClass("white");
     $("#creativity").addClass("show-text");
+    console.log("black");
   } else {
     $("body").removeClass("dark");
     $("#creativity").removeClass("show-text");
+    console.log("gray");
   }
 }
