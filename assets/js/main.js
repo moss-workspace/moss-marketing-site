@@ -121,6 +121,7 @@ function toggleBackground() {
   } else if (scrollTop > elementTop + elementHeight) {
     $("body").addClass("white");
     $("body").removeClass("dark");
+    $("header").removeClass("light");
     $("#creativity").removeClass("show-text");
   } else if (scrollTop > elementTop - windowHeight) {
     $("body").addClass("dark");
