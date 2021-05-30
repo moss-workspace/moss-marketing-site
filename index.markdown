@@ -52,6 +52,9 @@ files_section:
   - "/uploads/screen-shot-2021-04-14-at-11-42-37-pm.png"
   - "/uploads/unnamed-1.gif"
   file_list:
+  - name: new_comp--eport.jpg
+    size: 12.6MB
+    type: JPEG image
   - name: 4587324986891712983938415387458763473902745398027453890732849057324.jpg
     size: 125KB
     type: JPEG image
