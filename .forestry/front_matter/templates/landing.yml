@@ -95,12 +95,11 @@ fields:
     label: Images
     description: 'Upload files to display as images in windows (Note: actual file
       name will be displayed.'
-  - name: file_manager
-    type: file
-    config:
-      maxSize: 64
-    label: File manager
-    description: Choose an image to represent a file manager
+  - name: screenshots
+    type: image_gallery
+    config: {}
+    label: Screenshots
+    description: Choose 3 images for screenshots
   - name: messages
     type: list
     config:
@@ -136,6 +135,33 @@ fields:
       labelField: 
     label: Notifications
     description: Create notifications
+  - name: file_list
+    type: field_group_list
+    fields:
+    - name: name
+      type: text
+      config:
+        required: false
+      label: Name
+      description: 'Enter the file name (ex: "image.png")'
+    - name: size
+      type: text
+      config:
+        required: false
+      label: Size
+      description: 'Enter the file size (ex: "2MB")'
+    - name: type
+      type: text
+      config:
+        required: false
+      label: Type
+      description: 'Enter the file type (ex: "PNG image")'
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: File list
+    description: Enter info for each file in the list
   label: Files section
   description: The second section
 - name: creativity_section
