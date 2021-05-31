@@ -31,7 +31,7 @@
       <div class="desktop__images">
         {% for image in page.desktop_section.images %}
         <img
-          src="{{ image }}"
+          src="{{ image | relative_url }}"
           class="desktop__image reveal"
           offset="{{ forloop.index | replace: '1', '.1' | replace: '2', '.05' | replace: '3', '.2' }}"
         />
