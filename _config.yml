@@ -4,7 +4,7 @@ email: team@mossworkspace.com
 description: A workflow tool as fluid as creativity itself, Moss clarifies the inherently
   messy creative process by consolidating assets and inspiration into a single visual
   workspace.
-baseurl: ''
+baseurl: "/landing-page"
 url: ''
 twitter_username: jekyllrb
 github_username: jekyll
