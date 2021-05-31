@@ -27,11 +27,6 @@
       margin-left: 0;
     }
 
-    @include break-below("sm") {
-      width: 130vw;
-      margin-left: -15vw;
-    }
-
     .files__stack__content {
       border-radius: 4px;
       width: 90%;
@@ -39,6 +34,11 @@
       padding: 5%;
       position: relative;
       @include transition(all, 0.4s, ease);
+
+      @include break-below("sm") {
+        width: 130%;
+        margin-left: -15%;
+      }
 
       &.shrink {
         border: 2px solid $light-gray-4;
