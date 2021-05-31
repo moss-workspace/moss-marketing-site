@@ -13,6 +13,6 @@ Clone the repo, run:
 
 To start the local server run:
 
-`bundle exec jekyll serve --livereload`
+`bundle exec jekyll serve --baseurl ''`
 
-Note: `--livereload` is optional, but convenient.
+Adding `--baseurl ''` will serve the site from `localhost:4000` instead of serving from the baseurl set in forestry (or _config.yml)
