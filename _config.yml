@@ -22,9 +22,9 @@ exclude:
 tagline: Where ideas grow
 header:
   logo: "/uploads/moss_logo.png"
-  weather: true
+  weather: false
   weather_location: Brooklyn, NY
-  button: "✍️  Sign up"
+  button: "✍  Join the waitlist"
   logo_light: "/uploads/moss-wordmark-small-white_rgb.png"
 footer:
   logo: "/uploads/moss-icon-small__rgb.svg"
