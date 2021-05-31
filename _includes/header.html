@@ -1,11 +1,11 @@
 <header>
   <div class="header__left">
     <img
-      src="{{ site.header.logo }}"
+      src="{{ site.header.logo | relative_url }}"
       class="header__left__logo header__logo--dark"
     />
     <img
-      src="{{ site.header.logo_light }}"
+      src="{{ site.header.logo_light | relative_url }}"
       class="header__left__logo header__logo--light"
     />
     {% if site.header.weather %}

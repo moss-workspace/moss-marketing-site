@@ -10,10 +10,16 @@
         muted
         loop
       >
-        <source src="{{ page.hero_video.landscape }}" type="video/mp4" />
+        <source
+          src="{{ page.hero_video.landscape | relative_url }}"
+          type="video/mp4"
+        />
       </video>
       <video class="hero__video" id="hero__video--portrait" autoplay muted loop>
-        <source src="{{ page.hero_video.portrait }}" type="video/mp4" />
+        <source
+          src="{{ page.hero_video.portrait | relative_url }}"
+          type="video/mp4"
+        />
       </video>
     </div>
 
@@ -79,38 +85,41 @@
         <div class="why__image--large--wrapper preview parallax" speed="2">
           <img
             class="why__image--large"
-            src="{{ page.why_section.large_image }}"
+            src="{{ page.why_section.large_image | relative_url }}"
           />
           <div class="preview__icons">
             <img
               class="preview__icon preview__icon--link"
-              src="/assets/icons/link-linked_blue.svg"
+              src="{{ '/assets/icons/link-linked_blue.svg' | relative_url }}"
             />
           </div>
         </div>
         <div class="why__video--wrapper preview parallax" speed="5">
           <video class="why__video" autoplay muted loop>
-            <source src="{{ page.why_section.video}}" type="video/mp4" />
+            <source
+              src="{{ page.why_section.video | relative_url }}"
+              type="video/mp4"
+            />
           </video>
           <div class="preview__icons">
             <img
               class="preview__icon preview__icon--image"
-              src="/assets/icons/file-video_darkGray2.svg"
+              src="{{ '/assets/icons/file-video_darkGray2.svg' | relative_url }}"
             />
           </div>
         </div>
         <div class="why__images--small">
           {% for image in page.why_section.small_images limit:2 %}
           <div class="why__image--small--wrapper preview">
-            <img class="why__image--small" src="{{ image }}" />
+            <img class="why__image--small" src="{{ image | relative_url }}" />
             <div class="preview__icons">
               <img
                 class="preview__icon preview__icon--image"
-                src="/assets/icons/file-image_darkGray2.svg"
+                src="{{ '/assets/icons/file-image_darkGray2.svg' | relative_url }}"
               />
               <img
                 class="preview__icon preview__icon--link"
-                src="/assets/icons/link-linked_blue.svg"
+                src="{{ '/assets/icons/link-linked_blue.svg' | relative_url }}"
               />
             </div>
           </div>
@@ -130,7 +139,10 @@
       </div>
       <div class="final__animation">
         <video autoplay muted loop>
-          <source src="{{ page.final_section.animation }}" type="video/mp4" />
+          <source
+            src="{{ page.final_section.animation | relative_url }}"
+            type="video/mp4"
+          />
         </video>
       </div>
     </section>
@@ -140,7 +152,10 @@
         <h1 class="textblock__title">
           {{ site.tagline }}
         </h1>
-        <img class="tagline__logo" src="{{ site.footer.logo }}" />
+        <img
+          class="tagline__logo"
+          src="{{ site.footer.logo | relative_url }}"
+        />
       </div>
     </section>
 

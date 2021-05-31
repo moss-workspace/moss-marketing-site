@@ -1,6 +1,9 @@
 <footer>
   <div class="footer__left">
-    <img src="{{ site.footer.logo }}" class="footer__left__logo" />
+    <img
+      src="{{ site.footer.logo | relative_url }}"
+      class="footer__left__logo"
+    />
     <div class="small footer__left__legal">
       {{ site.footer.legal | newline_to_br }}
     </div>

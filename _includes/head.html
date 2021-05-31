@@ -18,44 +18,44 @@
   <!-- CSS -->
   <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}" />
   {% if page.layout == "landing" %}
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/landing.css" />
+  <link rel="stylesheet" href="{{ '/css/landing.css' | relative_url }}" />
   {% endif %}
 
   <!-- Favicon -->
   <link
     rel="apple-touch-icon"
     sizes="180x180"
-    href="{{ site.baseurl }}/assets/favicon/apple-touch-icon.png"
+    href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}"
   />
   <link
     rel="icon"
     type="image/png"
     sizes="32x32"
-    href="{{ site.baseurl }}/assets/favicon/favicon-32x32.png"
+    href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}"
   />
   <link
     rel="icon"
     type="image/png"
     sizes="16x16"
-    href="{{ site.baseurl }}/assets/favicon/favicon-16x16.png"
+    href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}"
   />
   <link
     rel="manifest"
-    href="{{ site.baseurl }}/assets/favicon/site.webmanifest"
+    href="{ '/assets/favicon/site.webmanifest' | relative_url }}"
   />
   <link
     rel="mask-icon"
-    href="{{ site.baseurl }}/assets/favicon/safari-pinned-tab.svg"
+    href="{{ '/assets/favicon/safari-pinned-tab.svg' | relative_url }}"
     color="#121212"
   />
   <link
     rel="shortcut icon"
-    href="{{ site.baseurl }}/assets/favicon/favicon.ico"
+    href="{{ '/assets/favicon/favicon.ico' | relative_url }}"
   />
   <meta name="msapplication-TileColor" content="#121212" />
   <meta
     name="msapplication-config"
-    content="{{ site.baseurl }}/assets/favicon/browserconfig.xml"
+    content="{{ '/assets/favicon/browserconfig.xml' | relative_url }}"
   />
   <meta name="theme-color" content="#fcfcfc" />
 
@@ -68,7 +68,7 @@
   ></script>
   <script
     type="text/javascript"
-    src="{{ site.baseurl }}/assets/js/landing.js"
+    src="{{ '/assets/js/landing.js' | relative_url }}"
   ></script>
   {% endif %}
 
