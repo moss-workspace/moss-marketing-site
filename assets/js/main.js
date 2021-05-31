@@ -2,6 +2,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function () {
   sizeHeroVideo();
+  $(".toast").click(function () {
+    $(this).hide();
+  });
 });
 
 // Resize
@@ -133,4 +136,10 @@ function toggleBackground() {
     $("header").removeClass("light");
     $("#creativity").removeClass("show-text");
   }
+}
+
+// Scroll to signup
+////////////////////////////////////////////////////////////////////////////////
+function scrollToSignup() {
+  $("html, body").animate({ scrollTop: $("#signup").offset().top });
 }

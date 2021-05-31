@@ -347,7 +347,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 .stack__image {
   position: absolute;
-  padding: 5px;
+  padding: 0 5px 5px 5px;
   background-color: $light-gray-2;
   border-radius: 5px;
   text-align: center;
@@ -374,7 +374,6 @@
     p {
       flex: 1;
       color: $dark-gray-2;
-      margin: 0;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -531,7 +530,6 @@
       margin-right: 5px;
     }
     &--name {
-      margin: 0;
       flex: 1;
       color: $dark-gray-3;
       overflow: hidden;
@@ -541,7 +539,6 @@
     &--size,
     &--type {
       flex-shrink: 0;
-      margin: 0;
       width: 70px;
       color: $dark-gray-1;
       overflow: hidden;

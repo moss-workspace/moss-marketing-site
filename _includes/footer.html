@@ -1,13 +1,13 @@
 <footer>
   <div class="footer__left">
     <img src="{{ site.footer.logo }}" class="footer__left__logo" />
-    <h4 class="small footer__left__legal">
+    <div class="small footer__left__legal">
       {{ site.footer.legal | newline_to_br }}
-    </h4>
+    </div>
   </div>
   <div class="footer__right">
     {% for link in site.footer.links %}
-    <div class="small footer__right__link">
+    <p class="footer__right__link">
       {% if link.open_in_new_tab %}
       <a href="{{ link.url }}" target="_blank">
         {% if link.social_icon %}
@@ -21,7 +21,7 @@
         {% endif %} {{ link.text }}
       </a>
       {% endif %}
-    </div>
+    </p>
     {% endfor %}
   </div>
 </footer>

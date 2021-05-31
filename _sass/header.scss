@@ -1,7 +1,22 @@
+@import "variables";
+@import "base";
+
 header {
   height: 28px;
   display: flex;
   justify-content: space-between;
+  #header__scrollbutton {
+    display: none;
+  }
+  @include break-below("sm") {
+    .header__left__weather,
+    .header__form {
+      display: none;
+    }
+    #header__scrollbutton {
+      display: block;
+    }
+  }
   .header__left {
     display: flex;
     align-items: center;
@@ -14,12 +29,35 @@ header {
       display: none;
     }
   }
+  .header__right {
+    @include gap(5px);
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    justify-content: flex-end;
+    a {
+      text-decoration: none;
+    }
+    .header__form {
+      flex: 1;
+      .email-input {
+        display: flex;
+        input {
+          flex: 1;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
   &.light {
     .header__logo--dark {
       display: none;
     }
     .header__logo--light {
       display: block;
+    }
+    button {
+      @include button--black;
     }
   }
 }

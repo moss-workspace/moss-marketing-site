@@ -1,6 +1,5 @@
 @import "variables";
 @import "type";
-@import "base";
 
 // General
 ////////////////////////////////////////////////////////////////////////////////
@@ -272,7 +271,7 @@ header {
     width: 70vw;
   }
   @include break-below("sm") {
-    width: 90vw;
+    width: 80vw;
   }
   video {
     position: absolute;

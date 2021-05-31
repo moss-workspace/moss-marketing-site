@@ -1,13 +1,12 @@
 @import "variables";
 
 footer {
-  height: 36px;
+  height: 42px;
   display: flex;
   justify-content: space-between;
   .footer__left {
     display: flex;
     align-items: center;
-
     &__logo {
       height: 100%;
       width: auto;
@@ -19,6 +18,7 @@ footer {
   }
   .footer__right {
     text-align: right;
+    @include gap-vertical(3px);
     a {
       text-decoration: none;
       color: $dark-gray-1;

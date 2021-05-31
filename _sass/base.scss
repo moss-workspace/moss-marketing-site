@@ -53,8 +53,43 @@ input {
   }
 }
 
+// Toast
+////////////////////////////////////////////////////////////////////////////////
+.toast {
+  display: flex;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 900;
+  @include fade;
+  @include shadow-toast;
+  &:hover,
+  &:active {
+    background-color: $white;
+  }
+  p {
+    color: $dark-gray-1;
+  }
+  a {
+    color: $dark-gray-2;
+  }
+}
+
 // Button
 ////////////////////////////////////////////////////////////////////////////////
+@mixin button--black {
+  color: $light-gray-3;
+  background-color: $black;
+  border: 1px solid $dark-gray-3;
+  &:hover {
+    background: $dark-gray-4;
+  }
+  &:active {
+    background: $dark-gray-3;
+  }
+}
+
 .button {
   @include fade-bg;
   @include p;
@@ -154,12 +189,16 @@ input {
     }
   }
 
+  &--black {
+    @include button--black;
+  }
+
   &--floating {
     @include shadow-toast;
   }
 
   &--borderless {
-    border: 0;
+    border: 0 !important;
   }
 
   // Size
