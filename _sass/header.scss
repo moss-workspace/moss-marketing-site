@@ -5,6 +5,7 @@ header {
   height: 28px;
   display: flex;
   justify-content: space-between;
+  background-color: transparent !important;
   #header__scrollbutton {
     display: none;
   }
@@ -53,7 +54,7 @@ header {
       }
     }
   }
-  &.light {
+  &.dark {
     .header__logo--dark {
       display: none;
     }
@@ -62,6 +63,17 @@ header {
     }
     button {
       @include button--black;
+    }
+  }
+  &.white {
+    .header__logo--dark {
+      display: block;
+    }
+    .header__logo--light {
+      display: none;
+    }
+    button {
+      @include button--white;
     }
   }
 }

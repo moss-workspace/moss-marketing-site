@@ -8,9 +8,9 @@
       src="{{ site.header.logo_light | relative_url }}"
       class="header__left__logo header__logo--light"
     />
-    {% if site.header.weather %}
+    {% if site.header.weather == true %}
     <div class="small header__left__weather">
-      <!-- TODO: input weather API from openweathermaps (add field in CMS for location) -->
+      <!-- TODO: input weather API from openweathermaps -->
       Weather goes here<br />
       it's 2 lines
     </div>

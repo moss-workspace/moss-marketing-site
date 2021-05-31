@@ -120,20 +120,17 @@ function toggleBackground() {
     scrollTop = $(window).scrollTop();
 
   if (scrollTop > $("#signup").offset().top - windowHeight / 2) {
-    $("body").removeClass("white");
+    $("body, header").removeClass("white");
   } else if (scrollTop > elementTop + elementHeight) {
-    $("body").addClass("white");
-    $("body").removeClass("dark");
-    $("header").removeClass("light");
+    $("body, header").addClass("white");
+    $("body, header").removeClass("dark");
     $("#creativity").removeClass("show-text");
   } else if (scrollTop > elementTop - windowHeight) {
-    $("body").addClass("dark");
-    $("body").removeClass("white");
-    $("header").addClass("light");
+    $("body, header").addClass("dark");
+    $("body, header").removeClass("white");
     $("#creativity").addClass("show-text");
   } else {
-    $("body").removeClass("dark");
-    $("header").removeClass("light");
+    $("body, header").removeClass("dark");
     $("#creativity").removeClass("show-text");
   }
 }

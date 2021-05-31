@@ -90,6 +90,20 @@ input {
   }
 }
 
+@mixin button--white {
+  background: $white;
+  color: $dark-gray-2;
+  border: 1px solid $light-gray-2;
+
+  &:hover {
+    background: $light-gray-1;
+  }
+
+  &:active {
+    background: $light-gray-2;
+  }
+}
+
 .button {
   @include fade-bg;
   @include p;
@@ -134,17 +148,7 @@ input {
 
   // Colors
   &--white {
-    background: $white;
-    color: $dark-gray-2;
-    border: 1px solid $light-gray-2;
-
-    &:hover {
-      background: $light-gray-1;
-    }
-
-    &:active {
-      background: $light-gray-2;
-    }
+    @include button--white;
   }
 
   &--gray-1 {
