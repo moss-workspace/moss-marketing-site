@@ -9,7 +9,7 @@
           class="stack__file stack"
           offset="0"
         >
-          <img class="stack__file__image" src="{{ file }}" />
+          <img class="stack__file__image" src="{{ file | relative_url }}" />
           <p class="stack__file__name">
             {{ file | split: '/' | last }}
           </p>
@@ -32,7 +32,7 @@
           </p>
           <div class="stack__image__top--rect"></div>
         </div>
-        <img class="stack__file__image" src="{{ image }}" />
+        <img class="stack__file__image" src="{{ image | relative_url }}" />
       </div>
       {% endfor %}
 
@@ -42,7 +42,7 @@
         id="stack__screenshot--{{ forloop.index }}"
         class="stack__screenshot stack"
         offset="0"
-        src="{{ screenshot }}"
+        src="{{ screenshot | relative_url }}"
       />
       {% endfor %}
 
@@ -54,7 +54,7 @@
         >
           <img
             class="stack__filelist__file--icon"
-            src="/assets/icons/file-image_darkGray3.svg"
+            src="{{ '/assets/icons/file-image_darkGray3.svg' | relative_url }}"
           />
           <p class="stack_filelist__file--name">
             {{ file.name }}
@@ -89,7 +89,7 @@
       >
         <img
           class="stack__notification__icon"
-          src="{{ notification.icon }}"
+          src="{{ notification.icon | relative_url }}"
           alt="Notification icon"
         />
         <div class="stack__notification__text">
