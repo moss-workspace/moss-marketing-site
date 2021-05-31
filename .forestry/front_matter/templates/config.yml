@@ -23,11 +23,11 @@ fields:
 - type: text
   name: baseurl
   label: Base URL
-  description: The base URL of your site
+  description: 'The base URL of your site (ex: /blog)'
 - type: text
   name: url
   label: URL
-  description: 'The actual URL of your site (ex: site.com/blog)'
+  description: 'The URL of your site (ex: mossoworkspace.com)'
 - type: list
   name: exclude
   label: exclude
