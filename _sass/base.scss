@@ -12,6 +12,12 @@ body {
   @include fade-in;
   .dark {
     background-color: $black;
+    h1 {
+      color: $white;
+    }
+    h2 {
+      color: $light-gray-2;
+    }
   }
 }
 

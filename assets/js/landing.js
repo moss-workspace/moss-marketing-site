@@ -31,7 +31,7 @@ $(window).scroll(function (event) {
   });
 
   sizeStack();
-  // toggleBackground();
+  toggleBackgroundColor();
 });
 
 // Animations
@@ -105,22 +105,17 @@ function sizeStack(element) {
 
 // Background
 ////////////////////////////////////////////////////////////////////////////////
-function toggleBackground() {
-  var element = $("#creativity"),
-    elementTop = element.offset().top,
-    elementHeight = element.outerHeight(),
-    windowHeight = $(window).height(),
+function toggleBackgroundColor() {
+  var windowHeight = $(window).height(),
     scrollTop = $(window).scrollTop();
 
-  if (scrollTop > $("#signup").offset().top - windowHeight / 2) {
-    $("body, header").removeClass("white");
-  } else if (scrollTop > elementTop + elementHeight) {
-    $("body, header").addClass("white");
+  if (
+    scrollTop >
+    $("#files").offset().top + $("#files").outerHeight() - windowHeight / 2
+  ) {
     $("body, header").removeClass("dark");
-  } else if (scrollTop > elementTop - windowHeight) {
+  } else if (scrollTop > $("#desktop").offset().top - windowHeight / 2) {
     $("body, header").addClass("dark");
-    $("body, header").removeClass("white");
-    $("#creativity").addClass("show-text");
   } else {
     $("body, header").removeClass("dark");
   }
