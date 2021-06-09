@@ -249,11 +249,11 @@ fields:
     label: Note
     description: Choose an image of a note
   - name: tag
-    type: text
+    type: file
     config:
-      required: false
+      maxSize: 64
     label: Tag
-    description: Enter the text for a tag
+    description: Choose an image for the tag
   label: Why section
   description: The fourth section
 - name: final_section
