@@ -122,5 +122,27 @@ fields:
     description: 'Create links for the footer '
   label: Footer
   description: Choose how the site-wide footer displays
+- name: privacy
+  type: field_group
+  config: {}
+  fields:
+  - name: cookie_prompt
+    type: text
+    config:
+      required: false
+    label: Cookie prompt
+    description: Enter the cookie prompt message
+  - name: privacy_policy
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Privacy policy
+    description: Enter your privacy policy
+  label: Privacy
+  description: Settings for privacy &amp; cookies
 pages:
 - _config.yml
