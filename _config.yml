@@ -34,8 +34,8 @@ footer:
     All rights reserved
   links:
   - text: Privacy Policy
-    url: https://www.notion.so/Privacy-a27b700b29334cf4a8984039f3595879
-    open_in_new_tab: true
+    url: "/privacy"
+    open_in_new_tab: false
     social_icon: false
   social:
   - icon: Twitter
