@@ -2,28 +2,21 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <div class="hero">
-      <video
-        class="hero__video"
-        id="hero__video--landscape"
-        autoplay
-        muted
-        loop
-      >
-        <source
-          src="{{ page.hero_video.landscape | relative_url }}"
-          type="video/mp4"
-        />
-      </video>
-      <video class="hero__video" id="hero__video--portrait" autoplay muted loop>
-        <source
-          src="{{ page.hero_video.portrait | relative_url }}"
-          type="video/mp4"
-        />
-      </video>
-    </div>
-
     {% include cookie_prompt.html %} {% include header.html %}
+
+    <section class="hero">
+      <div class="textblock">
+        <h1 class="textblock__title">
+          {{ page.hero.title }}
+        </h1>
+        <h2 class="textblock__body">
+          {{ page.hero.body }}
+        </h2>
+        <div class="signup__form">
+          {% include signup_form.html %}
+        </div>
+      </div>
+    </section>
 
     <section class="desktop">
       <div class="textblock">
@@ -156,20 +149,6 @@
           class="tagline__logo"
           src="{{ site.footer.logo | relative_url }}"
         />
-      </div>
-    </section>
-
-    <section class="signup" id="signup">
-      <div class="textblock">
-        <h1 class="textblock__title">
-          {{ page.sign_up.title }}
-        </h1>
-        <h3 class="textblock__body">
-          {{ page.sign_up.body | newline_to_br }}
-        </h3>
-        <div class="signup__form">
-          {% include signup_form.html %}
-        </div>
       </div>
     </section>
 

@@ -31,7 +31,7 @@ $(window).scroll(function (event) {
   });
 
   sizeStack();
-  toggleBackground();
+  // toggleBackground();
 });
 
 // Animations

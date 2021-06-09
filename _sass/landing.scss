@@ -34,11 +34,12 @@
 // Hero
 ////////////////////////////////////////////////////////////////////////////////
 .hero {
-  display: flex;
-  .hero__video {
-    object-fit: cover;
-    width: 100vw;
-    height: calc(100vh - 60px);
+  height: calc(100vh - 60px);
+  .textblock {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
   }
 }
 
