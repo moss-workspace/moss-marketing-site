@@ -117,9 +117,12 @@ why_section:
     No more office-work. No more sifting, sorting, digging. No more asking where, why and what. the. fuck.
 
     No more missing out on the unexpected chemistry that happens when everything is at your fingertips. No more workarounds to compensate for a workspace that was never even made for us.
-  images: []
-  note: ''
-  tag: ''
+  images:
+  - "/uploads/group-2-1.png"
+  - "/uploads/image-2-1.png"
+  - "/uploads/image-1.png"
+  note: "/uploads/note.png"
+  tag: "/uploads/frame-655.png"
 final_section:
   title: Moss transforms the desktop from a rigid, siloed system into an open and
     collaborative digital environment.
