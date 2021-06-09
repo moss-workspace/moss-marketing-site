@@ -111,7 +111,7 @@
 .files {
   padding-top: 10vh;
   position: relative;
-  .textblock {
+  .textblock:first-of-type {
     position: absolute;
     top: 0;
     left: 0;

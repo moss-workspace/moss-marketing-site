@@ -41,17 +41,23 @@
     <section class="files">
       <div class="textblock">
         <h1 class="textblock__title">
-          {{ page.files_section.title }}
+          {{ page.files_section.title_1 }}
         </h1>
         <h2 class="textblock__body files__body--1">
           {{ page.files_section.body_1 }}
         </h2>
-        <h2 class="textblock__body files__body--2">
-          {{ page.files_section.body_2 }}
-        </h2>
       </div>
 
       {% include stack.html %}
+
+      <div class="textblock">
+        <h1 class="textblock__title">
+          {{ page.files_section.title_2 }}
+        </h1>
+        <h2 class="textblock__body files__body--1">
+          {{ page.files_section.body_2 }}
+        </h2>
+      </div>
     </section>
 
     <section class="creativity" id="creativity">
