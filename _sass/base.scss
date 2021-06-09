@@ -25,6 +25,31 @@ footer {
   padding: 16px;
 }
 
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: -60px;
+  z-index: 900;
+  @include fade-in;
+  @include transition(top, 0.2s, ease);
+  &.down {
+    top: 0;
+  }
+}
+
+#cookieprompt {
+  display: none;
+  padding-right: 3px;
+  z-index: 999;
+  &:hover,
+  &:active {
+    background-color: $white;
+    cursor: default;
+  }
+}
+
+// Buttons & inputs
+////////////////////////////////////////////////////////////////////////////////
 .input-button {
   display: flex;
   width: 100%;
@@ -53,6 +78,32 @@ input {
   }
 }
 
+.toggle {
+  float: right;
+  width: 20px;
+  border-radius: 100px;
+  background-color: $light-gray-4;
+  padding: 1px;
+  @include transition(background-color, 0.15s, ease);
+  &:hover {
+    cursor: pointer;
+  }
+  &--circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 100px;
+    background-color: $white;
+    margin-left: 0;
+    @include transition(margin, 0.15s, ease);
+  }
+  &.on {
+    background-color: $blue;
+    .toggle--circle {
+      margin-left: 10px;
+    }
+  }
+}
+
 // Toast
 ////////////////////////////////////////////////////////////////////////////////
 .toast {
@@ -64,15 +115,48 @@ input {
   z-index: 900;
   @include fade;
   @include shadow-toast;
+  @include gap(5px);
   &:hover,
   &:active {
     background-color: $white;
   }
   p {
     color: $dark-gray-1;
+    display: inline;
   }
   a {
     color: $dark-gray-2;
+  }
+}
+
+// Default content
+////////////////////////////////////////////////////////////////////////////////
+.default__content {
+  margin: 100px auto 0 auto;
+  min-height: 90vh;
+  width: 80vw;
+  max-width: 400px;
+
+  h1 {
+    margin-bottom: 26px;
+  }
+
+  .divider {
+    color: $light-gray-2;
+    margin-top: 62px;
+  }
+
+  .privacy__toggle__wrapper {
+    width: 100%;
+    margin-top: 12px;
+    .privacy__toggle__icon,
+    .privacy__toggle__text {
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .toggle {
+      float: right;
+    }
   }
 }
 

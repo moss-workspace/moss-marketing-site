@@ -1,0 +1,35 @@
+---
+permalink: /privacy
+layout: default
+---
+
+<h1>
+  Privacy policy
+</h1>
+<p>
+  {{ site.privacy.privacy_policy | newline_to_br }}
+</p>
+
+<hr class="divider" />
+
+<div class="privacy__toggle__wrapper">
+  <p class="privacy__toggle__icon">
+    🍪
+  </p>
+  <p class="privacy__toggle__text">
+    Allow cookies for anonymous analytics
+  </p>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var consent = getCookie("analytics-consent");
+      if (consent == "true") {
+        $("#privacy__toggle").addClass("on");
+      }
+    });
+  </script>
+
+  <div id="privacy__toggle" class="toggle" onclick="toggleCookieConsent();">
+    <div class="toggle--circle"></div>
+  </div>
+</div>

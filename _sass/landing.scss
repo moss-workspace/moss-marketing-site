@@ -31,20 +31,6 @@
   @include transition(transform, 0.05s, linear);
 }
 
-// Header
-////////////////////////////////////////////////////////////////////////////////
-header {
-  position: sticky;
-  position: -webkit-sticky;
-  top: -60px;
-  z-index: 900;
-  @include fade-in;
-  @include transition(top, 0.2s, ease);
-  &.down {
-    top: 0;
-  }
-}
-
 // Hero
 ////////////////////////////////////////////////////////////////////////////////
 .hero {

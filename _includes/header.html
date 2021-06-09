@@ -1,13 +1,15 @@
 <header>
   <div class="header__left">
-    <img
-      src="{{ site.header.logo | relative_url }}"
-      class="header__left__logo header__logo--dark"
-    />
-    <img
-      src="{{ site.header.logo_light | relative_url }}"
-      class="header__left__logo header__logo--light"
-    />
+    <a href="/">
+      <img
+        src="{{ site.header.logo | relative_url }}"
+        class="header__left__logo header__logo--dark"
+      />
+      <img
+        src="{{ site.header.logo_light | relative_url }}"
+        class="header__left__logo header__logo--light"
+      />
+    </a>
     {% if site.header.weather == true %}
     <div class="small header__left__weather">
       <!-- TODO: input weather API from openweathermaps -->
@@ -56,12 +58,12 @@
         <!-- mc responses -->
         <div id="mce-responses" class="clear">
           <div
-            class="response toast button button--medium button--white"
+            class="response toast button button--medium button--white button--borderless"
             id="mce-error-response"
             style="display: none;"
           ></div>
           <div
-            class="response toast button button--medium button--white"
+            class="response toast button button--medium button--white button--borderless"
             id="mce-success-response"
             style="display: none;"
           ></div>

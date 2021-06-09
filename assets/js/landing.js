@@ -3,7 +3,9 @@
 $(document).ready(function () {
   sizeHeroVideo();
   $(".toast").click(function () {
-    $(this).hide();
+    if ($(this) !== $("#cookieprompt")) {
+      $(this).hide();
+    }
   });
 });
 
@@ -15,7 +17,6 @@ $(window).resize(function () {
 
 // Scroll
 ////////////////////////////////////////////////////////////////////////////////
-var lastScrollTop = 0;
 $(window).scroll(function (event) {
   $(".reveal").each(function () {
     reveal($(this));
@@ -31,14 +32,6 @@ $(window).scroll(function (event) {
 
   sizeStack();
   toggleBackground();
-
-  var scrollTop = $(this).scrollTop();
-  if (scrollTop < lastScrollTop) {
-    $("header").addClass("down");
-  } else {
-    $("header").removeClass("down");
-  }
-  lastScrollTop = scrollTop;
 });
 
 // Animations
