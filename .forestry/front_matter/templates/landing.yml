@@ -208,6 +208,12 @@ fields:
         format: markdown
     label: Body
     description: Enter your body text
+  - name: image_grid
+    type: image_gallery
+    config: {}
+    label: Image grid
+    description: 'Choose images for the grid (note: the first image will be pulled
+      out of the grid)'
   label: Creativity section
   description: The third section
 - name: why_section
@@ -230,23 +236,24 @@ fields:
         format: markdown
     label: Body
     description: Enter your body text
-  - name: large_image
-    type: file
-    config:
-      maxSize: 64
-    label: Large image
-    description: Select a large image for the left margin
-  - name: video
-    type: file
-    config:
-      maxSize: 64
-    description: Select a video for the right margin
-    label: Video
-  - name: small_images
+  - name: images
     type: image_gallery
     config: {}
-    label: Small images
-    description: Select two small images
+    label: Images
+    description: 'Choose 3 images (note: images show left to right, first image is
+      on the left)'
+  - name: note
+    type: file
+    config:
+      maxSize: 64
+    label: Note
+    description: Choose an image of a note
+  - name: tag
+    type: text
+    config:
+      required: false
+    label: Tag
+    description: Enter the text for a tag
   label: Why section
   description: The fourth section
 - name: final_section
@@ -269,78 +276,14 @@ fields:
         format: markdown
     label: Body
     description: Enter your body text
-  - name: animation
-    type: file
-    config:
-      maxSize: 64
-    label: Animation
-    description: Select a video for the animation
+  - name: images
+    type: image_gallery
+    config: {}
+    label: Images
+    description: 'Choose 4 images (note: images show left to right, first image is
+      on the left)'
   label: Final section
   description: The fifth section
-- name: sign_up
-  type: field_group
-  config: {}
-  fields:
-  - name: title
-    type: text
-    config:
-      required: false
-    label: Title
-    description: Enter your title
-  - name: body
-    type: textarea
-    default: ''
-    config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
-    label: Body
-    description: Enter your body text
-  - name: placeholder
-    type: text
-    config:
-      required: false
-    label: Placeholder
-    description: Enter placeholder text for the email field
-  - name: button
-    type: text
-    config:
-      required: false
-    label: Button
-    description: Enter text for the sign up button
-  - name: links
-    type: field_group_list
-    fields:
-    - name: text
-      type: text
-      config:
-        required: false
-      label: Text
-      description: Enter the text of the link
-    - name: url
-      type: text
-      config:
-        required: false
-      label: URL
-      description: Enter the url to redirect to
-    - name: open_in_new_tab
-      type: boolean
-      label: Open in new tab
-      description: Should this open in a new tab?
-      default: true
-    - name: social_icon
-      type: boolean
-      label: Social icon
-      description: Does this need a social icon?
-    config:
-      min: 
-      max: 
-      labelField: 
-    label: Links
-    description: Enter links
-  label: Sign up
-  description: The sign up area
 pages:
 - index.markdown
 - index.markdown
