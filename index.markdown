@@ -128,6 +128,10 @@ final_section:
     collaborative digital environment.
   body: A workflow tool as fluid as creativity itself. Where you can organize, experiment,
     and iterate together in one place.
-  images: []
+  images:
+  - "/uploads/butterfly-2.png"
+  - "/uploads/image-10.png"
+  - "/uploads/flower-2.png"
+  - "/uploads/sky-2.png"
 
 ---
