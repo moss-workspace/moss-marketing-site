@@ -6,7 +6,7 @@
 
     <section class="hero">
       <div class="textblock">
-        <h1 class="textblock__title">
+        <h1 class="textblock__title huge">
           {{ page.hero.title }}
         </h1>
         <h2 class="textblock__body">
@@ -155,6 +155,9 @@
           class="tagline__logo"
           src="{{ site.footer.logo | relative_url }}"
         />
+        <div class="signup__form">
+          {% include signup_form.html %}
+        </div>
       </div>
     </section>
 

@@ -2,22 +2,19 @@
 @import "base";
 
 header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: -60px;
+  z-index: 900;
+  @include fade-in;
+  @include transition(top, 0.2s, ease);
+  &.down {
+    top: 0;
+  }
   height: 28px;
   display: flex;
   justify-content: space-between;
   background-color: transparent !important;
-  #header__scrollbutton {
-    display: none;
-  }
-  @include break-below("sm") {
-    .header__left__weather,
-    .header__form {
-      display: none;
-    }
-    #header__scrollbutton {
-      display: block;
-    }
-  }
   .header__left {
     display: flex;
     align-items: center;

@@ -5,8 +5,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 .textblock {
   margin: 100px auto;
-  max-width: 450px;
+  max-width: 700px;
   width: 40vw;
+  text-align: center;
   @include break-below("md") {
     width: 50vw;
   }
@@ -16,6 +17,10 @@
   &__title {
     margin-bottom: 16px;
     margin-top: 0;
+  }
+  &__body {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
 

@@ -45,25 +45,36 @@
 }
 
 // Mixins
+@mixin huge {
+  font-family: "Gascogne", "Times", serif;
+  font-weight: 100;
+  font-size: rem(70px);
+  line-height: rem(74px);
+  @include break-below("md") {
+    font-size: rem(46px);
+    line-height: rem(48px);
+  }
+}
+
 @mixin h1 {
   font-family: "Gascogne", "Times", serif;
   font-weight: 100;
-  font-size: rem(42px);
-  line-height: rem(48px);
+  font-size: rem(52px);
+  line-height: rem(62px);
   @include break-below("md") {
-    font-size: rem(26px);
-    line-height: rem(30px);
+    font-size: rem(34px);
+    line-height: rem(40px);
   }
 }
 
 @mixin h2 {
   font-family: "Lab Grotesque", "Helvetica", sans-serif;
   font-weight: 200;
-  font-size: rem(18px);
-  line-height: rem(22px);
+  font-size: rem(22px);
+  line-height: rem(30px);
   @include break-below("sm") {
-    font-size: rem(13px);
-    line-height: rem(16px);
+    font-size: rem(16px);
+    line-height: rem(20px);
   }
 }
 
@@ -92,14 +103,19 @@
 }
 
 // Styles
+.huge {
+  @include huge;
+  color: $black;
+}
+
 h1 {
   @include h1;
-  color: $dark-gray-4;
+  color: $black;
 }
 
 h2 {
   @include h2;
-  color: $dark-gray-3;
+  color: $dark-gray-2;
 }
 
 h3 {

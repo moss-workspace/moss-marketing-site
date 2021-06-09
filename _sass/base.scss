@@ -6,15 +6,12 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: $light-gray-1;
+  background-color: $white;
   font-style: normal;
   box-sizing: border-box;
   @include fade-in;
   .dark {
     background-color: $black;
-  }
-  .white {
-    background-color: $white;
   }
 }
 
@@ -23,18 +20,6 @@ body {
 header,
 footer {
   padding: 16px;
-}
-
-header {
-  position: sticky;
-  position: -webkit-sticky;
-  top: -60px;
-  z-index: 900;
-  @include fade-in;
-  @include transition(top, 0.2s, ease);
-  &.down {
-    top: 0;
-  }
 }
 
 #cookieprompt {
