@@ -8,24 +8,42 @@ fields:
     required: false
   label: Permalink
   description: The URL extension for this page
-- name: hero_video
+- name: hero
   type: field_group
   config: {}
   fields:
-  - name: landscape
-    type: file
+  - name: title
+    type: text
     config:
-      maxSize: 64
-    label: Landscape
-    description: Choose a landscape version of the video
-  - name: portrait
-    type: file
+      required: false
+    label: Title
+    description: Enter your title
+  - name: body
+    type: text
     config:
-      maxSize: 64
-    label: Portrait
-    description: Choose a portrait version of the video
-  label: Hero video
-  description: Choose a hero video
+      required: false
+    label: Body
+    description: Enter your body text
+  - name: placeholder
+    type: text
+    config:
+      required: false
+    label: Placeholder
+    description: Enter the placeholder text for the email input
+  - name: button
+    type: text
+    config:
+      required: false
+    label: Button
+    description: Enter the email button text
+  - name: subtitle
+    type: text
+    config:
+      required: false
+    label: Subtitle
+    description: Enter a subtitle
+  label: Hero
+  description: Choose content for the hero
 - name: desktop_section
   type: field_group
   config: {}
