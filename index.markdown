@@ -95,7 +95,7 @@ files_section:
   - name: photo-1621966447384-1c397069ed75.png
     size: 3.6MB
     type: PNG image
-  title_1: ''
+  title_1: Files. Folders. Function.
   title_2: But what if your work was never meant for the cubicle?
 creativity_section:
   title: What about creativity?
