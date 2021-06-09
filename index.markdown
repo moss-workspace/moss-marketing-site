@@ -18,8 +18,8 @@ desktop_section:
 files_section:
   title_1: Files. Folders. Function.
   body_1: 'It was designed to emulate the office, and with it – office-work. Sifting
-  and sorting. Emptying the trash. A rote process built for rote tasks. After 40
-  years we’ve universally accepted this workspace as status-quo. '
+    and sorting. Emptying the trash. A rote process built for rote tasks. After 40
+    years we’ve universally accepted this workspace as status-quo. '
   messages:
   - Where are those references you pulled?
   - just throw them in the deck, presentation in 5
@@ -102,7 +102,15 @@ creativity_section:
   title: What about creativity?
   body: The creative process is messy, and fragile. It requires cultivation. Care.
     Room to grow. A space designed specifically for it, not in spite of it.
-  image_grid: []
+  image_grid:
+  - "/uploads/group-3-6.png"
+  - "/uploads/image-3-1.png"
+  - "/uploads/image-8.png"
+  - "/uploads/image-4.png"
+  - "/uploads/image-6.png"
+  - "/uploads/image-9.png"
+  - "/uploads/image-7.png"
+  - "/uploads/image-5.png"
 why_section:
   title: 'That’s why we’re building Moss. '
   body: |-
