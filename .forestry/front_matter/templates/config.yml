@@ -48,20 +48,6 @@ fields:
       maxSize: 64
     label: Logo light
     description: Choose a light logo for dark mode
-  - name: weather
-    type: boolean
-    label: Weather
-    description: Do you want to display the weather?
-    default: true
-  - name: weather_location
-    type: text
-    config:
-      required: false
-    label: Weather location
-    showOnly:
-      field: weather
-      value: true
-    description: Which location do you want to show weather for?
   - name: button
     type: text
     config:
@@ -90,6 +76,28 @@ fields:
         format: markdown
     label: Legal
     description: Enter legal info (no more than 3 lines)
+  - name: social
+    type: field_group_list
+    fields:
+    - name: icon
+      type: text
+      config:
+        required: false
+      label: Icon
+      description: 'Enter the name of the icon to display (ex: facebook, instagram,
+        etc.)'
+    - name: url
+      type: text
+      config:
+        required: false
+      label: URL
+      description: Enter the url
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Social
+    description: Choose social links
   - name: links
     type: field_group_list
     fields:
@@ -110,10 +118,6 @@ fields:
       label: Open in new tab
       description: Open the link in a new tab?
       default: true
-    - name: social_icon
-      type: boolean
-      label: Social icon
-      description: Do you want to display a social icon with this link?
     config:
       min: 
       max: 
