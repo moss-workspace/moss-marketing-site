@@ -37,11 +37,9 @@ footer:
     url: https://www.notion.so/Privacy-a27b700b29334cf4a8984039f3595879
     open_in_new_tab: true
     social_icon: false
-  - text: Twitter
-    url: https://twitter.com/mossworkspace
-    open_in_new_tab: true
-    social_icon: true
   social:
+  - icon: Twitter
+    url: https://twitter.com/mossworkspace
   - icon: Instagram
     url: https://www.instagram.com/mossworkspace/
 privacy:
