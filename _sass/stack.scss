@@ -12,7 +12,7 @@
 }
 
 .files__stack__wrapper {
-  height: 200vh;
+  height: 300vh;
   position: relative;
   .files__stack {
     height: 100vh;
@@ -42,56 +42,68 @@
 
       &.shrink {
         border: 2px solid $light-gray-4;
-        transform: perspective(100px) translateZ(-150px) translateY(40vh);
+        transform: perspective(100px) translateZ(-80px) translateY(10vh);
       }
 
       // Note: z-index defines load order
-      // Lowest number appears first
+      // Lowest number appears first, do not exceed 600
 
       // Layout desktop files
       .stack__file {
         // give all a fallback
         z-index: 190;
       }
-
+      #stack__file--30,
+      #stack__file--20,
       #stack__file--1 {
         z-index: 100;
       }
-
+      #stack__file--33,
+      #stack__file--22,
+      #stack__file--6,
       #stack__file--10,
-      #stack__file--15,
-      #stack__file--20 {
+      #stack__file--15 {
         z-index: 110;
       }
-
-      #stack__file--8,
+      #stack__file--35,
+      #stack__file--27,
+      #stack__file--18,
       #stack__file--12,
-      #stack__file--14,
-      #stack__file--22 {
+      #stack__file--14 {
         z-index: 120;
       }
-
-      #stack__file--1 {
+      #stack__file--29,
+      #stack__file--19,
+      #stack__file--3 {
         z-index: 130;
       }
-
-      #stack__file--1 {
+      #stack__file--26,
+      #stack__file--11,
+      #stack__file--7,
+      #stack__file--5 {
         z-index: 140;
       }
-
+      #stack__file--28,
+      #stack__file--9,
       #stack__file--1 {
         z-index: 150;
       }
-
-      #stack__file--1 {
+      #stack__file--31,
+      #stack__file--23,
+      #stack__file--16,
+      #stack__file--2 {
         z-index: 160;
       }
-
-      #stack__file--1 {
+      #stack__file--32,
+      #stack__file--24,
+      #stack__file--13 {
         z-index: 170;
       }
-
-      #stack__file--1 {
+      #stack__file--34,
+      #stack__file--25,
+      #stack__file--17,
+      #stack__file--8,
+      #stack__file--4 {
         z-index: 180;
       }
 
@@ -116,7 +128,7 @@
         width: 20%;
         bottom: 10%;
         right: 45%;
-        z-index: 420;
+        z-index: 470;
         @include break-below("md") {
           width: 40%;
           bottom: 2%;
@@ -141,7 +153,7 @@
       #stack__message--2 {
         top: 28%;
         right: 35%;
-        z-index: 520;
+        z-index: 530;
         @include break-below("md") {
           top: 25%;
         }
@@ -153,7 +165,7 @@
       #stack__message--3 {
         top: 38%;
         left: 12%;
-        z-index: 530;
+        z-index: 550;
         @include break-below("md") {
           top: 32%;
         }
@@ -165,7 +177,7 @@
       #stack__message--4 {
         bottom: 15%;
         right: 15%;
-        z-index: 540;
+        z-index: 570;
         @include break-below("md") {
           bottom: 15%;
           right: 10%;
@@ -192,7 +204,7 @@
       #stack__notification--2 {
         bottom: 20%;
         left: 2%;
-        z-index: 560;
+        z-index: 590;
         @include break-below("md") {
           display: none;
         }
@@ -203,7 +215,7 @@
         width: 50%;
         top: 30%;
         right: 10%;
-        z-index: 410;
+        z-index: 430;
         @include break-below("md") {
           width: 80%;
           top: 40%;
@@ -219,7 +231,7 @@
         width: 18%;
         top: 10%;
         left: 25%;
-        z-index: 330;
+        z-index: 350;
         @include break-below("md") {
           width: 30%;
           top: 20%;
@@ -233,7 +245,7 @@
         width: 35%;
         bottom: 15%;
         left: 10%;
-        z-index: 320;
+        z-index: 370;
         @include break-below("md") {
           width: 60%;
           bottom: 10%;
@@ -249,7 +261,7 @@
         width: 40%;
         top: 35%;
         left: 4%;
-        z-index: 200;
+        z-index: 250;
         @include break-below("md") {
           top: 40%;
           left: 2%;

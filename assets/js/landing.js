@@ -53,9 +53,10 @@ function reveal(element) {
 function stack(element) {
   var wrapperTop = $("#files__stack__wrapper").offset().top,
     wrapperHeight = $("#files__stack__wrapper").outerHeight(),
+    windowHeight = $(window).height(),
     elementZ = element.css("z-index"),
     scrollTop = $(window).scrollTop(),
-    offset = (wrapperHeight / 2) * (elementZ / 600);
+    offset = wrapperHeight * (elementZ / 1000);
 
   if (scrollTop > wrapperTop + offset) {
     element.addClass("visible");
@@ -114,7 +115,7 @@ function toggleBackgroundColor() {
     $("#files").offset().top + $("#files").outerHeight() - windowHeight / 2
   ) {
     $("body, header").removeClass("dark");
-  } else if (scrollTop > $("#desktop").offset().top - windowHeight / 2) {
+  } else if (scrollTop > $("#desktop").offset().top - windowHeight) {
     $("body, header").addClass("dark");
   } else {
     $("body, header").removeClass("dark");

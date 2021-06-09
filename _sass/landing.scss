@@ -90,11 +90,10 @@
 // Desktop
 ////////////////////////////////////////////////////////////////////////////////
 .desktop {
-  margin-top: 200px;
-
+  margin-top: 60vh;
   .desktop__images {
     width: 75vw;
-    height: 100vh;
+    height: 90vh;
     max-height: 100vw;
     margin: 0 auto;
     position: relative;
@@ -153,7 +152,6 @@
 // The stacked content gets very complex & has it's own scss file: "stack.scss"
 ////////////////////////////////////////////////////////////////////////////////
 .files {
-  padding-top: 10vh;
   position: relative;
   .textblock:first-of-type {
     position: absolute;
@@ -161,9 +159,6 @@
     left: 0;
     right: 0;
     z-index: 600;
-  }
-  .files__body--2 {
-    margin-top: 200px;
   }
 }
 
