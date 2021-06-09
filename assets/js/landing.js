@@ -117,14 +117,12 @@ function toggleBackground() {
   } else if (scrollTop > elementTop + elementHeight) {
     $("body, header").addClass("white");
     $("body, header").removeClass("dark");
-    $("#creativity").removeClass("show-text");
   } else if (scrollTop > elementTop - windowHeight) {
     $("body, header").addClass("dark");
     $("body, header").removeClass("white");
     $("#creativity").addClass("show-text");
   } else {
     $("body, header").removeClass("dark");
-    $("#creativity").removeClass("show-text");
   }
 }
 

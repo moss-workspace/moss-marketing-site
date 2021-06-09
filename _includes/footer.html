@@ -9,19 +9,22 @@
     </div>
   </div>
   <div class="footer__right">
+    {% for link in site.footer.social %}
+    <a class="footer__right__social" href="{{ link.url }}" target="_blank">
+      <i class="fab fa-{{ link.icon | downcase }}"></i>
+    </a>
+    {% endfor %}
+
+    <!--  -->
     {% for link in site.footer.links %}
     <p class="footer__right__link">
       {% if link.open_in_new_tab %}
       <a href="{{ link.url }}" target="_blank">
-        {% if link.social_icon %}
-        <i class="fab fa-{{ link.text | downcase }}"></i>
-        {% endif %} {{ link.text }}
+        { link.text }}
       </a>
       {% else %}
       <a href="{{ link.url }}">
-        {% if link.social_icon %}
-        <i class="fab fa-{{ link.text | downcase }}"></i>
-        {% endif %} {{ link.text }}
+        {{ link.text }}
       </a>
       {% endif %}
     </p>

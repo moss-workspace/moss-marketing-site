@@ -69,6 +69,21 @@
           {{ page.creativity_section.body }}
         </h2>
       </div>
+      <div class="parallax__wrapper">
+        {% for image in page.creativity_section.image_grid limit: 1 %}
+        <div class="preview parallax" speed="2">
+          {% include preview.html %}
+        </div>
+        {% endfor %}
+        <div class="creativity__grid parallax" speed="2">
+          {% for image in page.creativity_section.image_grid offset:1 limit: 7
+          %}
+          <div class="preview">
+            {% include preview.html %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
     </section>
 
     <section class="why">
@@ -80,50 +95,17 @@
           {{ page.why_section.body }}
         </h2>
       </div>
-      <div class="why__parallax--container">
-        <div class="why__image--large--wrapper preview parallax" speed="2">
-          <img
-            class="why__image--large"
-            src="{{ page.why_section.large_image | relative_url }}"
-          />
-          <div class="preview__icons">
-            <img
-              class="preview__icon preview__icon--link"
-              src="{{ '/assets/icons/link-linked_blue.svg' | relative_url }}"
-            />
-          </div>
+      <div class="parallax__wrapper">
+        {% for image in page.why_section.images limit: 3 %}
+        <div class="preview parallax" speed="2">
+          {% include preview.html %}
         </div>
-        <div class="why__video--wrapper preview parallax" speed="5">
-          <video class="why__video" autoplay muted loop>
-            <source
-              src="{{ page.why_section.video | relative_url }}"
-              type="video/mp4"
-            />
-          </video>
-          <div class="preview__icons">
-            <img
-              class="preview__icon preview__icon--image"
-              src="{{ '/assets/icons/file-video_darkGray2.svg' | relative_url }}"
-            />
-          </div>
-        </div>
-        <div class="why__images--small">
-          {% for image in page.why_section.small_images limit:2 %}
-          <div class="why__image--small--wrapper preview">
-            <img class="why__image--small" src="{{ image | relative_url }}" />
-            <div class="preview__icons">
-              <img
-                class="preview__icon preview__icon--image"
-                src="{{ '/assets/icons/file-image_darkGray2.svg' | relative_url }}"
-              />
-              <img
-                class="preview__icon preview__icon--link"
-                src="{{ '/assets/icons/link-linked_blue.svg' | relative_url }}"
-              />
-            </div>
-          </div>
-          {% endfor %}
-        </div>
+        {% endfor %}
+        <img
+          class="why__note"
+          src="{{ page.why_section.note | relative_url }}"
+        />
+        <img class="why__tag" src="{{ page.why_section.tag | relative_url }}" />
       </div>
     </section>
 
@@ -136,18 +118,17 @@
           {{ page.final_section.body }}
         </h2>
       </div>
-      <div class="final__animation">
-        <video autoplay muted loop>
-          <source
-            src="{{ page.final_section.animation | relative_url }}"
-            type="video/mp4"
-          />
-        </video>
+      <div class="parallax__wrapper">
+        {% for image in page.why_section.images limit: 4 %}
+        <div class="preview parallax" speed="2">
+          {% include preview.html %}
+        </div>
+        {% endfor %}
       </div>
     </section>
 
     <section class="tagline">
-      <div class="textblock">
+      <div class="textblock center">
         <h1 class="textblock__title">
           {{ site.tagline }}
         </h1>

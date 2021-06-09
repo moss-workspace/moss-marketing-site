@@ -8,6 +8,8 @@
   max-width: 700px;
   width: 40vw;
   text-align: center;
+  z-index: 100;
+  position: relative;
   @include break-below("md") {
     width: 50vw;
   }
@@ -29,6 +31,48 @@
   &.visible {
     opacity: 1;
   }
+}
+
+.preview {
+  max-width: 100px;
+
+  .preview__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .preview__icons {
+    .preview__icon {
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      padding: 5px;
+      &--image {
+        float: left;
+        padding-left: 0;
+      }
+      &--link {
+        float: right;
+        @include fade-bg;
+        &:hover {
+          cursor: pointer;
+          background-color: $light-gray-1;
+        }
+        &:active {
+          background-color: $light-gray-2;
+        }
+      }
+    }
+  }
+}
+
+// parallax
+////////////////////////////////////////////////////////////////////////////////
+.parallax__wrapper {
+  height: 700px;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
 }
 
 .parallax {
@@ -131,145 +175,25 @@
 // Creativity
 ////////////////////////////////////////////////////////////////////////////////
 .creativity {
-  @include fade-in;
   .textblock {
-    margin: 50vh auto 100vh auto;
-    opacity: 0;
-
-    &__title,
-    &__body {
-      color: $white;
-    }
-  }
-  &.show-text {
-    .textblock {
-      opacity: 1;
-    }
+    margin: 700px auto 0 auto;
   }
 }
 
 // Why
 ////////////////////////////////////////////////////////////////////////////////
-.preview {
-  .preview__icons {
-    .preview__icon {
-      width: 12px;
-      height: 12px;
-      border-radius: 2px;
-      padding: 5px;
-      &--image {
-        float: left;
-        padding-left: 0;
-      }
-      &--link {
-        float: right;
-        @include fade-bg;
-        &:hover {
-          cursor: pointer;
-          background-color: $light-gray-1;
-        }
-        &:active {
-          background-color: $light-gray-2;
-        }
-      }
-    }
-  }
-}
-
 .why {
-  height: 200vh;
-  max-height: 100vw;
-  position: relative;
-  .textblock {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .why__parallax--container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    .why__image--large--wrapper {
-      position: absolute;
-      width: 10vw;
-      height: 120vh;
-      top: 40vh;
-      left: 0;
-      @include break-below("md") {
-        width: 10vw;
-        height: 80vh;
-        top: 20vh;
-      }
-      .why__image--large {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    .why__video--wrapper {
-      position: absolute;
-      width: 15vw;
-      height: 80vh;
-      top: 10vh;
-      right: 0;
-      @include break-below("md") {
-        width: 10vw;
-        height: 60vh;
-        top: 0;
-      }
-      .why__video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    .why__images--small {
-      position: absolute;
-      height: auto;
-      top: 10vh;
-      left: 50vw;
-      max-width: 25vw;
-      display: flex;
-      @include break-below("md") {
-        top: -10vh;
-        left: 40vw;
-        max-width: 30vw;
-      }
-      .why__image--small--wrapper {
-        width: 50vw;
-        .why__image--small {
-          width: 100%;
-          height: auto;
-        }
-        &:first-child {
-          padding-right: 8px;
-        }
-      }
-    }
-  }
+  margin-top: 700px;
 }
 
 // Final
 ////////////////////////////////////////////////////////////////////////////////
-.final__animation {
-  height: 100vh;
-  max-height: 80vw;
-  margin: 0 auto;
-  position: relative;
-  width: 50vw;
-  @include break-below("md") {
-    width: 70vw;
-  }
-  @include break-below("sm") {
-    width: 80vw;
-  }
-  video {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
+.final {
+  margin-top: 700px;
+  .textblock {
+    &__body {
+      margin-top: 700px;
+    }
   }
 }
 
@@ -279,12 +203,6 @@
   height: 100vh;
   position: relative;
   .textblock {
-    text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
     &__title {
       display: inline-block;
     }
@@ -293,26 +211,5 @@
     display: inline-block;
     width: 26px;
     margin-bottom: 26px;
-  }
-}
-
-// Signup
-////////////////////////////////////////////////////////////////////////////////
-.signup {
-  height: 100vh;
-  position: relative;
-  .textblock {
-    max-width: 300px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 40%;
-    transform: translateY(-50%);
-    &__body {
-      margin-bottom: 36px;
-    }
-    .email-input input:first-child {
-      margin-bottom: 8px;
-    }
   }
 }
