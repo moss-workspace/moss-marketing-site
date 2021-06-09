@@ -143,10 +143,11 @@ sign_up:
 
     We’ll be sending out early copies throughout 2021, so put your name down on the waitlist and follow us for updates.
 hero:
-  title: ''
-  body: ''
-  placeholder: ''
-  button: ''
-  subtitle: ''
+  title: The creative desktop.
+  body: No more office work. Unleash your team’s creative process by consolidating
+    assets and inspiration into a single visual workspace.
+  placeholder: Enter your email
+  button: Join the waitlist
+  subtitle: "\U0001F447  Read the manifesto"
 
 ---
