@@ -26,8 +26,8 @@ files_section:
   body_1: 'It was designed to emulate the office, and with it – office-work. Sifting
     and sorting. Emptying the trash. A rote process built for rote tasks. After 40
     years we’ve universally accepted this workspace as status-quo. '
-  body_2: But what if your work was never meant for the cubicle? What if your process
-    doesn’t fit neatly into a box, but rather demands thinking outside of one?
+  body_2: What if your process doesn’t fit neatly into a box, but rather demands thinking
+    outside of one?
   desktop_images:
   - {}
   notifications:
@@ -95,11 +95,14 @@ files_section:
   - name: photo-1621966447384-1c397069ed75.png
     size: 3.6MB
     type: PNG image
+  title_1: ''
+  title_2: But what if your work was never meant for the cubicle?
 creativity_section:
   title: What about creativity?
   body: The creative process is messy, and fragile. It requires cultivation. Care.
     Room to grow. A space designed specifically for it, not in spite of it.
   background_color: ''
+  image_grid: []
 why_section:
   title: 'That’s why we’re building Moss. '
   body: |-
@@ -112,12 +115,16 @@ why_section:
   - "/uploads/image-2.png"
   large_image: "/uploads/image.png"
   video: "/uploads/whereideasgrow_01_compress-preview.mp4"
+  images: []
+  note: ''
+  tag: ''
 final_section:
   title: Moss transforms the desktop from a rigid, siloed system into an open and
     collaborative digital environment.
   body: A workflow tool as fluid as creativity itself. Where you can organize, experiment,
     and iterate together in one place.
   animation: "/uploads/whereideasgrow_01_compress-preview.mp4"
+  images: []
 sign_up:
   title: "Try it early \U0001F331"
   placeholder: Enter your work email
@@ -135,5 +142,11 @@ sign_up:
     We're working with early testers to make sure our workspace works for you.
 
     We’ll be sending out early copies throughout 2021, so put your name down on the waitlist and follow us for updates.
+hero:
+  title: ''
+  body: ''
+  placeholder: ''
+  button: ''
+  subtitle: ''
 
 ---
