@@ -4,17 +4,17 @@
 // General
 ////////////////////////////////////////////////////////////////////////////////
 .textblock {
-  margin: 100px auto;
+  margin: 0 auto;
   max-width: 700px;
-  width: 40vw;
+  width: 60vw;
   text-align: center;
   z-index: 100;
   position: relative;
   @include break-below("md") {
-    width: 50vw;
+    width: 70vw;
   }
   @include break-below("sm") {
-    width: 60vw;
+    width: 80vw;
   }
   &__title {
     margin-bottom: 16px;
@@ -83,13 +83,8 @@
 // Hero
 ////////////////////////////////////////////////////////////////////////////////
 .hero {
-  height: calc(100vh - 60px);
-  .textblock {
-    position: absolute;
-    top: 30%;
-    left: 0;
-    right: 0;
-  }
+  height: 100vh;
+  margin-top: -60px;
 }
 
 // Desktop

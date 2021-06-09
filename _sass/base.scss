@@ -1,6 +1,8 @@
 @import "variables";
 @import "type";
 
+// General
+////////////////////////////////////////////////////////////////////////////////
 html,
 body {
   padding: 0;
@@ -21,11 +23,13 @@ body {
   }
 }
 
-// General
-////////////////////////////////////////////////////////////////////////////////
 header,
 footer {
   padding: 16px;
+}
+
+section {
+  overflow: auto;
 }
 
 #cookieprompt {
@@ -41,8 +45,6 @@ footer {
 
 .center {
   position: absolute;
-  left: 0;
-  right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
