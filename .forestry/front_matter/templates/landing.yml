@@ -75,12 +75,12 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: title
+  - name: title_1
     type: text
     config:
       required: false
-    label: Title
-    description: Enter your title
+    label: Title 1
+    description: Enter your first title
   - name: body_1
     type: textarea
     default: ''
@@ -91,16 +91,6 @@ fields:
         format: markdown
     label: Body 1
     description: Enter your body text
-  - name: body_2
-    type: textarea
-    default: ''
-    config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
-    label: Body 2
-    description: Enter the second piece of body text
   - name: desktop_files
     type: image_gallery
     config: {}
@@ -180,6 +170,22 @@ fields:
       labelField: 
     label: File list
     description: Enter info for each file in the list
+  - name: title_2
+    type: text
+    config:
+      required: false
+    label: Title 2
+    description: Enter your second title
+  - name: body_2
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body 2
+    description: Enter the second piece of body text
   label: Files section
   description: The second section
 - name: creativity_section
