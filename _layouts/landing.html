@@ -9,14 +9,14 @@
         {% for image in page.hero.images.left limit:4 %}
         <div
           class="preview parallax"
-          speed="{{ forloop.index | replace: '1', '9' | replace: '2', '6' | replace: '3', '6' | replace: '4', '9' }}"
+          speed="{{ forloop.index | replace: '1', '9' | replace: '2', '7' | replace: '3', '8' | replace: '4', '9' }}"
         >
           {% include preview.html %}
         </div>
         {% endfor %} {% for image in page.hero.images.right limit:5 %}
         <div
           class="preview parallax"
-          speed="{{ forloop.index | replace: '1', '6' | replace: '2', '6' | replace: '3', '6' | replace: '4', '9' | replace: '5', '9' }}"
+          speed="{{ forloop.index | replace: '1', '7' | replace: '2', '8' | replace: '3', '7' | replace: '4', '9' | replace: '5', '9' }}"
         >
           {% include preview.html %}
         </div>
