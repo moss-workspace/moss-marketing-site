@@ -42,6 +42,34 @@ fields:
       required: false
     label: Subtitle
     description: Enter a subtitle
+  - name: images
+    type: field_group
+    config: {}
+    fields:
+    - name: left
+      type: image_gallery
+      config: {}
+      label: Left
+      description: 'Choose 4 images to go on the left (note: first image goes on top)'
+    - name: right
+      type: image_gallery
+      config: {}
+      label: Right
+      description: 'Choose 5 images to go on the right (note: first image goes on
+        top)'
+    - name: dots
+      type: image_gallery
+      config: {}
+      label: Dots
+      description: Choose 2 images of dots
+    - name: tag
+      type: file
+      config:
+        maxSize: 64
+      label: Tag
+      description: Choose one tag image
+    label: Images
+    description: Choose images for the header
   label: Hero
   description: Choose content for the hero
 - name: desktop_section
