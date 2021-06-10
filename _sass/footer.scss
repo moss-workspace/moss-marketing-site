@@ -1,7 +1,7 @@
 @import "variables";
 
 footer {
-  height: 42px;
+  height: 48px;
   display: flex;
   justify-content: space-between;
   .footer__left {
@@ -14,6 +14,7 @@ footer {
     }
     &__legal {
       flex-shrink: 0;
+      color: $dark-gray-2;
     }
   }
   .footer__right {
@@ -21,10 +22,18 @@ footer {
     @include gap-vertical(3px);
     a {
       text-decoration: none;
-      color: $dark-gray-1;
+      color: $dark-gray-2;
       &:hover {
-        color: $dark-gray-2;
+        color: $dark-gray-3;
       }
+    }
+    &__social {
+      height: 22px;
+      width: 22px;
+      margin-left: 8px;
+    }
+    &__link {
+      margin-top: 10px;
     }
   }
 }

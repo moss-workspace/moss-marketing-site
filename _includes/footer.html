@@ -4,9 +4,9 @@
       src="{{ site.footer.logo | relative_url }}"
       class="footer__left__logo"
     />
-    <div class="small footer__left__legal">
+    <h3 class="footer__left__legal">
       {{ site.footer.legal | newline_to_br }}
-    </div>
+    </h3>
   </div>
   <div class="footer__right">
     {% for link in site.footer.social %}
@@ -17,17 +17,17 @@
 
     <!--  -->
     {% for link in site.footer.links %}
-    <p class="footer__right__link">
+    <h3 class="footer__right__link">
       {% if link.open_in_new_tab %}
       <a href="{{ link.url }}" target="_blank">
         { link.text }}
       </a>
       {% else %}
-      <a href="{{ link.url }}">
+      <a class="href="{{ link.url }}">
         {{ link.text }}
       </a>
       {% endif %}
-    </p>
+    </h3>
     {% endfor %}
   </div>
 </footer>
