@@ -16,9 +16,9 @@ hero:
     - "/uploads/image-7-1.png"
     right:
     - "/uploads/image-25.png"
+    - "/uploads/image-3-2.png"
     - "/uploads/image-2-2.png"
     - "/uploads/image-1-1.png"
-    - "/uploads/image-3-2.png"
     - "/uploads/image-4-1.png"
     dots:
     - "/uploads/dots-3.png"
