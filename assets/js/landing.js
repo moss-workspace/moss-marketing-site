@@ -130,6 +130,12 @@ function scrollToSignup() {
   }
 }
 
+// Scroll to manifesto
+////////////////////////////////////////////////////////////////////////////////
+function scrollToManifesto() {
+  $("html, body").animate({ scrollTop: $("#desktop").offset().top - 150 });
+}
+
 // Fill & submit mailchimp form from another form
 ////////////////////////////////////////////////////////////////////////////////
 function joinWaitlist() {
