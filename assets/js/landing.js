@@ -56,9 +56,9 @@ function stack(element) {
     windowHeight = $(window).height(),
     elementZ = element.css("z-index"),
     scrollTop = $(window).scrollTop(),
-    offset = wrapperHeight * (elementZ / 1000);
+    offset = wrapperHeight * (elementZ / 600);
 
-  if (scrollTop > wrapperTop + offset) {
+  if (scrollTop > wrapperTop + offset - windowHeight) {
     element.addClass("visible");
   } else {
     element.removeClass("visible");

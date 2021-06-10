@@ -12,7 +12,7 @@
 }
 
 .files__stack__wrapper {
-  height: 300vh;
+  height: 250vh;
   position: relative;
   .files__stack {
     height: 100vh;
@@ -42,7 +42,7 @@
 
       &.shrink {
         border: 2px solid $light-gray-4;
-        transform: perspective(100px) translateZ(-80px) translateY(10vh);
+        transform: perspective(100px) translateZ(-80px) translateY(20vh);
       }
 
       // Note: z-index defines load order
@@ -55,6 +55,9 @@
       }
       #stack__file--30,
       #stack__file--20,
+      #stack__file--8,
+      #stack__file--4,
+      #stack__file--5,
       #stack__file--1 {
         z-index: 100;
       }
@@ -62,14 +65,16 @@
       #stack__file--22,
       #stack__file--6,
       #stack__file--10,
-      #stack__file--15 {
+      #stack__file--15,
+      #stack__file--7 {
         z-index: 110;
       }
       #stack__file--35,
       #stack__file--27,
       #stack__file--18,
       #stack__file--12,
-      #stack__file--14 {
+      #stack__file--14,
+      #stack__file--2 {
         z-index: 120;
       }
       #stack__file--29,
@@ -78,20 +83,16 @@
         z-index: 130;
       }
       #stack__file--26,
-      #stack__file--11,
-      #stack__file--7,
-      #stack__file--5 {
+      #stack__file--11 {
         z-index: 140;
       }
       #stack__file--28,
-      #stack__file--9,
-      #stack__file--1 {
+      #stack__file--9 {
         z-index: 150;
       }
       #stack__file--31,
       #stack__file--23,
-      #stack__file--16,
-      #stack__file--2 {
+      #stack__file--16 {
         z-index: 160;
       }
       #stack__file--32,
@@ -101,9 +102,7 @@
       }
       #stack__file--34,
       #stack__file--25,
-      #stack__file--17,
-      #stack__file--8,
-      #stack__file--4 {
+      #stack__file--17 {
         z-index: 180;
       }
 
