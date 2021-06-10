@@ -467,6 +467,9 @@ section {
     .preview {
       position: relative;
       width: 100%;
+      &:nth-child(6) {
+        padding-bottom: 160%;
+      }
     }
     &--pullout {
       left: 50%;
