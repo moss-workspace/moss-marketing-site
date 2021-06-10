@@ -1,18 +1,14 @@
 // Load
 ////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function () {
-  sizeHeroVideo();
   $(".toast").click(function () {
     if ($(this) !== $("#cookieprompt")) {
       $(this).hide();
     }
   });
-});
-
-// Resize
-////////////////////////////////////////////////////////////////////////////////
-$(window).resize(function () {
-  sizeHeroVideo();
+  $(".parallax").each(function () {
+    setParallaxDepth($(this));
+  });
 });
 
 // Scroll
@@ -67,24 +63,20 @@ function stack(element) {
 
 function parallax(element) {
   var elementTop = element.offset().top,
-    elementHeight = element.outerHeight(),
     windowHeight = $(window).height(),
     scrollTop = $(window).scrollTop(),
     diff = scrollTop - elementTop,
-    pos = Math.round(diff / element.attr("speed"));
+    pos = diff / element.attr("speed");
 
   element.css("transform", "translateY(" + pos + "px)");
 }
 
-// Hero
-////////////////////////////////////////////////////////////////////////////////
-function sizeHeroVideo() {
-  if ($(window).height() <= $(window).width()) {
-    $("#hero__video--portrait").hide();
-    $("#hero__video--landscape").show();
+function setParallaxDepth(element) {
+  var speed = element.attr("speed");
+  if (speed) {
+    element.css("z-index", speed);
   } else {
-    $("#hero__video--portrait").show();
-    $("#hero__video--landscape").hide();
+    element.css("z-index", "1");
   }
 }
 

@@ -71,11 +71,11 @@
       </div>
       <div class="parallax__wrapper">
         {% for image in page.creativity_section.image_grid limit: 1 %}
-        <div class="preview parallax" speed="2">
+        <div class="creativity__grid--pullout preview parallax" speed="9">
           {% include preview.html %}
         </div>
         {% endfor %}
-        <div class="creativity__grid parallax" speed="2">
+        <div class="creativity__grid parallax" speed="6">
           {% for image in page.creativity_section.image_grid offset:1 limit: 7
           %}
           <div class="preview">
@@ -97,15 +97,23 @@
       </div>
       <div class="parallax__wrapper">
         {% for image in page.why_section.images limit: 3 %}
-        <div class="preview parallax" speed="2">
+        <div
+          class="preview parallax"
+          speed="{% if forloop.index == 1 %}9{% elsif forloop.index == 2 %}3{% else %}6{% endif %}"
+        >
           {% include preview.html %}
         </div>
         {% endfor %}
         <img
-          class="why__note"
+          class="why__note parallax"
+          speed="3"
           src="{{ page.why_section.note | relative_url }}"
         />
-        <img class="why__tag" src="{{ page.why_section.tag | relative_url }}" />
+        <img
+          class="why__tag parallax"
+          speed="9"
+          src="{{ page.why_section.tag | relative_url }}"
+        />
       </div>
     </section>
 
@@ -114,16 +122,23 @@
         <h1 class="textblock__title">
           {{ page.final_section.title }}
         </h1>
-        <h2 class="textblock__body">
-          {{ page.final_section.body }}
-        </h2>
       </div>
+
       <div class="parallax__wrapper">
-        {% for image in page.why_section.images limit: 4 %}
-        <div class="preview parallax" speed="2">
+        {% for image in page.final_section.images limit: 4 %}
+        <div
+          class="preview parallax"
+          speed="{% if forloop.index == 1 %}6{% elsif forloop.index == 2 %}9{% elsif forloop.index == 3 %}3{% else %}6{% endif %}"
+        >
           {% include preview.html %}
         </div>
         {% endfor %}
+      </div>
+
+      <div class="textblock">
+        <h2 class="textblock__body">
+          {{ page.final_section.body }}
+        </h2>
       </div>
     </section>
 
