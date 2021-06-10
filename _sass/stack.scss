@@ -290,7 +290,7 @@
     grid-template-columns: repeat(5, 1fr);
     // Hide files above specific index
     // (currently, top limit is just super high to be safe)
-    @for $i from 30 through 50 {
+    @for $i from 29 through 50 {
       #stack__file--#{$i} {
         display: none;
       }
@@ -303,7 +303,7 @@
   @include break-below("sm") {
     height: 60%;
     margin-top: 20%;
-    @for $i from 18 through 50 {
+    @for $i from 17 through 50 {
       #stack__file--#{$i} {
         display: none;
       }

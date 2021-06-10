@@ -66,12 +66,6 @@
   }
 }
 
-// Lower half layout
-////////////////////////////////////////////////////////////////////////////////
-.creativity {
-  margin-top: 700px;
-}
-
 // parallax
 ////////////////////////////////////////////////////////////////////////////////
 section {
@@ -173,27 +167,42 @@ section {
     z-index: 600;
   }
   .files__textblock--2 {
-    margin: 150px auto;
+    margin: 150px auto 0 auto;
   }
 }
 
 // Creativity
 ////////////////////////////////////////////////////////////////////////////////
 .creativity {
+  margin-top: 750px;
+  @include break-below("sm") {
+    margin-top: 500px;
+  }
   &__grid {
     position: absolute;
     left: -2%;
     top: -5%;
     column-count: 3;
-    column-gap: 16px;
+    column-gap: 8px;
+    width: 24%;
+    @include break-below("sm") {
+      width: 60%;
+      left: -12%;
+      top: 20%;
+    }
     .preview {
       position: relative;
-      width: 150px;
+      width: 100%;
     }
     &--pullout {
       left: 50%;
       top: 25%;
-      width: 150px;
+      width: 8%;
+      @include break-below("sm") {
+        left: 70%;
+        top: 30%;
+        width: 20%;
+      }
     }
   }
 }
@@ -205,7 +214,10 @@ section {
     .preview:nth-child(1) {
       left: 0;
       bottom: 0;
-      width: 250px;
+      width: 15%;
+      @include break-below("sm") {
+        width: 25%;
+      }
       .preview__icon--image {
         display: none;
       }
@@ -213,12 +225,21 @@ section {
     .preview:nth-child(2) {
       right: 30%;
       top: 30%;
-      width: 150px;
+      width: 10%;
+      @include break-below("sm") {
+        right: 40%;
+        top: 50%;
+        width: 15%;
+      }
     }
     .preview:nth-child(3) {
       right: 0;
       top: -10%;
-      width: 250px;
+      width: 15%;
+      @include break-below("sm") {
+        top: 20%;
+        width: 27%;
+      }
       .preview__icon--link {
         display: none;
       }
@@ -227,13 +248,22 @@ section {
       position: absolute;
       left: -1%;
       bottom: 65%;
-      width: 250px;
+      width: 10%;
+      @include break-below("sm") {
+        bottom: 30%;
+        width: 30%;
+      }
     }
     .why__tag {
       position: absolute;
-      right: 7%;
+      right: 10%;
       top: -5%;
-      width: 100px;
+      width: 6%;
+      @include break-below("sm") {
+        right: 15%;
+        top: 20%;
+        width: 15%;
+      }
     }
   }
 }
@@ -245,22 +275,42 @@ section {
     .preview:nth-child(1) {
       left: 4%;
       bottom: 0;
-      width: 250px;
+      width: 12%;
+      @include break-below("sm") {
+        left: -5%;
+        bottom: 5%;
+        width: 30%;
+      }
     }
     .preview:nth-child(2) {
       left: 50%;
       top: 25%;
-      width: 150px;
+      width: 8%;
+      @include break-below("sm") {
+        left: 40%;
+        width: 15%;
+      }
     }
     .preview:nth-child(3) {
       right: 0;
       bottom: 15%;
-      width: 450px;
+      width: 25%;
+      @include break-below("sm") {
+        bottom: 10%;
+        width: 40%;
+      }
+      .preview__icon--link {
+        display: none;
+      }
     }
     .preview:nth-child(4) {
-      right: 0;
+      right: 5%;
       bottom: 0%;
-      width: 200px;
+      width: 10%;
+      @include break-below("sm") {
+        width: 25%;
+        bottom: 5%;
+      }
     }
   }
 }
