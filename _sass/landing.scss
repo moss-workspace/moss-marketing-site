@@ -143,6 +143,9 @@ section {
       .preview__icon--image {
         display: none;
       }
+      @include break-below("lg") {
+        width: 12%;
+      }
       @include break-below("md") {
         width: 15%;
       }
@@ -157,6 +160,10 @@ section {
       width: 18%;
       .preview__icon--image {
         display: none;
+      }
+      @include break-below("lg") {
+        bottom: 4%;
+        width: 20%;
       }
       @include break-below("md") {
         left: -5%;
@@ -201,6 +208,9 @@ section {
       left: 5%;
       bottom: 55%;
       width: 7%;
+      @include break-below("lg") {
+        bottom: 45%;
+      }
       @include break-below("md") {
         left: 4%;
         bottom: 43%;
@@ -251,6 +261,11 @@ section {
       .preview__icon--link {
         display: none;
       }
+      @include break-below("lg") {
+        right: -5%;
+        bottom: 40%;
+        width: 16%;
+      }
       @include break-below("md") {
         right: -10%;
         bottom: 30%;
@@ -266,6 +281,11 @@ section {
       right: 10%;
       top: 32%;
       width: 5%;
+      @include break-below("lg") {
+        right: 8%;
+        top: 35%;
+        width: 8%;
+      }
       @include break-below("md") {
         right: -5%;
         top: 15%;
