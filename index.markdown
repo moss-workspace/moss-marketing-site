@@ -131,7 +131,7 @@ final_section:
   images:
   - "/uploads/image-10.png"
   - "/uploads/butterfly-2.png"
-  - "/uploads/flower-2.png"
   - "/uploads/sky-2.png"
+  - "/uploads/flower-2.png"
 
 ---
