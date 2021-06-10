@@ -5,7 +5,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 .textblock {
   margin: 0 auto;
-  max-width: 700px;
   width: 60vw;
   text-align: center;
   z-index: 100;
@@ -17,12 +16,13 @@
     width: 80vw;
   }
   &__title {
+    max-width: 700px;
     margin-bottom: 16px;
-    margin-top: 0;
+    margin: 0 auto;
   }
   &__body {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 16px auto 0 auto;
   }
 }
 
@@ -105,6 +105,9 @@ section {
 .hero {
   height: 100vh;
   margin-top: -60px;
+  .textblock__body {
+    max-width: 700px;
+  }
 }
 
 .signup__form {
