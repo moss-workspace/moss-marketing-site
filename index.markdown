@@ -8,6 +8,22 @@ hero:
   placeholder: Enter your email
   button: Join the waitlist
   subtitle: "\U0001F447  Read the manifesto"
+  images:
+    left:
+    - "/uploads/image-11.png"
+    - "/uploads/image-5-1.png"
+    - "/uploads/image-6-1.png"
+    - "/uploads/image-7-1.png"
+    right:
+    - "/uploads/image-25.png"
+    - "/uploads/image-2-2.png"
+    - "/uploads/image-1-1.png"
+    - "/uploads/image-3-2.png"
+    - "/uploads/image-4-1.png"
+    dots:
+    - "/uploads/dots-3.png"
+    - "/uploads/image-26.png"
+    tag: "/uploads/frame-658.png"
 desktop_section:
   title: The desktop.
   body: Home to work as we know it, not much has changed since it was first introduced.
