@@ -12,18 +12,26 @@
     </a>
   </div>
   <div class="header__right">
-    <a href="https://alpha.mossworkspace.com/">
+    <a class="header__right__signin" href="https://alpha.mossworkspace.com/">
       <button class="button button--white button--medium">
         Sign in
       </button>
     </a>
 
+    {% if page.layout == "landing" %}
     <button
-      type="submit"
-      id="mc-embedded-subscribe"
       class="button button--gray-1 button--medium"
+      onclick="scrollToSignup();"
     >
       {{ site.header.button }}
     </button>
+    {% else %}
+    <a href="/">
+      <button class="button button--gray-1 button--medium">
+        {{ site.header.button }}
+      </button>
+    </a>
+
+    {% endif %}
   </div>
 </header>

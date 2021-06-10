@@ -36,14 +36,9 @@ header {
     a {
       text-decoration: none;
     }
-    .header__form {
-      flex: 1;
-      .email-input {
-        display: flex;
-        input {
-          flex: 1;
-          margin-right: 5px;
-        }
+    &__signin {
+      @include break-below("sm") {
+        display: none;
       }
     }
   }

@@ -118,5 +118,13 @@ function toggleBackgroundColor() {
 // Scroll to signup
 ////////////////////////////////////////////////////////////////////////////////
 function scrollToSignup() {
-  $("html, body").animate({ scrollTop: $("#signup").offset().top });
+  var windowHeight = $(window).height(),
+    scrollTop = $(window).scrollTop();
+
+  if (scrollTop < windowHeight / 2) {
+    $("html, body").animate({ scrollTop: $("#hero").offset().top });
+  } else {
+    $("html, body").animate({ scrollTop: $("#tagline").offset().top });
+  }
+  $("#mce-EMAIL").focus();
 }
