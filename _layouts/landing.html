@@ -15,6 +15,9 @@
         <div class="signup__form">
           {% include signup_form.html %}
         </div>
+        <p class="textblock__subtitle">
+          {{ page.hero.subtitle }}
+        </p>
       </div>
     </section>
 
@@ -99,7 +102,7 @@
         {% for image in page.why_section.images limit: 3 %}
         <div
           class="preview parallax"
-          speed="{% if forloop.index == 1 %}9{% elsif forloop.index == 2 %}3{% else %}6{% endif %}"
+          speed="{{ forloop.index | replace: '1', '9' | replace: '2', '3' | replace: '3', '6' }}"
         >
           {% include preview.html %}
         </div>
@@ -128,7 +131,7 @@
         {% for image in page.final_section.images limit: 4 %}
         <div
           class="preview parallax"
-          speed="{% if forloop.index == 1 %}6{% elsif forloop.index == 2 %}9{% elsif forloop.index == 3 %}3{% else %}6{% endif %}"
+          speed="{{ forloop.index | replace: '1', '6' | replace: '2', '9' | replace: '3', '3' | replace: '4', '6' }}"
         >
           {% include preview.html %}
         </div>
