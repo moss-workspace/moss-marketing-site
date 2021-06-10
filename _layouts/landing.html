@@ -5,6 +5,32 @@
     {% include cookie_prompt.html %} {% include header.html %}
 
     <section class="hero">
+      <div class="hero__images">
+        {% for image in page.hero.images.left limit:4 %}
+        <div
+          class="preview parallax"
+          speed="{{ forloop.index | replace: '1', '9' | replace: '2', '6' | replace: '3', '6' | replace: '4', '9' }}"
+        >
+          {% include preview.html %}
+        </div>
+        {% endfor %} {% for image in page.hero.images.right limit:5 %}
+        <div
+          class="preview parallax"
+          speed="{{ forloop.index | replace: '1', '6' | replace: '2', '6' | replace: '3', '6' | replace: '4', '9' | replace: '5', '9' }}"
+        >
+          {% include preview.html %}
+        </div>
+        {% endfor %} {% for dot in page.hero.images.dots limit:2 %}
+        <img
+          class="hero__image--dot hero__image--dot--{{ forloop.index }}"
+          src="{{ dot | relative_url }}"
+        />
+        {% endfor %}
+        <img
+          class="hero__image--tag"
+          src="{{ page.hero.images.tag | relative_url }}"
+        />
+      </div>
       <div class="textblock center">
         <h1 class="textblock__title huge">
           {{ page.hero.title }}

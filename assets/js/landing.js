@@ -8,6 +8,7 @@ $(document).ready(function () {
   });
   $(".parallax").each(function () {
     setParallaxDepth($(this));
+    parallax($(this));
   });
 });
 

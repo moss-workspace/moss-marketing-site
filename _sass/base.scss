@@ -40,9 +40,11 @@ footer {
 }
 
 .center {
-  position: absolute;
+  position: absolute !important;
   top: 50%;
   transform: translateY(-50%);
+  left: 0;
+  right: 0;
 }
 
 // Buttons & inputs
