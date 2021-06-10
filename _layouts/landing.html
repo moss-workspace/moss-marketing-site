@@ -16,7 +16,7 @@
         {% endfor %} {% for image in page.hero.images.right limit:5 %}
         <div
           class="preview parallax"
-          speed="{{ forloop.index | replace: '1', '7' | replace: '2', '8' | replace: '3', '7' | replace: '4', '9' | replace: '5', '9' }}"
+          speed="{{ forloop.index | replace: '1', '7' | replace: '2', '7' | replace: '3', '8' | replace: '4', '9' | replace: '5', '9' }}"
         >
           {% include preview.html %}
         </div>
@@ -31,19 +31,21 @@
           src="{{ page.hero.images.tag | relative_url }}"
         />
       </div>
-      <div class="textblock center">
-        <h1 class="textblock__title huge">
-          {{ page.hero.title }}
-        </h1>
-        <h2 class="textblock__body">
-          {{ page.hero.body }}
-        </h2>
-        <div class="signup__form">
-          {% include signup_form.html %}
+      <div class="textblock__wrapper">
+        <div class="textblock">
+          <h1 class="textblock__title huge">
+            {{ page.hero.title }}
+          </h1>
+          <h2 class="textblock__body">
+            {{ page.hero.body }}
+          </h2>
+          <div class="signup__form">
+            {% include signup_form.html %}
+          </div>
+          <p class="textblock__subtitle">
+            {{ page.hero.subtitle }}
+          </p>
         </div>
-        <p class="textblock__subtitle">
-          {{ page.hero.subtitle }}
-        </p>
       </div>
     </section>
 
@@ -180,8 +182,23 @@
           class="tagline__logo"
           src="{{ site.footer.logo | relative_url }}"
         />
-        <div class="signup__form">
-          {% include signup_form.html %}
+        <div class="signup__form input-button" id="mc_embed_signup_scroll">
+          <input
+            class="input input--large"
+            placeholder="{{ page.hero.placeholder }}"
+            type="email"
+            value=""
+            name="EMAIL"
+            required
+            id="tagline-email"
+          />
+          <button
+            type="submit"
+            class="button button--blue button--large button--full"
+            onclick="joinWaitlist();"
+          >
+            {{ page.hero.button }}
+          </button>
         </div>
       </div>
     </section>
