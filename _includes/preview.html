@@ -1,11 +1,17 @@
-<img class="preview__image" src="{{ image | relative_url }}" />
+<img
+  class="preview__image"
+  src="{{ image | relative_url }}"
+  alt="Moss preview"
+/>
 <div class="preview__icons">
   <img
     class="preview__icon preview__icon--image"
     src="{{ '/assets/icons/file-image_darkGray2.svg' | relative_url }}"
+    alt="image icon"
   />
   <img
     class="preview__icon preview__icon--link"
     src="{{ '/assets/icons/link-linked_blue.svg' | relative_url }}"
+    alt="link icon"
   />
 </div>

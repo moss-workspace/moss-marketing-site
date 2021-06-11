@@ -9,7 +9,11 @@
           class="stack__file stack"
           offset="0"
         >
-          <img class="stack__file__image" src="{{ file | relative_url }}" />
+          <img
+            class="stack__file__image"
+            src="{{ file | relative_url }}"
+            alt="desktop image"
+          />
           <p class="stack__file__name">
             {{ file | split: '/' | last }}
           </p>
@@ -32,7 +36,11 @@
           </p>
           <div class="stack__image__top--rect"></div>
         </div>
-        <img class="stack__file__image" src="{{ image | relative_url }}" />
+        <img
+          class="stack__file__image"
+          src="{{ image | relative_url }}"
+          alt="file image"
+        />
       </div>
       {% endfor %}
 
@@ -43,6 +51,7 @@
         class="stack__screenshot stack"
         offset="0"
         src="{{ screenshot | relative_url }}"
+        alt="screenshot"
       />
       {% endfor %}
 
@@ -55,6 +64,7 @@
           <img
             class="stack__filelist__file--icon"
             src="{{ '/assets/icons/file-image_darkGray3.svg' | relative_url }}"
+            alt="image icon"
           />
           <p class="stack_filelist__file--name">
             {{ file.name }}
