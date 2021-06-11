@@ -39,7 +39,7 @@
             {{ page.hero.title }}
           </h1>
           <h2 class="textblock__body">
-            {{ page.hero.body }}
+            {{ page.hero.body | newline_to_br }}
           </h2>
           <div class="signup__form">
             {% include signup_form.html %}
@@ -60,7 +60,7 @@
           {{ page.desktop_section.title }}
         </h1>
         <h2 class="textblock__body">
-          {{ page.desktop_section.body }}
+          {{ page.desktop_section.body | newline_to_br }}}
         </h2>
       </div>
       <div class="desktop__images">
@@ -81,7 +81,7 @@
           {{ page.files_section.title_1 }}
         </h1>
         <h2 class="textblock__body files__body--1">
-          {{ page.files_section.body_1 }}
+          {{ page.files_section.body_1 | newline_to_br }}}
         </h2>
       </div>
 
@@ -92,7 +92,7 @@
           {{ page.files_section.title_2 }}
         </h1>
         <h2 class="textblock__body files__body--1">
-          {{ page.files_section.body_2 }}
+          {{ page.files_section.body_2 | newline_to_br }}}
         </h2>
       </div>
     </section>
@@ -103,7 +103,7 @@
           {{ page.creativity_section.title }}
         </h1>
         <h2 class="textblock__body">
-          {{ page.creativity_section.body }}
+          {{ page.creativity_section.body | newline_to_br }}}
         </h2>
       </div>
       <div class="parallax__wrapper">
@@ -112,7 +112,7 @@
           {% include preview.html %}
         </div>
         {% endfor %}
-        <div class="creativity__grid parallax" speed="6">
+        <div class="creativity__grid parallax" speed="5">
           {% for image in page.creativity_section.image_grid offset:1 limit: 7
           %}
           <div class="preview">
@@ -129,7 +129,7 @@
           {{ page.why_section.title }}
         </h1>
         <h2 class="textblock__body">
-          {{ page.why_section.body }}
+          {{ page.why_section.body | newline_to_br }}}
         </h2>
       </div>
       <div class="parallax__wrapper">
@@ -176,7 +176,7 @@
 
       <div class="textblock">
         <h2 class="textblock__body">
-          {{ page.final_section.body }}
+          {{ page.final_section.body | newline_to_br }}}
         </h2>
       </div>
     </section>

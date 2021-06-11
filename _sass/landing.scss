@@ -573,10 +573,10 @@ section {
     }
     .preview:nth-child(3) {
       right: 0;
-      top: -10%;
+      top: -20%;
       width: 15%;
       @include break-below("lg") {
-        top: 5%;
+        top: -10%;
         width: 18%;
       }
       @include break-below("md") {
@@ -647,10 +647,10 @@ section {
     .preview:nth-child(1) {
       left: 4%;
       bottom: 0;
-      width: 12%;
+      width: 20%;
       @include break-below("lg") {
         bottom: 5%;
-        width: 18%;
+        width: 22%;
       }
       @include break-below("md") {
         left: 3%;

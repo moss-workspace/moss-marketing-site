@@ -42,7 +42,7 @@
       }
 
       &.shrink {
-        border: 2px solid $light-gray-4;
+        border: 2px solid $dark-gray-2;
         transform: perspective(100px) translateZ(-80px) translateY(20vh);
       }
 

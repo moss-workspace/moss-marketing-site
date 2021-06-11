@@ -10,7 +10,7 @@ footer {
     &__logo {
       height: 100%;
       width: auto;
-      padding-right: 16px;
+      padding-right: 12px;
     }
     &__legal {
       flex-shrink: 0;
@@ -30,7 +30,9 @@ footer {
     &__social {
       height: 22px;
       width: 22px;
+      display: inline-block;
       margin-left: 8px;
+      font-size: 22px;
     }
     &__link {
       margin-top: 10px;
