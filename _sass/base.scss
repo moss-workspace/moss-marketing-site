@@ -340,6 +340,7 @@ input {
   border-radius: 2px;
   border: 1px solid $light-gray-2;
   width: 100%;
+  -webkit-appearance: none;
 
   &:hover {
     border-color: $light-gray-3;
