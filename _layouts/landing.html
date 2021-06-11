@@ -60,7 +60,7 @@
           {{ page.desktop_section.title }}
         </h1>
         <h2 class="textblock__body">
-          {{ page.desktop_section.body | newline_to_br }}}
+          {{ page.desktop_section.body | newline_to_br }}
         </h2>
       </div>
       <div class="desktop__images">
@@ -81,7 +81,7 @@
           {{ page.files_section.title_1 }}
         </h1>
         <h2 class="textblock__body files__body--1">
-          {{ page.files_section.body_1 | newline_to_br }}}
+          {{ page.files_section.body_1 | newline_to_br }}
         </h2>
       </div>
 
@@ -92,7 +92,7 @@
           {{ page.files_section.title_2 }}
         </h1>
         <h2 class="textblock__body files__body--1">
-          {{ page.files_section.body_2 | newline_to_br }}}
+          {{ page.files_section.body_2 | newline_to_br }}
         </h2>
       </div>
     </section>
@@ -103,7 +103,7 @@
           {{ page.creativity_section.title }}
         </h1>
         <h2 class="textblock__body">
-          {{ page.creativity_section.body | newline_to_br }}}
+          {{ page.creativity_section.body | newline_to_br }}
         </h2>
       </div>
       <div class="parallax__wrapper">
@@ -120,6 +120,17 @@
           </div>
           {% endfor %}
         </div>
+
+        <div class="creativity__container preview parallax" speed="6">
+          <div class="preview__image"></div>
+          <div class="preview__icons">
+            <img
+              class="preview__icon preview__icon--folder"
+              src="{{ '/assets/icons/file-folder_darkGray2.svg' | relative_url }}"
+              alt="folder icon"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -129,7 +140,7 @@
           {{ page.why_section.title }}
         </h1>
         <h2 class="textblock__body">
-          {{ page.why_section.body | newline_to_br }}}
+          {{ page.why_section.body | newline_to_br }}
         </h2>
       </div>
       <div class="parallax__wrapper">
@@ -176,7 +187,7 @@
 
       <div class="textblock">
         <h2 class="textblock__body">
-          {{ page.final_section.body | newline_to_br }}}
+          {{ page.final_section.body | newline_to_br }}
         </h2>
       </div>
     </section>

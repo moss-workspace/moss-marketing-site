@@ -105,7 +105,7 @@ function toggleBackgroundColor() {
 
   if (
     scrollTop >
-    $("#files").offset().top + $("#files").outerHeight() - windowHeight / 2
+    $("#files").offset().top + $("#files").outerHeight() - windowHeight / 4
   ) {
     $("body, header").removeClass("dark");
   } else if (scrollTop > $("#desktop").offset().top - windowHeight) {
