@@ -30,7 +30,7 @@ desktop_section:
   images:
   - "/uploads/image-65.png"
   - "/uploads/classic-mac-os-1999-system-9-system-folder-12.png"
-  - "/uploads/screen-shot-2021-06-11-at-5-37-7.png"
+  - "/uploads/screen-shot-2021-06-11-at-5-38.png"
 files_section:
   title_1: Files. Folders. Function.
   body_1: "It was designed to emulate the office, and with it—office-work.\n\nSifting
