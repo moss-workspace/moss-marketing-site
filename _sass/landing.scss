@@ -42,11 +42,14 @@
     object-fit: cover;
   }
   .preview__icons {
+    line-height: 0;
     .preview__icon {
       width: 12px;
       height: 12px;
       border-radius: 2px;
       padding: 5px 0;
+      display: inline-block;
+
       &--link {
         padding: 5px;
       }
@@ -57,10 +60,6 @@
       @include break-below("xs") {
         width: 8px;
         height: 8px;
-      }
-      &--image {
-        float: left;
-        padding-left: 0;
       }
       &--link {
         float: right;
@@ -224,23 +223,23 @@ section {
       z-index: 10;
       position: absolute;
       left: 5%;
-      bottom: 48%;
-      width: 7%;
+      bottom: 55%;
+      width: 5%;
       @include break-below("lg") {
-        bottom: 45%;
+        bottom: 50%;
+        width: 6%;
       }
       @include break-below("md") {
         left: 4%;
-        bottom: 40%;
-        width: 10%;
+        width: 8%;
       }
       @include break-below("sm") {
         left: 3%;
-        bottom: 38%;
+        bottom: 45%;
         width: 10%;
       }
       @include break-below("xs") {
-        bottom: 35%;
+        bottom: 38%;
         width: 12%;
       }
     }
@@ -346,19 +345,19 @@ section {
       z-index: 10;
       position: absolute;
       right: 10%;
-      bottom: 10%;
-      width: 30%;
+      bottom: 15%;
+      width: 20%;
+      @include break-below("lg") {
+        width: 25%;
+      }
       @include break-below("md") {
-        bottom: 12%;
-        width: 40%;
+        width: 30%;
       }
       @include break-below("sm") {
-        bottom: 14%;
         width: 40%;
       }
       @include break-below("xs") {
         right: 5%;
-        bottom: 15%;
         width: 50%;
       }
     }
@@ -518,6 +517,7 @@ section {
     }
     .preview {
       position: relative;
+      margin-bottom: 3px;
       width: 100%;
       &:nth-child(6) {
         padding-bottom: 160%;
@@ -622,7 +622,7 @@ section {
     .why__note {
       position: absolute;
       left: -1%;
-      bottom: 45%;
+      bottom: 60%;
       width: 10%;
       @include break-below("lg") {
         bottom: 55%;
@@ -632,6 +632,7 @@ section {
         width: 20%;
       }
       @include break-below("sm") {
+        bottom: 45%;
         width: 25%;
       }
       @include break-below("xs") {
@@ -641,18 +642,18 @@ section {
     .why__tag {
       position: absolute;
       right: 10%;
-      top: -5%;
+      top: -20%;
       width: 6%;
       @include break-below("lg") {
         right: 12%;
-        top: 8%;
+        top: -15%;
         width: 8%;
       }
       @include break-below("md") {
         top: 10%;
         width: 12%;
       }
-      @include break-below("md") {
+      @include break-below("sm") {
         top: 12%;
       }
       @include break-below("xs") {
@@ -671,10 +672,10 @@ section {
     .preview:nth-child(1) {
       left: 4%;
       bottom: 0;
-      width: 20%;
+      width: 17%;
       @include break-below("lg") {
         bottom: 5%;
-        width: 22%;
+        width: 20%;
       }
       @include break-below("md") {
         left: 3%;
@@ -725,7 +726,7 @@ section {
         width: 40%;
       }
       @include break-below("xs") {
-        width: 60%;
+        bottom: 25%;
       }
       .preview__icon--link {
         display: none;
