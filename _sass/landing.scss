@@ -469,6 +469,9 @@ section {
       width: 100%;
       &:nth-child(6) {
         padding-bottom: 160%;
+        @include break-below("sm") {
+          padding-bottom: 170%;
+        }
       }
     }
     &--pullout {
