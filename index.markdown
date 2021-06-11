@@ -116,8 +116,8 @@ files_section:
     outside of one?
 creativity_section:
   title: What about creativity?
-  body: The creative process is messy, and fragile. It requires cultivation. Care.
-    Room to grow. A space designed specifically for it, not in spite of it.
+  body: "The creative process is messy, and fragile. \n\nIt requires cultivation.
+    Care. Room to grow. A space designed specifically for it, not in spite of it."
   image_grid:
   - "/uploads/group-3-6.png"
   - "/uploads/image-3-1.png"
