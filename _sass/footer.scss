@@ -15,11 +15,16 @@ footer {
     &__legal {
       flex-shrink: 0;
       color: $dark-gray-2;
+      a {
+        color: $dark-gray-2;
+        &:hover {
+          color: $dark-gray-3;
+        }
+      }
     }
   }
   .footer__right {
     text-align: right;
-    @include gap-vertical(3px);
     a {
       text-decoration: none;
       color: $dark-gray-2;
