@@ -138,7 +138,7 @@ why_section:
   - "/uploads/image-2-1.png"
   - "/uploads/image-1.png"
   note: "/uploads/note.png"
-  tag: "/uploads/frame-662.png"
+  tag: "/uploads/frame-655.png"
 final_section:
   title: Moss transforms the desktop from a rigid, siloed system into an open and
     collaborative digital environment.
