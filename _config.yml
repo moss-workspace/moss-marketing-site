@@ -33,10 +33,9 @@ footer:
     Moss workspace, inc.
     All rights reserved
   links:
-  - text: Privacy Policy
-    url: "/privacy"
+  - text: Email us
+    url: mailto:team@mossworkspace.com
     open_in_new_tab: false
-    social_icon: false
   social:
   - icon: Twitter
     url: https://twitter.com/mossworkspace
