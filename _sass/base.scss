@@ -140,8 +140,21 @@ input {
     margin-bottom: 26px;
   }
 
+  h3 {
+    line-height: 20px;
+  }
+
+  a {
+    color: inherit;
+    &:hover {
+      color: $black;
+    }
+  }
+
   .divider {
-    color: $light-gray-2;
+    background-color: $light-gray-2;
+    height: 1px;
+    border: none;
     margin-top: 62px;
   }
 
