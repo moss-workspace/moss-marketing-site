@@ -404,13 +404,6 @@ section {
       -moz-transition: opacity 0.09s ease, transform 0.25s ease;
       -o-transition: opacity 0.09s ease, transform 0.25s ease;
       transition: opacity 0.09s ease, transform 0.25s ease;
-      width: 30vw;
-      @include break-below("md") {
-        width: 40vw;
-      }
-      @include break-below("xs") {
-        width: 50vw;
-      }
       &.visible {
         opacity: 1;
       }
@@ -419,6 +412,13 @@ section {
         transform: translateY(-70%);
         &.visible {
           transform: translateY(-80%);
+        }
+        width: 30vw;
+        @include break-below("md") {
+          width: 40vw;
+        }
+        @include break-below("xs") {
+          width: 50vw;
         }
       }
       &:nth-child(2) {
@@ -429,12 +429,27 @@ section {
         &.visible {
           transform: translateY(-50%);
         }
+        width: 25vw;
+        @include break-below("md") {
+          width: 35vw;
+        }
+        @include break-below("xs") {
+          width: 45vw;
+        }
       }
       &:nth-child(3) {
-        right: 0;
+        top: 42%;
+        right: -2%;
         transform: translateY(-35%);
         &.visible {
           transform: translateY(-45%);
+        }
+        width: 35vw;
+        @include break-below("md") {
+          width: 45vw;
+        }
+        @include break-below("xs") {
+          width: 55vw;
         }
       }
     }
