@@ -27,7 +27,7 @@ fields:
 - type: text
   name: url
   label: URL
-  description: 'The URL of your site (ex: mossoworkspace.com)'
+  description: 'The URL of your site (ex: mossworkspace.com)'
 - type: list
   name: exclude
   label: exclude
