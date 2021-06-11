@@ -192,7 +192,7 @@
       #stack__notification--1 {
         top: 5%;
         right: 8%;
-        z-index: 550;
+        z-index: 530;
         @include break-below("md") {
           top: 2%;
           right: 2%;
@@ -204,7 +204,7 @@
       #stack__notification--2 {
         bottom: 20%;
         left: 2%;
-        z-index: 590;
+        z-index: 560;
         @include break-below("md") {
           display: none;
         }
@@ -212,9 +212,9 @@
 
       // Layout screenshots
       #stack__screenshot--1 {
-        width: 50%;
+        width: 60%;
         top: 30%;
-        right: 10%;
+        right: 8%;
         z-index: 430;
         @include break-below("md") {
           width: 80%;
@@ -224,11 +224,10 @@
         @include break-below("xs") {
           width: 80%;
           top: 50%;
-          right: 2%;
         }
       }
       #stack__screenshot--2 {
-        width: 18%;
+        width: 20%;
         top: 10%;
         left: 25%;
         z-index: 350;
@@ -243,7 +242,7 @@
       }
       #stack__screenshot--3 {
         width: 35%;
-        bottom: 15%;
+        bottom: 18%;
         left: 10%;
         z-index: 370;
         @include break-below("md") {
@@ -412,55 +411,9 @@
   // TODO: deal with gray bg on comment spike
   &.blue {
     background-color: $blue;
-    // &:before {
-    //   content: "";
-    //   position: absolute;
-    //   z-index: 0;
-    //   bottom: 0;
-    //   right: -8px;
-    //   height: 20px;
-    //   width: 20px;
-    //   background-color: $blue;
-    //   border-bottom-left-radius: 15px;
-    // }
-
-    // &:after {
-    //   content: "";
-    //   position: absolute;
-    //   z-index: 1;
-    //   bottom: 0;
-    //   right: -10px;
-    //   width: 10px;
-    //   height: 20px;
-    //   background: $black;
-    //   border-bottom-left-radius: 10px;
-    // }
   }
   &.gray {
     background-color: $dark-gray-3;
-    // &:before {
-    //   content: "";
-    //   position: absolute;
-    //   z-index: 0;
-    //   bottom: 0;
-    //   left: -8px;
-    //   height: 20px;
-    //   width: 20px;
-    //   background-color: $dark-gray-3;
-    //   border-bottom-right-radius: 15px;
-    // }
-
-    // &:after {
-    //   content: "";
-    //   position: absolute;
-    //   z-index: 1;
-    //   bottom: 0;
-    //   left: -10px;
-    //   width: 10px;
-    //   height: 20px;
-    //   background: $black;
-    //   border-bottom-right-radius: 10px;
-    // }
   }
 }
 
