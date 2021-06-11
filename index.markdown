@@ -33,9 +33,9 @@ desktop_section:
   - "/uploads/screen-shot-2021-05-25-at-12-34-32-pm.png"
 files_section:
   title_1: Files. Folders. Function.
-  body_1: 'It was designed to emulate the office, and with it – office-work. Sifting
-    and sorting. Emptying the trash. A rote process built for rote tasks. After 40
-    years we’ve universally accepted this workspace as status-quo. '
+  body_1: "It was designed to emulate the office, and with it—office-work.\n\nSifting
+    and sorting. Emptying the trash. \n\nA rote system built for rote tasks. After
+    40 years we’ve universally accepted this workspace as status-quo. "
   messages:
   - Where are those references you pulled?
   - just throw them in the deck, presentation in 5
@@ -116,8 +116,8 @@ files_section:
     outside of one?
 creativity_section:
   title: What about creativity?
-  body: The creative process is messy, and fragile. It requires cultivation. Care.
-    Room to grow. A space designed specifically for it, not in spite of it.
+  body: "The creative process is messy, and fragile. \n\nIt requires cultivation.
+    Care. Room to grow. A space designed specifically for it, not in spite of it."
   image_grid:
   - "/uploads/group-3-6.png"
   - "/uploads/image-3-1.png"
@@ -129,10 +129,10 @@ creativity_section:
   - "/uploads/image-5.png"
 why_section:
   title: 'That’s why we’re building Moss. '
-  body: |-
-    No more office-work. No more sifting, sorting, digging. No more asking where, why and what. the. fuck.
-
-    No more missing out on the unexpected chemistry that happens when everything is at your fingertips. No more workarounds to compensate for a workspace that was never even made for us.
+  body: "No more office work. No more sifting, sorting, digging. \n\nNo more asking
+    where, why and what. the. fuck.\n\nNo more missing out on the unexpected chemistry
+    that happens when everything is at your fingertips. \n\nNo more workarounds to
+    compensate for a workspace that was never even made for us."
   images:
   - "/uploads/group-2-1.png"
   - "/uploads/image-2-1.png"
