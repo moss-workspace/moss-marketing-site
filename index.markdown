@@ -129,10 +129,10 @@ creativity_section:
   - "/uploads/image-5.png"
 why_section:
   title: 'That’s why we’re building Moss. '
-  body: |-
-    No more office-work. No more sifting, sorting, digging. No more asking where, why and what. the. fuck.
-
-    No more missing out on the unexpected chemistry that happens when everything is at your fingertips. No more workarounds to compensate for a workspace that was never even made for us.
+  body: "No more office work. No more sifting, sorting, digging. \n\nNo more asking
+    where, why and what. the. fuck.\n\nNo more missing out on the unexpected chemistry
+    that happens when everything is at your fingertips. \n\nNo more workarounds to
+    compensate for a workspace that was never even made for us."
   images:
   - "/uploads/group-2-1.png"
   - "/uploads/image-2-1.png"
