@@ -43,7 +43,10 @@ footer:
 privacy:
   cookie_prompt: This site uses cookies. You can manage your preferences <a href="{{
     '/privacy' | relative_url }}">here</a>.
-  privacy_policy: |-
-    Vivamus tempor felis mollis condimentum dignissim. Proin fringilla molestie nisl sit amet mollis. Vivamus nibh velit, molestie vel mi eget, fermentum vulputate leo. Praesent neque est, posuere ac neque vitae, maximus scelerisque neque. Pellentesque sed nisi sed nisi tristique ornare quis nec sapien. Fusce feugiat odio ut interdum lobortis. Aenean vitae hendrerit nibh, quis tincidunt metus. Cras nibh risus, eleifend vitae metus a, aliquet elementum nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam rutrum dictum tortor, tempor malesuada risus congue id. Integer mauris leo, imperdiet quis aliquam eget, pharetra venenatis nunc. Donec et erat ut elit finibus mollis. Vivamus aliquam arcu a porta porta. Morbi scelerisque orci nulla, id varius urna pretium sit amet. Curabitur tristique nisi vitae interdum dictum.
-
-    Vivamus tempor felis mollis condimentum dignissim. Proin fringilla molestie nisl sit amet mollis. Vivamus nibh velit, molestie vel mi eget, fermentum vulputate leo. Praesent neque est, posuere ac neque vitae, maximus scelerisque neque. Pellentesque sed nisi sed nisi tristique ornare quis nec sapien. Fusce feugiat odio ut interdum lobortis. Aenean vitae hendrerit nibh, quis tincidunt metus. Cras nibh risus, eleifend vitae metus a, aliquet elementum nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam rutrum dictum tortor, tempor malesuada risus congue id. Integer mauris leo, imperdiet quis aliquam eget, pharetra venenatis nunc. Donec et erat ut elit finibus mollis. Vivamus aliquam arcu a porta porta. Morbi scelerisque orci nulla, id varius urna pretium sit amet. Curabitur tristique nisi vitae interdum dictum.
+  privacy_policy: The site uses Google Analytics. Google Analytics cookies helps to
+    distinguish between different users and understand how often a particular user
+    visits the site, how the user got to the site, and the user’s activity on the
+    site. Google developed two resources – <a href="https://policies.google.com/technologies/partner-sites">How
+    Google Uses Information from Sites or Apps that Use Our Services</a> and <a href="https://tools.google.com/dlpage/gaoptout">Google
+    Analytics Opt-out Browser Add-on</a> – to help provide website visitors more information
+    and choice on how their data is collected when websites use Google services.
