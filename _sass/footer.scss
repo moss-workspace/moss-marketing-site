@@ -11,6 +11,10 @@ footer {
       height: 100%;
       width: auto;
       padding-right: 12px;
+      img {
+        height: 100%;
+        width: auto;
+      }
     }
     &__legal {
       flex-shrink: 0;
