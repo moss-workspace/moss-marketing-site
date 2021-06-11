@@ -33,9 +33,9 @@
       height: 90%;
       padding: 5%;
       position: relative;
-      @include transition(all, 0.4s, ease);
+      @include transition(all, 0.5s, ease);
 
-      @include break-below("sm") {
+      @include break-below("xs") {
         width: 130%;
         margin-left: -15%;
         padding: 0;
@@ -118,7 +118,7 @@
           top: 5%;
           right: 8%;
         }
-        @include break-below("sm") {
+        @include break-below("xs") {
           width: 60%;
           top: 12%;
           right: 20%;
@@ -146,7 +146,7 @@
         top: 20%;
         left: 2%;
         z-index: 510;
-        @include break-below("sm") {
+        @include break-below("xs") {
           left: 15%;
         }
       }
@@ -157,7 +157,7 @@
         @include break-below("md") {
           top: 25%;
         }
-        @include break-below("sm") {
+        @include break-below("xs") {
           top: 35%;
           right: 15%;
         }
@@ -169,7 +169,7 @@
         @include break-below("md") {
           top: 32%;
         }
-        @include break-below("sm") {
+        @include break-below("xs") {
           top: 50%;
           left: 15%;
         }
@@ -182,7 +182,7 @@
           bottom: 15%;
           right: 10%;
         }
-        @include break-below("sm") {
+        @include break-below("xs") {
           bottom: 5%;
           right: 50%;
         }
@@ -197,7 +197,7 @@
           top: 2%;
           right: 2%;
         }
-        @include break-below("sm") {
+        @include break-below("xs") {
           right: 13%;
         }
       }
@@ -221,7 +221,7 @@
           top: 40%;
           right: 2%;
         }
-        @include break-below("sm") {
+        @include break-below("xs") {
           width: 80%;
           top: 50%;
           right: 2%;
@@ -237,7 +237,7 @@
           top: 20%;
           left: 15%;
         }
-        @include break-below("sm") {
+        @include break-below("xs") {
           display: none;
         }
       }
@@ -251,7 +251,7 @@
           bottom: 10%;
           left: 5%;
         }
-        @include break-below("sm") {
+        @include break-below("xs") {
           display: none;
         }
       }
@@ -266,7 +266,7 @@
           top: 40%;
           left: 2%;
         }
-        @include break-below("sm") {
+        @include break-below("xs") {
           width: 70%;
           top: 40%;
           left: 10%;
@@ -296,7 +296,7 @@
       }
     }
   }
-  @include break-below("sm") {
+  @include break-below("xs") {
     grid-template-columns: repeat(4, 1fr);
     height: 60%;
     margin-top: 20%;
@@ -412,55 +412,55 @@
   // TODO: deal with gray bg on comment spike
   &.blue {
     background-color: $blue;
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      bottom: 0;
-      right: -8px;
-      height: 20px;
-      width: 20px;
-      background-color: $blue;
-      border-bottom-left-radius: 15px;
-    }
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   z-index: 0;
+    //   bottom: 0;
+    //   right: -8px;
+    //   height: 20px;
+    //   width: 20px;
+    //   background-color: $blue;
+    //   border-bottom-left-radius: 15px;
+    // }
 
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      bottom: 0;
-      right: -10px;
-      width: 10px;
-      height: 20px;
-      background: $light-gray-1;
-      border-bottom-left-radius: 10px;
-    }
+    // &:after {
+    //   content: "";
+    //   position: absolute;
+    //   z-index: 1;
+    //   bottom: 0;
+    //   right: -10px;
+    //   width: 10px;
+    //   height: 20px;
+    //   background: $black;
+    //   border-bottom-left-radius: 10px;
+    // }
   }
   &.gray {
     background-color: $dark-gray-3;
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      bottom: 0;
-      left: -8px;
-      height: 20px;
-      width: 20px;
-      background-color: $dark-gray-3;
-      border-bottom-right-radius: 15px;
-    }
+    // &:before {
+    //   content: "";
+    //   position: absolute;
+    //   z-index: 0;
+    //   bottom: 0;
+    //   left: -8px;
+    //   height: 20px;
+    //   width: 20px;
+    //   background-color: $dark-gray-3;
+    //   border-bottom-right-radius: 15px;
+    // }
 
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      bottom: 0;
-      left: -10px;
-      width: 10px;
-      height: 20px;
-      background: $light-gray-1;
-      border-bottom-right-radius: 10px;
-    }
+    // &:after {
+    //   content: "";
+    //   position: absolute;
+    //   z-index: 1;
+    //   bottom: 0;
+    //   left: -10px;
+    //   width: 10px;
+    //   height: 20px;
+    //   background: $black;
+    //   border-bottom-right-radius: 10px;
+    // }
   }
 }
 
@@ -551,7 +551,7 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      @include break-below("sm") {
+      @include break-below("xs") {
         display: none;
       }
     }

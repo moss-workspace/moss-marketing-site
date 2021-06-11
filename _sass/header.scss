@@ -37,7 +37,7 @@ header {
       text-decoration: none;
     }
     &__signin {
-      @include break-below("sm") {
+      @include break-below("xs") {
         display: none;
       }
     }

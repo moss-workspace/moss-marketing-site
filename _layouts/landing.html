@@ -140,7 +140,7 @@
         {% endfor %}
         <img
           class="why__note parallax"
-          speed="3"
+          speed="6"
           src="{{ page.why_section.note | relative_url }}"
         />
         <img
@@ -162,7 +162,7 @@
         {% for image in page.final_section.images limit: 4 %}
         <div
           class="preview parallax"
-          speed="{{ forloop.index | replace: '1', '6' | replace: '2', '9' | replace: '3', '3' | replace: '4', '6' }}"
+          speed="{{ forloop.index | replace: '1', '6' | replace: '2', '8' | replace: '3', '3' | replace: '4', '5' }}"
         >
           {% include preview.html %}
         </div>

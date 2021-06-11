@@ -72,7 +72,7 @@
   font-weight: 200;
   font-size: rem(22px);
   line-height: rem(30px);
-  @include break-below("sm") {
+  @include break-below("xs") {
     font-size: rem(16px);
     line-height: rem(20px);
   }
