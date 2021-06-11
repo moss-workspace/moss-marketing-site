@@ -149,7 +149,20 @@
           class="preview parallax"
           speed="{{ forloop.index | replace: '1', '9' | replace: '2', '3' | replace: '3', '6' }}"
         >
-          {% include preview.html %}
+          {% if forloop.index == 3 %}
+          <img
+            class="preview__image"
+            src="{{ image | relative_url }}"
+            alt="Moss preview"
+          />
+          <div class="preview__icons">
+            <img
+              class="preview__icon preview__icon--image"
+              src="{{ '/assets/icons/psd_color.svg' | relative_url }}"
+              alt="image icon"
+            />
+          </div>
+          {% else %} {% include preview.html %} {% endif %}
         </div>
         {% endfor %}
         <img
