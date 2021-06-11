@@ -212,7 +212,7 @@
 
       // Layout screenshots
       #stack__screenshot--1 {
-        width: 60%;
+        width: 65%;
         top: 30%;
         right: 8%;
         z-index: 430;
@@ -222,7 +222,6 @@
           right: 2%;
         }
         @include break-below("xs") {
-          width: 80%;
           top: 50%;
         }
       }
