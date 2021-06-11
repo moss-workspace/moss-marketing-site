@@ -92,8 +92,8 @@ files_section:
   - "/uploads/a_boat_upon_the_waters_62032.jpg"
   file_manager: "/uploads/screen-shot-2021-04-14-at-11-42-37-pm.png"
   screenshots:
-  - "/uploads/screen-shot-2021-04-14-at-11-42-37-pm.png"
-  - "/uploads/classic-mac-os-1999-system-9-system-folder.png"
+  - "/uploads/screen-shot-2021-06-11-at-3-37-3.png"
+  - "/uploads/5e2a264712a08f84503e68fd50530cbc-6.png"
   - "/uploads/unnamed-1.gif"
   file_list:
   - name: new_comp--eport.jpg
