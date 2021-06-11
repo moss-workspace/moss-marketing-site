@@ -33,9 +33,9 @@ desktop_section:
   - "/uploads/screen-shot-2021-05-25-at-12-34-32-pm.png"
 files_section:
   title_1: Files. Folders. Function.
-  body_1: 'It was designed to emulate the office, and with it – office-work. Sifting
-    and sorting. Emptying the trash. A rote process built for rote tasks. After 40
-    years we’ve universally accepted this workspace as status-quo. '
+  body_1: "It was designed to emulate the office, and with it—office-work.\n\nSifting
+    and sorting. Emptying the trash. \n\nA rote system built for rote tasks. After
+    40 years we’ve universally accepted this workspace as status-quo. "
   messages:
   - Where are those references you pulled?
   - just throw them in the deck, presentation in 5
