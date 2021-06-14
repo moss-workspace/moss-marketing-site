@@ -11,12 +11,12 @@ hero:
   images:
     left:
     - "/uploads/image-11.png"
-    - "/uploads/image-5-1.png"
+    - "/uploads/image-2-3.png"
     - "/uploads/image-6-1.png"
     - "/uploads/image-7-1.png"
     right:
     - "/uploads/image-25.png"
-    - "/uploads/image-3-2.png"
+    - "/uploads/image-1-2.png"
     - "/uploads/image-2-2.png"
     - "/uploads/image-1-1.png"
     - "/uploads/image-4-1.png"
