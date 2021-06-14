@@ -3,7 +3,7 @@
 $(document).ready(function () {
   $(".toast").click(function () {
     if ($(this) !== $("#cookieprompt")) {
-      $(this).css("display", "none");
+      $(this).hide();
     }
   });
   $(".parallax").each(function () {
