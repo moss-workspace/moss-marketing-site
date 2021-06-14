@@ -137,9 +137,9 @@ why_section:
     that happens when everything is at your fingertips. \n\nNo more workarounds to
     compensate for a workspace that was never even made for us."
   images:
-  - "/uploads/group-2-1.png"
+  - "/uploads/group-2-2.png"
   - "/uploads/image-2-1.png"
-  - "/uploads/image-1.png"
+  - "/uploads/image-12.png"
   note: "/uploads/note.png"
   tag: "/uploads/frame-655.png"
 final_section:
@@ -150,7 +150,7 @@ final_section:
   images:
   - "/uploads/image-10.png"
   - "/uploads/butterfly-2.png"
-  - "/uploads/sky-2.png"
+  - "/uploads/sky-3.png"
   - "/uploads/flower-2.png"
 
 ---
