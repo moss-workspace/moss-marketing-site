@@ -41,8 +41,7 @@ footer:
   - icon: Instagram
     url: https://www.instagram.com/mossworkspace/
 privacy:
-  cookie_prompt: This site uses cookies. You can manage your preferences <a href="{{
-    '/privacy' | relative_url }}">here</a>.
+  cookie_prompt: This site uses cookies.
   privacy_policy: The site uses Google Analytics. Google Analytics cookies helps to
     distinguish between different users and understand how often a particular user
     visits the site, how the user got to the site, and the user’s activity on the
