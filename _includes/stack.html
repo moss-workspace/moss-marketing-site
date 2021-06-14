@@ -3,7 +3,7 @@
     <div class="files__stack__content">
       <!--  files -->
       <div class="stack__files">
-        {% for file in page.files_section.desktop_files %}
+        {% for file in page.files_section.desktop_files limit:36 %}
         <div
           id="stack__file--{{ forloop.index }}"
           class="stack__file stack"
