@@ -50,6 +50,10 @@
         }
       }
 
+      &.instagram {
+        transform: perspective(100px) translateZ(0) translateY(0) !important;
+      }
+
       // Note: z-index defines load order
       // Lowest number appears first, do not exceed 600
 

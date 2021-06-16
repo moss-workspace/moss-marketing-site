@@ -1,6 +1,7 @@
 // Load
 ////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function () {
+  checkInstagram();
   $(".toast").click(function () {
     if ($(this) !== $("#cookieprompt")) {
       $(this).hide();
@@ -30,6 +31,16 @@ $(window).scroll(function (event) {
   toggleBackgroundColor();
   sizeStack();
 });
+
+// Check for instagram in-app browser
+////////////////////////////////////////////////////////////////////////////////
+function checkInstagram() {
+  var ua = navigator.userAgent || navigator.vendor || window.opera;
+  var isInstagram = ua.indexOf("Instagram") > -1 ? true : false;
+  if (!isInstagram) {
+    $(".files__stack__content").addClass("instagram");
+  }
+}
 
 // Animations
 ////////////////////////////////////////////////////////////////////////////////

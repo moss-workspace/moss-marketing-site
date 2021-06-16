@@ -1,7 +1,6 @@
 // Document Ready
 ////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function () {
-  checkInstagram();
   var consent = getCookie("analytics-consent");
   if (consent == "" || consent == null) {
     // prettier-ignore
@@ -12,16 +11,6 @@ $(document).ready(function () {
     showCookiePrompt();
   }
 });
-
-// Check for instagram in-app browser
-////////////////////////////////////////////////////////////////////////////////
-function checkInstagram() {
-  var ua = navigator.userAgent || navigator.vendor || window.opera;
-  var isInstagram = ua.indexOf("Instagram") > -1 ? true : false;
-  if (isInstagram) {
-    $("body").addClass("instagram");
-  }
-}
 
 // Scroll
 ////////////////////////////////////////////////////////////////////////////////
