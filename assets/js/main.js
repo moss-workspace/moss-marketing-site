@@ -10,6 +10,11 @@ $(document).ready(function () {
     });
     showCookiePrompt();
   }
+  $(".toast").click(function () {
+    if ($(this).attr("id") !== "cookieprompt") {
+      $(this).hide();
+    }
+  });
 });
 
 // Scroll

@@ -31,7 +31,7 @@ footer {
 #cookieprompt {
   display: none;
   padding-right: 3px;
-  z-index: 999;
+  bottom: 16px;
   &:hover,
   &:active {
     background-color: $white;
@@ -108,10 +108,11 @@ input {
 .toast {
   display: flex;
   position: fixed;
-  bottom: 16px;
+  bottom: 52px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 900;
+  color: $dark-gray-2;
   @include fade;
   @include shadow-toast;
   @include gap(5px);
@@ -120,11 +121,11 @@ input {
     background-color: $white;
   }
   p {
-    color: $dark-gray-1;
+    color: $dark-gray-2;
     display: inline;
   }
   a {
-    color: $dark-gray-2;
+    color: $dark-gray-3;
   }
 }
 

@@ -2,11 +2,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function () {
   checkInstagram();
-  $(".toast").click(function () {
-    if ($(this) !== $("#cookieprompt")) {
-      $(this).hide();
-    }
-  });
   $(".parallax").each(function () {
     setParallaxDepth($(this));
     parallax($(this));
