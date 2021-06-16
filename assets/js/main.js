@@ -16,10 +16,11 @@ $(document).ready(function () {
 // Check for instagram in-app browser
 ////////////////////////////////////////////////////////////////////////////////
 function checkInstagram() {
-  var ua = navigator.userAgent || navigator.vendor || window.opera;
-  var isInstagram = ua.indexOf("Instagram") > -1 ? true : false;
+  var isInstagram = navigator.userAgent.match(/instagram/i);
   if (isInstagram) {
     $("body").addClass("instagram");
+  } else {
+    console.log("not instagram");
   }
 }
 
