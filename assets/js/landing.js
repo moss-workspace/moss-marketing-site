@@ -27,8 +27,8 @@ $(window).scroll(function (event) {
     parallax($(this));
   });
 
-  sizeStack();
   toggleBackgroundColor();
+  sizeStack();
 });
 
 // Animations
