@@ -37,8 +37,7 @@
 
       @include break-below("xs") {
         width: 130%;
-        margin-left: -15%;
-        padding: 0;
+        margin-left: -20%;
         @include transition(all, 0.8s, ease);
       }
 
@@ -46,12 +45,12 @@
         border: 2px solid $dark-gray-2;
         transform: perspective(100px) translateZ(-80px) translateY(20vh);
         @include break-below("xs") {
-          transform: perspective(100px) translateZ(-40px) translateY(20vh);
+          transform: perspective(100px) translateZ(-60px) translateY(20vh);
         }
       }
 
       &.instagram {
-        transform: perspective(100px) translateZ(0) translateY(0) !important;
+        // transform: perspective(100px) translateZ(0) translateY(0) !important;
       }
 
       // Note: z-index defines load order
