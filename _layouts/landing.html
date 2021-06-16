@@ -222,7 +222,10 @@
           alt="Moss logo"
           loading="lazy"
         />
-        <div class="signup__form input-button" id="mc_embed_signup_scroll">
+        <form
+          class="signup__form input-button"
+          onsubmit="return joinWaitlist();"
+        >
           <input
             class="input input--large"
             placeholder="{{ page.hero.placeholder }}"
@@ -235,11 +238,10 @@
           <button
             type="submit"
             class="button button--blue button--large button--full"
-            onclick="joinWaitlist();"
           >
             {{ page.hero.button }}
           </button>
-        </div>
+        </form>
       </div>
     </section>
 

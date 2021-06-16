@@ -111,7 +111,7 @@ input {
   bottom: 52px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 900;
+  z-index: 999;
   color: $dark-gray-2;
   @include fade;
   @include shadow-toast;

@@ -50,7 +50,7 @@
       }
 
       &.instagram {
-        // transform: perspective(100px) translateZ(0) translateY(0) !important;
+        transform: perspective(100px) translateZ(0) translateY(0) !important;
       }
 
       // Note: z-index defines load order

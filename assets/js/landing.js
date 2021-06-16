@@ -32,7 +32,7 @@ $(window).scroll(function (event) {
 function checkInstagram() {
   var ua = navigator.userAgent || navigator.vendor || window.opera;
   var isInstagram = ua.indexOf("Instagram") > -1 ? true : false;
-  if (isInstagram) {
+  if (!isInstagram) {
     $(".files__stack__content").addClass("instagram");
   }
 }
@@ -149,4 +149,5 @@ function joinWaitlist() {
   $("#mce-EMAIL").val(email);
   $("#mc-embedded-subscribe").click();
   $("#tagline-email").val("");
+  return false;
 }
