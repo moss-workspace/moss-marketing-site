@@ -11,10 +11,10 @@ hero:
   subtitle: "\U0001F447  Read the manifesto"
   images:
     left:
-    - "/uploads/image-11.png"
-    - "/uploads/image-2-3.png"
-    - "/uploads/image-6-1.png"
-    - "/uploads/image-7-1.png"
+    - "/uploads/imagedots-3-small-png.png"
+    - "/uploads/image-5dots-3-small-png.png"
+    - "/uploads/image-6dots-3-small-png.png"
+    - "/uploads/image-7dots-3-small-png.png"
     right:
     - "/uploads/image-25.png"
     - "/uploads/image-1-2.png"
