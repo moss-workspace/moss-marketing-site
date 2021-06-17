@@ -44,16 +44,27 @@
           <div class="signup__form">
             {% include signup_form.html %}
           </div>
+          {% if page.title == 'Waitlist' %}
+          <button
+            class="textblock__subtitle button button--white button--small button--borderless"
+          >
+            <a href="{{ '/#desktop' | relative_url }}">
+              {{ page.hero.subtitle }}
+            </a>
+          </button>
+          {% else %}
           <button
             class="textblock__subtitle button button--white button--small button--borderless"
             onclick="scrollToManifesto();"
           >
             {{ page.hero.subtitle }}
           </button>
+          {% endif %}
         </div>
       </div>
     </section>
 
+    {% if page.title != 'Waitlist' %}
     <section class="desktop" id="desktop">
       <div class="textblock">
         <h1 class="textblock__title">
@@ -244,7 +255,8 @@
         </form>
       </div>
     </section>
-
-    {% include footer.html %}
+    {% else %}
+    <div class="waitlist__bumper"></div>
+    {% endif %} {% include footer.html %}
   </body>
 </html>

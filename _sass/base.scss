@@ -234,6 +234,11 @@ input {
     line-height: rem(11px);
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   &:disabled {
     cursor: not-allowed;
     opacity: 0.75;
