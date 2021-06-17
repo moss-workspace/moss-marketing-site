@@ -16,14 +16,14 @@ hero:
     - "/uploads/image-6dots-3-small-png.png"
     - "/uploads/image-7dots-3-small-png.png"
     right:
-    - "/uploads/image-25.png"
-    - "/uploads/image-1-2.png"
-    - "/uploads/image-2-2.png"
-    - "/uploads/image-1-1.png"
-    - "/uploads/image-4-1.png"
+    - "/uploads/image-25dots-3-small-png.png"
+    - "/uploads/image-3dots-3-small-png.png"
+    - "/uploads/image-2dots-3-small-png.png"
+    - "/uploads/image-1dots-3-small-png.png"
+    - "/uploads/image-4dots-3-small-png.png"
     dots:
-    - "/uploads/dots-3.png"
-    - "/uploads/image-26.png"
-    tag: "/uploads/frame-662.png"
+    - "/uploads/dots-3-small.png"
+    - "/uploads/image-26dots-3-small-png.png"
+    tag: "/uploads/frame-662dots-3-small-png.png"
 
 ---
