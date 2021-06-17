@@ -47,3 +47,13 @@ function setParallaxDepth(element) {
     element.css("z-index", "1");
   }
 }
+
+// Scroll to signup
+////////////////////////////////////////////////////////////////////////////////
+function scrollToSignup() {
+  var bodyHeight = $("body").height(),
+    scrollTop = $(window).scrollTop();
+
+  $("html, body").animate({ scrollTop: $("#hero").offset().top });
+  $("#mce-EMAIL").focus();
+}
