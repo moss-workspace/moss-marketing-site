@@ -9,6 +9,10 @@ sections:
 - type: document
   path: index.markdown
   label: Landing
+- type: document
+  path: waitlist.markdown
+  label: Waitlist
+  match: "**/*"
 - type: jekyll-pages
   label: All pages
   create: documents
