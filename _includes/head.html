@@ -68,12 +68,17 @@
     type="text/javascript"
     src="{{ '/assets/js/main.js' | relative_url }}"
   ></script>
-  {% if page.layout == "landing" %}
+  {% if page.layout == "landing" %} {% if page.title == "Waitlist" %}
+  <script
+    type="text/javascript"
+    src="{{ '/assets/js/waitlist.js' | relative_url }}"
+  ></script>
+  {% else %}
   <script
     type="text/javascript"
     src="{{ '/assets/js/landing.js' | relative_url }}"
   ></script>
-  {% endif %}
+  {% endif %} {% endif %}
 
   <!-- Google Analytics -->
   <script
