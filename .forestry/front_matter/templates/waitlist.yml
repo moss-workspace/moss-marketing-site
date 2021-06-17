@@ -46,3 +46,5 @@ fields:
     - type: file
       name: tag
       label: tag
+pages:
+- waitlist.markdown
