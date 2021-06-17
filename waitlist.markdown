@@ -12,9 +12,9 @@ hero:
   images:
     left:
     - "/uploads/imagedots-3-small-png.png"
-    - "/uploads/image-5dots-3-small-png.png"
-    - "/uploads/image-6dots-3-small-png.png"
-    - "/uploads/image-7dots-3-small-png.png"
+    - "/uploads/image-5-small.png"
+    - "/uploads/image-6-small.png"
+    - "/uploads/image-7-small.png"
     right:
     - "/uploads/image-25dots-3-small-png.png"
     - "/uploads/image-3dots-3-small-png.png"
