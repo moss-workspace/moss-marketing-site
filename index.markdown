@@ -24,6 +24,9 @@ hero:
     - "/uploads/dots-3.png"
     - "/uploads/image-26.png"
     tag: "/uploads/frame-662.png"
+  subtitles:
+  - "\U0001F5A5  Watch the video"
+  - "\U0001F447  Read the manifesto"
 desktop_section:
   title: The desktop.
   body: Home to work as we know it, not much has changed since it was first introduced.
