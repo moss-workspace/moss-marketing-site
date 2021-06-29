@@ -43,13 +43,32 @@ fields:
     label: Subtitle
     description: Enter a subtitle
   - name: subtitles
-    type: list
+    type: field_group_list
+    fields:
+    - name: text
+      type: text
+      config:
+        required: false
+      label: Text
+      description: The text of the link
+    - name: url
+      type: text
+      config:
+        required: false
+      label: URL
+      description: The url of the link
+      showOnly:
+        field: scroll_to_manifesto
+    - name: scroll_to_manifesto
+      type: boolean
+      label: Scroll to manifesto
+      description: Make active to scroll to the manifesto instead of linking.
     config:
-      use_select: false
       min: 
       max: 
+      labelField: 
     label: Subtitles
-    description: Enter additional links to show beneath the email field
+    description: Links that go below the email input.
   - name: images
     type: field_group
     config: {}
