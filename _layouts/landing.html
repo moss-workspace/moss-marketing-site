@@ -44,22 +44,27 @@
           <div class="signup__form">
             {% include signup_form.html %}
           </div>
-          {% if page.title == 'Waitlist' %}
-          <button
-            class="textblock__subtitle button button--white button--small button--borderless"
-          >
-            <a href="{{ '/#desktop' | relative_url }}">
-              {{ page.hero.subtitle }}
-            </a>
-          </button>
-          {% else %}
+          {% for subtitle in page.hero.subtitles %} {% if page.title !=
+          'Waitlist' and subtitle.scroll_to_manifesto %}
+
           <button
             class="textblock__subtitle button button--white button--small button--borderless"
             onclick="scrollToManifesto();"
           >
-            {{ page.hero.subtitle }}
+            {{ subtitle.text }}
           </button>
-          {% endif %}
+          {% else %}
+          <button
+            class="textblock__subtitle button button--white button--small button--borderless"
+          >
+            <a
+              href="{{ subtitle.url }}"
+              target="{{ subtitle.scroll_to_manifesto | replace: 'true', '' | replace: 'false', '_blank' }}"
+            >
+              {{ subtitle.text }}
+            </a>
+          </button>
+          {% endif %} {% endfor %}
         </div>
       </div>
     </section>
