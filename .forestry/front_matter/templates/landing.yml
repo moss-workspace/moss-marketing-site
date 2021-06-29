@@ -57,8 +57,6 @@ fields:
         required: false
       label: URL
       description: The url of the link
-      showOnly:
-        field: scroll_to_manifesto
     - name: scroll_to_manifesto
       type: boolean
       label: Scroll to manifesto
