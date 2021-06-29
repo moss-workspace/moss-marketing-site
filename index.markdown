@@ -25,6 +25,9 @@ hero:
     - "/uploads/image-26.png"
     tag: "/uploads/frame-662.png"
   subtitles:
+  - text: "\U0001F5A5  Watch the video"
+    url: https://vimeo.com/472490067/524a565895
+    scroll_to_manifesto: false
   - text: "\U0001F447  Read the manifesto"
     url: https://mossworkspace.com/#desktop
     scroll_to_manifesto: true
