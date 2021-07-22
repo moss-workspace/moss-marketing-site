@@ -2,9 +2,10 @@
 layout: landing
 permalink: "/"
 hero:
-  title: The creative desktop.
-  body: No more office work. Unleash your team’s creative process by consolidating
-    assets and inspiration into a single visual workspace.
+  title: Inspiration, meet organization.
+  body: Moss transforms the desktop into a collaborative, visual environment for the
+    creative process. Seamlessly connect, organize, and share assets & inspiration
+    in a flexible workspace built for better ideas.
   placeholder: Enter your email
   button: Join the waitlist
   subtitle: "\U0001F447  Read the manifesto"
