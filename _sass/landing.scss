@@ -147,7 +147,7 @@ section {
   }
   .textblock {
     &__body {
-      max-width: 700px;
+      max-width: 650px;
     }
   }
 
@@ -328,7 +328,7 @@ section {
       }
       @include break-below("xs") {
         right: -10%;
-        top: 10%;
+        top: 4%;
         width: 18%;
       }
     }
