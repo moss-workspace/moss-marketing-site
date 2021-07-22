@@ -16,6 +16,12 @@ fields:
   name: description
   label: Description
   description: What's your site for?
+- name: thumbnail_image
+  type: file
+  config:
+    maxSize: 64
+  label: Thumbnail image
+  description: Choose an image to use for the site's thumbnail on social media.
 - type: text
   name: email
   label: Email
@@ -148,11 +154,5 @@ fields:
     description: Enter your privacy policy
   label: Privacy
   description: Settings for privacy &amp; cookies
-- name: thumbnail_image
-  type: file
-  config:
-    maxSize: 64
-  label: Thumbnail image
-  description: Choose an image to use for the site's thumbnail on social media.
 pages:
 - _config.yml
