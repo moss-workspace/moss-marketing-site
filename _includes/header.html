@@ -14,13 +14,13 @@
     </a>
   </div>
   <div class="header__right">
-    <!-- <a class="header__right__signin" href="https://alpha.mossworkspace.com/">
+    {% if site.header.show_jobs_button %}
+    <a href="{{ site.header.jobs_button_url }}" target="_blank">
       <button class="button button--white button--medium">
-        Sign in
+        {{ site.header.jobs_button_text }}
       </button>
-    </a> -->
-
-    {% if page.layout == "landing" %}
+    </a>
+    {% endif %} {% if page.layout == "landing" %}
     <button
       class="button button--gray-1 button--medium"
       onclick="scrollToSignup();"
@@ -28,7 +28,7 @@
       {{ site.header.button }}
     </button>
     {% else %}
-    <a href="/">
+    <a href="{{ '/' | relative_url }}">
       <button class="button button--gray-1 button--medium">
         {{ site.header.button }}
       </button>
