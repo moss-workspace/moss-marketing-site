@@ -258,6 +258,15 @@
             {{ page.hero.button }}
           </button>
         </form>
+        {% if site.header.show_jobs_button %}
+        <button
+          class="textblock__subtitle button button--white button--small button--borderless"
+        >
+          <a href="{{ site.header.jobs_button_url }}" target="'_blank'">
+            {{ site.header.jobs_button_text }}
+          </a>
+        </button>
+        {% endif %}
       </div>
     </section>
     {% else %}
