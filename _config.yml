@@ -26,6 +26,9 @@ header:
   weather_location: Brooklyn, NY
   button: "✍️  Join the waitlist"
   logo_light: "/uploads/moss-wordmark-small-white_rgb.png"
+  show_jobs_button: true
+  jobs_button_text: "\U0001F469‍\U0001F4BB Join the team"
+  jobs_button_url: "/"
 footer:
   logo: "/uploads/moss-icon-small__rgb.svg"
   legal: |-
