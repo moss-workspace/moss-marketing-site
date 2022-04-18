@@ -1,5 +1,5 @@
 ---
-label: workspace
+label: Workspace
 hide_body: true
 fields:
 - name: landing
@@ -26,15 +26,21 @@ fields:
     type: boolean
     label: Show video link
     description: Toggle whether or not to show the video link
-  - name: video_link
+  - name: video_text
     type: text
     config:
       required: false
-    label: Video link
+    label: Video text
     description: Text for the video link
     showOnly:
       field: show_video_link
       value: true
+  - name: video_url
+    type: text
+    config:
+      required: false
+    label: Video URL
+    description: URL for the video
   label: Landing
   description: Landing screen for the site.
 - name: blocks
