@@ -1,4 +1,39 @@
 ---
 label: workspace
 hide_body: true
-fields: []
+fields:
+- name: landing
+  type: field_group
+  config: {}
+  fields:
+  - name: header
+    type: text
+    config:
+      required: false
+    label: Header
+    description: Large header text
+  - name: subhead
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Subhead
+    description: Subheader text
+  - name: show_video_link
+    type: boolean
+    label: Show video link
+    description: Toggle whether or not to show the video link
+  - name: video_link
+    type: text
+    config:
+      required: false
+    label: Video link
+    description: Text for the video link
+    showOnly:
+      field: show_video_link
+      value: true
+  label: Landing
+  description: Landing screen for the site.
