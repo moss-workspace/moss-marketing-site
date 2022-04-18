@@ -1,4 +1,73 @@
 ---
 label: Testimonial
 hide_body: true
-fields: []
+fields:
+- name: quote
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Quote
+  description: " Testimonial quote text"
+- name: name
+  type: text
+  config:
+    required: false
+  label: Name
+  description: Name of the quoted person
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: Title of the quoted person
+- name: previews
+  type: field_group_list
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+    description: Thumbnail image of the preview
+  - name: custom_info
+    type: boolean
+    label: Custom info
+    description: Toggle to input custom file info, otherwise it will display the actual
+      file name and an image icon.
+  - name: file_name
+    type: text
+    config:
+      required: false
+    label: File name
+    description: File name for the preview
+    showOnly:
+      field: custom_info
+      value: true
+  - name: file_type
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Image
+      - PSD
+      - AI
+      - Video
+      - Document
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: File type
+    description: File type for the preview
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Previews
+  description: Previews to display around the quote
