@@ -1,5 +1,3 @@
----
-
 # moss-marketing-site
 
 The Moss marketing site (mossworkspace.com)
