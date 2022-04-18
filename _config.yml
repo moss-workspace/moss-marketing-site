@@ -48,6 +48,13 @@ footer:
   - icon: Instagram
     url: https://www.instagram.com/mossworkspace/
   illustration: ''
+  link_sections:
+  - name: About
+    links:
+    - icon: ''
+      text: Company
+      url: https://mossworkspace.com/company/
+      open_in_new_tab: false
 privacy:
   cookie_prompt: This site uses cookies.
   privacy_policy: The site uses Google Analytics. Google Analytics cookies helps to
