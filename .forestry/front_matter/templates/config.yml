@@ -89,70 +89,68 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: logo
+  - name: illustration
     type: file
     config:
       maxSize: 64
-    label: Logo
-    description: Choose a logo file
-  - name: legal
-    type: textarea
-    default: ''
-    config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
-    label: Legal
-    description: Enter legal info (no more than 3 lines)
-  - name: social
-    type: field_group_list
-    fields:
-    - name: icon
-      type: text
-      config:
-        required: false
-      label: Icon
-      description: 'Enter the name of the icon to display (ex: facebook, instagram,
-        etc.)'
-    - name: url
-      type: text
-      config:
-        required: false
-      label: URL
-      description: Enter the url
-    config:
-      min: 
-      max: 
-      labelField: 
-    label: Social
-    description: Choose social links
+    label: Illustration
+    description: Choose an illustration file
   - name: links
     type: field_group_list
     fields:
-    - name: text
-      type: text
+    - name: column
+      type: field_group_list
+      fields:
+      - name: tilte
+        type: text
+        config:
+          required: false
+        label: Tilte
+        description: Title text for the column
+      - name: link
+        type: field_group_list
+        fields:
+        - name: icon
+          type: file
+          config:
+            maxSize: 64
+          label: Icon
+          description: Icon for the link
+        - name: text
+          type: text
+          config:
+            required: false
+          label: Text
+          description: Text for the link
+        - name: url
+          type: text
+          config:
+            required: false
+          label: URL
+          description: URL for the link
+        - name: open_in_new_tab
+          type: boolean
+          label: Open in new tab
+          description: Toggle whether or not to open in new tab
+          default: true
+        config:
+          min: 
+          max: 
+          labelField: 
+        label: Link
+        description: Footer link
       config:
-        required: false
-      label: Text
-      description: Enter the link text
-    - name: url
-      type: text
-      config:
-        required: false
-      label: URL
-      description: Enter the URL
-    - name: open_in_new_tab
-      type: boolean
-      label: Open in new tab
-      description: Open the link in a new tab?
-      default: true
+        min: 
+        max: 
+        labelField: 
+      label: Column
+      description: A column of links
     config:
       min: 
       max: 
       labelField: 
     label: Links
-    description: 'Create links for the footer '
+    description: Footer links sorted into columns
   label: Footer
   description: Choose how the site-wide footer displays
 - name: privacy
