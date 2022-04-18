@@ -49,8 +49,6 @@ footer:
     url: https://www.instagram.com/mossworkspace/
   illustration: ''
   link_sections:
-  - name: Social
-    links: []
   - name: About
     links:
     - icon: ''
@@ -58,6 +56,8 @@ footer:
       url: https://mossworkspace.com/company/
       open_in_new_tab: false
   - name: Resources
+    links: []
+  - name: Social
     links: []
 privacy:
   cookie_prompt: This site uses cookies.
