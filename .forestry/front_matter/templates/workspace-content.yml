@@ -59,3 +59,9 @@ fields:
       path: 
   label: Illustration type
   description: Choose an illustration type
+- name: previews
+  type: include
+  config: {}
+  template: previews
+  label: Previews
+  description: Previews for the illustration
