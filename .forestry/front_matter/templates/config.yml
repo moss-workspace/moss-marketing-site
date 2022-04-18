@@ -95,62 +95,52 @@ fields:
       maxSize: 64
     label: Illustration
     description: Choose an illustration file
-  - name: links
+  - name: link_sections
     type: field_group_list
     fields:
-    - name: column
+    - name: name
+      type: text
+      config:
+        required: false
+      label: Name
+      description: Section name
+    - name: links
       type: field_group_list
       fields:
-      - name: title
+      - name: icon
+        type: file
+        config:
+          maxSize: 64
+        label: Icon
+        description: Icon for the link
+      - name: text
         type: text
         config:
           required: false
-        label: Title
-        description: Title text for the column
-      - name: link
-        type: field_group_list
-        fields:
-        - name: icon
-          type: file
-          config:
-            maxSize: 64
-          label: Icon
-          description: Icon for the link
-        - name: text
-          type: text
-          config:
-            required: false
-          label: Text
-          description: Text for the link
-        - name: url
-          type: text
-          config:
-            required: false
-          label: URL
-          description: URL for the link
-        - name: open_in_new_tab
-          type: boolean
-          label: Open in new tab
-          description: Toggle whether or not to open in new tab
-          default: true
+        label: Text
+        description: Text for the link
+      - name: url
+        type: text
         config:
-          min: 
-          max: 
-          labelField: 
-        label: Link
-        description: Footer link
+          required: false
+        label: URL
+        description: URL for the link
+      - name: open_in_new_tab
+        type: boolean
+        label: Open in new tab
+        description: Toggle whether or not to open in a new tab
       config:
         min: 
         max: 
         labelField: 
-      label: Column
-      description: A column of links
+      label: Links
+      description: List of links for the section
     config:
       min: 
       max: 
       labelField: 
-    label: Links
-    description: Footer links sorted into columns
+    label: Link sections
+    description: Columns of links for the footer
   label: Footer
   description: Choose how the site-wide footer displays
 - name: privacy
