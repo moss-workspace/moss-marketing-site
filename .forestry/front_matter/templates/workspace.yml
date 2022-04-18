@@ -37,3 +37,12 @@ fields:
       value: true
   label: Landing
   description: Landing screen for the site.
+- name: blocks
+  type: blocks
+  template_types:
+  - waitlist-cta
+  config:
+    min: 
+    max: 
+  label: Blocks
+  description: Flow of page content
