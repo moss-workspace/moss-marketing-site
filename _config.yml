@@ -49,6 +49,8 @@ footer:
     url: https://www.instagram.com/mossworkspace/
   illustration: ''
   link_sections:
+  - name: Resources
+    links: []
   - name: About
     links:
     - icon: ''
