@@ -1,4 +1,97 @@
 ---
 label: Company
 hide_body: true
-fields: []
+fields:
+- name: header
+  type: text
+  config:
+    required: false
+  label: Header
+  description: Large header text
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body
+  description: Body text
+- name: illustration
+  type: include
+  config: {}
+  template: previews
+  label: Illustration
+  description: Group of previews for illustration
+- name: impact_header
+  type: text
+  config:
+    required: false
+  label: Impact header
+  description: Header for the impact section
+- name: impact_section
+  type: field_group_list
+  fields:
+  - name: illustration
+    type: file
+    config:
+      maxSize: 64
+    label: Illustration
+    description: Impact section illustration
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: A title for the section
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+    description: Body text for the section
+  - name: extra_info
+    type: boolean
+    label: Extra info
+    description: Toggle to include extra information
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+    description: Additional image for the section
+    showOnly:
+      field: extra_info
+      value: true
+  - name: small_text
+    type: text
+    config:
+      required: false
+    label: Small Text
+    description: Small additional text for the section
+    showOnly:
+      field: extra_info
+      value: true
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Impact section
+  description: A section to each type of impact
+- name: email_illustration
+  type: file
+  config:
+    maxSize: 64
+  label: Email illustration
+  description: Image to illustrate the email signup
+- name: email_header
+  type: text
+  config:
+    required: false
+  label: Email header
+  description: Header for the email signup
