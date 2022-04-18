@@ -41,6 +41,7 @@ fields:
   type: blocks
   template_types:
   - waitlist-cta
+  - testimonial
   config:
     min: 
     max: 
