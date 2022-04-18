@@ -1,4 +1,52 @@
 ---
 label: Previews
 hide_body: true
-fields: []
+fields:
+- name: previews
+  type: field_group_list
+  fields:
+  - name: thumbnail
+    type: file
+    config:
+      maxSize: 64
+    label: Thumbnail
+    description: Thumbnail image (or video)
+  - name: custom_info
+    type: boolean
+    label: Custom info
+    description: Toggle to set custom info, otherwise the actual file name and an
+      image icon will be used.
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+    description: File name for the preview
+    showOnly:
+      field: custom_info
+      value: true
+  - name: icon
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Image
+      - Video
+      - PSD
+      - AI
+      - Document
+      - Folder
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Icon
+    description: Icon for the preview
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Previews
+  description: Group of previews
