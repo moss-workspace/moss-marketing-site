@@ -1,9 +1,9 @@
 ---
 
----
-# landing-page
+# moss-marketing-site
 
-A one page Moss marketing site.
+The Moss marketing site (mossworkspace.com)
+
 
 ## Local development
 
