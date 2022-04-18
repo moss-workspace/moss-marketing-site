@@ -35,14 +35,19 @@ footer:
     © 2021
     Moss workspace, inc.
   links:
-  - text: Email us
-    url: mailto:team@mossworkspace.com
-    open_in_new_tab: false
+  - column:
+    - title: About
+      link:
+      - icon: ''
+        text: Company
+        url: "/company"
+        open_in_new_tab: false
   social:
   - icon: Twitter
     url: https://twitter.com/mossworkspace
   - icon: Instagram
     url: https://www.instagram.com/mossworkspace/
+  illustration: ''
 privacy:
   cookie_prompt: This site uses cookies.
   privacy_policy: The site uses Google Analytics. Google Analytics cookies helps to
