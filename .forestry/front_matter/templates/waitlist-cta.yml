@@ -1,4 +1,16 @@
 ---
 label: Waitlist CTA
 hide_body: true
-fields: []
+fields:
+- name: header
+  type: text
+  config:
+    required: false
+  label: Header
+  description: Large header text
+- name: subhead
+  type: text
+  config:
+    required: false
+  label: Subhead
+  description: Subhead text
