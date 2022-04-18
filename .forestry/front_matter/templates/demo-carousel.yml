@@ -1,4 +1,41 @@
 ---
 label: Demo carousel
 hide_body: true
-fields: []
+fields:
+- name: header
+  type: text
+  config:
+    required: false
+  label: Header
+  description: Large header text
+- name: demo
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+    description: Name of demo
+  - name: video
+    type: file
+    config:
+      maxSize: 64
+    label: Video
+    description: Video (or image) for the demo
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Description
+    description: Description text for demo
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Carousel
+  description: Carousel of demos
