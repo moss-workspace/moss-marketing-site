@@ -8,7 +8,7 @@ sections:
   label: Pages
 - type: document
   path: index.markdown
-  label: Landing
+  label: Workspace
 - type: document
   path: waitlist.markdown
   label: Waitlist
