@@ -1,4 +1,61 @@
 ---
 label: Workspace content
 hide_body: true
-fields: []
+fields:
+- name: header
+  type: text
+  config:
+    required: false
+  label: Header
+  description: Large header text
+- name: subhead
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Subhead
+  description: Subhead text<br>
+- name: video
+  type: file
+  config:
+    maxSize: 64
+  label: Video
+  description: Large demo video (or image)
+- name: body
+  type: field_group_list
+  fields:
+  - name: paragraph
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Paragraph
+    description: A text block
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Body
+  description: Body text
+- name: illustration_type
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Drop it in
+    - Lay it out
+    - Creative clarity
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Illustration type
+  description: Choose an illustration type
