@@ -101,11 +101,11 @@ fields:
     - name: column
       type: field_group_list
       fields:
-      - name: tilte
+      - name: title
         type: text
         config:
           required: false
-        label: Tilte
+        label: Title
         description: Title text for the column
       - name: link
         type: field_group_list
