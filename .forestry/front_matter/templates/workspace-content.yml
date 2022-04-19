@@ -27,7 +27,7 @@ fields:
 - name: text_blocks
   type: field_group_list
   fields:
-  - name: paragraph
+  - name: text_block
     type: textarea
     default: ''
     config:
@@ -35,8 +35,8 @@ fields:
       wysiwyg: true
       schema:
         format: markdown
-    label: Paragraph
     description: A text block
+    label: Text block
   config:
     min: 
     max: 
