@@ -96,4 +96,4 @@ fields:
   label: Email header
   description: Header for the email signup
 pages:
-- Company.md
+- company.md
