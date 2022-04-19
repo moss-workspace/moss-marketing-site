@@ -30,6 +30,9 @@ header:
   jobs_button_url: "/"
   navigation:
   - icon: ''
+    text: Thesis
+    url: "/thesis"
+  - icon: ''
     text: Workspace
     url: "/"
   buttons: []
