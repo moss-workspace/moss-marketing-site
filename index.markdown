@@ -248,13 +248,15 @@ blocks:
     description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
       space—Moss’ infinite canvas gives you room to take your idea wherever it wants
       to go. '
+    icon: ''
 - template: testimonial
   quote: ''
   name: ''
   title: ''
   previews: []
+  avatar: ''
 - template: waitlist-cta
-  header: ''
-  subhead: ''
+  header: Try Moss early
+  subhead: Join the waitlist for beta access.
 
 ---
