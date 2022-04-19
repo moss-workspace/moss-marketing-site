@@ -5,6 +5,11 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: heading
+  label: Settings
+- type: document
+  path: _config.yml
+  label: Site-wide settings
+- type: heading
   label: Pages
 - type: document
   path: index.markdown
@@ -18,11 +23,6 @@ sections:
 - type: jekyll-pages
   label: All pages
   create: documents
-- type: heading
-  label: Data
-- type: document
-  path: _config.yml
-  label: Site-wide settings
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
