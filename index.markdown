@@ -215,7 +215,7 @@ blocks:
       switching to track down your compositions. \n\n**Where traditional workflows
       are cubicles, Moss is the open studio.**"
 - template: workspace-content
-  illustration_type: ''
+  illustration_type: Creative clarity
   header: Find creative clarity.
   subhead: 'Connect the dots in one workspace for every tool, team, and iteration. '
   video: ''
@@ -231,7 +231,14 @@ blocks:
   show_button: false
   button_text: ''
   button_url: ''
-  text_blocks: []
+  text_blocks:
+  - text_block: Moss is collaborative by default and tool agnostic, allowing different
+      artists, disciplines and creative inputs to iterate frictionlessly in one digital
+      space. Effortless access to your team and assets enables more efficient and
+      effective work.
+  - text_block: With realtime updates, your workspace becomes a living, breathing
+      ecosystem for team-wide projects and explorations. Seeing collective progress
+      helps build creative momentum for everyone.
 - template: demo-carousel
   header: ''
   demo: []
