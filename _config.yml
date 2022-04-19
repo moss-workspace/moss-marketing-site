@@ -39,12 +39,12 @@ header:
     text: Company
     url: "/company"
   buttons:
-  - waitlist_button: true
-    text: Join the waitlist
-    url: ''
   - waitlist_button: false
     text: Sign in
     url: app.beta.mossworkspace.com
+  - waitlist_button: true
+    text: Join the waitlist
+    url: ''
 footer:
   logo: "/uploads/moss-icon-small__rgb.svg"
   legal: |-
