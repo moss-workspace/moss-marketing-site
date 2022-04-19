@@ -47,8 +47,6 @@ fields:
   type: blocks
   template_types:
   - workspace-content
-  - workspace-content
-  - workspace-content
   - demo-carousel
   - testimonial
   - waitlist-cta
