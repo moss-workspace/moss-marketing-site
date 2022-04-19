@@ -184,6 +184,7 @@ blocks:
   show_button: true
   button_text: Learn more about tethering
   button_url: ''
+  text_blocks: []
 - template: workspace-content
   illustration_type: Lay it out
   header: Lay it out.
@@ -201,6 +202,13 @@ blocks:
   show_button: false
   button_text: ''
   button_url: ''
+  text_blocks:
+  - text_block: Ditch traditional file management and tackle creative problems in
+      a freeform, distraction-free space that works the way you do.
+  - text_block: "With Moss, organization follows your creative flow, not the other
+      way around. Intuitive navigation keeps you in the flow without constantly context
+      switching to track down your compositions. \n\n**Where traditional workflows
+      are cubicles, Moss is the open studio.**"
 - template: workspace-content
   illustration_type: ''
   header: Find creative clarity.
@@ -218,6 +226,7 @@ blocks:
   show_button: false
   button_text: ''
   button_url: ''
+  text_blocks: []
 - template: demo-carousel
   header: ''
   demo: []
