@@ -242,6 +242,12 @@ blocks:
 - template: demo-carousel
   header: Jump right in.
   demo: []
+  demos:
+  - name: Creative exploration
+    video: ''
+    description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
+      space—Moss’ infinite canvas gives you room to take your idea wherever it wants
+      to go. '
 - template: testimonial
   quote: ''
   name: ''
