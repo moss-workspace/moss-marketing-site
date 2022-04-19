@@ -1,6 +1,6 @@
 ---
 layout: landing
-permalink: "/"
+permalink: "/thesis"
 hero:
   title: Inspiration, meet organization.
   body: Moss transforms the desktop into a collaborative, visual environment for the
