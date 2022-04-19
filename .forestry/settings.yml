@@ -12,7 +12,7 @@ sections:
 - type: heading
   label: Pages
 - type: document
-  path: index.markdown
+  path: workspace.markdown
   label: Workspace
 - type: document
   path: thesis.markdown
