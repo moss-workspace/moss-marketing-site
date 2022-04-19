@@ -2,6 +2,12 @@
 label: Company
 hide_body: true
 fields:
+- name: permalink
+  type: text
+  config:
+    required: false
+  description: The URL extension for this page
+  label: Permalink
 - name: header
   type: text
   config:
