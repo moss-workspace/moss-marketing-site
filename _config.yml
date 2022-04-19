@@ -28,7 +28,10 @@ header:
   show_jobs_button: false
   jobs_button_text: "\U0001F469‍\U0001F4BB Join the team"
   jobs_button_url: "/"
-  navigation: []
+  navigation:
+  - icon: ''
+    text: Workspace
+    url: "/"
   buttons: []
 footer:
   logo: "/uploads/moss-icon-small__rgb.svg"
