@@ -57,3 +57,5 @@ fields:
     max: 
   label: Blocks
   description: Flow of page content
+pages:
+- index.markdown
