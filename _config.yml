@@ -30,14 +30,14 @@ header:
   jobs_button_url: "/"
   navigation:
   - icon: ''
-    text: Company
-    url: "/company"
-  - icon: ''
     text: Workspace
     url: "/"
   - icon: ''
     text: Thesis
     url: "/thesis"
+  - icon: ''
+    text: Company
+    url: "/company"
   buttons: []
 footer:
   logo: "/uploads/moss-icon-small__rgb.svg"
