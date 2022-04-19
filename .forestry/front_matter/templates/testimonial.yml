@@ -12,6 +12,12 @@ fields:
       format: markdown
   label: Quote
   description: " Testimonial quote text"
+- name: avatar
+  type: file
+  config:
+    maxSize: 64
+  label: Avatar
+  description: Avatar for the quoted person
 - name: name
   type: text
   config:
