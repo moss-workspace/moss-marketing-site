@@ -161,10 +161,11 @@ final_section:
   - "/uploads/sky-3.png"
   - "/uploads/flower-2.png"
 landing:
-  header: ''
-  subhead: ''
-  show_video_link: false
-  video_text: ''
+  header: The creative desktop
+  subhead: Inspiration meets organization in a new visual workspace built for better
+    ideas.
+  show_video_link: true
+  video_text: Watch the video
   video_url: ''
 blocks:
 - template: workspace-content
