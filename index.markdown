@@ -174,12 +174,16 @@ blocks:
   body:
   - paragraph: From online references to production-ready source files and daily output
       folders, Moss makes sharing your work as painless as drag-and-drop.
-  - paragraph: "Every asset you add to your workspace is shared instantly and stays
-      tethered to its source, so your latest is at your fingertips and stays up to
-      date for your entire team. \n\nRIP convert to JPG. "
+  - paragraph: |-
+      Every asset you add to your workspace is shared instantly and stays tethered to its source, so your latest is at your fingertips and stays up to date for your entire team.
+
+      **RIP convert to JPG.**
   video: ''
   illustration_type: ''
   previews: []
+  show_button: false
+  button_text: ''
+  button_url: ''
 - template: workspace-content
   illustration_type: []
   header: ''
@@ -187,6 +191,9 @@ blocks:
   video: ''
   body: []
   previews: []
+  show_button: false
+  button_text: ''
+  button_url: ''
 - template: workspace-content
   illustration_type: []
   header: ''
@@ -194,6 +201,9 @@ blocks:
   video: ''
   body: []
   previews: []
+  show_button: false
+  button_text: ''
+  button_url: ''
 - template: demo-carousel
   header: ''
   demo: []
