@@ -9,5 +9,6 @@ impact_header: ''
 impact_section: []
 email_illustration: ''
 email_header: ''
+permalink: "/company"
 
 ---
