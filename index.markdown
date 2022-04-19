@@ -179,13 +179,13 @@ blocks:
 
       **RIP convert to JPG.**
   video: ''
-  illustration_type: Lay it out
+  illustration_type: Drop it in
   previews: []
   show_button: true
   button_text: Learn more about tethering
   button_url: ''
 - template: workspace-content
-  illustration_type: []
+  illustration_type: ''
   header: ''
   subhead: ''
   video: ''
