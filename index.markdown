@@ -166,6 +166,44 @@ landing:
   show_video_link: false
   video_text: ''
   video_url: ''
-blocks: []
+blocks:
+- template: workspace-content
+  header: Drop it in.
+  subhead: "Moss takes the busywork out of creativity.\n\nShare your work and keep
+    it in-sync without stopping to source, export, and compress along the way. "
+  body:
+  - paragraph: From online references to production-ready source files and daily output
+      folders, Moss makes sharing your work as painless as drag-and-drop.
+  - paragraph: "Every asset you add to your workspace is shared instantly and stays
+      tethered to its source, so your latest is at your fingertips and stays up to
+      date for your entire team. \n\nRIP convert to JPG. "
+  video: ''
+  illustration_type: ''
+  previews: []
+- template: workspace-content
+  illustration_type: []
+  header: ''
+  subhead: ''
+  video: ''
+  body: []
+  previews: []
+- template: workspace-content
+  illustration_type: []
+  header: ''
+  subhead: ''
+  video: ''
+  body: []
+  previews: []
+- template: demo-carousel
+  header: ''
+  demo: []
+- template: testimonial
+  quote: ''
+  name: ''
+  title: ''
+  previews: []
+- template: waitlist-cta
+  header: ''
+  subhead: ''
 
 ---

@@ -12,11 +12,9 @@ sections:
 - type: document
   path: thesis.markdown
   label: Thesis
-  match: "**/*"
 - type: document
   path: company.md
   label: Company
-  match: "**/*"
 - type: jekyll-pages
   label: All pages
   create: documents
