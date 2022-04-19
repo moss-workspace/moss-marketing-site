@@ -240,7 +240,7 @@ blocks:
       ecosystem for team-wide projects and explorations. Seeing collective progress
       helps build creative momentum for everyone.
 - template: demo-carousel
-  header: ''
+  header: Jump right in.
   demo: []
 - template: testimonial
   quote: ''
