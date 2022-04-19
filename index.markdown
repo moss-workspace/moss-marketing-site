@@ -202,11 +202,18 @@ blocks:
   button_text: ''
   button_url: ''
 - template: workspace-content
-  illustration_type: []
-  header: ''
-  subhead: ''
+  illustration_type: ''
+  header: Find creative clarity.
+  subhead: 'Connect the dots in one workspace for every tool, team, and iteration. '
   video: ''
-  body: []
+  body:
+  - paragraph: Moss is collaborative by default and tool agnostic, allowing different
+      artists, disciplines and creative inputs to iterate frictionlessly in one digital
+      space. Effortless access to your team and assets enables more efficient and
+      effective work.
+  - paragraph: With realtime updates, your workspace becomes a living, breathing ecosystem
+      for team-wide projects and explorations. Seeing collective progress helps build
+      creative momentum for everyone.
   previews: []
   show_button: false
   button_text: ''
