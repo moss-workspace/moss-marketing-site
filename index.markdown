@@ -184,7 +184,12 @@ blocks:
   show_button: true
   button_text: Learn more about tethering
   button_url: ''
-  text_blocks: []
+  text_blocks:
+  - text_block: "Every asset you add to your workspace is shared instantly and stays
+      tethered to its source, so your latest is at your fingertips and stays up to
+      date for your entire team. \n\n**RIP convert to JPG.**"
+  - text_block: From online references to production-ready source files and daily
+      output folders, Moss makes sharing your work as painless as drag-and-drop.
 - template: workspace-content
   illustration_type: Lay it out
   header: Lay it out.
