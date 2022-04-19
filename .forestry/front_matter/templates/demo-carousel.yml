@@ -8,7 +8,7 @@ fields:
     required: false
   label: Header
   description: Large header text
-- name: demo
+- name: demos
   type: field_group_list
   fields:
   - name: name
@@ -37,5 +37,5 @@ fields:
     min: 
     max: 
     labelField: 
-  label: Carousel
+  label: Demos
   description: Carousel of demos
