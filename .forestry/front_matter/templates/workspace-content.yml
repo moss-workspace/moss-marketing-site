@@ -24,7 +24,7 @@ fields:
     maxSize: 64
   label: Video
   description: Large demo video (or image)
-- name: body
+- name: text_blocks
   type: field_group_list
   fields:
   - name: paragraph
@@ -41,8 +41,8 @@ fields:
     min: 
     max: 
     labelField: 
-  label: Body
-  description: Body text
+  label: Text blocks
+  description: Add blocks of body text
 - name: show_button
   type: boolean
   label: Show button
