@@ -185,11 +185,18 @@ blocks:
   button_text: Learn more about tethering
   button_url: ''
 - template: workspace-content
-  illustration_type: ''
-  header: ''
-  subhead: ''
+  illustration_type: Lay it out
+  header: Lay it out.
+  subhead: "Never dig for a file again.\n\nOrganize your work visually, so you can
+    spend less time chasing assets and more time following inspiration. "
   video: ''
-  body: []
+  body:
+  - paragraph: Ditch traditional file management and tackle creative problems in a
+      freeform, distraction-free space that works the way you do.
+  - paragraph: |-
+      With Moss, organization follows your creative flow, not the other way around. Intuitive navigation keeps you in the flow without constantly context switching to track down your compositions.
+
+      **Where traditional workflows are cubicles, Moss is the open studio.**
   previews: []
   show_button: false
   button_text: ''
