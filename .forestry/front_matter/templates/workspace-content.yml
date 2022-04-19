@@ -43,6 +43,28 @@ fields:
     labelField: 
   label: Body
   description: Body text
+- name: show_button
+  type: boolean
+  label: Show button
+  description: Toggle whether or not to show a button
+- name: button_text
+  type: text
+  config:
+    required: false
+  label: Button text
+  description: Text for the button
+  showOnly:
+    field: show_button
+    value: true
+- name: button_url
+  type: text
+  config:
+    required: false
+  label: Button URL
+  description: URL for the button
+  showOnly:
+    field: show_button
+    value: true
 - name: illustration_type
   type: select
   default: []
