@@ -10,8 +10,13 @@ sections:
   path: index.markdown
   label: Workspace
 - type: document
-  path: waitlist.markdown
-  label: Waitlist
+  path: thesis.markdown
+  label: Thesis
+  match: "**/*"
+- type: document
+  path: company.md
+  label: Company
+  match: "**/*"
 - type: jekyll-pages
   label: All pages
   create: documents
@@ -19,7 +24,7 @@ sections:
   label: Data
 - type: document
   path: _config.yml
-  label: Site settings
+  label: Site-wide settings
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
