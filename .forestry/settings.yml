@@ -8,7 +8,7 @@ sections:
   label: Settings
 - type: document
   path: _config.yml
-  label: Site-wide settings
+  label: Info & navigation
 - type: heading
   label: Pages
 - type: document
