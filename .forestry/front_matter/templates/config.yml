@@ -34,10 +34,24 @@ fields:
   name: url
   label: URL
   description: 'The URL of your site (ex: mossworkspace.com)'
-- type: list
-  name: exclude
-  label: exclude
-  hidden: true
+- name: sign_up_field
+  type: field_group
+  config: {}
+  fields:
+  - name: prompt
+    type: text
+    config:
+      required: false
+    label: Prompt
+    description: Placeholder text for the field
+  - name: button_text
+    type: text
+    config:
+      required: false
+    label: Button text
+    description: Text for the button
+  label: Sign up field
+  description: Settings for the sign up field used across the site
 - name: header
   type: field_group
   config: {}
