@@ -29,6 +29,8 @@ header:
   show_jobs_button: false
   jobs_button_text: "\U0001F469‍\U0001F4BB Join the team"
   jobs_button_url: "/"
+  navigation: []
+  buttons: []
 footer:
   logo: "/uploads/moss-icon-small__rgb.svg"
   legal: |-
@@ -69,3 +71,6 @@ privacy:
     Analytics Opt-out Browser Add-on</a> – to help provide website visitors more information
     and choice on how their data is collected when websites use Google services.
 thumbnail_image: "/uploads/mossworkspace-com.png"
+sign_up_field:
+  prompt: Enter your email
+  button_text: Join the waitlist
