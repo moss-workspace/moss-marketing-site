@@ -126,18 +126,25 @@ content:
   button_url: ''
   previews: []
 - template: workspace-content
-  content_type: Drop it in
+  content_type: Lay it out
   upper_illustration:
     previews: []
     note: ''
-  header: ''
-  subhead: ''
+  header: Lay it out.
+  subhead: "Never dig for a file again.\n\nOrganize your work visually, so you can
+    spend less time chasing assets and more time following inspiration. "
   video: ''
   middle_illustration:
     left_note: ''
     previews: []
     right_note: ''
-  text_blocks: []
+  text_blocks:
+  - text_block: |-
+      With Moss, organization follows your creative flow, not the other way around. Intuitive navigation keeps you in the flow without constantly context switching to track down your compositions.
+
+      **Where traditional workflows are cubicles, Moss is the open studio.**
+  - text_block: Ditch traditional file management and tackle creative problems in
+      a freeform, distraction-free space that works the way you do.
   show_button: false
   button_text: ''
   button_url: ''
