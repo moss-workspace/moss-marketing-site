@@ -167,16 +167,23 @@ content:
   button_url: ''
   previews: []
 - template: demo-carousel
-  header: ''
-  demos: []
+  header: Jump right in.
+  demos:
+  - name: Creative exploration
+    video: ''
+    description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
+      space—Moss’ infinite canvas gives you room to take your idea wherever it wants
+      to go. '
+    icon: ''
 - template: testimonial
-  quote: ''
+  quote: Moss has completely transformed the way we work. Once you use it, you’ll
+    wonder why this hasn’t always existed.
   avatar: ''
-  name: ''
-  title: ''
+  name: Mitch Paone
+  title: Partner & Creative Director, DIA
   previews: []
 - template: waitlist-cta
-  header: ''
-  subhead: ''
+  header: Try Moss early
+  subhead: Join the waitlist for beta access.
 
 ---
