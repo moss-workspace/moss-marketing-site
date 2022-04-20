@@ -22,6 +22,7 @@ sections:
 
       Every asset you add to your workspace is shared instantly and stays tethered to its source, so your latest is at your fingertips and stays up to date for your entire team.
 
+
       **RIP convert to JPG.**
   show_button: true
   button_text: Learn more about tethering
