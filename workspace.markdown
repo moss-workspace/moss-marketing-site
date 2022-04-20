@@ -141,12 +141,12 @@ content:
     previews: []
     right_note: ''
   text_blocks:
+  - text_block: Ditch traditional file management and tackle creative problems in
+      a freeform, distraction-free space that works the way you do.
   - text_block: |-
       With Moss, organization follows your creative flow, not the other way around. Intuitive navigation keeps you in the flow without constantly context switching to track down your compositions.
 
       **Where traditional workflows are cubicles, Moss is the open studio.**
-  - text_block: Ditch traditional file management and tackle creative problems in
-      a freeform, distraction-free space that works the way you do.
   show_button: false
   button_text: ''
   button_url: ''
