@@ -104,8 +104,10 @@ content:
 - template: workspace-content
   content_type: Drop it in
   header: Drop it in.
-  subhead: "Moss takes the busywork out of creativity.\n\nShare your work and keep
-    it in-sync without stopping to source, export, and compress along the way. "
+  subhead: |-
+    Moss takes the busywork out of creativity.
+
+    Share your work and keep it in-sync without stopping to source, export, and compress along the way.
   text_blocks:
   - text_block: |-
       From online references to production-ready source files and daily output folders, Moss makes sharing your work as painless as drag-and-drop.
