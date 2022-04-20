@@ -1,13 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-  <body>
-    {% include cookie_prompt.html %} {% include header.html %}
+    {% include head.html %}
+    <body>
+        {% include cookie_prompt.html %}
+        {% include header.html %}
 
-    <section class="default__content">
-      {{ content }}
-    </section>
+        <section>
+            <h1>{{ page.landing.header }}</h1>
+            <h4>{{ page.landing.subhead }}</h4>
+            {% if page.landing.show_video_link %}
+                <div class="button white borderless">
+                    {{ page.landing.video_text }}
+                </div>
+            {% endif %}
+        </section>
 
-    {% include footer.html %}
-  </body>
+        {% for section in page.sections %}
+            {% assign template = section.template %}
+            {% case template %}
+                {% when 'workspace-content' %}
+                    {% if section.upper_illustration %}
+                        <div class="note">
+                            {{ section.upper_illustration.note }}
+                        </div>
+                        {% for image in section.upper_illustration.previews %}
+                            <div class="preview">
+                                {% include preview.html %}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    <h2>{{ section.header }}</h2>
+                    <h4>{{ section.subhead }}</h4>
+                    <div class="workspace__largeVideo">
+                        VIDEO HERE
+                    </div>
+                    {% if section.middle_illustration %}
+                        <div class="note">
+                            {{ section.upper_illustration.left_note }}
+                        </div>
+                        {% for image in section.middle_illustration.left_previews %}
+                            <div class="preview">
+                                {% include preview.html %}
+                            </div>
+                        {% endfor %}
+                        <div class="note">
+                            {{ section.upper_illustration.right_note }}
+                        </div>
+                        {% for image in section.middle_illustration.right_previews %}
+                            <div class="preview">
+                                {% include preview.html %}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    {% for block in section.text_blocks %}
+                        <h5>{{ block }}</h5>
+                    {% endfor %}
+                    {% if show_button %}
+                        <div class="button">
+                            {{ section.button_text }}
+                        </div>
+                    {% endif %}
+                    {% for image in section.previews %}
+                        <div class="preview">
+                            {% include preview.html %}
+                        </div>
+                    {% endfor %}
+                {% when 'demo-carousel' %}
+                    <h2>{{ section.header }}</h2>
+                    {% for demo in section.demos %}
+                        <div class="button">
+                            {{ demo.name }}
+                        </div>
+                    {% endfor %}
+                    {% for demo in section.demos %}
+                        <div class="workspace__carousel__video">
+                            DEMO HERE
+                        </div>
+                        <p>{{ demo.description }}</p>
+                    {% endfor %}
+                {% when 'testimonial' %}
+                    <h2>{{ section.quote }}</h2>
+                    <h4>{{ section.name }}</h4>
+                    <h4>{{ section.title }}</h4>
+                {% when 'waitlist-cta' %}
+                    <h2>{{ section.header }}</h2>
+                    <h4>{{ section.subhead }}</h4>
+            {% endcase %}
+        {%
+		endfor %}
+
+        <section>{{ page.blocks.header }}</section>
+
+        {% include footer.html %}
+    </body>
 </html>

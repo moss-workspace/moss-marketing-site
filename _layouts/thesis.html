@@ -1,83 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body>
+  <body class="dark">
     {% include cookie_prompt.html %} {% include header.html %}
 
-    <section class="hero" id="hero">
-      <div class="hero__images">
-        {% for image in page.hero.images.left limit:4 %}
-        <div
-          class="preview parallax"
-          speed="{{ forloop.index | replace: '1', '9' | replace: '2', '7' | replace: '3', '8' | replace: '4', '9' }}"
-        >
-          {% include preview_hero.html %}
-        </div>
-        {% endfor %} {% for image in page.hero.images.right limit:5 %}
-        <div
-          class="preview parallax"
-          speed="{{ forloop.index | replace: '1', '7' | replace: '2', '7' | replace: '3', '8' | replace: '4', '9' | replace: '5', '9' }}"
-        >
-          {% include preview_hero.html %}
-        </div>
-        {% endfor %} {% for dot in page.hero.images.dots limit:2 %}
-        <img
-          class="hero__image--dot hero__image--dot--{{ forloop.index }}"
-          src="{{ dot | relative_url }}"
-          alt="dot"
-        />
-        {% endfor %}
-        <img
-          class="hero__image--tag"
-          src="{{ page.hero.images.tag | relative_url }}"
-          alt="Moss tag"
-        />
-      </div>
-      <div class="textblock__wrapper">
-        <div class="textblock">
-          <h1 class="textblock__title huge">
-            {{ page.hero.title }}
-          </h1>
-          <h2 class="textblock__body">
-            {{ page.hero.body | newline_to_br }}
-          </h2>
-          <div class="signup__form">
-            {% include signup_form.html %}
-          </div>
-          {% for subtitle in page.hero.subtitles %} {% if page.title !=
-          'Waitlist' and subtitle.scroll_to_manifesto %}
-
-          <button
-            class="textblock__subtitle button button--white button--small button--borderless"
-            onclick="scrollToManifesto();"
-          >
-            {{ subtitle.text }}
-          </button>
-          {% else %}
-          <button
-            class="textblock__subtitle button button--white button--small button--borderless"
-          >
-            <a
-              href="{{ subtitle.url }}"
-              target="{{ subtitle.scroll_to_manifesto | replace: 'true', '' | replace: 'false', '_blank' }}"
-            >
-              {{ subtitle.text }}
-            </a>
-          </button>
-          {% endif %} {% endfor %}
-        </div>
-      </div>
-    </section>
-
-    {% if page.title != 'Waitlist' %}
     <section class="desktop" id="desktop">
       <div class="textblock">
-        <h1 class="textblock__title">
-          {{ page.desktop_section.title }}
-        </h1>
-        <h2 class="textblock__body">
+        <h2 class="textblock__title">{{ page.desktop_section.title }}</h2>
+        <h4 class="textblock__body">
           {{ page.desktop_section.body | newline_to_br }}
-        </h2>
+        </h4>
       </div>
       <div class="desktop__images">
         {% for image in page.desktop_section.images %}
@@ -94,34 +26,28 @@
 
     <section class="files" id="files">
       <div class="textblock files__textblock--1">
-        <h1 class="textblock__title">
-          {{ page.files_section.title_1 }}
-        </h1>
-        <h2 class="textblock__body files__body--1">
+        <h2 class="textblock__title">{{ page.files_section.title_1 }}</h2>
+        <h4 class="textblock__body files__body--1">
           {{ page.files_section.body_1 | newline_to_br }}
-        </h2>
+        </h4>
       </div>
 
       {% include stack.html %}
 
       <div class="textblock files__textblock--2">
-        <h1 class="textblock__title">
-          {{ page.files_section.title_2 }}
-        </h1>
-        <h2 class="textblock__body files__body--1">
+        <h2 class="textblock__title">{{ page.files_section.title_2 }}</h2>
+        <h4 class="textblock__body files__body--1">
           {{ page.files_section.body_2 | newline_to_br }}
-        </h2>
+        </h4>
       </div>
     </section>
 
     <section class="creativity" id="creativity">
       <div class="textblock">
-        <h1 class="textblock__title">
-          {{ page.creativity_section.title }}
-        </h1>
-        <h2 class="textblock__body">
+        <h2 class="textblock__title">{{ page.creativity_section.title }}</h2>
+        <h4 class="textblock__body">
           {{ page.creativity_section.body | newline_to_br }}
-        </h2>
+        </h4>
       </div>
       <div class="parallax__wrapper">
         {% for image in page.creativity_section.image_grid limit: 1 %}
@@ -132,9 +58,7 @@
         <div class="creativity__grid parallax" speed="5">
           {% for image in page.creativity_section.image_grid offset:1 limit: 7
           %}
-          <div class="preview">
-            {% include preview.html %}
-          </div>
+          <div class="preview">{% include preview.html %}</div>
           {% endfor %}
         </div>
 
@@ -154,12 +78,10 @@
 
     <section class="why">
       <div class="textblock">
-        <h1 class="textblock__title">
-          {{ page.why_section.title }}
-        </h1>
-        <h2 class="textblock__body">
+        <h2 class="textblock__title">{{ page.why_section.title }}</h2>
+        <h4 class="textblock__body">
           {{ page.why_section.body | newline_to_br }}
-        </h2>
+        </h4>
       </div>
       <div class="parallax__wrapper">
         {% for image in page.why_section.images limit: 3 %}
@@ -204,9 +126,7 @@
 
     <section class="final">
       <div class="textblock">
-        <h1 class="textblock__title">
-          {{ page.final_section.title }}
-        </h1>
+        <h2 class="textblock__title">{{ page.final_section.title }}</h2>
       </div>
 
       <div class="parallax__wrapper">
@@ -221,17 +141,15 @@
       </div>
 
       <div class="textblock">
-        <h2 class="textblock__body">
+        <h4 class="textblock__body">
           {{ page.final_section.body | newline_to_br }}
-        </h2>
+        </h4>
       </div>
     </section>
 
     <section class="tagline" id="tagline">
       <div class="textblock center">
-        <h1 class="textblock__title">
-          {{ site.tagline }}
-        </h1>
+        <h2 class="textblock__title">{{ site.tagline }}</h2>
         <img
           class="tagline__logo"
           data-src="{{ site.footer.logo | relative_url }}"
@@ -258,19 +176,8 @@
             {{ page.hero.button }}
           </button>
         </form>
-        {% if site.header.show_jobs_button %}
-        <button
-          class="textblock__subtitle button button--white button--small button--borderless"
-        >
-          <a href="{{ site.header.jobs_button_url }}" target="'_blank'">
-            {{ site.header.jobs_button_text }}
-          </a>
-        </button>
-        {% endif %}
       </div>
     </section>
-    {% else %}
-    <div class="waitlist__bumper"></div>
-    {% endif %} {% include footer.html %}
+    {% include footer.html %}
   </body>
 </html>

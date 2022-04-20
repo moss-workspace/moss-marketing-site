@@ -28,6 +28,13 @@ footer {
   padding: 16px;
 }
 
+section {
+  margin: 0 200px;
+  @include break-below("md") {
+    margin: 0 150px;
+  }
+}
+
 #cookieprompt {
   display: none;
   padding-right: 3px;
@@ -45,6 +52,37 @@ footer {
   transform: translateY(-50%);
   left: 0;
   right: 0;
+}
+
+// Grid system
+////////////////////////////////////////////////////////////////////////////////
+
+// 12 columns on desktop
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    grid-column: span #{$i};
+  }
+}
+@for $i from 1 through 12 {
+  @for $j from 1 through 12 {
+    .col-#{$i}-#{$j} {
+      grid-column: #{$j} / span #{$i};
+    }
+  }
+}
+
+// 4 columns on mobile
+@for $i from 1 through 4 {
+  .col-md-#{$i} {
+    grid-column: span #{$i};
+  }
+}
+@for $i from 1 through 4 {
+  @for $j from 1 through 4 {
+    .col-md-#{$i}-#{$j} {
+      grid-column: #{$j} / span #{$i};
+    }
+  }
 }
 
 // Buttons & inputs
