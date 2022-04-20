@@ -101,6 +101,3 @@ fields:
     required: false
   label: Email header
   description: Header for the email signup
-pages:
-- company.md
-- company.md

@@ -49,18 +49,41 @@ fields:
     description: URL for the video
   label: Landing
   description: Landing screen for the site.
-- name: blocks
-  type: blocks
-  template_types:
-  - workspace-content
-  - demo-carousel
-  - testimonial
-  - waitlist-cta
-  config:
-    min: 
-    max: 
-  label: Blocks
-  description: Flow of page content
+- name: section_1
+  type: include
+  config: {}
+  template: workspace-content
+  label: Section 1
+  description: The first section (drop it in)
+- name: section_2
+  type: include
+  config: {}
+  template: workspace-content
+  label: Section 2
+  description: The second section (lay it out)
+- name: section_3
+  type: include
+  config: {}
+  template: workspace-content
+  label: Section 3
+  description: The third section (creative clarity)
+- name: demo_carousel
+  type: include
+  config: {}
+  template: demo-carousel
+  label: Demo carousel
+  description: A carousel of demos
+- name: testimonial
+  type: include
+  config: {}
+  template: testimonial
+  label: Testimonial
+  description: A large quote
+- name: waitlist_cta
+  type: include
+  config: {}
+  template: waitlist-cta
+  label: Waitlist CTA
+  description: A CTA to sign up for the waitlist
 pages:
-- index.markdown
 - workspace.markdown
