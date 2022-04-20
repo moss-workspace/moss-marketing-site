@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include cookie_prompt.html %} {% include header.html %}
+
+    <section class="default__content">
+      {{ content }}
+    </section>
+
+    {% include footer.html %}
+  </body>
+</html>

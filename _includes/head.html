@@ -25,8 +25,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}" />
-  {% if page.layout == "landing" %}
-  <link rel="stylesheet" href="{{ '/css/landing.css' | relative_url }}" />
+  {% if page.layout == "thesis" %}
+  <link rel="stylesheet" href="{{ '/css/thesis.css' | relative_url }}" />
   {% endif %}
 
   <!-- Favicon -->
@@ -77,7 +77,7 @@
     type="text/javascript"
     src="{{ '/assets/js/main.js' | relative_url }}"
   ></script>
-  {% if page.layout == "landing" %} {% if page.title == "Waitlist" %}
+  {% if page.layout == "thesis" %} {% if page.title == "Waitlist" %}
   <script
     async
     type="text/javascript"
@@ -87,7 +87,7 @@
   <script
     async
     type="text/javascript"
-    src="{{ '/assets/js/landing.js' | relative_url }}"
+    src="{{ '/assets/js/thesis.js' | relative_url }}"
   ></script>
   {% endif %} {% endif %}
 
