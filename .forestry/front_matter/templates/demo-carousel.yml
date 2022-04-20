@@ -11,6 +11,12 @@ fields:
 - name: demos
   type: field_group_list
   fields:
+  - name: icon
+    type: file
+    config:
+      maxSize: 64
+    label: Icon
+    description: Icon for the demo
   - name: name
     type: text
     config:
@@ -33,12 +39,6 @@ fields:
         format: markdown
     label: Description
     description: Description text for demo
-  - name: icon
-    type: file
-    config:
-      maxSize: 64
-    label: Icon
-    description: Icon for the demo
   config:
     min: 
     max: 
