@@ -49,9 +49,9 @@ fields:
     description: URL for the video
   label: Landing
   description: Landing screen for the site.
-- name: content
+- name: sections
   type: blocks
-  label: Content
+  label: Sections
   template_types:
   - workspace-content
   - demo-carousel
@@ -60,6 +60,6 @@ fields:
   config:
     min: 
     max: 
-  description: Blocks of content for this page
+  description: Content sections for this page
 pages:
 - workspace.markdown
