@@ -65,22 +65,6 @@ fields:
   showOnly:
     field: show_button
     value: true
-- name: illustration_type
-  type: select
-  default: []
-  config:
-    required: false
-    options:
-    - Drop it in
-    - Lay it out
-    - Creative clarity
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Illustration type
-  description: Choose an illustration type
 - name: previews
   type: include
   config: {}
