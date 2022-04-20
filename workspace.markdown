@@ -33,8 +33,12 @@ sections:
     left_note: ''
     previews: []
     right_note: ''
+    note: ''
   button_url: ''
   previews: []
+  middle_illustration_right:
+    note: ''
+    previews: []
 - template: workspace-content
   content_type: Lay it out
   upper_illustration:
@@ -48,6 +52,7 @@ sections:
     left_note: ''
     previews: []
     right_note: ''
+    note: ''
   text_blocks:
   - text_block: Ditch traditional file management and tackle creative problems in
       a freeform, distraction-free space that works the way you do.
@@ -59,23 +64,37 @@ sections:
   button_text: ''
   button_url: ''
   previews: []
+  middle_illustration_right:
+    note: ''
+    previews: []
 - template: workspace-content
-  content_type: Drop it in
+  content_type: Creative clarity
   upper_illustration:
     previews: []
     note: ''
-  header: ''
-  subhead: ''
+  header: Find creative clarity.
+  subhead: 'Connect the dots in one workspace for every tool, team, and iteration. '
   video: ''
   middle_illustration:
     left_note: ''
     previews: []
     right_note: ''
-  text_blocks: []
+    note: ''
+  text_blocks:
+  - text_block: Moss is collaborative by default and tool agnostic, allowing different
+      artists, disciplines and creative inputs to iterate frictionlessly in one digital
+      space. Effortless access to your team and assets enables more efficient and
+      effective work.
+  - text_block: With realtime updates, your workspace becomes a living, breathing
+      ecosystem for team-wide projects and explorations. Seeing collective progress
+      helps build creative momentum for everyone.
   show_button: false
   button_text: ''
   button_url: ''
   previews: []
+  middle_illustration_right:
+    note: ''
+    previews: []
 - template: demo-carousel
   header: Jump right in.
   demos:
