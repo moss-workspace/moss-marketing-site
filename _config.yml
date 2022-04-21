@@ -47,19 +47,6 @@ header:
       text: Join the waitlist
       url: ""
 footer:
-  links:
-    - column:
-        - title: About
-          link:
-            - icon: ""
-              text: Company
-              url: "/company"
-              open_in_new_tab: false
-  social:
-    - icon: Twitter
-      url: https://twitter.com/mossworkspace
-    - icon: Instagram
-      url: https://www.instagram.com/mossworkspace/
   illustration: ""
   link_sections:
     - name: About

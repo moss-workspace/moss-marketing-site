@@ -9,9 +9,11 @@
             <div class="textblock__center">
                 <h1>{{ page.landing.header }}</h1>
                 <h4>{{ page.landing.subhead }}</h4>
+            </div>
+            <div class="col-4-5" style="text-align: center;">
                 {% include signup_form.html %}
                 {% if page.landing.show_video_link %}
-                    <button class="button--white button--medium">
+                    <button class="button--white button--medium button--borderless">
                         {{ page.landing.video_text }}
                     </button>
                 {% endif %}
@@ -105,7 +107,7 @@
                         </div>
                         <form class="signup__form input-button col-4-5" onsubmit="() => {return joinWaitlist();}">
                             <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
-                            <button class="button--blue button--large button--full" type="submit">
+                            <button class="button--blue button--large" type="submit">
                                 {{ site.sign_up_field.button_text }}
                             </button>
                         </form>
