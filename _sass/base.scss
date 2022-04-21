@@ -23,18 +23,77 @@ body {
   }
 }
 
-header,
-footer {
-  padding: 16px;
+.center {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
 }
 
-section {
-  margin: 0 200px;
+// Layout
+////////////////////////////////////////////////////////////////////////////////
+header,
+footer {
+  margin: 0 64px;
   @include break-below("md") {
-    margin: 0 150px;
+    margin: 0 26px;
   }
 }
 
+section {
+  margin: 200px 64px;
+  position: relative;
+  @include break-below("md") {
+    margin: 150px 26px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 18px;
+  grid-row-gap: 18px;
+  @include break-below("md") {
+    margin: 150px 26px;
+    grid-column-gap: 14px;
+    grid-row-gap: 14px;
+  }
+  &.fullscreen {
+    margin: 0 64px;
+    height: 100vh;
+    // NOTE: this approach works as long as the fullscreen section has <3 children
+    > * {
+      align-self: flex-end;
+    }
+    > * + * {
+      align-self: auto;
+    }
+    > *:only-child {
+      align-self: center;
+    }
+  }
+}
+
+.textblock {
+  z-index: 100;
+  position: relative;
+  &__center {
+    @extend .col-8-3;
+    text-align: center;
+  }
+  &__left {
+    text-align: left;
+    @extend .col-4-2;
+  }
+  &__right {
+    text-align: left;
+    @extend .col-4-8;
+  }
+}
+
+// Cookie prompt
+////////////////////////////////////////////////////////////////////////////////
 #cookieprompt {
   display: none;
   padding-right: 3px;
@@ -46,51 +105,15 @@ section {
   }
 }
 
-.center {
-  position: absolute !important;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0;
-}
-
-// Grid system
-////////////////////////////////////////////////////////////////////////////////
-
-// 12 columns on desktop
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    grid-column: span #{$i};
-  }
-}
-@for $i from 1 through 12 {
-  @for $j from 1 through 12 {
-    .col-#{$i}-#{$j} {
-      grid-column: #{$j} / span #{$i};
-    }
-  }
-}
-
-// 4 columns on mobile
-@for $i from 1 through 4 {
-  .col-md-#{$i} {
-    grid-column: span #{$i};
-  }
-}
-@for $i from 1 through 4 {
-  @for $j from 1 through 4 {
-    .col-md-#{$i}-#{$j} {
-      grid-column: #{$j} / span #{$i};
-    }
-  }
-}
-
 // Buttons & inputs
 ////////////////////////////////////////////////////////////////////////////////
 .input-button {
   display: flex;
   width: 100%;
-  @include gap(5px);
+  max-width: 425px;
+  margin: 0 auto;
+
+  @include gap(6px);
   > div {
     position: relative;
   }
@@ -213,6 +236,8 @@ input {
 
 // Button
 ////////////////////////////////////////////////////////////////////////////////
+
+// Button colors
 @mixin button--black {
   color: $light-gray-3;
   background-color: $black;
@@ -229,21 +254,55 @@ input {
   background: $white;
   color: $dark-gray-2;
   border: 1px solid $light-gray-2;
-
   &:hover {
     background: $light-gray-1;
   }
-
   &:active {
     background: $light-gray-2;
   }
 }
+@mixin button--blue {
+  color: $white;
+  background: $light-blue;
+  border: 1px solid $blue;
+  &:hover {
+    background: $mid-blue;
+  }
+  &:active {
+    background: $blue;
+  }
+}
+
+@mixin button--gray-1 {
+  background: $light-gray-1;
+  border: 1px solid $light-gray-3;
+  color: $dark-gray-3;
+  &:hover {
+    background: $light-gray-2;
+  }
+  &:active {
+    background: $light-gray-3;
+  }
+}
+
+@mixin button--gray-2 {
+  background: $light-gray-2;
+  border: 1px solid $light-gray-4;
+  color: $dark-gray-2;
+  &:hover {
+    background: $light-gray-3;
+  }
+  &:active {
+    background: $light-gray-4;
+  }
+}
+
+button {
+  @include p;
+}
 
 .button {
   @include fade-bg;
-  @include p;
-  line-height: rem(11px);
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -269,7 +328,6 @@ input {
   a,
   span {
     flex: 1;
-    line-height: rem(11px);
   }
 
   a {
@@ -286,51 +344,20 @@ input {
     cursor: pointer;
   }
 
-  // Colors
   &--white {
     @include button--white;
   }
 
   &--gray-1 {
-    background: $light-gray-1;
-    border: 1px solid $light-gray-3;
-    color: $dark-gray-3;
-
-    &:hover {
-      background: $light-gray-2;
-    }
-
-    &:active {
-      background: $light-gray-3;
-    }
+    @include button--gray-1;
   }
 
   &--gray-2 {
-    background: $light-gray-2;
-    border: 1px solid $light-gray-4;
-    color: $dark-gray-2;
-
-    &:hover {
-      background: $light-gray-3;
-    }
-
-    &:active {
-      background: $light-gray-4;
-    }
+    @include button--gray-2;
   }
 
   &--blue {
-    color: $white;
-    background: $light-blue;
-    border: 1px solid $blue;
-
-    &:hover {
-      background: $mid-blue;
-    }
-
-    &:active {
-      background: $blue;
-    }
+    @include button--blue;
   }
 
   &--black {
@@ -351,33 +378,22 @@ input {
   }
 
   &--large {
-    @include h3;
-    height: 40px;
-    padding: 0 12px;
-    @include gap(12px);
+    @include h6;
+    height: 46px;
+    padding: 0 14px;
+    @include gap(8px);
   }
 
   &--medium {
-    height: 28px;
+    height: 30px;
     padding: 0 8px;
-    @include gap(5px);
+    @include gap(6px);
   }
 
   &--small {
-    height: 22px;
-    padding: 0 5px;
-    @include gap(5px);
-  }
-
-  &--tiny {
-    height: 16px;
-    padding: 0 2px;
-    @include gap(2px);
-  }
-
-  &--circle {
-    border-radius: 50%;
-    padding: 8px;
+    height: 26px;
+    padding: 0 6px;
+    @include gap(3px);
   }
 
   > img,
@@ -422,15 +438,15 @@ input {
   }
 
   &--large {
-    @include h3;
-    padding: 0 12px;
-    height: 40px;
+    @include h6;
+    padding: 0 14px;
+    height: 46px;
   }
 
   &--medium {
     @include p;
     padding: 0 8px;
-    height: 28px;
+    height: 30px;
   }
 
   &--full {

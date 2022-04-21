@@ -1,36 +1,23 @@
-<footer>
-  <div class="footer__left">
-    <a href="{{ '/' | relative_url }}" class="footer__left__logo">
-      <img src="{{ site.footer.logo | relative_url }}" alt="Moss logo" />
-    </a>
-    <h3 class="footer__left__legal">
-      {{ site.footer.legal | newline_to_br }}
-      <br />
-      <a href="{{ '/privacy' | relative_url }}">Privacy policy</a>
-    </h3>
-  </div>
-  <div class="footer__right">
-    {% for link in site.footer.social %}
-    <a class="footer__right__social" href="{{ link.url }}" target="_blank">
-      <i class="fab fa-{{ link.icon | downcase }}"></i>
-    </a>
+<footer class="grid">
+    {% assign sections = site.footer.link_sections | reverse%}
+    {% for section in sections %}
+        <div class="col-2">
+            <h3>
+                {{ section.name }}
+            </h3>
+            <ul>
+                {% for link in section.links %}
+                    <a href="{{ link.url }}" {% if link.open_in_new_tab %} target="_blank" {% endif%}>
+                        <button class="button--small button--white button--borderless footer__link">
+                            <img src="{{ link.icon }}"/>
+                            <span>{{ link.text }}</span>
+                        </button>
+                    </a>
+                {% endfor %}
+            </ul>
+        </div>
     {% endfor %}
-
-    <!--  -->
-    {% for link in site.footer.links %}
-    <h3 class="footer__right__link">
-      {% if link.open_in_new_tab %}
-      <a href="{{ link.url | relative_url }}" target="_blank">
-        { link.text }}
-      </a>
-      {% else %}
-      <a href="{{ link.url | relative_url }}">
-        {{ link.text }}
-      </a>
-      {% endif %}
-    </h3>
-    {% endfor %}
-  </div>
+    <img class="footer__illustration" src="{{ site.footer.illustration }}"/>
 </footer>
 
 <!-- Lazy load if available, otherwise use LazySizes -->

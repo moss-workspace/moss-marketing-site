@@ -1,50 +1,8 @@
 @import "variables";
 
 footer {
-  height: 48px;
-  display: flex;
-  justify-content: space-between;
-  .footer__left {
-    display: flex;
-    align-items: center;
-    &__logo {
-      height: 48px;
-      width: 48px;
-      padding-right: 12px;
-      img {
-        height: 100%;
-        width: auto;
-      }
-    }
-    &__legal {
-      flex-shrink: 0;
-      color: $dark-gray-2;
-      a {
-        color: $dark-gray-2;
-        &:hover {
-          color: $dark-gray-3;
-        }
-      }
-    }
-  }
-  .footer__right {
-    text-align: right;
-    a {
-      text-decoration: none;
-      color: $dark-gray-2;
-      &:hover {
-        color: $dark-gray-3;
-      }
-    }
-    &__social {
-      height: 22px;
-      width: 22px;
-      display: inline-block;
-      margin-left: 3px;
-      font-size: 22px;
-    }
-    &__link {
-      margin-top: 10px;
-    }
-  }
+  direction: rtl;
+  text-align: left;
+  padding: 46px 0 64px 0;
+  border-top: 1px solid $light-gray-3;
 }

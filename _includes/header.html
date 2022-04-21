@@ -1,39 +1,33 @@
 <header>
-  <div class="header__left">
-    <a href="{{ '/' | relative_url }}">
-      <img
-        src="{{ site.header.logo | relative_url }}"
-        class="header__left__logo header__logo--dark"
-        alt="Moss logo"
-      />
-      <img
-        src="{{ site.header.logo_light | relative_url }}"
-        class="header__left__logo header__logo--light"
-        alt="Moss logo"
-      />
-    </a>
-  </div>
-  <div class="header__right">
-    {% if site.header.show_jobs_button %}
-    <a href="{{ site.header.jobs_button_url }}" target="_blank">
-      <button class="button button--white button--medium">
-        {{ site.header.jobs_button_text }}
-      </button>
-    </a>
-    {% endif %} {% if page.layout == "thesis" %}
-    <button
-      class="button button--gray-1 button--medium"
-      onclick="scrollToSignup();"
-    >
-      {{ site.header.button }}
-    </button>
-    {% else %}
-    <a href="{{ '/' | relative_url }}">
-      <button class="button button--gray-1 button--medium">
-        {{ site.header.button }}
-      </button>
-    </a>
-
-    {% endif %}
-  </div>
+    <div class="header__left">
+        <a href="{{ '/' | relative_url }}">
+            <img src="{{ site.header.logo | relative_url }}" class="header__left__logo header__logo--dark" alt="Moss logo"/>
+            <img src="{{ site.header.logo_light | relative_url }}" class="header__left__logo header__logo--light" alt="Moss logo"/>
+        </a>
+    </div>
+    <div class="header__center">
+        {% for item in site.header.navigation %}
+            <a href="{{ item.url }}">
+                <button class=" button--large button--white button--borderless">
+                    <img src="{{ item.icon }}"/>
+                    <h3>{{ item.text }}</h3>
+                </button>
+            </a>
+        {% endfor %}
+    </div>
+    <div class="header__right">
+        {% for button in site.header.buttons %}
+            {% if button.waitlist_button %}
+                <button class=" button--gray-1 button--large" onclick="scrollToSignup();">
+                    {{ button.text }}
+                </button>
+            {% else %}
+                <a href="{{ button.url }}">
+                    <button class=" button--white button--borderless button--large">
+                        {{ button.text }}
+                    </button>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
 </header>

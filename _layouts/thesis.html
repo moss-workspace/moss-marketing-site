@@ -1,183 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-  <body class="dark">
-    {% include cookie_prompt.html %} {% include header.html %}
+    {% include head.html %}
+    <body class="dark">
+        {% include cookie_prompt.html %}
+        {% include header.html %}
 
-    <section class="desktop" id="desktop">
-      <div class="textblock">
-        <h2 class="textblock__title">{{ page.desktop_section.title }}</h2>
-        <h4 class="textblock__body">
-          {{ page.desktop_section.body | newline_to_br }}
-        </h4>
-      </div>
-      <div class="desktop__images">
-        {% for image in page.desktop_section.images %}
-        <img
-          data-src="{{ image | relative_url }}"
-          class="desktop__image reveal"
-          offset="{{ forloop.index | replace: '1', '.1' | replace: '2', '.05' | replace: '3', '.2' }}"
-          alt="desktop image"
-          loading="lazy"
-        />
-        {% endfor %}
-      </div>
-    </section>
+        <section class="desktop" id="desktop">
+            <div class="textblock">
+                <h2 class="textblock__title">{{ page.desktop_section.title }}</h2>
+                <h4 class="textblock__body">
+                    {{ page.desktop_section.body | newline_to_br }}
+                </h4>
+            </div>
+            <div class="desktop__images">
+                {% for image in page.desktop_section.images %}
+                    <img data-src="{{ image | relative_url }}" class="desktop__image reveal" offset="{{ forloop.index | replace: '1', '.1' | replace: '2', '.05' | replace: '3', '.2' }}" alt="desktop image" loading="lazy"/>
+                {% endfor %}
+            </div>
+        </section>
 
-    <section class="files" id="files">
-      <div class="textblock files__textblock--1">
-        <h2 class="textblock__title">{{ page.files_section.title_1 }}</h2>
-        <h4 class="textblock__body files__body--1">
-          {{ page.files_section.body_1 | newline_to_br }}
-        </h4>
-      </div>
+        <section class="files" id="files">
+            <div class="textblock files__textblock--1">
+                <h2 class="textblock__title">{{ page.files_section.title_1 }}</h2>
+                <h4 class="textblock__body files__body--1">
+                    {{ page.files_section.body_1 | newline_to_br }}
+                </h4>
+            </div>
 
-      {% include stack.html %}
+            {% include stack.html %}
 
-      <div class="textblock files__textblock--2">
-        <h2 class="textblock__title">{{ page.files_section.title_2 }}</h2>
-        <h4 class="textblock__body files__body--1">
-          {{ page.files_section.body_2 | newline_to_br }}
-        </h4>
-      </div>
-    </section>
+            <div class="textblock files__textblock--2">
+                <h2 class="textblock__title">{{ page.files_section.title_2 }}</h2>
+                <h4 class="textblock__body files__body--1">
+                    {{ page.files_section.body_2 | newline_to_br }}
+                </h4>
+            </div>
+        </section>
 
-    <section class="creativity" id="creativity">
-      <div class="textblock">
-        <h2 class="textblock__title">{{ page.creativity_section.title }}</h2>
-        <h4 class="textblock__body">
-          {{ page.creativity_section.body | newline_to_br }}
-        </h4>
-      </div>
-      <div class="parallax__wrapper">
-        {% for image in page.creativity_section.image_grid limit: 1 %}
-        <div class="creativity__grid--pullout preview parallax" speed="9">
-          {% include preview.html %}
-        </div>
-        {% endfor %}
-        <div class="creativity__grid parallax" speed="5">
-          {% for image in page.creativity_section.image_grid offset:1 limit: 7
-          %}
-          <div class="preview">{% include preview.html %}</div>
-          {% endfor %}
-        </div>
+        <section class="creativity" id="creativity">
+            <div class="textblock">
+                <h2 class="textblock__title">{{ page.creativity_section.title }}</h2>
+                <h4 class="textblock__body">
+                    {{ page.creativity_section.body | newline_to_br }}
+                </h4>
+            </div>
+            <div class="parallax__wrapper">
+                {% for image in page.creativity_section.image_grid limit: 1 %}
+                    <div class="creativity__grid--pullout preview parallax" speed="9">
+                        {% include preview.html %}
+                    </div>
+                {% endfor %}
+                <div class="creativity__grid parallax" speed="5">
+                    {% for image in page.creativity_section.image_grid offset:1 limit: 7 %}
+                        <div class="preview">{% include preview.html %}</div>
+                    {% endfor %}
+                </div>
 
-        <div class="creativity__container preview parallax" speed="6">
-          <div class="preview__image"></div>
-          <div class="preview__icons">
-            <img
-              class="preview__icon preview__icon--folder"
-              data-src="{{ '/assets/icons/file-folder_darkGray2.svg' | relative_url }}"
-              alt="folder icon"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+                <div class="creativity__container preview parallax" speed="6">
+                    <div class="preview__image"></div>
+                    <div class="preview__icons">
+                        <img class="preview__icon preview__icon--folder" data-src="{{ '/assets/icons/file-folder_darkGray2.svg' | relative_url }}" alt="folder icon" loading="lazy"/>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="why">
-      <div class="textblock">
-        <h2 class="textblock__title">{{ page.why_section.title }}</h2>
-        <h4 class="textblock__body">
-          {{ page.why_section.body | newline_to_br }}
-        </h4>
-      </div>
-      <div class="parallax__wrapper">
-        {% for image in page.why_section.images limit: 3 %}
-        <div
-          class="preview parallax"
-          speed="{{ forloop.index | replace: '1', '9' | replace: '2', '3' | replace: '3', '6' }}"
-        >
-          {% if forloop.index == 3 %}
-          <img
-            class="preview__image"
-            data-src="{{ image | relative_url }}"
-            alt="Moss preview"
-            loading="lazy"
-          />
-          <div class="preview__icons">
-            <img
-              class="preview__icon preview__icon--image"
-              data-src="{{ '/assets/icons/psd_color.svg' | relative_url }}"
-              alt="image icon"
-              loading="lazy"
-            />
-          </div>
-          {% else %} {% include preview.html %} {% endif %}
-        </div>
-        {% endfor %}
-        <img
-          class="why__note parallax"
-          speed="6"
-          data-src="{{ page.why_section.note | relative_url }}"
-          alt="Moss note"
-          loading="lazy"
-        />
-        <img
-          class="why__tag parallax"
-          speed="9"
-          data-src="{{ page.why_section.tag | relative_url }}"
-          alt="Moss tag"
-          loading="lazy"
-        />
-      </div>
-    </section>
+        <section class="why">
+            <div class="textblock">
+                <h2 class="textblock__title">{{ page.why_section.title }}</h2>
+                <h4 class="textblock__body">
+                    {{ page.why_section.body | newline_to_br }}
+                </h4>
+            </div>
+            <div class="parallax__wrapper">
+                {% for image in page.why_section.images limit: 3 %}
+                    <div class="preview parallax" speed="{{ forloop.index | replace: '1', '9' | replace: '2', '3' | replace: '3', '6' }}">
+                        {% if forloop.index == 3 %}
+                            <img class="preview__image" data-src="{{ image | relative_url }}" alt="Moss preview" loading="lazy"/>
+                            <div class="preview__icons">
+                                <img class="preview__icon preview__icon--image" data-src="{{ '/assets/icons/psd_color.svg' | relative_url }}" alt="image icon" loading="lazy"/>
+                            </div>
+                        {% else %}
+                            {% include preview.html %}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                <img class="why__note parallax" speed="6" data-src="{{ page.why_section.note | relative_url }}" alt="Moss note" loading="lazy"/>
+                <img class="why__tag parallax" speed="9" data-src="{{ page.why_section.tag | relative_url }}" alt="Moss tag" loading="lazy"/>
+            </div>
+        </section>
 
-    <section class="final">
-      <div class="textblock">
-        <h2 class="textblock__title">{{ page.final_section.title }}</h2>
-      </div>
+        <section class="final">
+            <div class="textblock">
+                <h2 class="textblock__title">{{ page.final_section.title }}</h2>
+            </div>
 
-      <div class="parallax__wrapper">
-        {% for image in page.final_section.images limit: 4 %}
-        <div
-          class="preview parallax"
-          speed="{{ forloop.index | replace: '1', '6' | replace: '2', '8' | replace: '3', '3' | replace: '4', '5' }}"
-        >
-          {% include preview.html %}
-        </div>
-        {% endfor %}
-      </div>
+            <div class="parallax__wrapper">
+                {% for image in page.final_section.images limit: 4 %}
+                    <div class="preview parallax" speed="{{ forloop.index | replace: '1', '6' | replace: '2', '8' | replace: '3', '3' | replace: '4', '5' }}">
+                        {% include preview.html %}
+                    </div>
+                {% endfor %}
+            </div>
 
-      <div class="textblock">
-        <h4 class="textblock__body">
-          {{ page.final_section.body | newline_to_br }}
-        </h4>
-      </div>
-    </section>
+            <div class="textblock">
+                <h4 class="textblock__body">
+                    {{ page.final_section.body | newline_to_br }}
+                </h4>
+            </div>
+        </section>
 
-    <section class="tagline" id="tagline">
-      <div class="textblock center">
-        <h2 class="textblock__title">{{ site.tagline }}</h2>
-        <img
-          class="tagline__logo"
-          data-src="{{ site.footer.logo | relative_url }}"
-          alt="Moss logo"
-          loading="lazy"
-        />
-        <form
-          class="signup__form input-button"
-          onsubmit="return joinWaitlist();"
-        >
-          <input
-            class="input input--large"
-            placeholder="{{ page.hero.placeholder }}"
-            type="email"
-            value=""
-            name="EMAIL"
-            required
-            id="tagline-email"
-          />
-          <button
-            type="submit"
-            class="button button--blue button--large button--full"
-          >
-            {{ page.hero.button }}
-          </button>
-        </form>
-      </div>
-    </section>
-    {% include footer.html %}
-  </body>
+        <section class="tagline" id="tagline">
+            <div class="textblock center">
+                <h2 class="textblock__title">{{ site.tagline }}</h2>
+                {% include signup_form.html %}
+            </div>
+        </section>
+        {% include footer.html %}
+    </body>
 </html>

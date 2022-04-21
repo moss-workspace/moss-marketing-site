@@ -5,92 +5,113 @@
         {% include cookie_prompt.html %}
         {% include header.html %}
 
-        <section>
-            <h1>{{ page.landing.header }}</h1>
-            <h4>{{ page.landing.subhead }}</h4>
-            {% if page.landing.show_video_link %}
-                <div class="button white borderless">
-                    {{ page.landing.video_text }}
-                </div>
-            {% endif %}
+        <section class="grid fullscreen">
+            <div class="textblock__center">
+                <h1>{{ page.landing.header }}</h1>
+                <h4>{{ page.landing.subhead }}</h4>
+                {% include signup_form.html %}
+                {% if page.landing.show_video_link %}
+                    <button class="button--white button--medium">
+                        {{ page.landing.video_text }}
+                    </button>
+                {% endif %}
+            </div>
         </section>
 
         {% for section in page.sections %}
             {% assign template = section.template %}
             {% case template %}
                 {% when 'workspace-content' %}
-                    {% if section.upper_illustration %}
-                        <div class="note">
-                            {{ section.upper_illustration.note }}
+                    <section class="grid">
+                        {% if section.upper_illustration %}
+                            <div class="note">
+                                {{ section.upper_illustration.note }}
+                            </div>
+                            {% for image in section.upper_illustration.previews %}
+                                <div class="preview">
+                                    {% include preview.html %}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="textblock__center">
+                            <h2>{{ section.header }}</h2>
+                            <h4>{{ section.subhead }}</h4>
                         </div>
-                        {% for image in section.upper_illustration.previews %}
+                        <div class="large-demo">
+                            VIDEO HERE
+                        </div>
+                        {% if section.middle_illustration %}
+                            <div class="note">
+                                {{ section.upper_illustration.left_note }}
+                            </div>
+                            {% for image in section.middle_illustration.left_previews %}
+                                <div class="preview">
+                                    {% include preview.html %}
+                                </div>
+                            {% endfor %}
+                            <div class="note">
+                                {{ section.upper_illustration.right_note }}
+                            </div>
+                            {% for image in section.middle_illustration.right_previews %}
+                                <div class="preview">
+                                    {% include preview.html %}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        {% for block in section.text_blocks %}
+                            <h5 class="textblock__right">{{ block.text_block | newline_to_br }}</h5>
+                        {% endfor %}
+                        {% if show_button %}
+                            <button class="button--white button--medium">
+                                {{ section.button_text }}
+                            </button>
+                        {% endif %}
+                        {% for image in section.previews %}
                             <div class="preview">
                                 {% include preview.html %}
                             </div>
                         {% endfor %}
-                    {% endif %}
-                    <h2>{{ section.header }}</h2>
-                    <h4>{{ section.subhead }}</h4>
-                    <div class="workspace__largeVideo">
-                        VIDEO HERE
-                    </div>
-                    {% if section.middle_illustration %}
-                        <div class="note">
-                            {{ section.upper_illustration.left_note }}
-                        </div>
-                        {% for image in section.middle_illustration.left_previews %}
-                            <div class="preview">
-                                {% include preview.html %}
-                            </div>
-                        {% endfor %}
-                        <div class="note">
-                            {{ section.upper_illustration.right_note }}
-                        </div>
-                        {% for image in section.middle_illustration.right_previews %}
-                            <div class="preview">
-                                {% include preview.html %}
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                    {% for block in section.text_blocks %}
-                        <h5>{{ block }}</h5>
-                    {% endfor %}
-                    {% if show_button %}
-                        <div class="button">
-                            {{ section.button_text }}
-                        </div>
-                    {% endif %}
-                    {% for image in section.previews %}
-                        <div class="preview">
-                            {% include preview.html %}
-                        </div>
-                    {% endfor %}
+                    </section>
                 {% when 'demo-carousel' %}
-                    <h2>{{ section.header }}</h2>
-                    {% for demo in section.demos %}
-                        <div class="button">
-                            {{ demo.name }}
+                    <section class="grid">
+                        <div class="textblock__center">
+                            <h2>{{ section.header }}</h2>
+                            {% for demo in section.demos %}
+                                <div class="button">
+                                    {{ demo.name }}
+                                </div>
+                            {% endfor %}
+                            {% for demo in section.demos %}
+                                <div class="workspace__carousel__video">
+                                    DEMO HERE
+                                </div>
+                                <p>{{ demo.description }}</p>
+                            {% endfor %}
                         </div>
-                    {% endfor %}
-                    {% for demo in section.demos %}
-                        <div class="workspace__carousel__video">
-                            DEMO HERE
-                        </div>
-                        <p>{{ demo.description }}</p>
-                    {% endfor %}
+                    </section>
                 {% when 'testimonial' %}
-                    <h2>{{ section.quote }}</h2>
-                    <h4>{{ section.name }}</h4>
-                    <h4>{{ section.title }}</h4>
+                    <section class="grid">
+                        <div class="textblock__center">
+                            <h2>{{ section.quote }}</h2>
+                            <h4>{{ section.name }}</h4>
+                            <h4>{{ section.title }}</h4>
+                        </div>
+                    </section>
                 {% when 'waitlist-cta' %}
-                    <h2>{{ section.header }}</h2>
-                    <h4>{{ section.subhead }}</h4>
+                    <section class="grid fullscreen">
+                        <div class="textblock__center">
+                            <h2>{{ section.header }}</h2>
+                            <h4>{{ section.subhead }}</h4>
+                        </div>
+                        <form class="signup__form input-button col-4-5" onsubmit="() => {return joinWaitlist();}">
+                            <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
+                            <button class="button--blue button--large button--full" type="submit">
+                                {{ site.sign_up_field.button_text }}
+                            </button>
+                        </form>
+                    </section>
             {% endcase %}
-        {%
-		endfor %}
-
-        <section>{{ page.blocks.header }}</section>
-
+        {% endfor %}
         {% include footer.html %}
     </body>
 </html>

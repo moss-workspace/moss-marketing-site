@@ -49,6 +49,22 @@ html {
   }
 }
 
+// Grid system
+////////////////////////////////////////////////////////////////////////////////
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    grid-column: span #{$i};
+  }
+}
+
+@for $i from 1 through 12 {
+  @for $j from 1 through 12 {
+    .col-#{$i}-#{$j} {
+      grid-column: #{$j} / span #{$i};
+    }
+  }
+}
+
 // Transition
 ////////////////////////////////////////////////////////////////////////////////
 @mixin transition($prop, $time, $ease) {

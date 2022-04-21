@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-  <body>
-    {% include cookie_prompt.html %} {% include header.html %}
+    {% include head.html %}
+    <body>
+        {% include cookie_prompt.html %}
+        {% include header.html %}
 
-    <section class="default__content">
-      {{ content }}
-    </section>
+        <section>
+            <h2>
+                {{ page.header }}
+            </h2>
+            <h4>
+                {{ page.body }}
+            </h4>
+        </section>
 
-    {% include footer.html %}
-  </body>
+
+        <section>
+            <h2>
+                {{ page.impact_header }}
+            </h2>
+        </section>
+
+        <section>
+            <div class="company__email__illustration">
+                EMAIL ILLUSTRATION HERE
+            </div>
+            <div class="company__email__section">
+                <h2>
+                    {{ page.email_header }}
+                </h2>
+                {% include signup_form.html %}
+            </div>
+        </section>
+
+        {% include footer.html %}
+    </body>
 </html>

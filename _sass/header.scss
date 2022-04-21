@@ -4,31 +4,35 @@
 header {
   position: sticky;
   position: -webkit-sticky;
-  top: -60px;
+  top: -72px;
   z-index: 900;
   @include fade-in;
   @include transition(top, 0.2s, ease);
   &.down {
     top: 0;
   }
-  height: 28px;
+  height: 98px;
   display: flex;
   justify-content: space-between;
   background-color: transparent !important;
+  align-items: center;
   .header__left {
     display: flex;
-    align-items: center;
     &__logo {
-      height: 28px;
+      height: 46px;
       width: auto;
-      padding-right: 16px;
+      padding-right: 8px;
     }
     .header__logo--light {
       display: none;
     }
   }
+  .header__center {
+    display: flex;
+    @include gap(8px);
+  }
   .header__right {
-    @include gap(5px);
+    @include gap(8px);
     display: flex;
     width: 100%;
     max-width: 350px;

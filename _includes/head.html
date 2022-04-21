@@ -1,102 +1,62 @@
 <head>
-  <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
 
-  <!-- Enable responsiveness on mobile devices-->
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1"
-  />
+    <!-- Enable responsiveness on mobile devices-->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"/>
 
-  <!-- Title -->
-  <title>
-    {{ site.title }} &#124; {{ site.tagline }}
-  </title>
+    <!-- Title -->
+    <title>
+        {{ site.title }}
+        &#124;
+        {{ site.tagline }}
+    </title>
 
-  <!-- Description -->
-  <meta name="description" content="{{ site.description }}" />
+    <!-- Description -->
+    <meta name="description" content="{{ site.description }}"/>
 
-  <!-- Thumbnail image -->
-  <meta
-    property="og:image"
-    content="{{ site.thumbnail_image | relative_url }}"
-  />
-  <meta property="og:site_name" content="Moss | Where ideas grow" />
-  <meta name="twitter:image:alt" content="Moss website homepage" />
+    <!-- Thumbnail image -->
+    <meta property="og:image" content="{{ site.thumbnail_image | relative_url }}"/>
+    <meta content="Moss | Where ideas grow" property="og:site_name"/>
+    <meta content="Moss website homepage" name="twitter:image:alt"/>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}" />
-  {% if page.layout == "thesis" %}
-  <link rel="stylesheet" href="{{ '/css/thesis.css' | relative_url }}" />
-  {% endif %}
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}"/>
 
-  <!-- Favicon -->
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}"
-  />
-  <link
-    rel="manifest"
-    href="{{ '/assets/favicon/site.webmanifest' | relative_url }}"
-  />
-  <link
-    rel="mask-icon"
-    href="{{ '/assets/favicon/safari-pinned-tab.svg' | relative_url }}"
-    color="#121212"
-  />
-  <link
-    rel="shortcut icon"
-    href="{{ '/assets/favicon/favicon.ico' | relative_url }}"
-  />
-  <meta name="msapplication-TileColor" content="#121212" />
-  <meta
-    name="msapplication-config"
-    content="{{ '/assets/favicon/browserconfig.xml' | relative_url }}"
-  />
-  <meta name="theme-color" content="#fcfcfc" />
+    {% assign layout = page.layout %}
+    {% case layout %}
+        {% when 'workspace' %}
+            <link rel="stylesheet" href="{{ '/css/workspace.css' | relative_url }}"/>
+        {% when 'thesis' %}
+            <link rel="stylesheet" href="{{ '/css/thesis.css' | relative_url }}"/>
+        {% when 'company' %}
+            <link rel="stylesheet" href="{{ '/css/company.css' | relative_url }}"/>
+    {% endcase %}
 
-  <!-- Javascript  -->
-  <script
-    type="text/javascript"
-    src="{{ '/assets/js/jquery-3.6.0.min.js' | relative_url }}"
-  ></script>
-  <script
-    defer
-    type="text/javascript"
-    src="{{ '/assets/js/main.js' | relative_url }}"
-  ></script>
-  {% if page.layout == "thesis" %} {% if page.title == "Waitlist" %}
-  <script
-    async
-    type="text/javascript"
-    src="{{ '/assets/js/waitlist.js' | relative_url }}"
-  ></script>
-  {% else %}
-  <script
-    async
-    type="text/javascript"
-    src="{{ '/assets/js/thesis.js' | relative_url }}"
-  ></script>
-  {% endif %} {% endif %}
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}"/>
+    <link rel="manifest" href="{{ '/assets/favicon/site.webmanifest' | relative_url }}"/>
+    <link rel="mask-icon" href="{{ '/assets/favicon/safari-pinned-tab.svg' | relative_url }}" color="#121212"/>
+    <link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}"/>
+    <meta content="#121212" name="msapplication-TileColor"/>
+    <meta name="msapplication-config" content="{{ '/assets/favicon/browserconfig.xml' | relative_url }}"/>
+    <meta content="#fcfcfc" name="theme-color"/>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=UA-156611983-1"
-  ></script>
-  <script>
+    <!-- Javascript  -->
+    <script type="text/javascript" src="{{ '/assets/js/jquery-3.6.0.min.js' | relative_url }}"></script>
+    <script defer type="text/javascript" src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    {% if page.layout == "thesis" %}
+        {% if page.title == "Waitlist" %}
+            <script async type="text/javascript" src="{{ '/assets/js/waitlist.js' | relative_url }}"></script>
+        {% else %}
+            <script async type="text/javascript" src="{{ '/assets/js/thesis.js' | relative_url }}"></script>
+        {% endif %}
+    {% endif %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156611983-1"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);

@@ -1,23 +1,24 @@
 ---
 title: Moss
 email: team@mossworkspace.com
-description: Inspiration meets organization in a new visual workspace built for better
+description:
+  Inspiration meets organization in a new visual workspace built for better
   ideas.
 baseurl: "/"
 url: mossworkspace.com
 twitter_username: jekyllrb
 github_username: jekyll
 exclude:
-- ".sass-cache/"
-- ".jekyll-cache/"
-- gemfiles/
-- Gemfile
-- Gemfile.lock
-- node_modules/
-- vendor/bundle/
-- vendor/cache/
-- vendor/gems/
-- vendor/ruby/
+  - ".sass-cache/"
+  - ".jekyll-cache/"
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 tagline: Where ideas grow
 header:
   logo: "/uploads/moss_logo.png"
@@ -29,55 +30,52 @@ header:
   jobs_button_text: "\U0001F469‍\U0001F4BB Join the team"
   jobs_button_url: "/"
   navigation:
-  - icon: ''
-    text: Workspace
-    url: "/"
-  - icon: ''
-    text: Thesis
-    url: "/thesis"
-  - icon: ''
-    text: Company
-    url: "/company"
-  buttons:
-  - waitlist_button: false
-    text: Sign in
-    url: app.beta.mossworkspace.com
-  - waitlist_button: true
-    text: Join the waitlist
-    url: ''
-footer:
-  logo: "/uploads/moss-icon-small__rgb.svg"
-  legal: |-
-    © 2021
-    Moss workspace, inc.
-  links:
-  - column:
-    - title: About
-      link:
-      - icon: ''
-        text: Company
-        url: "/company"
-        open_in_new_tab: false
-  social:
-  - icon: Twitter
-    url: https://twitter.com/mossworkspace
-  - icon: Instagram
-    url: https://www.instagram.com/mossworkspace/
-  illustration: ''
-  link_sections:
-  - name: About
-    links:
-    - icon: ''
+    - icon: ""
+      text: Workspace
+      url: "/"
+    - icon: ""
+      text: Thesis
+      url: "/thesis"
+    - icon: ""
       text: Company
-      url: https://mossworkspace.com/company/
-      open_in_new_tab: false
-  - name: Resources
-    links: []
-  - name: Social
-    links: []
+      url: "/company"
+  buttons:
+    - waitlist_button: false
+      text: Sign in
+      url: app.beta.mossworkspace.com
+    - waitlist_button: true
+      text: Join the waitlist
+      url: ""
+footer:
+  links:
+    - column:
+        - title: About
+          link:
+            - icon: ""
+              text: Company
+              url: "/company"
+              open_in_new_tab: false
+  social:
+    - icon: Twitter
+      url: https://twitter.com/mossworkspace
+    - icon: Instagram
+      url: https://www.instagram.com/mossworkspace/
+  illustration: ""
+  link_sections:
+    - name: About
+      links:
+        - icon: ""
+          text: Company
+          url: https://mossworkspace.com/company/
+          open_in_new_tab: false
+    - name: Resources
+      links: []
+    - name: Social
+      links: []
 privacy:
   cookie_prompt: This site uses cookies.
-  privacy_policy: The site uses Google Analytics. Google Analytics cookies helps to
+  privacy_policy:
+    The site uses Google Analytics. Google Analytics cookies helps to
     distinguish between different users and understand how often a particular user
     visits the site, how the user got to the site, and the user’s activity on the
     site. Google developed two resources – <a href="https://policies.google.com/technologies/partner-sites">How

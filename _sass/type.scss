@@ -76,7 +76,7 @@
   font-family: "Gascogne", "Times", serif;
   font-weight: 100;
   font-size: rem(22px);
-  line-height: rem(28px);
+  line-height: rem(26px);
   @include break-below("md") {
     font-size: rem(36px);
     line-height: rem(46px);
@@ -103,6 +103,13 @@
     font-size: rem(18px);
     line-height: rem(26px);
   }
+}
+
+@mixin h6 {
+  font-family: "Lab Grotesque", "Helvetica", sans-serif;
+  font-weight: 300;
+  font-size: rem(15px);
+  line-height: rem(18px);
 }
 
 @mixin p {

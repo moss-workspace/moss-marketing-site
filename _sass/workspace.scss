@@ -1,0 +1,10 @@
+@import "variables";
+@import "type";
+
+// General
+////////////////////////////////////////////////////////////////////////////////
+.large-demo {
+  @extend .col-12;
+  background-color: red;
+  height: 800px; // placeholder value
+}
