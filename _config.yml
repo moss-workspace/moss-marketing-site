@@ -77,7 +77,15 @@ footer:
       url: https://vimeo.com/472490067/524a565895
       open_in_new_tab: true
   - name: Social
-    links: []
+    links:
+    - icon: ''
+      text: Twitter
+      url: https://twitter.com/mossworkspace
+      open_in_new_tab: true
+    - icon: ''
+      text: Instagram
+      url: https://www.instagram.com/mossworkspace/
+      open_in_new_tab: true
 privacy:
   cookie_prompt: This site uses cookies.
   privacy_policy: The site uses Google Analytics. Google Analytics cookies helps to
