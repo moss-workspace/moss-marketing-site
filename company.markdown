@@ -7,8 +7,32 @@ body: |-
 
   So we’re building Moss. For ourselves, but also for our community and our collective progress.
 previews: []
-impact_header: ""
-impact_section: []
-email_illustration: ""
-email_header: ""
+impact_header: 'How we measure our impact:'
+impact_section:
+- illustration: ''
+  title: 'For our environment '
+  body: We minimize our own effect on the environment and contribute to groups fighting
+    the degradation of the environment.
+  extra_info: true
+  image: ''
+  small_text: We donate 1% of all sales to environmental causes.
+- illustration: ''
+  title: For ourselves
+  body: "We believe in providing accessible avenues for people to make great work
+    by building an environment that cultivates the creative process, and by extension—the
+    mental well-being of the people who dedicate themselves to it. \n"
+  extra_info: false
+  image: ''
+  small_text: ''
+- illustration: ''
+  title: For our community
+  body: We seek to break down cultural barriers by expanding your perspective beyond
+    your most immediate circle of reference and collaborators, and to serve as a platform
+    for overlooked and unheard voices.
+  extra_info: false
+  image: ''
+  small_text: ''
+email_illustration: ''
+email_header: ''
+
 ---
