@@ -10,13 +10,6 @@ previews: []
 impact_header: 'How we measure our impact:'
 impact_section:
 - illustration: ''
-  title: 'For our environment '
-  body: We minimize our own effect on the environment and contribute to groups fighting
-    the degradation of the environment.
-  extra_info: true
-  image: ''
-  small_text: We donate 1% of all sales to environmental causes.
-- illustration: ''
   title: For ourselves
   body: "We believe in providing accessible avenues for people to make great work
     by building an environment that cultivates the creative process, and by extension—the
@@ -32,7 +25,14 @@ impact_section:
   extra_info: false
   image: ''
   small_text: ''
-email_illustration: ''
+- illustration: ''
+  title: 'For our environment '
+  body: We minimize our own effect on the environment and contribute to groups fighting
+    the degradation of the environment.
+  extra_info: true
+  image: ''
+  small_text: We donate 1% of all sales to environmental causes.
+email_illustration: "/uploads/moss_email_illus.jpg"
 email_header: Get updates
 
 ---
