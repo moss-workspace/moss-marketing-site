@@ -68,7 +68,8 @@ section {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  margin: 0 64px;
+  margin-right: 64px;
+  margin-left: 64px;
   grid-column-gap: 18px;
   grid-row-gap: 18px;
   @include break-below("md") {
@@ -77,7 +78,6 @@ section {
     grid-row-gap: 14px;
   }
   &.fullscreen {
-    margin: 0 64px;
     height: 100vh;
     // NOTE: this approach works as long as the fullscreen section has <3 children
     > * {
@@ -98,6 +98,26 @@ section {
     text-align: center;
     @extend .col-8-3;
     @extend .col-md-12;
+    h1 {
+      margin-bottom: rem(14px);
+    }
+    h2 {
+      margin-bottom: rem(26px);
+    }
+    .signup-form {
+      margin-top: 46px;
+    }
+    @include break-below("md") {
+      h1 {
+        margin-bottom: rem(18px);
+      }
+      h2 {
+        margin-bottom: rem(18px);
+      }
+      .signup-form {
+        margin-top: 36px;
+      }
+    }
   }
   &__left {
     z-index: 800;

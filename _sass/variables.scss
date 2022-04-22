@@ -77,10 +77,10 @@ $column-count: 12;
   .col-#{$i} {
     grid-column: span #{$i};
   }
-  @each $breakpoint in map-keys($breakpoints) {
+  @each $breakpoint, $width in $breakpoints {
     .col-#{$breakpoint}-#{$i} {
-      @include break-below($breakpoint) {
-        grid-column: span #{$i};
+      @media (max-width: $width) {
+        grid-column: span #{$i} !important; // TODO: ugly hack to get around specificty
       }
     }
   }
@@ -94,7 +94,7 @@ $column-count: 12;
     @each $breakpoint in map-keys($breakpoints) {
       .col-#{$breakpoint}-#{$i}-#{$j} {
         @include break-below($breakpoint) {
-          grid-column: #{$j} / span #{$i};
+          grid-column: #{$j} / span #{$i} !important;
         }
       }
     }
