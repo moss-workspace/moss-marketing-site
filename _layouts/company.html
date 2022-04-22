@@ -5,30 +5,37 @@
         {% include cookie_prompt.html %}
         {% include header.html %}
 
-        <section>
-            <h2>
-                {{ page.header }}
-            </h2>
-            <h4>
-                {{ page.body }}
-            </h4>
+        <section class="grid">
+            <div class="col-6 col-md-12">
+                <h2>{{ page.header }}</h2>
+                <h4>{{ page.body }}</h4>
+            </div>
         </section>
 
 
-        <section>
-            <h2>
+        <section class="grid">
+            <h2 class="col-6 col-md-12">
                 {{ page.impact_header }}
             </h2>
+            {% for section in page.impact_section %}
+                <div class="{% if forloop.index0 == 0 %} col-3-1 {% else %} col-3-{{ forloop.index0 | times: 5}} {% endif %} col-md-12">
+                    <img src="{{ section.illustration }}"/>
+                    <h5 class="bold">{{ section.title }}</h5>
+                    <h5>{{ section.body | newline_to_br }}</h5>
+                    {% if section.extra_info %}
+                        <div class="comapny__impact__extra-info">
+                            <img src="{{ section.image }}"/>
+                            <p>{{ section.small_text }}</p>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
         </section>
 
-        <section>
-            <div class="company__email__illustration">
-                EMAIL ILLUSTRATION HERE
-            </div>
-            <div class="company__email__section">
-                <h2>
-                    {{ page.email_header }}
-                </h2>
+        <section class="company__email grid">
+            <img class="col-6 col-md-12" src="{{ page.email_illustration }}"/>
+            <div class="company__email__info col-6 col-md-12">
+                <h2>{{ page.email_header }}</h2>
                 {% include signup_form.html %}
             </div>
         </section>

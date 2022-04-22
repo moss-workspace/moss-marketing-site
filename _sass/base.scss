@@ -58,10 +58,21 @@ footer {
 }
 
 section {
-  margin: 200px 0;
-  position: relative;
+  margin-top: 400px;
+  &:first-of-type {
+    margin-top: 200px;
+  }
+  &:last-of-type {
+    margin-bottom: 200px;
+  }
   @include break-below("md") {
-    margin: 150px 0;
+    margin-top: 300px;
+    &:first-of-type {
+      margin-top: 150px;
+    }
+    &:last-of-type {
+      margin-bottom: 150px;
+    }
   }
 }
 
@@ -71,11 +82,10 @@ section {
   margin-right: 64px;
   margin-left: 64px;
   grid-column-gap: 18px;
-  grid-row-gap: 18px;
+  grid-row-gap: 0;
   @include break-below("md") {
     margin: 0 26px;
     grid-column-gap: 14px;
-    grid-row-gap: 14px;
   }
   &.fullscreen {
     height: 100vh;
@@ -92,6 +102,10 @@ section {
   }
 }
 
+.signup-form {
+  margin: 46px auto 0 auto;
+}
+
 .textblock {
   &__center {
     z-index: 800;
@@ -103,9 +117,6 @@ section {
     }
     h2 {
       margin-bottom: rem(26px);
-    }
-    .signup-form {
-      margin-top: 46px;
     }
     @include break-below("md") {
       h1 {
@@ -150,7 +161,6 @@ section {
   display: flex;
   width: 100%;
   max-width: 425px;
-  margin: 0 auto;
 
   @include gap(6px);
   > div {
