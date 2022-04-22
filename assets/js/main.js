@@ -47,8 +47,9 @@ function scrollToSignup() {
       closestSignup = $(this)
     }
   })
-  
+
   $("html, body").animate({ scrollTop: closestSignup.parent().offset().top });
+  closestSignup.find('input').first().focus()
 }
 
 // Fill & submit mailchimp form from another form
