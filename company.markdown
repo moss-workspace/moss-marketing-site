@@ -33,6 +33,6 @@ impact_section:
   image: ''
   small_text: ''
 email_illustration: ''
-email_header: ''
+email_header: Get updates
 
 ---
