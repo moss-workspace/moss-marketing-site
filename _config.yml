@@ -29,13 +29,13 @@ header:
   jobs_button_text: "\U0001F469‍\U0001F4BB Join the team"
   jobs_button_url: "/"
   navigation:
-  - icon: ''
+  - icon: "/uploads/globe_icon-2.png"
     text: Workspace
     url: "/"
-  - icon: ''
+  - icon: "/uploads/globe_icon-1.png"
     text: Thesis
     url: "/thesis"
-  - icon: ''
+  - icon: "/uploads/globe_icon.png"
     text: Company
     url: "/company"
   buttons:
