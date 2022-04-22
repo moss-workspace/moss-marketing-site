@@ -58,20 +58,21 @@ footer {
 }
 
 section {
-  margin: 200px 64px;
+  margin: 200px 0;
   position: relative;
   @include break-below("md") {
-    margin: 150px 26px;
+    margin: 150px 0;
   }
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  margin: 0 64px;
   grid-column-gap: 18px;
   grid-row-gap: 18px;
   @include break-below("md") {
-    margin: 150px 26px;
+    margin: 0 26px;
     grid-column-gap: 14px;
     grid-row-gap: 14px;
   }
@@ -92,19 +93,19 @@ section {
 }
 
 .textblock {
-  z-index: 100;
-  position: relative;
-  text-align: left;
   &__center {
+    z-index: 800;
     text-align: center;
     @extend .col-8-3;
     @extend .col-md-12;
   }
   &__left {
+    z-index: 800;
     @extend .col-4-2;
     @extend .col-md-9;
   }
   &__right {
+    z-index: 800;
     @extend .col-4-8;
     @extend .col-md-9-4;
   }

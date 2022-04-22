@@ -731,21 +731,3 @@ section {
     }
   }
 }
-
-// Tagline
-////////////////////////////////////////////////////////////////////////////////
-.tagline {
-  height: 100vh;
-  position: relative;
-  .textblock {
-    &__title {
-      display: inline-block;
-    }
-  }
-  .tagline__logo {
-    display: inline-block;
-    width: 26px;
-    margin-bottom: 26px;
-    margin-left: 5px;
-  }
-}

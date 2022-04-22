@@ -6,11 +6,11 @@
         {% include header.html %}
 
         <section class="desktop" id="desktop">
-            <div class="textblock">
-                <h2 class="textblock__title">{{ page.desktop_section.title }}</h2>
-                <h4 class="textblock__body">
-                    {{ page.desktop_section.body | newline_to_br }}
-                </h4>
+            <div class="grid">
+                <div class="textblock__center">
+                    <h2>{{ page.desktop_section.title }}</h2>
+                    <h4>{{ page.desktop_section.body | newline_to_br }}</h4>
+                </div>
             </div>
             <div class="desktop__images">
                 {% for image in page.desktop_section.images %}
@@ -20,29 +20,31 @@
         </section>
 
         <section class="files" id="files">
-            <div class="textblock files__textblock--1">
-                <h2 class="textblock__title">{{ page.files_section.title_1 }}</h2>
-                <h4 class="textblock__body files__body--1">
-                    {{ page.files_section.body_1 | newline_to_br }}
-                </h4>
+            <div class="grid">
+                <div class="textblock__center files__textblock--1">
+                    <h2>{{ page.files_section.title_1 }}</h2>
+                    <h4 class="files__body--1">{{ page.files_section.body_1 | newline_to_br }}</h4>
+                </div>
             </div>
 
             {% include stack.html %}
 
-            <div class="textblock files__textblock--2">
-                <h2 class="textblock__title">{{ page.files_section.title_2 }}</h2>
-                <h4 class="textblock__body files__body--1">
-                    {{ page.files_section.body_2 | newline_to_br }}
-                </h4>
+            <div class="grid">
+                <div class="textblock__center files__textblock--2">
+                    <h2>{{ page.files_section.title_2 }}</h2>
+                    <h4 class="files__body--1">
+                        {{ page.files_section.body_2 | newline_to_br }}
+                    </h4>
+                </div>
             </div>
         </section>
 
         <section class="creativity" id="creativity">
-            <div class="textblock">
-                <h2 class="textblock__title">{{ page.creativity_section.title }}</h2>
-                <h4 class="textblock__body">
-                    {{ page.creativity_section.body | newline_to_br }}
-                </h4>
+            <div class="grid">
+                <div class="textblock__center">
+                    <h2>{{ page.creativity_section.title }}</h2>
+                    <h4>{{ page.creativity_section.body | newline_to_br }}</h4>
+                </div>
             </div>
             <div class="parallax__wrapper">
                 {% for image in page.creativity_section.image_grid limit: 1 %}
@@ -66,11 +68,11 @@
         </section>
 
         <section class="why">
-            <div class="textblock">
-                <h2 class="textblock__title">{{ page.why_section.title }}</h2>
-                <h4 class="textblock__body">
-                    {{ page.why_section.body | newline_to_br }}
-                </h4>
+            <div class="grid">
+                <div class="textblock__center">
+                    <h2>{{ page.why_section.title }}</h2>
+                    <h4>{{ page.why_section.body | newline_to_br }}</h4>
+                </div>
             </div>
             <div class="parallax__wrapper">
                 {% for image in page.why_section.images limit: 3 %}
@@ -91,8 +93,10 @@
         </section>
 
         <section class="final">
-            <div class="textblock">
-                <h2 class="textblock__title">{{ page.final_section.title }}</h2>
+            <div class="grid">
+                <div class="textblock__center">
+                    <h2>{{ page.final_section.title }}</h2>
+                </div>
             </div>
 
             <div class="parallax__wrapper">
@@ -103,16 +107,16 @@
                 {% endfor %}
             </div>
 
-            <div class="textblock">
-                <h4 class="textblock__body">
-                    {{ page.final_section.body | newline_to_br }}
-                </h4>
+            <div class="grid">
+                <div class="textblock__center">
+                    <h4>{{ page.final_section.body | newline_to_br }}</h4>
+                </div>
             </div>
         </section>
 
-        <section class="tagline" id="tagline">
-            <div class="textblock center">
-                <h2 class="textblock__title">{{ site.tagline }}</h2>
+        <section class="grid fullscreen" id="tagline">
+            <div class="textblock__center">
+                <h2>{{ site.tagline }}</h2>
                 {% include signup_form.html %}
             </div>
         </section>
