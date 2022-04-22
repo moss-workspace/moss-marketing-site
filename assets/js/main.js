@@ -30,6 +30,37 @@ $(window).scroll(function (event) {
   lastScrollTop = scrollTop;
 });
 
+// Scroll to signup
+////////////////////////////////////////////////////////////////////////////////
+function scrollToSignup() {
+  var bodyHeight = $("body").height(),
+    scrollTop = $(window).scrollTop();
+
+   var distance = bodyHeight;
+   var closestSignup = null;
+
+  $(".signup-form").each(function() {
+    var elementTop = $(this).offset().top;
+    var difference = Math.abs(scrollTop - elementTop)
+    if (difference <= distance) {
+      distance = difference
+      closestSignup = $(this)
+    }
+  })
+  
+  $("html, body").animate({ scrollTop: closestSignup.parent().offset().top });
+}
+
+// Fill & submit mailchimp form from another form
+////////////////////////////////////////////////////////////////////////////////
+function joinWaitlist() {
+  var email = $("#tagline-email").val();
+  $("#mce-EMAIL").val(email);
+  $("#mc-embedded-subscribe").click();
+  $("#tagline-email").val("");
+  return false;
+}
+
 // Update preferences
 ////////////////////////////////////////////////////////////////////////////////
 function handleCookieAccept() {

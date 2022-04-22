@@ -120,34 +120,3 @@ function toggleBackgroundColor() {
     $("body, header").removeClass("dark");
   }
 }
-
-// Scroll to signup
-////////////////////////////////////////////////////////////////////////////////
-function scrollToSignup() {
-  var bodyHeight = $("body").height(),
-    scrollTop = $(window).scrollTop();
-
-  if (scrollTop < bodyHeight / 2) {
-    $("html, body").animate({ scrollTop: $("#hero").offset().top });
-    $("#mce-EMAIL").focus();
-  } else {
-    $("html, body").animate({ scrollTop: $("#tagline").offset().top });
-    $("#tagline-email").focus();
-  }
-}
-
-// Scroll to manifesto
-////////////////////////////////////////////////////////////////////////////////
-function scrollToManifesto() {
-  $("html, body").animate({ scrollTop: $("#desktop").offset().top - 150 });
-}
-
-// Fill & submit mailchimp form from another form
-////////////////////////////////////////////////////////////////////////////////
-function joinWaitlist() {
-  var email = $("#tagline-email").val();
-  $("#mce-EMAIL").val(email);
-  $("#mc-embedded-subscribe").click();
-  $("#tagline-email").val("");
-  return false;
-}

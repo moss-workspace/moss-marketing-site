@@ -77,10 +77,6 @@
   font-weight: 100;
   font-size: rem(22px);
   line-height: rem(26px);
-  @include break-below("md") {
-    font-size: rem(36px);
-    line-height: rem(46px);
-  }
 }
 
 @mixin h4 {

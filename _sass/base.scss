@@ -94,17 +94,19 @@ section {
 .textblock {
   z-index: 100;
   position: relative;
+  text-align: left;
   &__center {
-    @extend .col-8-3;
     text-align: center;
+    @extend .col-8-3;
+    @extend .col-md-12;
   }
   &__left {
-    text-align: left;
     @extend .col-4-2;
+    @extend .col-md-9;
   }
   &__right {
-    text-align: left;
     @extend .col-4-8;
+    @extend .col-md-9-4;
   }
 }
 

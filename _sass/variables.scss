@@ -49,18 +49,54 @@ html {
   }
 }
 
-// Grid system
+// Breakpoints
 ////////////////////////////////////////////////////////////////////////////////
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    grid-column: span #{$i};
+$breakpoints: (
+  xs: 400px,
+  sm: 600px,
+  md: 800px,
+  lg: 1200px,
+) !default;
+
+@mixin break-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
 
-@for $i from 1 through 12 {
-  @for $j from 1 through 12 {
+// Grid system
+////////////////////////////////////////////////////////////////////////////////
+$column-count: 12;
+
+@for $i from 1 through $column-count {
+  .col-#{$i} {
+    grid-column: span #{$i};
+  }
+  @each $breakpoint in map-keys($breakpoints) {
+    .col-#{$breakpoint}-#{$i} {
+      @include break-below($breakpoint) {
+        grid-column: span #{$i};
+      }
+    }
+  }
+}
+
+@for $i from 1 through $column-count {
+  @for $j from 1 through $column-count {
     .col-#{$i}-#{$j} {
       grid-column: #{$j} / span #{$i};
+    }
+    @each $breakpoint in map-keys($breakpoints) {
+      .col-#{$breakpoint}-#{$i}-#{$j} {
+        @include break-below($breakpoint) {
+          grid-column: #{$j} / span #{$i};
+        }
+      }
     }
   }
 }
@@ -105,24 +141,4 @@ html {
 @mixin shadow-icon() {
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25),
     0px 0px 6px 0px rgba(0, 0, 0, 0.25);
-}
-
-// Breakpoints
-////////////////////////////////////////////////////////////////////////////////
-$breakpoints: (
-  xs: 400px,
-  sm: 600px,
-  md: 800px,
-  lg: 1200px,
-) !default;
-
-@mixin break-below($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (max-width: map-get($breakpoints, $breakpoint)) {
-      @content;
-    }
-  } @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($breakpoints)}.";
-  }
 }
