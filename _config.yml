@@ -67,7 +67,15 @@ footer:
       url: "/privacy"
       open_in_new_tab: false
   - name: Resources
-    links: []
+    links:
+    - icon: ''
+      text: Thesis
+      url: "/thesis"
+      open_in_new_tab: false
+    - icon: ''
+      text: Watch the video
+      url: https://vimeo.com/472490067/524a565895
+      open_in_new_tab: true
   - name: Social
     links: []
 privacy:
