@@ -8,8 +8,8 @@
     <div class="header__center">
         {% for item in site.header.navigation %}
             <a href="{{ item.url }}">
-                <button class=" button--large button--white button--borderless">
-                    <img src="{{ item.icon }}"/>
+                <button class="button--large button--white button--borderless">
+                    <img class="header__nav-icon" src="{{ item.icon | relative_url }}"/>
                     <h3>{{ item.text }}</h3>
                 </button>
             </a>
@@ -18,7 +18,7 @@
     <div class="header__right">
         {% for button in site.header.buttons %}
             {% if button.waitlist_button %}
-                <button class=" button--gray-1 button--large" onclick="scrollToSignup();">
+                <button class="header_waitlist-button button--gray-1 button--large" onclick="scrollToSignup();">
                     {{ button.text }}
                 </button>
             {% else %}

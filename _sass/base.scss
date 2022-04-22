@@ -23,6 +23,10 @@ body {
   }
 }
 
+ul {
+  list-style-type: none;
+}
+
 .center {
   position: absolute !important;
   top: 50%;
@@ -58,12 +62,32 @@ footer {
 }
 
 section {
+  display: block;
+  position: relative;
   margin-top: 400px;
   &:first-of-type {
     margin-top: 200px;
   }
   &:last-of-type {
     margin-bottom: 200px;
+  }
+  &.fullscreen {
+    height: calc(100vh - 98px);
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    // NOTE: this approach works as long as the fullscreen section has <3 children
+    > * {
+      align-self: flex-end;
+    }
+    > * + * {
+      align-self: auto;
+    }
+    > *:only-child {
+      align-self: center;
+    }
+    @include break-below("md") {
+      height: calc(100vh - 82px);
+    }
   }
   @include break-below("md") {
     margin-top: 300px;
@@ -84,21 +108,9 @@ section {
   grid-column-gap: 18px;
   grid-row-gap: 0;
   @include break-below("md") {
-    margin: 0 26px;
+    margin-right: 26px;
+    margin-left: 26px;
     grid-column-gap: 14px;
-  }
-  &.fullscreen {
-    height: 100vh;
-    // NOTE: this approach works as long as the fullscreen section has <3 children
-    > * {
-      align-self: flex-end;
-    }
-    > * + * {
-      align-self: auto;
-    }
-    > *:only-child {
-      align-self: center;
-    }
   }
 }
 
@@ -159,9 +171,6 @@ section {
 ////////////////////////////////////////////////////////////////////////////////
 .input-button {
   display: flex;
-  width: 100%;
-  max-width: 425px;
-
   @include gap(6px);
   > div {
     position: relative;
@@ -171,6 +180,13 @@ section {
   }
   button {
     flex: 0;
+  }
+  @include break-below("md") {
+    display: block;
+    @include gap(0);
+    button {
+      margin-top: 8px;
+    }
   }
 }
 

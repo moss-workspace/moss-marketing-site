@@ -1,23 +1,23 @@
 <footer class="grid">
     {% assign sections = site.footer.link_sections | reverse%}
     {% for section in sections %}
-        <div class="col-2">
-            <h3>
-                {{ section.name }}
-            </h3>
+        <div class="col-2 col-md-6-1">
+            <h3>{{ section.name }}</h3>
             <ul>
                 {% for link in section.links %}
-                    <a href="{{ link.url }}" {% if link.open_in_new_tab %} target="_blank" {% endif%}>
-                        <button class="button--small button--white button--borderless footer__link">
-                            <img src="{{ link.icon }}"/>
-                            <span>{{ link.text }}</span>
-                        </button>
-                    </a>
+                    <li>
+                        <a href="{{ link.url }}" {% if link.open_in_new_tab %} target="_blank" {% endif%}>
+                            <button class="button--small button--white button--borderless footer__link">
+                                <img src="{{ link.icon }}"/>
+                                <span>{{ link.text }}</span>
+                            </button>
+                        </a>
+                    </li>
                 {% endfor %}
             </ul>
         </div>
     {% endfor %}
-    <img class="footer__illustration" src="{{ site.footer.illustration }}"/>
+    <img class="footer__illustration col-4-9 col-md-6" src="{{ site.footer.illustration }}"/>
 </footer>
 
 <!-- Lazy load if available, otherwise use LazySizes -->

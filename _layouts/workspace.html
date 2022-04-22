@@ -10,7 +10,7 @@
                 <h1>{{ page.landing.header }}</h1>
                 <h4>{{ page.landing.subhead }}</h4>
             </div>
-            <div class="col-4-5" style="text-align: center;">
+            <div class="col-4-5 col-md-12" style="text-align: center;">
                 {% include signup_form.html %}
                 {% if page.landing.show_video_link %}
                     <button class="button--white button--medium button--borderless">
@@ -105,9 +105,9 @@
                             <h2>{{ section.header }}</h2>
                             <h4>{{ section.subhead }}</h4>
                         </div>
-                        <form class="signup-form input-button col-4-5" onsubmit="() => {return joinWaitlist();}">
+                        <form class="signup-form input-button col-4-5 col-md-12" onsubmit="() => {return joinWaitlist();}">
                             <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
-                            <button class="button--blue button--large" type="submit">
+                            <button class="button--blue button--large button--full" type="submit">
                                 {{ site.sign_up_field.button_text }}
                             </button>
                         </form>

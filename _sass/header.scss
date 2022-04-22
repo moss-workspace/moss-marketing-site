@@ -4,7 +4,7 @@
 header {
   position: sticky;
   position: -webkit-sticky;
-  top: -72px;
+  top: -98px;
   z-index: 900;
   @include fade-in;
   @include transition(top, 0.2s, ease);
@@ -16,6 +16,10 @@ header {
   margin: 0;
   justify-content: space-between;
   background-color: transparent !important;
+  @include break-below("md") {
+    height: 30px;
+    padding: 26px;
+  }
   .header__left {
     display: inline-flex;
     float: left;
@@ -23,6 +27,9 @@ header {
       height: 46px;
       width: auto;
       padding-right: 8px;
+      @include break-below("md") {
+        height: 30px;
+      }
     }
     .header__logo--light {
       display: none;
@@ -34,6 +41,13 @@ header {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+    .header__nav-icon {
+      width: 36px;
+      height: 36px;
+    }
+    @include break-below("md") {
+      display: none;
+    }
   }
   .header__right {
     float: right;
@@ -49,6 +63,9 @@ header {
       @include break-below("xs") {
         display: none;
       }
+    }
+    @include break-below("md") {
+      display: none;
     }
   }
   &.dark {
