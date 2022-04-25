@@ -25,12 +25,33 @@
 
 // Slick slider
 ////////////////////////////////////////////////////////////////////////////////
-.slick-center {
-  // background-color: red;
-}
-
 .workspace__carousel__button {
   &.active {
     @extend .button--gray-1;
+  }
+}
+
+.workspace__carousel__item {
+  background-color: red;
+}
+
+.slick {
+  margin-top: 46px;
+  @include break-below("md") {
+    margin-top: 26px;
+  }
+}
+
+.slick-slide {
+  margin: 0 18px;
+  @include break-below("md") {
+    margin: 0 14px;
+  }
+}
+
+.slick-list {
+  margin: 0 -18px;
+  @include break-below("md") {
+    margin: 0 -14px;
   }
 }
