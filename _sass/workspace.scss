@@ -1,5 +1,6 @@
 @import "variables";
 @import "type";
+@import "base";
 
 // General
 ////////////////////////////////////////////////////////////////////////////////
@@ -16,4 +17,20 @@
 
 .workspace__carousel__item {
   width: 100%;
+}
+
+.workspace__video-button {
+  margin-top: 26px;
+}
+
+// Slick slider
+////////////////////////////////////////////////////////////////////////////////
+.slick-center {
+  // background-color: red;
+}
+
+.workspace__carousel__button {
+  &.active {
+    @extend .button--gray-1;
+  }
 }

@@ -1,4 +1,8 @@
-<header>
+{% if page.layout == 'thesis' %}
+    <header class="dark">
+{% else %}
+    <header>
+{%endif %}
     <div class="header__left">
         <a href="{{ '/' | relative_url }}">
             <img src="{{ site.header.logo | relative_url }}" class="header__left__logo header__logo--dark" alt="Moss logo"/>

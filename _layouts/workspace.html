@@ -13,7 +13,7 @@
             <div class="signup-form col-4-5 col-md-12" style="text-align: center;">
                 {% include signup_form.html %}
                 {% if page.landing.show_video_link %}
-                    <button class="button--white button--medium button--borderless">
+                    <button class="workspace__video-button button--white button--medium button--borderless">
                         {{ page.landing.video_text }}
                     </button>
                 {% endif %}
@@ -61,13 +61,16 @@
                             {% endfor %}
                         {% endif %}
                         {% for block in section.text_blocks %}
-                            <h5 class="textblock__right">{{ block.text_block | newline_to_br }}</h5>
+                            <div class="textblock__right">
+                                <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
+                                <!-- Add button on last text block -->
+                                {% if forloop.index == section.text_blocks.size and section.show_button %}
+                                    <button class="button--white button--large">
+                                        {{ section.button_text }}
+                                    </button>
+                                </div>
+                            {% endif %}
                         {% endfor %}
-                        {% if show_button %}
-                            <button class="button--white button--medium">
-                                {{ section.button_text }}
-                            </button>
-                        {% endif %}
                         {% for image in section.previews %}
                             <div class="preview">
                                 {% include preview.html %}
@@ -80,9 +83,9 @@
                             <div class="textblock__center">
                                 <h2>{{ section.header }}</h2>
                                 {% for demo in section.demos %}
-                                    <button class="button--white button--large">
+                                    <button class="workspace__carousel__button button--white button--large" onclick="goToSlide({{forloop.index0}}, this)">
                                         {{ demo.name }}
-                                    </div>
+                                    </button>
                                 {% endfor %}
                             </div>
                         </div>
@@ -97,29 +100,29 @@
                             {% endfor %}
                         </div>
                     </section>
-                    {% when 'testimonial' %}
-                        <section class="grid">
-                            <div class="textblock__center">
-                                <h2>{{ section.quote }}</h2>
-                                <h4>{{ section.name }}</h4>
-                                <h4>{{ section.title }}</h4>
-                            </div>
-                        </section>
-                    {% when 'waitlist-cta' %}
-                        <section class="grid fullscreen">
-                            <div class="textblock__center">
-                                <h1>{{ section.header }}</h1>
-                                <h4>{{ section.subhead }}</h4>
-                            </div>
-                            <form class="signup-form input-button col-4-5 col-md-12" onsubmit="() => {return joinWaitlist();}">
-                                <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
-                                <button class="button--blue button--large button--full" type="submit">
-                                    {{ site.sign_up_field.button_text }}
-                                </button>
-                            </form>
-                        </section>
-                    {% endcase %}
-            {% endfor %}
-            {% include footer.html %}</body>
+                {% when 'testimonial' %}
+                    <section class="grid">
+                        <div class="textblock__center">
+                            <h2>{{ section.quote }}</h2>
+                            <h4>{{ section.name }}</h4>
+                            <h4>{{ section.title }}</h4>
+                        </div>
+                    </section>
+                {% when 'waitlist-cta' %}
+                    <section class="grid fullscreen">
+                        <div class="textblock__center">
+                            <h1>{{ section.header }}</h1>
+                            <h4>{{ section.subhead }}</h4>
+                        </div>
+                        <form class="signup-form input-button col-4-5 col-md-12" onsubmit="() => {return joinWaitlist();}">
+                            <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
+                            <button class="button--blue button--large button--full" type="submit">
+                                {{ site.sign_up_field.button_text }}
+                            </button>
+                        </form>
+                    </section>
+            {% endcase %}
+        {% endfor %}
+        {% include footer.html %}
     </body>
 </html>
