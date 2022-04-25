@@ -98,12 +98,36 @@ sections:
 - template: demo-carousel
   header: Jump right in.
   demos:
+  - icon: ''
+    name: Research and discovery
+    video: ''
+    description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
+      space—Moss’ infinite canvas gives you room to take your idea wherever it wants
+      to go. '
   - name: Creative exploration
     video: ''
     description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
       space—Moss’ infinite canvas gives you room to take your idea wherever it wants
       to go. '
     icon: ''
+  - icon: ''
+    name: Sharing WIP
+    video: ''
+    description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
+      space—Moss’ infinite canvas gives you room to take your idea wherever it wants
+      to go. '
+  - icon: ''
+    name: Check-ins and feedback
+    video: ''
+    description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
+      space—Moss’ infinite canvas gives you room to take your idea wherever it wants
+      to go. '
+  - icon: ''
+    name: Getting up to speed
+    video: ''
+    description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
+      space—Moss’ infinite canvas gives you room to take your idea wherever it wants
+      to go. '
 - template: testimonial
   quote: Moss has completely transformed the way we work. Once you use it, you’ll
     wonder why this hasn’t always existed.
