@@ -32,10 +32,14 @@
             {% endfor %}
         </section>
 
-        <section class="company__email grid">
-            <img class="col-6 col-md-12" src="{{ page.email_illustration }}"/>
-            <div class="company__email__info col-6 col-md-12">
-                <h2>{{ page.email_header }}</h2>
+        <section class="company__email grid textblock">
+            <div class="company__email__image col-6 col-md-12">
+                <img src="{{ page.email_illustration }}"/>
+            </div>
+            <h2 class="col-6 col-md-12">
+                {{ page.email_header }}
+            </h2>
+            <div class="signup-form col-4-8 col-md-12">
                 {% include signup_form.html %}
             </div>
         </section>

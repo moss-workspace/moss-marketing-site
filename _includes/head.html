@@ -47,11 +47,10 @@
     <script type="text/javascript" src="{{ '/assets/js/jquery-3.6.0.min.js' | relative_url }}"></script>
     <script defer type="text/javascript" src="{{ '/assets/js/main.js' | relative_url }}"></script>
     {% if page.layout == "thesis" %}
-        {% if page.title == "Waitlist" %}
-            <script async type="text/javascript" src="{{ '/assets/js/waitlist.js' | relative_url }}"></script>
-        {% else %}
-            <script async type="text/javascript" src="{{ '/assets/js/thesis.js' | relative_url }}"></script>
-        {% endif %}
+        <script async type="text/javascript" src="{{ '/assets/js/thesis.js' | relative_url }}"></script>
+    {% elsif page.layout == "workspace" %}
+        <script async type="text/javascript" src="{{ '/assets/js/slick.min.js' | relative_url }}"></script>
+        <script async type="text/javascript" src="{{ '/assets/js/workspace.js' | relative_url }}"></script>
     {% endif %}
 
     <!-- Global site tag (gtag.js) - Google Analytics -->

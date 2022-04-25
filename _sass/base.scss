@@ -114,10 +114,6 @@ section {
   }
 }
 
-.signup-form {
-  margin: 46px auto 0 auto;
-}
-
 .textblock {
   &__center {
     z-index: 800;
@@ -125,20 +121,21 @@ section {
     @extend .col-8-3;
     @extend .col-md-12;
     h1 {
-      margin-bottom: rem(14px);
+      margin-bottom: 14px;
     }
     h2 {
-      margin-bottom: rem(26px);
+      margin-bottom: 26px;
+    }
+    h4 {
+      margin-bottom: 46px;
     }
     @include break-below("md") {
-      h1 {
-        margin-bottom: rem(18px);
-      }
+      h1,
       h2 {
-        margin-bottom: rem(18px);
+        margin-bottom: 18px;
       }
-      .signup-form {
-        margin-top: 36px;
+      h4 {
+        margin-bottom: 36px;
       }
     }
   }

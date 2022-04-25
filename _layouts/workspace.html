@@ -10,7 +10,7 @@
                 <h1>{{ page.landing.header }}</h1>
                 <h4>{{ page.landing.subhead }}</h4>
             </div>
-            <div class="col-4-5 col-md-12" style="text-align: center;">
+            <div class="signup-form col-4-5 col-md-12" style="text-align: center;">
                 {% include signup_form.html %}
                 {% if page.landing.show_video_link %}
                     <button class="button--white button--medium button--borderless">
@@ -75,45 +75,51 @@
                         {% endfor %}
                     </section>
                 {% when 'demo-carousel' %}
-                    <section class="grid">
-                        <div class="textblock__center">
-                            <h2>{{ section.header }}</h2>
+                    <section>
+                        <div class="grid">
+                            <div class="textblock__center">
+                                <h2>{{ section.header }}</h2>
+                                {% for demo in section.demos %}
+                                    <button class="button--white button--large">
+                                        {{ demo.name }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="slick workspace__carousel">
                             {% for demo in section.demos %}
-                                <div class="button">
-                                    {{ demo.name }}
+                                <div class="workspace__carousel__item">
+                                    <div class="workspace__carousel__video">
+                                        DEMO HERE
+                                    </div>
+                                    <p>{{ demo.description }}</p>
                                 </div>
                             {% endfor %}
-                            {% for demo in section.demos %}
-                                <div class="workspace__carousel__video">
-                                    DEMO HERE
-                                </div>
-                                <p>{{ demo.description }}</p>
-                            {% endfor %}
                         </div>
                     </section>
-                {% when 'testimonial' %}
-                    <section class="grid">
-                        <div class="textblock__center">
-                            <h2>{{ section.quote }}</h2>
-                            <h4>{{ section.name }}</h4>
-                            <h4>{{ section.title }}</h4>
-                        </div>
-                    </section>
-                {% when 'waitlist-cta' %}
-                    <section class="grid fullscreen">
-                        <div class="textblock__center">
-                            <h2>{{ section.header }}</h2>
-                            <h4>{{ section.subhead }}</h4>
-                        </div>
-                        <form class="signup-form input-button col-4-5 col-md-12" onsubmit="() => {return joinWaitlist();}">
-                            <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
-                            <button class="button--blue button--large button--full" type="submit">
-                                {{ site.sign_up_field.button_text }}
-                            </button>
-                        </form>
-                    </section>
-            {% endcase %}
-        {% endfor %}
-        {% include footer.html %}
+                    {% when 'testimonial' %}
+                        <section class="grid">
+                            <div class="textblock__center">
+                                <h2>{{ section.quote }}</h2>
+                                <h4>{{ section.name }}</h4>
+                                <h4>{{ section.title }}</h4>
+                            </div>
+                        </section>
+                    {% when 'waitlist-cta' %}
+                        <section class="grid fullscreen">
+                            <div class="textblock__center">
+                                <h1>{{ section.header }}</h1>
+                                <h4>{{ section.subhead }}</h4>
+                            </div>
+                            <form class="signup-form input-button col-4-5 col-md-12" onsubmit="() => {return joinWaitlist();}">
+                                <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
+                                <button class="button--blue button--large button--full" type="submit">
+                                    {{ site.sign_up_field.button_text }}
+                                </button>
+                            </form>
+                        </section>
+                    {% endcase %}
+            {% endfor %}
+            {% include footer.html %}</body>
     </body>
 </html>
