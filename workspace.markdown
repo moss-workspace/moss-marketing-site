@@ -56,6 +56,8 @@ sections:
     previews: []
     right_note: ''
   lower_illustration: None
+  scattered:
+    previews: []
 - template: workspace-content
   content_type: Lay it out
   upper_illustration: None
@@ -89,6 +91,8 @@ sections:
     previews: []
     right_note: ''
   lower_illustration: None
+  scattered:
+    previews: []
 - template: workspace-content
   content_type: Creative clarity
   upper_illustration: Brainstorm
@@ -130,6 +134,12 @@ sections:
     previews: []
     right_note: ''
   lower_illustration: Scattered
+  scattered:
+    previews:
+    - thumbnail: "/uploads/group-718.png"
+      custom_info: false
+      name: ''
+      icon: []
 - template: demo-carousel
   header: Jump right in.
   demos:
