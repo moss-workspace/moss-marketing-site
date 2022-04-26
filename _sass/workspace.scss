@@ -5,7 +5,6 @@
 // General
 ////////////////////////////////////////////////////////////////////////////////
 .large-demo {
-  @extend .col-12;
   background-color: red;
   height: 800px; // placeholder value
   margin-bottom: 200px;
@@ -29,22 +28,33 @@
 
 // Drop it in
 ////////////////////////////////////////////////////////////////////////////////
-.illustration__stack {
+.illustration__stack__wrapper {
+  height: 100vh;
+  background-color: green;
   position: relative;
+  .illustration__stack {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 10vh;
+    background-color: blue;
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
+  }
   .preview {
-    width: 70%;
+    width: 50%;
     height: auto;
     &:first-of-type {
-      left: 5%;
-      top: 5%;
-    }
-    &:nth-of-type(2) {
       left: 15%;
       top: 15%;
     }
-    &:nth-of-type(3) {
+    &:nth-of-type(2) {
       left: 25%;
       top: 25%;
+    }
+    &:nth-of-type(3) {
+      left: 35%;
+      top: 35%;
     }
   }
 }
@@ -58,6 +68,13 @@
   }
 }
 
+.slick {
+  margin-top: 46px;
+  @include break-below("md") {
+    margin-top: 26px;
+  }
+}
+
 .workspace__carousel__item {
   text-align: center;
   img {
@@ -67,7 +84,7 @@
     @include fade;
   }
   p {
-    opacity: 1;
+    opacity: 0;
     margin: 46px auto 0 auto;
     width: 80%;
     max-width: 700px;
@@ -77,20 +94,14 @@
       margin: 26px auto 0 auto;
     }
   }
-  &.active {
-    img {
-      @include shadow-menu;
-    }
-    p {
-      opacity: 1;
-    }
-  }
 }
 
-.slick {
-  margin-top: 46px;
-  @include break-below("md") {
-    margin-top: 26px;
+.slick-center {
+  img {
+    @include shadow-menu;
+  }
+  p {
+    opacity: 1;
   }
 }
 

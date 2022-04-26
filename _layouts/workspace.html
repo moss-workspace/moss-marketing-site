@@ -40,7 +40,7 @@
                             <h2>{{ section.header }}</h2>
                             <h4>{{ section.subhead }}</h4>
                         </div>
-                        <div class="large-demo">
+                        <div class="large-demo col-10-2 col-md-12">
                             VIDEO HERE
                         </div>
 
@@ -64,14 +64,16 @@
                         {% endif %}
 
                         {% if section.content_type == "Drop it in" %}
-                            <div class="illustration__stack col-6 col-md-12">
-                                {% for preview in section.previews %}
-                                    {% assign image = preview.thumbnail %}
-                                    {% assign name = preview.name %}
-                                    <div class="preview">
-                                        {% include preview.html %}
-                                    </div>
-                                {% endfor %}
+                            <div class="illustration__stack__wrapper col-6 col-md-12">
+                                <div class="illustration__stack">
+                                    {% for preview in section.previews %}
+                                        {% assign image = preview.thumbnail %}
+                                        {% assign name = preview.name %}
+                                        <div class="preview">
+                                            {% include preview.html %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
                             </div>
                         {% endif %}
 
@@ -103,7 +105,7 @@
                         </div>
                         <div class="slick workspace__carousel">
                             {% for demo in section.demos %}
-                                <div class="workspace__carousel__item {% if forloop.index == 1%}active{% endif %}">
+                                <div class="workspace__carousel__item">
                                     <img data-src="{{ demo.image | relative_url }}" loading="lazy"/>
                                     <p>{{ demo.description }}</p>
                                 </div>
