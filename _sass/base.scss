@@ -36,6 +36,11 @@ strong {
   @extend .bold;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .center {
   position: absolute !important;
   top: 50%;
@@ -124,29 +129,29 @@ section {
 }
 
 .textblock {
+  h1 {
+    margin-bottom: 14px;
+  }
+  h2 {
+    margin-bottom: 26px;
+  }
+  h4 {
+    margin-bottom: 46px;
+  }
+  @include break-below("md") {
+    h1,
+    h2 {
+      margin-bottom: 18px;
+    }
+    h4 {
+      margin-bottom: 36px;
+    }
+  }
   &__center {
     z-index: 800;
     text-align: center;
     @extend .col-8-3;
     @extend .col-md-12;
-    h1 {
-      margin-bottom: 14px;
-    }
-    h2 {
-      margin-bottom: 26px;
-    }
-    h4 {
-      margin-bottom: 46px;
-    }
-    @include break-below("md") {
-      h1,
-      h2 {
-        margin-bottom: 18px;
-      }
-      h4 {
-        margin-bottom: 36px;
-      }
-    }
   }
   &__left {
     @extend .col-4-2;

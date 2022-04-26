@@ -76,8 +76,6 @@
 .workspace__carousel__item {
   text-align: center;
   img {
-    width: 100%;
-    height: auto;
     border-radius: 2px;
     @include fade;
   }

@@ -6,7 +6,7 @@
         {% include header.html %}
 
         <section class="grid">
-            <div class="col-6 col-md-12">
+            <div class="textblock col-6 col-md-12">
                 <h2>{{ page.header }}</h2>
                 <h4>{{ page.body }}</h4>
             </div>
@@ -14,17 +14,19 @@
 
 
         <section class="grid">
-            <h2 class="col-6 col-md-12">
+            <h2 class="company__impact__header col-6 col-md-12">
                 {{ page.impact_header }}
             </h2>
             {% for section in page.impact_section %}
-                <div class="{% if forloop.index0 == 0 %} col-3-1 {% else %} col-3-{{ forloop.index0 | times: 5}} {% endif %} col-md-12">
-                    <img src="{{ section.illustration }}"/>
+                <div class="company__impact__section {% if forloop.index0 == 0 %} col-3-1 {% else %} col-3-{{ forloop.index0 | times: 5}} {% endif %} col-md-12">
+                    <img data-src="{{ section.illustration | relative_url }}" loading="lazy"/>
                     <h5 class="bold">{{ section.title }}</h5>
                     <h5>{{ section.body | newline_to_br }}</h5>
                     {% if section.extra_info %}
-                        <div class="comapny__impact__extra-info">
-                            <img src="{{ section.image }}"/>
+                        <div class="company__impact__extra-info">
+                            <a href="https://directories.onepercentfortheplanet.org/profile/moss-workspace-inc" target="_blank">
+                                <img data-src="{{ section.image | relative_url }}" loading="lazy"/>
+                            </a>
                             <p>{{ section.small_text }}</p>
                         </div>
                     {% endif %}
@@ -34,7 +36,7 @@
 
         <section class="company__email grid textblock">
             <div class="company__email__image col-6 col-md-12">
-                <img src="{{ page.email_illustration }}"/>
+                <img data-src="{{ page.email_illustration | relative_url }}" loading="lazy"/>
             </div>
             <h2 class="col-6 col-md-12">
                 {{ page.email_header }}

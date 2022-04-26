@@ -1,19 +1,69 @@
 @import "variables";
 @import "type";
 
+.company__impact__header {
+  margin-bottom: 26px;
+  @include break-below("md") {
+    margin-bottom: 18px;
+  }
+}
+
+.company__impact__section {
+  img {
+    margin-bottom: 36px;
+    @include break-below("md") {
+      margin-bottom: 26px;
+    }
+  }
+  .bold {
+    margin-bottom: 26px;
+    @include break-below("md") {
+      margin-bottom: 18px;
+    }
+  }
+  @include break-below("md") {
+    margin-bottom: 150px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.company__impact__extra-info {
+  display: flex;
+  margin-top: 26px;
+  align-items: center;
+  @include gap(14px);
+  img {
+    margin: 0;
+    max-width: 100px;
+  }
+}
+
 .company__email {
   background-color: $light-gray-0;
   text-align: center;
   h2 {
     align-self: flex-end;
   }
+  @include break-below("md") {
+    display: block;
+    width: 100vw;
+    height: 200vw;
+    margin-left: 0;
+    margin-right: 0;
+    h2,
+    .signup-form {
+      margin: 0 14px;
+    }
+  }
 }
 
 .company__email__image {
   overflow: hidden;
   grid-row: span 2;
-  img {
-    width: 100%;
-    height: auto;
+  @include break-below("md") {
+    grid-row: span 1;
+    margin-bottom: 25vw;
   }
 }
