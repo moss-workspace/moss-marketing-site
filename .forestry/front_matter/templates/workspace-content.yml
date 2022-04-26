@@ -110,6 +110,9 @@ fields:
     description: Choose 3 previews.
   label: Stack
   description: Choose 3 previews for the stack illustration
+  showOnly:
+    field: middle_illustration
+    value: Stack
 - name: text_blocks
   type: field_group_list
   fields:
