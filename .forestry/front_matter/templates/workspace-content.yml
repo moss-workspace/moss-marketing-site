@@ -107,40 +107,6 @@ fields:
     value: Collection
   description: Choose previews for the collection illustration.
   label: Collection
-- name: reference
-  type: field_group
-  config: {}
-  fields:
-  - name: left_note
-    type: text
-    config:
-      required: false
-    label: Left note
-    description: A note on the left side
-  - name: left_previews
-    type: include
-    config: {}
-    template: previews
-    label: Left previews
-    description: Choose three previews to show on the left.
-  - name: right_note
-    type: text
-    config:
-      required: false
-    label: Right note
-    description: A note on the right side
-  - name: collection
-    type: include
-    config: {}
-    template: previews
-    label: Collection
-    description: Select previews to show in a collection on the right (about 8-9 is
-      good).
-  showOnly:
-    field: middle_illustration
-    value: Reference
-  label: Reference
-  description: Choose previews for the reference illustration
 - name: text_blocks
   type: field_group_list
   fields:
