@@ -11,11 +11,19 @@ fields:
       maxSize: 64
     label: Thumbnail
     description: Thumbnail image (or video)
+  - name: show_info
+    type: boolean
+    label: Show info
+    description: Toggle whether or not to show preview info.
+    default: true
   - name: custom_info
     type: boolean
     label: Custom info
     description: Toggle to set custom info, otherwise the actual file name and an
       image icon will be used.
+    showOnly:
+      field: show_info
+      value: true
   - name: name
     type: text
     config:
