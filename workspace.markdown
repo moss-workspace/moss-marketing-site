@@ -133,7 +133,7 @@ sections:
   collection:
     note: Note here
     previews:
-    - thumbnail: ''
+    - thumbnail: "/uploads/group-718.png"
       custom_info: false
       name: ''
       icon: []
