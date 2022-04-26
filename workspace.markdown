@@ -91,17 +91,11 @@ sections:
   lower_illustration: None
 - template: workspace-content
   content_type: Creative clarity
-  upper_illustration:
-    previews: []
-    note: ''
+  upper_illustration: Brainstorm
   header: Find creative clarity.
   subhead: 'Connect the dots in one workspace for every tool, team, and iteration. '
   video: ''
-  middle_illustration:
-    left_note: ''
-    previews: []
-    right_note: ''
-    note: ''
+  middle_illustration: Reference
   text_blocks:
   - text_block: Moss is collaborative by default and tool agnostic, allowing different
       artists, disciplines and creative inputs to iterate frictionlessly in one digital
@@ -127,7 +121,7 @@ sections:
     left_note: ''
     previews: []
     right_note: ''
-  lower_illustration: ''
+  lower_illustration: Scattered
 - template: demo-carousel
   header: Jump right in.
   demos:
