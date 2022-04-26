@@ -26,13 +26,36 @@
 // Slick slider
 ////////////////////////////////////////////////////////////////////////////////
 .workspace__carousel__button {
+  margin-bottom: 8px;
   &.active {
     @extend .button--gray-1;
   }
 }
 
 .workspace__carousel__item {
-  background-color: red;
+  text-align: center;
+  img {
+    border-radius: 2px;
+    @include fade;
+  }
+  p {
+    opacity: 0;
+    margin: 46px auto 0 auto;
+    width: 80%;
+    max-width: 700px;
+    @include break-below("md") {
+      width: 100%;
+      margin: 26px auto 0 auto;
+    }
+  }
+  &.active {
+    img {
+      @include shadow-menu;
+    }
+    p {
+      opacity: 1;
+    }
+  }
 }
 
 .slick {
@@ -42,16 +65,20 @@
   }
 }
 
+// Manage margins between slides
+$margin: 18px;
+$margin-md: 14px;
+
 .slick-slide {
-  margin: 0 18px;
+  margin: 0 $margin;
   @include break-below("md") {
-    margin: 0 14px;
+    margin: 0 $margin-md;
   }
 }
 
 .slick-list {
-  margin: 0 -18px;
+  margin: 0 -$margin;
   @include break-below("md") {
-    margin: 0 -14px;
+    margin: 0 -$margin-md;
   }
 }

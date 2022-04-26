@@ -83,18 +83,17 @@
                             <div class="textblock__center">
                                 <h2>{{ section.header }}</h2>
                                 {% for demo in section.demos %}
-                                    <button class="workspace__carousel__button button--white button--large" onclick="goToSlide({{forloop.index0}}, this)">
-                                        {{ demo.name }}
+                                    <button class="{% if forloop.index == 1%}active{% endif %} workspace__carousel__button button--white button--large" onclick="goToSlide({{forloop.index0}}, this)">
+                                        <img src="{{ demo.icon | relative_url }}"/>
+                                        <span>{{ demo.name }}</span>
                                     </button>
                                 {% endfor %}
                             </div>
                         </div>
                         <div class="slick workspace__carousel">
                             {% for demo in section.demos %}
-                                <div class="workspace__carousel__item">
-                                    <div class="workspace__carousel__video">
-                                        DEMO HERE
-                                    </div>
+                                <div class="workspace__carousel__item {% if forloop.index == 1%}active{% endif %}">
+                                    <img data-src="{{ demo.image | relative_url }}"/>
                                     <p>{{ demo.description }}</p>
                                 </div>
                             {% endfor %}
