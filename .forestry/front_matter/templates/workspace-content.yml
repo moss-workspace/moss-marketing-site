@@ -17,6 +17,27 @@ fields:
       path: 
   label: Upper illustration
   description: Select an illustration type to show above the section title.
+- name: brainstorm
+  type: field_group
+  config: {}
+  fields:
+  - name: note
+    type: text
+    config:
+      required: false
+    label: Note
+    description: Enter text for the note
+  - name: previews
+    type: include
+    config: {}
+    template: previews
+    label: Previews
+    description: Choose 4 previews for the illustration.
+  showOnly:
+    field: upper_illustration
+    value: Brainstorm
+  label: Brainstorm
+  description: Choose previews to display in the brainstorm illustration.
 - name: header
   type: text
   config:
@@ -176,3 +197,12 @@ fields:
       path: 
   label: Lower illustration
   description: Select an illustration type to show below the section.
+- name: scattered
+  type: include
+  config: {}
+  template: previews
+  showOnly:
+    field: lower_illustration
+    value: Scattered
+  label: Scattered
+  description: Choose previews for the scattered illustration.
