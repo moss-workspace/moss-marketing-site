@@ -27,20 +27,12 @@ sections:
   button_text: Learn more about tethering
   upper_illustration: None
   video: ''
-  middle_illustration: Collection
+  middle_illustration: Stack
   button_url: ''
   previews:
   - thumbnail: "/uploads/group-718.png"
     custom_info: true
-    name: monarch.psd
-    icon: PSD
-  - thumbnail: "/uploads/group-718.png"
-    custom_info: false
-    name: ''
-    icon: ''
-  - thumbnail: "/uploads/group-718.png"
-    custom_info: false
-    name: ''
+    name: Preview name.psd
     icon: ''
   middle_illustration_right:
     note: ''
