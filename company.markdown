@@ -30,7 +30,7 @@ impact_section:
   body: We minimize our own effect on the environment and contribute to groups fighting
     the degradation of the environment.
   extra_info: true
-  image: ''
+  image: "/uploads/1ftp_darkgray-2.png"
   small_text: We donate 1% of all sales to environmental causes.
 email_illustration: "/uploads/moss_email_illus.jpg"
 email_header: Get updates
