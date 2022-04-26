@@ -31,6 +31,14 @@ sections:
   button_url: ''
   previews:
   - thumbnail: "/uploads/group-718.png"
+    custom_info: false
+    name: ''
+    icon: []
+  - thumbnail: "/uploads/group-718.png"
+    custom_info: false
+    name: ''
+    icon: []
+  - thumbnail: "/uploads/group-718.png"
     custom_info: true
     name: Preview name.psd
     icon: ''
