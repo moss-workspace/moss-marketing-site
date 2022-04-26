@@ -107,7 +107,15 @@ sections:
   show_button: false
   button_text: ''
   button_url: ''
-  previews: []
+  previews:
+  - thumbnail: ''
+    custom_info: false
+    name: ''
+    icon: []
+  - thumbnail: ''
+    custom_info: false
+    name: ''
+    icon: []
   middle_illustration_right:
     note: ''
     previews: []
