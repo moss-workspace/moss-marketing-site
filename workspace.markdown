@@ -124,8 +124,12 @@ sections:
     note: ''
     previews: []
   brainstorm:
-    note: ''
-    previews: []
+    note: Test note
+    previews:
+    - thumbnail: "/uploads/group-718.png"
+      custom_info: false
+      name: ''
+      icon: []
   collection:
     note: ''
     previews: []
