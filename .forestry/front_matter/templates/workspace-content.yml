@@ -2,43 +2,21 @@
 label: Workspace content
 hide_body: true
 fields:
-- name: content_type
+- name: upper_illustration
   type: select
-  default: Drop it in
+  default: []
   config:
     required: false
     options:
-    - Drop it in
-    - Lay it out
-    - Creative clarity
+    - None
+    - Brainstorm
     source:
       type: simple
       section: 
       file: 
       path: 
-  label: Content type
-  description: Choose a content type for this block
-- name: upper_illustration
-  type: field_group
-  config: {}
-  fields:
-  - name: previews
-    type: include
-    config: {}
-    template: previews
-    label: Previews
-    description: Choose images to use as previews in the illustration.
-  - name: note
-    type: text
-    config:
-      required: false
-    label: Note
-    description: Text for the note in the illustration.
   label: Upper illustration
-  showOnly:
-    field: content_type
-    value: Creative clarity
-  description: The illustration above the header text
+  description: Select an illustration type to show above the section title.
 - name: header
   type: text
   config:
@@ -62,44 +40,22 @@ fields:
   label: Video
   description: Large demo video (or image)
 - name: middle_illustration
-  type: field_group
-  config: {}
-  fields:
-  - name: note
-    type: text
-    config:
-      required: false
-    label: Note
-    description: Text for the note in the illustration
-  - name: previews
-    type: include
-    config: {}
-    template: previews
-    label: Previews
-    description: Choose images to use as previews in the illustration
-  label: Middle illustration left
-  description: The illustration to the left of the body text
-  showOnly:
-    field: content_type
-    value: Creative clarity
-- name: middle_illustration_right
-  type: field_group
-  config: {}
-  fields:
-  - name: note
-    type: text
-    config:
-      required: false
-    label: Note
-    description: Text for the note in the illustration
-  - name: previews
-    type: include
-    config: {}
-    template: previews
-    label: Previews
-    description: Choose images to use as previews in the illustration
-  label: Middle illustration right
-  description: The illustration to the right of the body text
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - None
+    - Stack
+    - Collection
+    - Brainstorm
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  description: Select an illustration type to show alongside the body copy.
+  label: Middle illustration
 - name: text_blocks
   type: field_group_list
   fields:
@@ -141,31 +97,18 @@ fields:
   showOnly:
     field: show_button
     value: true
-- name: previews
-  type: include
-  config: {}
-  template: previews
-  label: Previews
-  description: Previews for the illustration
-  showOnly:
-    field: content_type
-    value: Drop it in
-- name: collection
-  type: include
-  config: {}
-  template: previews
-  label: Collection
-  description: Choose previews to go in the collection illustration. The first preview
-    will be pulled out.
-  showOnly:
-    field: content_type
-    value: Lay it out
 - name: lower_illustration
-  type: include
-  config: {}
-  template: previews
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - None
+    - Scattered
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
   label: Lower illustration
-  description: Choose images to use as previews in the lower illustration.
-  showOnly:
-    field: content_type
-    value: Creative clarity
+  description: Select an illustration type to show below the section.
