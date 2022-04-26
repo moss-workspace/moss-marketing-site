@@ -44,6 +44,9 @@ fields:
         path: 
     label: Icon
     description: Icon for the preview
+    showOnly:
+      field: custom_info
+      value: true
   config:
     min: 
     max: 
