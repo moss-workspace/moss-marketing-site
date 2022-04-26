@@ -27,7 +27,7 @@ sections:
   button_text: Learn more about tethering
   upper_illustration: None
   video: ''
-  middle_illustration: Stack
+  middle_illustration: Collection
   button_url: ''
   previews:
   - thumbnail: "/uploads/group-718.png"
