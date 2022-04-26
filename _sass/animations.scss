@@ -1,0 +1,38 @@
+// reveal
+////////////////////////////////////////////////////////////////////////////////
+.reveal {
+  opacity: 0;
+  &.visible {
+    opacity: 1;
+  }
+}
+
+// parallax
+////////////////////////////////////////////////////////////////////////////////
+section {
+  position: relative;
+}
+
+.parallax__wrapper {
+  height: 750px;
+  width: 100%;
+  z-index: 0;
+  position: relative;
+  @include break-below("lg") {
+    height: 700px;
+  }
+  @include break-below("md") {
+    height: 650px;
+  }
+  @include break-below("sm") {
+    height: 600px;
+  }
+  @include break-below("xs") {
+    height: 550px;
+  }
+}
+
+.parallax {
+  //transition transform to smooth out jitter
+  @include transition(transform, 0.05s, linear);
+}

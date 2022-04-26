@@ -11,10 +11,6 @@ $(document).ready(function () {
 // Scroll
 ////////////////////////////////////////////////////////////////////////////////
 $(window).scroll(function (event) {
-  $(".reveal").each(function () {
-    reveal($(this));
-  });
-
   $(".stack").each(function () {
     stack($(this));
   });
@@ -34,22 +30,6 @@ function checkInstagram() {
   var isInstagram = ua.indexOf("Instagram") > -1 ? true : false;
   if (isInstagram) {
     $(".files__stack__content").addClass("instagram");
-  }
-}
-
-// Animations
-////////////////////////////////////////////////////////////////////////////////
-function reveal(element) {
-  var elementTop = element.offset().top,
-    elementHeight = element.outerHeight(),
-    windowHeight = $(window).height(),
-    scrollTop = $(this).scrollTop(),
-    offset = windowHeight * element.attr("offset");
-
-  if (scrollTop > elementTop + elementHeight - windowHeight + offset) {
-    element.addClass("visible");
-  } else {
-    element.removeClass("visible");
   }
 }
 

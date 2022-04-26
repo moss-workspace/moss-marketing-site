@@ -12,7 +12,7 @@ body {
   font-style: normal;
   box-sizing: border-box;
   @include fade-in;
-  .dark {
+  &.dark {
     background-color: $black;
     h1,
     h2,
@@ -23,11 +23,8 @@ body {
       color: $light-gray-2;
     }
   }
-  .gray {
-    background-color: $light-gray-0;
-    .button--white {
-      background-color: $light-gray-0;
-    }
+  &.gray {
+    background-color: $light-gray-1;
   }
 }
 
@@ -158,6 +155,7 @@ section {
   &__left,
   &__right {
     z-index: 800;
+    align-self: center;
     button {
       margin-top: 46px;
     }
@@ -592,5 +590,11 @@ button {
 
   &--full {
     width: 100%;
+  }
+}
+
+body {
+  &.gray .button--white {
+    @include button--gray-1;
   }
 }

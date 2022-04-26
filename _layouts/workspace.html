@@ -25,16 +25,6 @@
             {% case template %}
                 {% when 'workspace-content' %}
                     <section class="grid" {% if forloop.index == 1 %} id="gray-start" {% endif %}>
-                        {% if content_type == "Creative clarity" %}
-                            <div class="note">
-                                {{ section.upper_illustration.note }}
-                            </div>
-                            {% for image in section.upper_illustration.previews %}
-                                <div class="preview">
-                                    {% include preview.html %}
-                                </div>
-                            {% endfor %}
-                        {% endif %}
 
                         <div class="textblock__center">
                             <h2>{{ section.header }}</h2>
@@ -44,32 +34,13 @@
                             VIDEO HERE
                         </div>
 
-                        {% if content_type == "Creative clarity" %}
-                            <div class="note">
-                                {{ section.middle_illustration.left_note }}
-                            </div>
-                            {% for image in section.middle_illustration.left_previews %}
-                                <div class="preview">
-                                    {% include preview.html %}
-                                </div>
-                            {% endfor %}
-                            <div class="note">
-                                {{ section.middle_illustration.right_note }}
-                            </div>
-                            {% for image in section.middle_illustration.right_previews %}
-                                <div class="preview">
-                                    {% include preview.html %}
-                                </div>
-                            {% endfor %}
-                        {% endif %}
-
-                        {% if section.content_type == "Drop it in" %}
+                        {% if section.middle_illustration == "Stack" %}
                             <div class="illustration__stack__wrapper col-6 col-md-12">
                                 <div class="illustration__stack">
-                                    {% for preview in section.previews %}
+                                    {% for preview in section.stack.previews %}
                                         {% assign image = preview.thumbnail %}
                                         {% assign name = preview.name %}
-                                        <div class="preview">
+                                        <div class="preview reveal" offset=".4">
                                             {% include preview.html %}
                                         </div>
                                     {% endfor %}
@@ -80,7 +51,6 @@
                         {% for block in section.text_blocks %}
                             <div class="textblock__right">
                                 <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
-                                <!-- Add button on last text block -->
                                 {% if forloop.index == section.text_blocks.size and section.show_button %}
                                     <button class="button--white button--large">
                                         {{ section.button_text }}

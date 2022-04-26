@@ -17,6 +17,23 @@ $(document).ready(function () {
   });
 });
 
+// Animations
+////////////////////////////////////////////////////////////////////////////////
+function reveal(element) {
+  var elementTop = element.offset().top,
+    elementHeight = element.outerHeight(),
+    windowHeight = $(window).height(),
+    scrollTop = $(this).scrollTop(),
+    offset = windowHeight * element.attr("offset");
+
+  if (scrollTop > elementTop + elementHeight - windowHeight + offset) {
+    element.addClass("visible");
+  } else {
+    element.removeClass("visible");
+  }
+}
+
+
 // Scroll
 ////////////////////////////////////////////////////////////////////////////////
 var lastScrollTop = 0;
@@ -28,6 +45,10 @@ $(window).scroll(function (event) {
     $("header").removeClass("down");
   }
   lastScrollTop = scrollTop;
+  
+  $(".reveal").each(function () {
+    reveal($(this));
+  });
 });
 
 // Scroll to signup
