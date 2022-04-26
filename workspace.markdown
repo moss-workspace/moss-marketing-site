@@ -58,6 +58,20 @@ sections:
   lower_illustration: None
   scattered:
     previews: []
+  stack:
+    previews:
+    - thumbnail: "/uploads/group-718.png"
+      custom_info: true
+      name: fileName.psd
+      icon: PSD
+    - thumbnail: "/uploads/group-718.png"
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/group-718.png"
+      custom_info: false
+      name: ''
+      icon: []
 - template: workspace-content
   content_type: Lay it out
   upper_illustration: None
@@ -92,6 +106,8 @@ sections:
     right_note: ''
   lower_illustration: None
   scattered:
+    previews: []
+  stack:
     previews: []
 - template: workspace-content
   content_type: Creative clarity
@@ -152,6 +168,8 @@ sections:
       custom_info: false
       name: ''
       icon: []
+  stack:
+    previews: []
 - template: demo-carousel
   header: Jump right in.
   demos:
