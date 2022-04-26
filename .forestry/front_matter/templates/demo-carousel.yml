@@ -23,12 +23,12 @@ fields:
       required: false
     label: Name
     description: Name of demo
-  - name: video
+  - name: image
     type: file
     config:
       maxSize: 64
-    label: Video
-    description: Video (or image) for the demo
+    label: Image
+    description: Image for the demo
   - name: description
     type: textarea
     default: ''
