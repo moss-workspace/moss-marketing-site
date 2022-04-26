@@ -58,18 +58,12 @@ sections:
   lower_illustration: None
 - template: workspace-content
   content_type: Lay it out
-  upper_illustration:
-    previews: []
-    note: ''
+  upper_illustration: None
   header: Lay it out.
   subhead: "Never dig for a file again.\n\nOrganize your work visually, so you can
     spend less time chasing assets and more time following inspiration. "
   video: ''
-  middle_illustration:
-    left_note: ''
-    previews: []
-    right_note: ''
-    note: ''
+  middle_illustration: Collection
   text_blocks:
   - text_block: Ditch traditional file management and tackle creative problems in
       a freeform, distraction-free space that works the way you do.
@@ -94,7 +88,7 @@ sections:
     left_note: ''
     previews: []
     right_note: ''
-  lower_illustration: ''
+  lower_illustration: None
 - template: workspace-content
   content_type: Creative clarity
   upper_illustration:
