@@ -35,14 +35,17 @@
 .workspace__carousel__item {
   text-align: center;
   img {
+    width: 100%;
+    height: auto;
     border-radius: 2px;
     @include fade;
   }
   p {
-    opacity: 0;
+    opacity: 1;
     margin: 46px auto 0 auto;
     width: 80%;
     max-width: 700px;
+    @include fade;
     @include break-below("md") {
       width: 100%;
       margin: 26px auto 0 auto;

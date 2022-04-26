@@ -25,6 +25,9 @@ body {
   }
   .gray {
     background-color: $light-gray-0;
+    .button--white {
+      background-color: $light-gray-0;
+    }
   }
 }
 
@@ -387,6 +390,11 @@ button {
   -moz-osx-font-smoothing: inherit;
   -webkit-appearance: none;
 
+  img {
+    width: 14px;
+    height: 14px;
+  }
+
   button,
   img,
   .icon {
@@ -453,6 +461,10 @@ button {
     height: 46px;
     padding: 0 14px;
     @include gap(8px);
+    img {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &--medium {

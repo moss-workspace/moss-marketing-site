@@ -24,7 +24,7 @@ $(document).ready( function() {
 
 $('.slick').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
   $('.workspace__carousel__button').removeClass('active');
-  $('.workspace__carousel__button').eq(currentSlide).addClass('active');
+  $('.workspace__carousel__button').eq(nextSlide).addClass('active');
   $(slick.$slides).removeClass('active');
 });
 
@@ -34,4 +34,25 @@ $('.slick').on('afterChange', function(event, slick, currentSlide, nextSlide) {
 
 function goToSlide(number, target) {
   $('.slick').slick('slickGoTo', number);
+}
+
+// Scroll
+////////////////////////////////////////////////////////////////////////////////
+$(window).scroll(function (event) {
+  toggleBackgroundColor();
+});
+
+// Background
+////////////////////////////////////////////////////////////////////////////////
+function toggleBackgroundColor() {
+  var windowHeight = $(window).height(),
+    scrollTop = $(window).scrollTop();
+
+  if (scrollTop > $("#gray-end").offset().top - windowHeight) {
+    $("body").removeClass("gray");
+  } else if (scrollTop > $("#gray-start").offset().top - windowHeight) {
+    $("body").addClass("gray");
+  } else {
+    $("body").removeClass("gray");
+  }
 }
