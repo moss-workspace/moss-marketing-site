@@ -29,14 +29,12 @@
 // Drop it in
 ////////////////////////////////////////////////////////////////////////////////
 .illustration__stack__wrapper {
-  height: 100vh;
-  background-color: green;
+  height: 150vh;
   position: relative;
   .illustration__stack {
     position: sticky;
     position: -webkit-sticky;
-    top: 10vh;
-    background-color: blue;
+    top: 0;
     height: 0;
     padding-bottom: 100%;
     width: 100%;
