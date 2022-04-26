@@ -198,11 +198,17 @@ fields:
   label: Lower illustration
   description: Select an illustration type to show below the section.
 - name: scattered
-  type: include
+  type: field_group
   config: {}
-  template: previews
+  fields:
+  - name: previews
+    type: include
+    config: {}
+    template: previews
+    label: Previews
+    description: Choose previews for the illustration.
+  label: Scattered
+  description: Choose previews for the scattered illustration.
   showOnly:
     field: lower_illustration
     value: Scattered
-  label: Scattered
-  description: Choose previews for the scattered illustration.
