@@ -99,7 +99,7 @@ sections:
   header: Find creative clarity.
   subhead: 'Connect the dots in one workspace for every tool, team, and iteration. '
   video: ''
-  middle_illustration: Reference
+  middle_illustration: Collection
   text_blocks:
   - text_block: Moss is collaborative by default and tool agnostic, allowing different
       artists, disciplines and creative inputs to iterate frictionlessly in one digital
@@ -131,11 +131,19 @@ sections:
       name: ''
       icon: []
   collection:
-    note: ''
-    previews: []
+    note: Note here
+    previews:
+    - thumbnail: ''
+      custom_info: false
+      name: ''
+      icon: []
   reference:
     left_note: ''
-    previews: []
+    previews:
+    - icon: []
+      thumbnail: ''
+      custom_info: false
+      name: ''
     right_note: ''
   lower_illustration: Scattered
   scattered:
