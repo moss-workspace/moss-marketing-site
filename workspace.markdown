@@ -25,15 +25,9 @@ sections:
       **RIP convert to JPG.**
   show_button: true
   button_text: Learn more about tethering
-  upper_illustration:
-    previews: []
-    note: ''
+  upper_illustration: None
   video: ''
-  middle_illustration:
-    left_note: ''
-    previews: []
-    right_note: ''
-    note: ''
+  middle_illustration: Stack
   button_url: ''
   previews:
   - thumbnail: "/uploads/group-718.png"
@@ -51,6 +45,17 @@ sections:
   middle_illustration_right:
     note: ''
     previews: []
+  brainstorm:
+    note: ''
+    previews: []
+  collection:
+    note: ''
+    previews: []
+  reference:
+    left_note: ''
+    previews: []
+    right_note: ''
+  lower_illustration: None
 - template: workspace-content
   content_type: Lay it out
   upper_illustration:
@@ -79,6 +84,17 @@ sections:
   middle_illustration_right:
     note: ''
     previews: []
+  brainstorm:
+    note: ''
+    previews: []
+  collection:
+    note: ''
+    previews: []
+  reference:
+    left_note: ''
+    previews: []
+    right_note: ''
+  lower_illustration: ''
 - template: workspace-content
   content_type: Creative clarity
   upper_illustration:
@@ -107,6 +123,17 @@ sections:
   middle_illustration_right:
     note: ''
     previews: []
+  brainstorm:
+    note: ''
+    previews: []
+  collection:
+    note: ''
+    previews: []
+  reference:
+    left_note: ''
+    previews: []
+    right_note: ''
+  lower_illustration: ''
 - template: demo-carousel
   header: Jump right in.
   demos:
