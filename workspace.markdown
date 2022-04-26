@@ -35,7 +35,19 @@ sections:
     right_note: ''
     note: ''
   button_url: ''
-  previews: []
+  previews:
+  - thumbnail: "/uploads/group-718.png"
+    custom_info: true
+    name: monarch.psd
+    icon: PSD
+  - thumbnail: "/uploads/group-718.png"
+    custom_info: false
+    name: ''
+    icon: ''
+  - thumbnail: "/uploads/group-718.png"
+    custom_info: false
+    name: ''
+    icon: ''
   middle_illustration_right:
     note: ''
     previews: []
