@@ -77,15 +77,6 @@ fields:
       path: 
   description: Select an illustration type to show alongside the body copy.
   label: Middle illustration
-- name: stack
-  type: include
-  config: {}
-  template: previews
-  label: Stack
-  showOnly:
-    field: middle_illustration
-    value: Stack
-  description: Select three previews for the stack illustration.
 - name: collection
   type: field_group
   config: {}
@@ -107,6 +98,18 @@ fields:
     value: Collection
   description: Choose previews for the collection illustration.
   label: Collection
+- name: stack
+  type: field_group
+  config: {}
+  fields:
+  - name: previews
+    type: include
+    config: {}
+    template: previews
+    label: Previews
+    description: Choose 3 previews.
+  label: Stack
+  description: Choose 3 previews for the stack illustration
 - name: text_blocks
   type: field_group_list
   fields:
