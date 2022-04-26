@@ -71,11 +71,13 @@
                                 </div>
                             {% endif %}
                         {% endfor %}
-                        {% for image in section.previews %}
-                            <div class="preview">
+                        <div class="previews">
+                            {% for preview in section.previews %}
+                                {% assign image = preview.thumbnail %}
+                                {% assign name = preview.name %}
                                 {% include preview.html %}
-                            </div>
-                        {% endfor %}
+                            {% endfor %}
+                        </div>
                     </section>
                 {% when 'demo-carousel' %}
                     <section id="gray-end">

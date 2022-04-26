@@ -18,17 +18,27 @@
     height: auto;
     object-fit: cover;
   }
-  .preview__icons {
-    line-height: 0;
+  .preview__info {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+    @include gap(6px);
+    .preview__name {
+      display: inline-block;
+      vertical-align: top;
+      flex: 1;
+      color: $dark-gray-1;
+    }
     .preview__icon {
       width: 12px;
       height: 12px;
       border-radius: 2px;
-      padding: 5px 0;
       display: inline-block;
+      flex-shrink: 0;
 
       &--link {
-        padding: 5px;
+        padding: 6px;
       }
       @include break-below("md") {
         width: 10px;
@@ -37,6 +47,9 @@
       @include break-below("xs") {
         width: 8px;
         height: 8px;
+      }
+      &--folder {
+        padding-top: 6px;
       }
       &--link {
         float: right;

@@ -60,7 +60,7 @@
 
                 <div class="creativity__container preview parallax" speed="6">
                     <div class="preview__image"></div>
-                    <div class="preview__icons">
+                    <div class="preview__info">
                         <img class="preview__icon preview__icon--folder" data-src="{{ '/assets/icons/file-folder_darkGray2.svg' | relative_url }}" alt="folder icon" loading="lazy"/>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                     <div class="preview parallax" speed="{{ forloop.index | replace: '1', '9' | replace: '2', '3' | replace: '3', '6' }}">
                         {% if forloop.index == 3 %}
                             <img class="preview__image" data-src="{{ image | relative_url }}" alt="Moss preview" loading="lazy"/>
-                            <div class="preview__icons">
+                            <div class="preview__info">
                                 <img class="preview__icon preview__icon--image" data-src="{{ '/assets/icons/psd_color.svg' | relative_url }}" alt="image icon" loading="lazy"/>
                             </div>
                         {% else %}
