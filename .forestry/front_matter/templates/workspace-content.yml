@@ -87,6 +87,10 @@ fields:
       required: false
     label: Note
     description: A note for the illustration
+  - name: pull_out_preview
+    type: boolean
+    label: Pull out preview
+    description: Toggle whether or not to pull out the first preview in the grid
   - name: previews
     type: include
     config: {}
