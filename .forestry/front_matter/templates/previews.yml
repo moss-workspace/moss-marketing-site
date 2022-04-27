@@ -58,6 +58,6 @@ fields:
   config:
     min: 
     max: 
-    labelField: icon
+    labelField: name
   label: Previews
   description: Group of previews
