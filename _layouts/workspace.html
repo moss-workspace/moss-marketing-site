@@ -47,86 +47,98 @@
                                 </div>
                             </div>
                         {% elsif section.middle_illustration == "Collection" %}
-                            {{ section.collection.note }}
                             <div class="illustration__collection__wrapper col-6 col-md-12">
                                 <div class="illustration__collection">
+                                    {{ section.collection.note }}
                                     <div class="preview-grid">
-                                        {% for preview in section.collection.previews offset: 1 %}
-                                            {% assign image = preview.thumbnail %}
-                                            {% assign name = preview.name %}
-                                            <div class="preview">
+                                        {% if section.collection.pull_out_preview %}
+                                            {% for preview in section.collection.previews offset: 1 %}
+                                                {% assign image = preview.thumbnail %}
+                                                {% assign name = preview.name %}
+                                                <div class="preview">
+                                                    {% include preview.html %}
+                                                </div>
+                                            {% endfor %}
+                                        {% else %}
+                                            {% for preview in section.collection.previews %}
+                                                {% assign image = preview.thumbnail %}
+                                                {% assign name = preview.name %}
+                                                <div class="preview">
+                                                    {% include preview.html %}
+                                                </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                        </div>
+                                        {% if section.collection.pull_out_preview %}
+                                            <div class="illustration__collection__pullout preview">
+                                                {% assign preview = section.collection.previews | first %}
+                                                {% assign image = preview.thumbnail %}
+                                                {% assign name = preview.name %}
                                                 {% include preview.html %}
                                             </div>
-                                        {% endfor %}
-                                    </div>
-                                    <div class="illustration__collection__pullout preview">
-                                        {% assign preview = section.collection.previews | first %}
-                                        {% assign image = preview.thumbnail %}
-                                        {% assign name = preview.name %}
-                                        {% include preview.html %}
+                                        {% endif %}
                                     </div>
                                 </div>
-                            </div>
-                        {% endif %}
+                            {% endif %}
 
-                        <div class="textblock__right">
-                            {% for block in section.text_blocks %}
-                                <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
-                                {% if forloop.index == section.text_blocks.size and section.show_button %}
-                                    <button class="button--white button--large">
-                                        {{ section.button_text }}
-                                    </button>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-
-
-                    </section>
-                {% when 'demo-carousel' %}
-                    <section id="gray-end">
-                        <div class="grid">
-                            <div class="textblock__center">
-                                <h2>{{ section.header }}</h2>
-                                {% for demo in section.demos %}
-                                    <button class="{% if forloop.index == 1%}active{% endif %} workspace__carousel__button button--white button--large" onclick="goToSlide({{forloop.index0}}, this)">
-                                        <img src="{{ demo.icon | relative_url }}"/>
-                                        <span>{{ demo.name }}</span>
-                                    </button>
+                            <div class="textblock__right">
+                                {% for block in section.text_blocks %}
+                                    <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
+                                    {% if forloop.index == section.text_blocks.size and section.show_button %}
+                                        <button class="button--white button--large">
+                                            {{ section.button_text }}
+                                        </button>
+                                    {% endif %}
                                 {% endfor %}
                             </div>
-                        </div>
-                        <div class="slick workspace__carousel">
-                            {% for demo in section.demos %}
-                                <div class="workspace__carousel__item">
-                                    <img data-src="{{ demo.image | relative_url }}" loading="lazy"/>
-                                    <p>{{ demo.description }}</p>
+
+
+                        </section>
+                    {% when 'demo-carousel' %}
+                        <section id="gray-end">
+                            <div class="grid">
+                                <div class="textblock__center">
+                                    <h2>{{ section.header }}</h2>
+                                    {% for demo in section.demos %}
+                                        <button class="{% if forloop.index == 1%}active{% endif %} workspace__carousel__button button--white button--large" onclick="goToSlide({{forloop.index0}}, this)">
+                                            <img src="{{ demo.icon | relative_url }}"/>
+                                            <span>{{ demo.name }}</span>
+                                        </button>
+                                    {% endfor %}
                                 </div>
-                            {% endfor %}
-                        </div>
-                    </section>
-                {% when 'testimonial' %}
-                    <section class="grid">
-                        <div class="textblock__center">
-                            <h2>{{ section.quote }}</h2>
-                            <h4>{{ section.name }}</h4>
-                            <h4>{{ section.title }}</h4>
-                        </div>
-                    </section>
-                {% when 'waitlist-cta' %}
-                    <section class="grid fullscreen">
-                        <div class="textblock__center">
-                            <h1>{{ section.header }}</h1>
-                            <h4>{{ section.subhead }}</h4>
-                        </div>
-                        <form class="signup-form input-button col-4-5 col-md-12" onsubmit="() => {return joinWaitlist();}">
-                            <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
-                            <button class="button--blue button--large button--full" type="submit">
-                                {{ site.sign_up_field.button_text }}
-                            </button>
-                        </form>
-                    </section>
-            {% endcase %}
-        {% endfor %}
-        {% include footer.html %}
+                            </div>
+                            <div class="slick workspace__carousel">
+                                {% for demo in section.demos %}
+                                    <div class="workspace__carousel__item">
+                                        <img data-src="{{ demo.image | relative_url }}" loading="lazy"/>
+                                        <p>{{ demo.description }}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </section>
+                    {% when 'testimonial' %}
+                        <section class="grid">
+                            <div class="textblock__center">
+                                <h2>{{ section.quote }}</h2>
+                                <h4>{{ section.name }}</h4>
+                                <h4>{{ section.title }}</h4>
+                            </div>
+                        </section>
+                    {% when 'waitlist-cta' %}
+                        <section class="grid fullscreen">
+                            <div class="textblock__center">
+                                <h1>{{ section.header }}</h1>
+                                <h4>{{ section.subhead }}</h4>
+                            </div>
+                            <form class="signup-form input-button col-4-5 col-md-12" onsubmit="() => {return joinWaitlist();}">
+                                <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
+                                <button class="button--blue button--large button--full" type="submit">
+                                    {{ site.sign_up_field.button_text }}
+                                </button>
+                            </form>
+                        </section>
+                    {% endcase %}
+            {% endfor %}
+            {% include footer.html %}</body>
     </body>
 </html>
