@@ -34,6 +34,7 @@ sections:
   collection:
     note: ''
     previews: []
+    pull_out_preview: false
   reference:
     left_note: ''
     previews: []
@@ -126,6 +127,7 @@ sections:
       custom_info: false
       name: ''
       icon: []
+    pull_out_preview: true
   reference:
     left_note: ''
     previews: []
@@ -168,6 +170,7 @@ sections:
       name: ''
       icon: []
       show_info: false
+    pull_out_preview: false
   reference:
     left_note: ''
     previews:
