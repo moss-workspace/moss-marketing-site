@@ -35,7 +35,7 @@ fields:
       value: true
   - name: icon
     type: select
-    default: []
+    default: Image
     config:
       required: false
       options:
@@ -58,6 +58,6 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: icon
   label: Previews
   description: Group of previews
