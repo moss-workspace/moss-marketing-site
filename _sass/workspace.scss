@@ -64,6 +64,9 @@
   &.active {
     @extend .button--gray-1;
   }
+  @include break-below("md") {
+    @include button--medium;
+  }
 }
 
 .slick {
@@ -102,8 +105,8 @@
 }
 
 // Manage margins between slides
-$margin: 18px;
-$margin-md: 14px;
+$margin: 9px;
+$margin-md: 7px;
 
 .slick-slide {
   margin: 0 $margin;

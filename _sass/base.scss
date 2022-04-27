@@ -442,6 +442,34 @@ input {
   }
 }
 
+// Button sizes
+@mixin button--full {
+  width: 100%;
+}
+
+@mixin button--large {
+  @include h6;
+  height: 46px;
+  padding: 0 14px;
+  @include gap(8px);
+  img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@mixin button--medium {
+  height: 30px;
+  padding: 0 8px;
+  @include gap(6px);
+}
+
+@mixin button--small {
+  height: 26px;
+  padding: 0 6px;
+  @include gap(3px);
+}
+
 button {
   @include p;
   @include fade-bg;
@@ -492,6 +520,7 @@ button {
   }
 }
 
+// Button classes
 .button {
   &--white {
     @include button--white;
@@ -521,32 +550,20 @@ button {
     border: 0 !important;
   }
 
-  // Size
   &--full {
-    width: 100%;
+    @include button--full;
   }
 
   &--large {
-    @include h6;
-    height: 46px;
-    padding: 0 14px;
-    @include gap(8px);
-    img {
-      width: 18px;
-      height: 18px;
-    }
+    @include button--large;
   }
 
   &--medium {
-    height: 30px;
-    padding: 0 8px;
-    @include gap(6px);
+    @include button--medium;
   }
 
   &--small {
-    height: 26px;
-    padding: 0 6px;
-    @include gap(3px);
+    @include button--small;
   }
 }
 
