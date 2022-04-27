@@ -47,6 +47,30 @@ fields:
       required: false
     label: Video URL
     description: URL for the video
+  - name: left_previews
+    type: field_group
+    config: {}
+    fields:
+    - name: previews
+      type: include
+      config: {}
+      template: previews
+      label: Previews
+      description: Previews for the left side of the landing
+    label: Left previews
+    description: Previews for the left side of the landing
+  - name: right_previews
+    type: field_group
+    config: {}
+    fields:
+    - name: previews
+      type: include
+      config: {}
+      template: previews
+      label: Previews
+      description: Previews for the right side of the landing
+    description: Previews for the right side of the landing
+    label: Right previews
   label: Landing
   description: Landing screen for the site.
 - name: sections
