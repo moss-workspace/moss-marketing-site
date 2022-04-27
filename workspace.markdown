@@ -8,6 +8,80 @@ landing:
   show_video_link: true
   video_text: Watch the video
   video_url: ''
+  left_previews:
+    previews:
+    - thumbnail: "/uploads/2-89958.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/dandelion00watt_0003-copy-1.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/frame-869.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/frame-870.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/master-pnp-ppmsca-43500-43572u-3.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/screen-shot-2022-04-26-at-5-00-1.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/service-pnp-fsa-8d20000-8d20700-8d20741v-1.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+  right_previews:
+    previews:
+    - thumbnail: "/uploads/ac89-7062.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/frame-655.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/gpn-2000-001422.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/gpn-2002-000184.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/group-732.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/image-13.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/screen-shot-2022-04-26-at-4-18-2.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
 sections:
 - template: workspace-content
   header: Drop it in.
