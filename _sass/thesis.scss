@@ -394,8 +394,6 @@
     left: -2%;
     top: -5%;
     width: 24%;
-    column-count: 3;
-    column-gap: 8px;
     @include break-below("lg") {
       left: -5%;
       top: 20%;
@@ -416,15 +414,10 @@
       top: 35%;
       width: 60%;
     }
-    .preview {
-      position: relative;
-      margin-bottom: 3px;
-      width: 100%;
-      &:nth-child(6) {
-        padding-bottom: 160%;
-        @include break-below("xs") {
-          padding-bottom: 170%;
-        }
+    .preview:nth-child(6) {
+      padding-bottom: 160%;
+      @include break-below("xs") {
+        padding-bottom: 170%;
       }
     }
     &--pullout {

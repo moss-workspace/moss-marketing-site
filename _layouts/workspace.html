@@ -46,18 +46,40 @@
                                     {% endfor %}
                                 </div>
                             </div>
+                        {% elsif section.middle_illustration == "Collection" %}
+                            {{ section.collection.note }}
+                            <div class="illustration__collection__wrapper col-6 col-md-12">
+                                <div class="illustration__collection">
+                                    <div class="preview-grid">
+                                        {% for preview in section.collection.previews offset: 1 %}
+                                            {% assign image = preview.thumbnail %}
+                                            {% assign name = preview.name %}
+                                            <div class="preview">
+                                                {% include preview.html %}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="illustration__collection__pullout preview">
+                                        {% assign preview = section.collection.previews | first %}
+                                        {% assign image = preview.thumbnail %}
+                                        {% assign name = preview.name %}
+                                        {% include preview.html %}
+                                    </div>
+                                </div>
+                            </div>
                         {% endif %}
 
-                        {% for block in section.text_blocks %}
-                            <div class="textblock__right">
+                        <div class="textblock__right">
+                            {% for block in section.text_blocks %}
                                 <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
                                 {% if forloop.index == section.text_blocks.size and section.show_button %}
                                     <button class="button--white button--large">
                                         {{ section.button_text }}
                                     </button>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
 
                     </section>
                 {% when 'demo-carousel' %}

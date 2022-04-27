@@ -160,6 +160,7 @@ section {
   &__right {
     @extend .col-4-8;
     @extend .col-md-9-4;
+    @include gap-vertical(400px);
   }
   &__left,
   &__right {
@@ -210,10 +211,13 @@ section {
       vertical-align: top;
       flex: 1;
       color: $dark-gray-1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .preview__icon {
-      width: 12px;
-      height: 12px;
+      width: 14px;
+      height: 14px;
       border-radius: 2px;
       display: inline-block;
       flex-shrink: 0;
@@ -221,14 +225,14 @@ section {
       &--link {
         padding: 6px;
       }
-      @include break-below("md") {
-        width: 10px;
-        height: 10px;
-      }
-      @include break-below("xs") {
-        width: 8px;
-        height: 8px;
-      }
+      // @include break-below("md") {
+      //   width: 10px;
+      //   height: 10px;
+      // }
+      // @include break-below("xs") {
+      //   width: 8px;
+      //   height: 8px;
+      // }
       &--folder {
         padding-top: 6px;
       }
@@ -244,6 +248,19 @@ section {
         }
       }
     }
+  }
+}
+
+.preview-grid {
+  column-count: 3;
+  column-gap: 8px;
+  .preview {
+    position: relative;
+    margin-bottom: 3px;
+    width: 100%;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 }
 
