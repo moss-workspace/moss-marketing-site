@@ -155,21 +155,71 @@ sections:
   button_text: ''
   button_url: ''
   brainstorm:
-    note: Test note
+    note: I’m thinking it’s like
     previews:
-    - thumbnail: "/uploads/group-718.png"
+    - thumbnail: "/uploads/nmnh-usnment00669031_ornithoptera_goliath_m_d-5.png"
+      show_info: true
       custom_info: false
       name: ''
       icon: []
-      show_info: false
+    - thumbnail: "/uploads/nmnh-usnment00669031_ornithoptera_goliath_m_d-4.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/birdflight00unse_0100-2.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/birdflight00unse_0031-2-2.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
   collection:
     note: Note here
     previews:
-    - thumbnail: "/uploads/group-718.png"
+    - thumbnail: "/uploads/1679073202.png"
+      show_info: true
       custom_info: false
       name: ''
       icon: []
-      show_info: false
+    - thumbnail: "/uploads/4035686342_a9cc28c2bb-1.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/ac86-7042-2.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/ac89-7001-1.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/ac89-7046-1.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/ac89-7046.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/gpn-2000-000443-3.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/gpn-2000-000919-3.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
     pull_out_preview: false
   reference:
     left_note: ''
