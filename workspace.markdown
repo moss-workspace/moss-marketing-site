@@ -232,11 +232,21 @@ sections:
   lower_illustration: Scattered
   scattered:
     previews:
-    - thumbnail: "/uploads/group-718.png"
+    - thumbnail: "/uploads/468193769_727b657a60_b-1.png"
+      show_info: true
       custom_info: false
       name: ''
       icon: []
-      show_info: false
+    - thumbnail: "/uploads/master-pnp-fsa-8b03000-8b03300-8b03371u-1.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/nmnh-eo_401020_postman_heliconius_melpomene_aglaope_001-3.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
   stack:
     previews: []
 - template: demo-carousel
