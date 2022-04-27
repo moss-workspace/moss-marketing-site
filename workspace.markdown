@@ -367,7 +367,12 @@ sections:
   avatar: ''
   name: Mitch Paone
   title: Partner & Creative Director, DIA
-  previews: []
+  previews:
+  - thumbnail: "/uploads/rv-an417_cubicl_p_20140509201519.jpg"
+    show_info: true
+    custom_info: false
+    name: ''
+    icon: Image
 - template: waitlist-cta
   header: Try Moss early
   subhead: Join the waitlist for beta access.
