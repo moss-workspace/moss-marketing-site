@@ -1,23 +1,24 @@
 ---
 title: Moss
 email: team@mossworkspace.com
-description: Inspiration meets organization in a new visual workspace built for better
+description:
+  Inspiration meets organization in a new visual workspace built for better
   ideas.
 baseurl: "/"
 url: mossworkspace.com
 twitter_username: jekyllrb
 github_username: jekyll
 exclude:
-- ".sass-cache/"
-- ".jekyll-cache/"
-- gemfiles/
-- Gemfile
-- Gemfile.lock
-- node_modules/
-- vendor/bundle/
-- vendor/cache/
-- vendor/gems/
-- vendor/ruby/
+  - ".sass-cache/"
+  - ".jekyll-cache/"
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 tagline: Where ideas grow
 header:
   logo: "/uploads/moss_logo.png"
@@ -29,71 +30,71 @@ header:
   jobs_button_text: "\U0001F469‍\U0001F4BB Join the team"
   jobs_button_url: "/"
   navigation:
-  - icon: "/uploads/globe_icon-2.png"
-    text: Workspace
-    url: "/"
-  - icon: "/uploads/globe_icon-1.png"
-    text: Thesis
-    url: "/thesis"
-  - icon: "/uploads/globe_icon.png"
-    text: Company
-    url: "/company"
-  buttons:
-  - waitlist_button: false
-    text: Sign in
-    url: app.beta.mossworkspace.com
-  - waitlist_button: true
-    text: Join the waitlist
-    url: ''
-footer:
-  illustration: ''
-  link_sections:
-  - name: About
-    links:
-    - icon: "/uploads/globe-4.png"
-      text: Company
-      url: https://mossworkspace.com/company/
-      open_in_new_tab: false
-    - icon: "/uploads/globe-4.png"
-      text: Careers
-      url: ''
-      open_in_new_tab: false
-    - icon: ''
-      text: Email us
-      url: mailto:team@mossworkspace.com
-      open_in_new_tab: false
-    - icon: ''
-      text: Privacy policy
-      url: "/privacy"
-      open_in_new_tab: false
-  - name: Resources
-    links:
-    - icon: ''
+    - icon: "/uploads/globe_icon-2.png"
+      text: Workspace
+      url: "/"
+    - icon: "/uploads/globe_icon-1.png"
       text: Thesis
       url: "/thesis"
-      open_in_new_tab: false
-    - icon: ''
-      text: Watch the video
-      url: https://vimeo.com/472490067/524a565895
-      open_in_new_tab: true
-  - name: Social
-    links:
-    - icon: ''
-      text: Twitter
-      url: https://twitter.com/mossworkspace
-      open_in_new_tab: true
-    - icon: ''
-      text: Instagram
-      url: https://www.instagram.com/mossworkspace/
-      open_in_new_tab: true
+    - icon: "/uploads/globe_icon.png"
+      text: Company
+      url: "/company"
+  buttons:
+    - waitlist_button: false
+      text: Sign in
+      url: app.beta.mossworkspace.com
+    - waitlist_button: true
+      text: Join the waitlist
+      url: ""
+footer:
+  link_sections:
+    - name: About
+      links:
+        - icon: "/uploads/globe-4.png"
+          text: Company
+          url: https://mossworkspace.com/company/
+          open_in_new_tab: false
+        - icon: "/uploads/globe-4.png"
+          text: Careers
+          url: ""
+          open_in_new_tab: false
+        - icon: ""
+          text: Email us
+          url: mailto:team@mossworkspace.com
+          open_in_new_tab: false
+        - icon: ""
+          text: Privacy policy
+          url: "/privacy"
+          open_in_new_tab: false
+    - name: Resources
+      links:
+        - icon: ""
+          text: Thesis
+          url: "/thesis"
+          open_in_new_tab: false
+        - icon: ""
+          text: Watch the video
+          url: https://vimeo.com/472490067/524a565895
+          open_in_new_tab: true
+    - name: Social
+      links:
+        - icon: ""
+          text: Twitter
+          url: https://twitter.com/mossworkspace
+          open_in_new_tab: true
+        - icon: ""
+          text: Instagram
+          url: https://www.instagram.com/mossworkspace/
+          open_in_new_tab: true
   illustrations:
-  - "/uploads/image-11.png"
-  - "/uploads/image-2dots-3-small-png.png"
-  - "/uploads/image-4dots-3-small-png.png"
-  - "/uploads/image-26.png"
+    - "/uploads/image-11.png"
+    - "/uploads/image-2dots-3-small-png.png"
+    - "/uploads/image-4dots-3-small-png.png"
+    - "/uploads/image-26.png"
 privacy:
   cookie_prompt: This site uses cookies.
-  privacy_policy: The site uses Google Analytics. Google Analytics cookies helps to
+  privacy_policy:
+    The site uses Google Analytics. Google Analytics cookies helps to
     distinguish between different users and understand how often a particular user
     visits the site, how the user got to the site, and the user’s activity on the
     site. Google developed two resources – <a href="https://policies.google.com/technologies/partner-sites">How

@@ -1,7 +1,12 @@
 <footer class="grid">
-    {% assign sections = site.footer.link_sections | reverse%}
+    <div class="footer__illustration__wrapper col-6">
+        {% for illustration in site.footer.illustrations %}
+            <img class="footer__illustration" data-src="{{ illustration | relative_url }}" loading="lazy"/>
+        {% endfor %}
+    </div>
+    {% assign sections = site.footer.link_sections %}
     {% for section in sections %}
-        <div class="col-2 col-md-6-1">
+        <div class="col-2 col-md-6-7">
             <h3>{{ section.name }}</h3>
             <ul>
                 {% for link in section.links %}
@@ -17,7 +22,6 @@
             </ul>
         </div>
     {% endfor %}
-    <img class="footer__illustration col-4-9 col-md-6" src="{{ site.footer.illustration }}"/>
 </footer>
 
 <!-- Lazy load if available, otherwise use LazySizes -->

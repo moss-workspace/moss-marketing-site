@@ -15,6 +15,7 @@ $(document).ready(function () {
       $(this).hide();
     }
   });
+  chooseFooterImage();
 });
 
 // Animations
@@ -71,6 +72,14 @@ function scrollToSignup() {
 
   $("html, body").animate({ scrollTop: closestSignup.parent().offset().top });
   closestSignup.find('input').first().focus()
+}
+
+// Footer image selection
+////////////////////////////////////////////////////////////////////////////////
+function chooseFooterImage() {
+  var length = $('.footer__illustration').length;
+  var random = Math.floor(Math.random() * length);
+  $(".footer__illustration").eq(random).css("display", "block");
 }
 
 // Fill & submit mailchimp form from another form

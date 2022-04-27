@@ -1,12 +1,36 @@
 @import "variables";
 
 footer {
-  direction: rtl;
-  text-align: left;
   padding: 46px 0 64px 0;
   border-top: 1px solid $light-gray-3;
 
+  .footer__illustration__wrapper {
+    overflow: visible;
+    position: relative;
+  }
+
+  .footer__illustration {
+    position: absolute;
+    display: none; // Display is set randomly on load
+    width: 50%;
+    height: auto;
+    left: -10%;
+    top: 0;
+    @include break-below("md") {
+      width: 120%;
+      left: -30%;
+    }
+  }
+
+  h3 {
+    margin-bottom: 26px;
+    @include break-below("md") {
+      margin-bottom: 18px;
+    }
+  }
+
   ul {
     margin-bottom: 36px;
+    padding: 0;
   }
 }
