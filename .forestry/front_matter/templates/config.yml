@@ -129,12 +129,11 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: illustration
-    type: file
-    config:
-      maxSize: 64
-    label: Illustration
-    description: Choose an illustration file
+  - name: illustrations
+    type: image_gallery
+    config: {}
+    label: Illustrations
+    description: Choose illustrations to be randomly shown in the footer.
   - name: link_sections
     type: field_group_list
     fields:
