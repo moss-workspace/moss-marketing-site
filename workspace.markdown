@@ -81,6 +81,11 @@ sections:
   collection:
     note: Selects
     previews:
+    - thumbnail: "/uploads/6779837555_40a7ba6b99_z-2.png"
+      show_info: true
+      custom_info: true
+      name: Wing_concept_01bbb.psd
+      icon: PSD
     - thumbnail: "/uploads/1952_29926-2.png"
       show_info: true
       custom_info: false
@@ -91,11 +96,6 @@ sections:
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/6779837555_40a7ba6b99_z-2.png"
-      show_info: true
-      custom_info: true
-      name: Wing_concept_01bbb.psd
-      icon: PSD
     - thumbnail: "/uploads/16434225968_a1b7ba6100_h2-2.png"
       show_info: true
       custom_info: false
