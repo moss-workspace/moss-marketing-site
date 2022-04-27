@@ -44,21 +44,21 @@ sections:
     previews: []
   stack:
     previews:
-    - thumbnail: "/uploads/group-718.png"
-      custom_info: true
-      name: fileName.psd
-      icon: PSD
-      show_info: false
-    - thumbnail: "/uploads/group-718.png"
+    - thumbnail: "/uploads/master-pnp-ppmsca-43500-43572u-3.png"
+      show_info: true
       custom_info: false
       name: ''
       icon: []
-      show_info: false
-    - thumbnail: "/uploads/group-718.png"
+    - thumbnail: "/uploads/ac89-0146-1-3.png"
+      show_info: true
       custom_info: false
       name: ''
       icon: []
-      show_info: false
+    - thumbnail: "/uploads/nmnh-usnment00669031_ornithoptera_goliath_m_d-2.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
 - template: workspace-content
   upper_illustration: None
   header: Lay it out.
