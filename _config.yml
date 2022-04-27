@@ -50,11 +50,11 @@ footer:
   link_sections:
   - name: About
     links:
-    - icon: ''
+    - icon: "/uploads/globe-4.png"
       text: Company
       url: https://mossworkspace.com/company/
       open_in_new_tab: false
-    - icon: ''
+    - icon: "/uploads/globe-4.png"
       text: Careers
       url: ''
       open_in_new_tab: false
