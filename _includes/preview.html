@@ -1,12 +1,22 @@
+{% if preview %}
+    {% assign image = preview.thumbnail %}
+    {% assign name = preview.name %}
+    {% assign info = preview.show_info %}
+{% else %}
+    {% assign info = true %}
+{% endif %}
+
 <img class="preview__image" data-src="{{ image | relative_url }}" alt="Moss preview" loading="lazy"/>
-<div class="preview__info">
-    <img class="preview__icon preview__icon--image" data-src="{{ '/assets/icons/file-image_darkGray2.svg' | relative_url }}" alt="image icon" loading="lazy"/>
-    <p class="preview__name">
-        {% if name.size > 0 %}
-            {{ name }}
-        {% else %}
-            {{ image | split: '/' | last }}
-        {% endif %}
-    </p>
-    <img class="preview__icon preview__icon--link" data-src="{{ '/assets/icons/link-linked_blue.svg' | relative_url }}" alt="link icon" loading="lazy"/>
-</div>
+{% if info %}
+    <div class="preview__info">
+        <img class="preview__icon preview__icon--image" data-src="{{ '/assets/icons/file-image_darkGray2.svg' | relative_url }}" alt="image icon" loading="lazy"/>
+        <p class="preview__name">
+            {% if name.size > 0 %}
+                {{ name }}
+            {% else %}
+                {{ image | split: '/' | last }}
+            {% endif %}
+        </p>
+        <img class="preview__icon preview__icon--link" data-src="{{ '/assets/icons/link-linked_blue.svg' | relative_url }}" alt="link icon" loading="lazy"/>
+    </div>
+{% endif %}

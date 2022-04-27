@@ -28,17 +28,19 @@
 
 // Illustrations
 ////////////////////////////////////////////////////////////////////////////////
-.illustration__stack__wrapper {
+.illustration__wrapper {
   height: 150vh;
   position: relative;
-  .illustration__stack {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    height: 0;
-    padding-bottom: 100%;
-    width: 100%;
-  }
+}
+
+.illustration__stack {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height: 0;
+  padding-bottom: 100%;
+  width: 100%;
+
   .preview {
     width: 50%;
     height: auto;
@@ -57,27 +59,20 @@
   }
 }
 
-.illustration__collection__wrapper {
-  height: 150vh;
-  position: relative;
-  .illustration__collection {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 15vh;
-    width: 100%;
-    .preview-grid {
-      margin-left: -25%;
-      width: 85%;
-      .preview:last-of-type {
-        margin-top: 30vh;
-      }
-    }
-    &__pullout {
-      position: absolute;
-      width: 30%;
-      right: 0;
-      top: 30vh;
-    }
+.illustration__collection {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 15vh;
+  width: 100%;
+  .preview-grid {
+    margin-left: -25%;
+    width: 85%;
+  }
+  &__pullout {
+    position: absolute;
+    width: 30%;
+    right: 0;
+    top: 30vh;
   }
 }
 

@@ -6,6 +6,16 @@
         {% include header.html %}
 
         <section class="grid fullscreen">
+            {% for preview in page.landing.left_previews.previews %}
+                <div class="preview landing__left-preview">
+                    {% include preview.html %}
+                </div>
+            {% endfor %}
+            {% for preview in page.landing.right_previews.previews %}
+                <div class="preview landing__right-preview">
+                    {% include preview.html %}
+                </div>
+            {% endfor %}
             <div class="textblock__center">
                 <h1>{{ page.landing.header }}</h1>
                 <h4>{{ page.landing.subhead }}</h4>
@@ -26,6 +36,17 @@
                 {% when 'workspace-content' %}
                     <section class="grid" {% if forloop.index == 1 %} id="gray-start" {% endif %}>
 
+                        {% if section.upper_illustration == "Brainstorm" %}
+                            <div class="illustration__wrapper col-12">
+                                {% for preview in section.brainstorm.previews %}
+                                    <div class="preview">
+                                        {% include preview.html %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+
                         <div class="textblock__center">
                             <h2>{{ section.header }}</h2>
                             <h4>{{ section.subhead }}</h4>
@@ -35,11 +56,9 @@
                         </div>
 
                         {% if section.middle_illustration == "Stack" %}
-                            <div class="illustration__stack__wrapper col-6 col-md-12">
+                            <div class="illustration__wrapper col-6 col-md-12">
                                 <div class="illustration__stack">
                                     {% for preview in section.stack.previews %}
-                                        {% assign image = preview.thumbnail %}
-                                        {% assign name = preview.name %}
                                         <div class="preview reveal" offset="{{ forloop.index | replace: '1', '.1' | replace: '2', '.15' | replace: '3', '.2' }}">
                                             {% include preview.html %}
                                         </div>
@@ -47,39 +66,33 @@
                                 </div>
                             </div>
                         {% elsif section.middle_illustration == "Collection" %}
-                            <div class="illustration__collection__wrapper col-6 col-md-12">
+                            <div class="illustration__wrapper col-6 col-md-12">
                                 <div class="illustration__collection">
                                     {{ section.collection.note }}
                                     <div class="preview-grid">
                                         {% if section.collection.pull_out_preview %}
                                             {% for preview in section.collection.previews offset: 1 %}
-                                                {% assign image = preview.thumbnail %}
-                                                {% assign name = preview.name %}
-                                                <div class="preview">
+                                                <div class="preview {% if forloop.last %}preview__grid-gap{% endif %}">
                                                     {% include preview.html %}
                                                 </div>
                                             {% endfor %}
                                         {% else %}
                                             {% for preview in section.collection.previews %}
-                                                {% assign image = preview.thumbnail %}
-                                                {% assign name = preview.name %}
                                                 <div class="preview">
                                                     {% include preview.html %}
                                                 </div>
                                             {% endfor %}
                                         {% endif %}
-                                        </div>
-                                        {% if section.collection.pull_out_preview %}
-                                            <div class="illustration__collection__pullout preview">
-                                                {% assign preview = section.collection.previews | first %}
-                                                {% assign image = preview.thumbnail %}
-                                                {% assign name = preview.name %}
-                                                {% include preview.html %}
-                                            </div>
-                                        {% endif %}
                                     </div>
+                                    {% if section.collection.pull_out_preview %}
+                                        <div class="illustration__collection__pullout preview">
+                                            {% assign preview = section.collection.previews | first %}
+                                            {% include preview.html %}
+                                        </div>
+                                    {% endif %}
                                 </div>
-                            {% endif %}
+                            </div>
+                        {% endif %}
 
                             <div class="textblock__right">
                                 {% for block in section.text_blocks %}
@@ -92,6 +105,15 @@
                                 {% endfor %}
                             </div>
 
+                            {% if section.lower_illustration == "Scattered" %}
+                                <div class="illustration__wrapper col-12">
+                                    {% for preview in section.scattered.previews %}
+                                        <div class="preview">
+                                            {% include preview.html %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
 
                         </section>
                     {% when 'demo-carousel' %}
@@ -123,6 +145,11 @@
                                 <h4>{{ section.name }}</h4>
                                 <h4>{{ section.title }}</h4>
                             </div>
+                            {% for preview in section.previews %}
+                                <div class="preview">
+                                    {% include preview.html %}
+                                </div>
+                            {% endfor %}
                         </section>
                     {% when 'waitlist-cta' %}
                         <section class="grid fullscreen">
