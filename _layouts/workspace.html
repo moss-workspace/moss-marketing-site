@@ -8,13 +8,13 @@
         <section class="grid fullscreen landing">
             {% for preview in page.landing.left_previews.previews %}
                 <div class="preview landing__left-preview parallax" 
-                speed="{{ forloop.index | replace: '2', '3' | replace: '3', '2' | replace: '5', '1' | replace: '6', '2' | replace: '7', '3' }}">
+                speed="{{ forloop.index | replace: '1', '7' | replace: '2', '5' | replace: '3', '3' | replace: '5', '2' | replace: '6', '4' | replace: '7', '9' }}">
                     {% include preview_fast-load.html %}
                 </div>
             {% endfor %}
             {% for preview in page.landing.right_previews.previews %}
                 <div class="preview landing__right-preview parallax" 
-                speed="{{ forloop.index | replace: '2', '4' | replace: '3', '1' | replace: '4', '3' | replace: '7', '2' }}">
+                speed="{{ forloop.index | replace: '1', '9' | replace: '2', '5' | replace: '3', '3' | replace: '4', '6' | replace: '7', '4' }}">
                     {% include preview_fast-load.html %}
                 </div>
             {% endfor %}

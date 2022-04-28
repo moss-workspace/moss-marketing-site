@@ -95,13 +95,18 @@ section {
   margin-top: 400px;
   &:first-of-type {
     margin-top: 200px;
+    &.fullscreen {
+      margin-top: 0;
+    }
   }
   &:last-of-type {
     margin-bottom: 200px;
+    &.fullscreen {
+      margin-bottom: 0;
+    }
   }
   &.fullscreen {
     height: 100vh;
-    margin-top: 0;
     .textblock {
       align-self: flex-end;
     }
