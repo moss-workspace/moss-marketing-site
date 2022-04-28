@@ -33,6 +33,7 @@ fields:
     showOnly:
       field: custom_info
       value: true
+    default: Generic preview
   - name: icon
     type: select
     default: Image
