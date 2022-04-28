@@ -19,6 +19,7 @@ header {
   @include break-below("md") {
     height: 30px;
     padding: 26px;
+    top: -82px;
   }
   .header__left {
     display: inline-flex;

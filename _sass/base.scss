@@ -77,14 +77,6 @@ p {
 
 // Layout
 ////////////////////////////////////////////////////////////////////////////////
-header,
-footer {
-  margin: 0 64px;
-  @include break-below("md") {
-    margin: 0 26px;
-  }
-}
-
 section {
   display: block;
   position: relative;
@@ -96,17 +88,12 @@ section {
     margin-bottom: 200px;
   }
   &.fullscreen {
-    height: calc(100vh - 98px);
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    // NOTE: this approach works as long as the fullscreen section has <3 children
-    > * {
+    height: 100vh;
+    margin-top: 0;
+    .textblock {
       align-self: flex-end;
     }
-    > * + * {
-      align-self: auto;
-    }
-    > *:only-child {
+    .textblock:only-child {
       align-self: center;
     }
     @include break-below("md") {
@@ -127,13 +114,13 @@ section {
 .grid {
   display: grid;
   grid-template-columns: repeat($column-count, 1fr);
-  margin-right: 64px;
-  margin-left: 64px;
+  padding-right: 64px;
+  padding-left: 64px;
   grid-column-gap: 18px;
   grid-row-gap: 0;
   @include break-below("md") {
-    margin-right: 26px;
-    margin-left: 26px;
+    padding-right: 26px;
+    padding-left: 26px;
     grid-column-gap: 14px;
   }
 }
@@ -163,6 +150,16 @@ section {
     text-align: center;
     @extend .col-8-3;
     @extend .col-md-12;
+    h4 {
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @include break-below("md") {
+      h4 {
+        width: 100%;
+      }
+    }
   }
   &__left {
     @extend .col-4-2;
