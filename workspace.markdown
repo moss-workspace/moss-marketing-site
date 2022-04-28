@@ -254,46 +254,46 @@ sections:
   collection:
     note: Note here
     previews:
-    - thumbnail: "/uploads/1679073202.png"
-      show_info: true
-      custom_info: false
-      name: ''
-      icon: []
-    - thumbnail: "/uploads/4035686342_a9cc28c2bb-1.png"
-      show_info: true
-      custom_info: false
-      name: ''
-      icon: []
-    - thumbnail: "/uploads/ac86-7042-2.png"
-      show_info: true
-      custom_info: false
-      name: ''
-      icon: []
-    - thumbnail: "/uploads/ac89-7001-1.png"
-      show_info: true
-      custom_info: false
-      name: ''
-      icon: []
-    - thumbnail: "/uploads/ac89-7046-1.png"
-      show_info: true
-      custom_info: false
-      name: ''
-      icon: []
-    - thumbnail: "/uploads/ac89-7046.png"
-      show_info: true
-      custom_info: false
-      name: ''
-      icon: []
-    - thumbnail: "/uploads/gpn-2000-000443-3.png"
-      show_info: true
-      custom_info: false
-      name: ''
-      icon: []
     - thumbnail: "/uploads/gpn-2000-000919-3.png"
       show_info: true
       custom_info: false
       name: ''
-      icon: []
+      icon: Image
+    - thumbnail: "/uploads/gpn-2000-000443-3.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: Image
+    - thumbnail: "/uploads/ac89-7046.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: Image
+    - thumbnail: "/uploads/ac86-7042-2.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: Image
+    - thumbnail: "/uploads/4035686342_a9cc28c2bb-1.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: Image
+    - thumbnail: "/uploads/ac89-7001-1.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: Image
+    - thumbnail: "/uploads/1679073202.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: Image
+    - thumbnail: "/uploads/ac89-7046-1.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: Image
     pull_out_preview: false
   reference:
     left_note: ''
