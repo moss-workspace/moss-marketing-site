@@ -72,7 +72,7 @@
                                     <div class="preview-grid">
                                         {% if section.collection.pull_out_preview %}
                                             {% for preview in section.collection.previews offset: 1 %}
-                                                <div class="preview {% if forloop.last %}preview__grid-gap{% endif %}">
+                                                <div class="preview animate-keyframes {% if forloop.last %}preview__grid-gap{% endif %}">
                                                     {% include preview.html %}
                                                 </div>
                                             {% endfor %}

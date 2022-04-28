@@ -65,6 +65,16 @@ p {
   }
 }
 
+// Animation
+////////////////////////////////////////////////////////////////////////////////
+@mixin animate-keyframes($animation) {
+  animation: $animation 1s linear;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
 // Layout
 ////////////////////////////////////////////////////////////////////////////////
 header,

@@ -67,6 +67,19 @@
   .preview-grid {
     margin-left: -25%;
     width: 85%;
+    .preview {
+      @include animate-keyframes(align-animation);
+      @keyframes align-animation {
+        0% {
+          padding-top: 10vh;
+          left: -10vw;
+        }
+        15% {
+          padding-top: 0;
+          left: 0;
+        }
+      }
+    }
   }
   &__pullout {
     position: absolute;

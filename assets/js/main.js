@@ -18,27 +18,25 @@ $(document).ready(function () {
   chooseFooterImage();
 });
 
-// Animations
-////////////////////////////////////////////////////////////////////////////////
-function reveal(element) {
-  var elementTop = element.offset().top,
-    elementHeight = element.outerHeight(),
-    windowHeight = $(window).height(),
-    scrollTop = $(this).scrollTop(),
-    offset = windowHeight * element.attr("offset");
-
-  if (scrollTop > elementTop + elementHeight - windowHeight + offset) {
-    element.addClass("visible");
-  } else {
-    element.removeClass("visible");
-  }
-}
-
-
 // Scroll
 ////////////////////////////////////////////////////////////////////////////////
 var lastScrollTop = 0;
 $(window).scroll(function (event) {
+  
+  toggleHeader();
+  
+  $(".reveal").each(function () {
+    reveal($(this));
+  });
+
+  $(".animate-keyframes").each(function () {
+    animateKeyframes($(this));
+  });
+});
+
+// Toggle header nav
+////////////////////////////////////////////////////////////////////////////////
+function toggleHeader() {
   var scrollTop = $(this).scrollTop();
   if (scrollTop < lastScrollTop) {
     $("header").addClass("down");
@@ -46,11 +44,38 @@ $(window).scroll(function (event) {
     $("header").removeClass("down");
   }
   lastScrollTop = scrollTop;
-  
-  $(".reveal").each(function () {
-    reveal($(this));
-  });
-});
+}
+
+// Animations
+////////////////////////////////////////////////////////////////////////////////
+function reveal(element) {
+  var elementTop = element.offset().top,
+    elementHeight = element.outerHeight(),
+    windowHeight = $(window).height(),
+    windowTop = $(window).scrollTop(),
+    offset = windowHeight * element.attr("offset");
+
+  if (windowTop > elementTop + elementHeight - windowHeight + offset) {
+    element.addClass("visible");
+  } else {
+    element.removeClass("visible");
+  }
+}
+
+function animateKeyframes(element) {
+    var elementTop = element.offset().top,
+      elementHeight = element.outerHeight(),
+      windowTop = $(window).scrollTop(),
+      windowHeight = $(window).height();
+
+    console.log(`eTop: ${elementTop}, eHeight: ${elementHeight}, wTop: ${windowTop}, wHeight: ${windowHeight}`)
+
+    // 0% means element has come into view, 100% means element has left view.
+    var percentage = (windowTop + windowHeight - elementTop) / (windowHeight + elementHeight);
+    if (percentage >= 0 && percentage <= 1) {
+      element.css("--scroll", percentage);
+    }
+}
 
 // Scroll to signup
 ////////////////////////////////////////////////////////////////////////////////
