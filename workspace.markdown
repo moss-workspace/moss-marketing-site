@@ -118,7 +118,7 @@ sections:
     previews: []
   stack:
     previews:
-    - thumbnail: "/uploads/master-pnp-ppmsca-43500-43572u-3.png"
+    - thumbnail: "/uploads/group-718.png"
       show_info: true
       custom_info: false
       name: ''
