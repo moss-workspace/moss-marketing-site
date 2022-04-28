@@ -33,7 +33,7 @@ fields:
     showOnly:
       field: custom_info
       value: true
-    default: Generic preview
+    default: ''
   - name: icon
     type: select
     default: Image
@@ -59,6 +59,6 @@ fields:
   config:
     min: 
     max: 
-    labelField: name
+    labelField: icon
   label: Previews
   description: Group of previews
