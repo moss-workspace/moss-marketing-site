@@ -14,7 +14,7 @@ landing:
       show_info: true
       custom_info: false
       name: ''
-      icon: []
+      icon: ''
     - thumbnail: "/uploads/master-pnp-ppmsca-43500-43572u-3.png"
       show_info: true
       custom_info: true
