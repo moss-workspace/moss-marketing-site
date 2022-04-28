@@ -97,6 +97,25 @@ fields:
     template: previews
     label: Previews
     description: Previews for the collection. The last preview will be pulled out.
+  - name: context_bar
+    type: file
+    config:
+      maxSize: 64
+    label: Context bar
+    description: Choose an image for the context bar above the pulled out preview.
+    showOnly:
+      field: pull_out_preview
+      value: true
+  - name: context_bar_hovered
+    type: file
+    config:
+      maxSize: 64
+    label: Context bar hovered
+    description: Choose an image for the hovered context bar above the pulled out
+      preview.
+    showOnly:
+      field: pull_out_preview
+      value: true
   showOnly:
     field: middle_illustration
     value: Collection
