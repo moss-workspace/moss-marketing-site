@@ -10,6 +10,16 @@ landing:
   video_url: ''
   left_previews:
     previews:
+    - thumbnail: "/uploads/frame-870.png"
+      show_info: true
+      custom_info: false
+      name: ''
+      icon: []
+    - thumbnail: "/uploads/master-pnp-ppmsca-43500-43572u-3.png"
+      show_info: true
+      custom_info: true
+      name: " "
+      icon: AI
     - thumbnail: "/uploads/2-89958.png"
       show_info: true
       custom_info: false
@@ -25,22 +35,12 @@ landing:
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/frame-870.png"
-      show_info: true
-      custom_info: false
-      name: ''
-      icon: []
-    - thumbnail: "/uploads/master-pnp-ppmsca-43500-43572u-3.png"
+    - thumbnail: "/uploads/service-pnp-fsa-8d20000-8d20700-8d20741v-1.png"
       show_info: true
       custom_info: false
       name: ''
       icon: []
     - thumbnail: "/uploads/screen-shot-2022-04-26-at-5-00-1.png"
-      show_info: true
-      custom_info: false
-      name: ''
-      icon: []
-    - thumbnail: "/uploads/service-pnp-fsa-8d20000-8d20700-8d20741v-1.png"
       show_info: true
       custom_info: false
       name: ''
