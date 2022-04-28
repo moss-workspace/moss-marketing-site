@@ -109,6 +109,8 @@ sections:
     note: ''
     previews: []
     pull_out_preview: false
+    context_bar: ''
+    context_bar_hovered: ''
   reference:
     left_note: ''
     previews: []
@@ -202,6 +204,8 @@ sections:
       name: ''
       icon: []
     pull_out_preview: true
+    context_bar: ''
+    context_bar_hovered: ''
   reference:
     left_note: ''
     previews: []
@@ -295,6 +299,8 @@ sections:
       name: ''
       icon: Image
     pull_out_preview: false
+    context_bar: ''
+    context_bar_hovered: ''
   reference:
     left_note: ''
     previews:
@@ -376,5 +382,9 @@ sections:
 - template: waitlist-cta
   header: Try Moss early
   subhead: Join the waitlist for beta access.
+ui_images:
+  note: ''
+  cursor: ''
+  pointer: ''
 
 ---
