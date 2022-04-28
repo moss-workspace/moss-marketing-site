@@ -6,7 +6,7 @@
     {% assign info = true %}
 {% endif %}
 
-<img class="preview__image" src="{{ image | relative_url }}" alt="Moss preview"/>
+<img class="preview__image preview__first-load" src="{{ image | relative_url }}" alt="Moss preview"/>
 {% if info %}
     <div class="preview__info">
         <img class="preview__icon preview__icon--image" data-src="{{ '/assets/icons/file-image_darkGray2.svg' | relative_url }}" alt="image icon" loading="lazy"/>

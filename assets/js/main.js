@@ -10,19 +10,19 @@ $(document).ready(function () {
     });
     showCookiePrompt();
   }
-  
   $(".toast").click(function () {
     if ($(this).attr("id") !== "cookieprompt") {
       $(this).hide();
     }
   });
+});
 
-  chooseFooterImage();
-
+$(window).on("load", function() {
   $(".parallax").each(function () {
     setParallaxDepth($(this));
     parallax($(this));
   });
+  chooseFooterImage();
 });
 
 // Scroll
