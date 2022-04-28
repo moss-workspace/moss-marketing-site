@@ -14,7 +14,7 @@ landing:
       show_info: true
       custom_info: false
       name: ''
-      icon: ''
+      icon: Image
     - thumbnail: "/uploads/master-pnp-ppmsca-43500-43572u-3.png"
       show_info: true
       custom_info: true
@@ -24,14 +24,14 @@ landing:
       show_info: true
       custom_info: false
       name: ''
-      icon: []
+      icon: Image
     - thumbnail: "/uploads/dandelion00watt_0003-copy-1.png"
       show_info: true
-      custom_info: false
+      custom_info: true
       name: ''
-      icon: []
+      icon: PSD
     - thumbnail: "/uploads/frame-869.png"
-      show_info: true
+      show_info: false
       custom_info: false
       name: ''
       icon: []
@@ -39,9 +39,9 @@ landing:
       show_info: true
       custom_info: false
       name: ''
-      icon: []
+      icon: Image
     - thumbnail: "/uploads/screen-shot-2022-04-26-at-5-00-1.png"
-      show_info: true
+      show_info: false
       custom_info: false
       name: ''
       icon: []
@@ -49,39 +49,39 @@ landing:
     previews:
     - thumbnail: "/uploads/ac89-7062.png"
       show_info: true
-      custom_info: false
-      name: ''
-      icon: []
+      custom_info: true
+      name: " "
+      icon: Video
     - thumbnail: "/uploads/frame-655.png"
-      show_info: true
+      show_info: false
       custom_info: false
       name: ''
       icon: []
     - thumbnail: "/uploads/gpn-2000-001422.png"
-      show_info: true
+      show_info: false
       custom_info: false
       name: ''
       icon: []
     - thumbnail: "/uploads/group-732.png"
       show_info: true
-      custom_info: false
-      name: ''
-      icon: []
+      custom_info: true
+      name: " "
+      icon: Image
     - thumbnail: "/uploads/gpn-2002-000184.png"
       show_info: true
-      custom_info: false
-      name: ''
-      icon: []
+      custom_info: true
+      name: " "
+      icon: Image
     - thumbnail: "/uploads/image-13.png"
-      show_info: true
+      show_info: false
       custom_info: false
       name: ''
       icon: []
     - thumbnail: "/uploads/screen-shot-2022-04-26-at-4-18-2.png"
       show_info: true
-      custom_info: false
-      name: ''
-      icon: []
+      custom_info: true
+      name: " "
+      icon: PSD
 sections:
 - template: workspace-content
   header: Drop it in.
