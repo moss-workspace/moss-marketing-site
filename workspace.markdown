@@ -90,9 +90,9 @@ sections:
 
     Share your work and keep it in-sync without stopping to source, export, and compress along the way.
   text_blocks:
+  - text_block: From online references to production-ready source files and daily
+      output folders, Moss makes sharing your work as painless as drag-and-drop.
   - text_block: |-
-      From online references to production-ready source files and daily output folders, Moss makes sharing your work as painless as drag-and-drop.
-
       Every asset you add to your workspace is shared instantly and stays tethered to its source, so your latest is at your fingertips and stays up to date for your entire team.
 
       **RIP convert to JPG.**
