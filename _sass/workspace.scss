@@ -29,91 +29,85 @@
 // Landing
 ////////////////////////////////////////////////////////////////////////////////
 .landing {
-  overflow-x: hidden;
-  transform: translateY(-98px);
+  height: calc(100vh - 98px);
   @include break-below("md") {
-    transform: translateY(-82px);
+    height: calc(100vh - 82px);
   }
 }
 
 .landing__left-preview {
   &:nth-of-type(1) {
-    width: 40vw;
-    top: 10vh;
-    left: 0vw;
+    width: 40%;
+    top: 15%;
+    left: 0;
   }
   &:nth-of-type(2) {
-    width: 3vw;
-    top: 16vh;
-    left: 25vw;
+    width: 3%;
+    top: 20%;
+    left: 22%;
   }
   &:nth-of-type(3) {
-    width: 14vw;
-    top: 55%;
-    transform: translateY(-50%);
-    left: -3vw;
+    width: 9%;
+    top: 35%;
+    left: 0;
   }
   &:nth-of-type(4) {
-    width: 5vw;
-    top: 45%;
-    transform: translateY(-50%);
-    left: 8vw;
+    width: 5%;
+    top: 40%;
+    left: 7%;
   }
   &:nth-of-type(5) {
-    width: 8vw;
-    top: 60%;
-    transform: translateY(-50%);
-    left: 10vw;
+    width: 8%;
+    top: 75%;
+    left: 8%;
   }
   &:nth-of-type(6) {
-    width: 3vw;
-    bottom: 20vh;
-    left: 20vw;
+    width: 3%;
+    bottom: 15%;
+    left: 18%;
   }
   &:nth-of-type(7) {
-    width: 50vw;
-    bottom: 3vh;
-    left: 0vw;
+    width: 40%;
+    bottom: -15%;
+    left: -5%;
   }
 }
 
 .landing__right-preview {
   &:nth-of-type(8) {
-    width: 11vw;
-    top: 0vh;
-    right: 0vw;
+    width: 10%;
+    top: -10%;
+    right: 0;
   }
   &:nth-of-type(9) {
-    width: 6vw;
-    top: 17vh;
-    right: 2vw;
+    width: 6%;
+    top: 15%;
+    right: 3%;
   }
   &:nth-of-type(10) {
-    width: 18vw;
-    top: 19vh;
-    right: 3vw;
+    width: 15%;
+    top: 37%;
+    right: 5%;
   }
   &:nth-of-type(11) {
-    width: 7vw;
+    width: 6%;
     top: 60%;
-    transform: translateY(-50%);
-    right: 17vw;
+    right: 17%;
   }
   &:nth-of-type(12) {
-    width: 5vw;
-    top: 75%;
-    transform: translateY(-50%);
-    right: 10vw;
+    width: 5%;
+    bottom: 0;
+    right: 10%;
   }
   &:nth-of-type(13) {
-    width: 13vw;
-    bottom: 23vh;
-    right: -3vw;
+    width: 12%;
+    bottom: 20%;
+    right: -4%;
   }
   &:nth-of-type(14) {
-    width: 15vw;
-    bottom: 10vh;
-    right: 2vw;
+    width: 15%;
+    bottom: -15%;
+    right: 2%;
   }
 }
 

@@ -75,6 +75,18 @@ p {
   animation-fill-mode: both;
 }
 
+.reveal {
+  opacity: 0;
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.parallax {
+  //transition transform to smooth out jitter
+  @include transition(transform, 0.05s, linear);
+}
+
 // Layout
 ////////////////////////////////////////////////////////////////////////////////
 section {

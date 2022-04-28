@@ -16,6 +16,10 @@ $(document).ready(function () {
     }
   });
   chooseFooterImage();
+  $(".parallax").each(function () {
+    setParallaxDepth($(this));
+    parallax($(this));
+  });
 });
 
 // Scroll
@@ -31,6 +35,10 @@ $(window).scroll(function (event) {
 
   $(".animate-keyframes").each(function () {
     animateKeyframes($(this));
+  });
+
+  $(".parallax").each(function () {
+    parallax($(this));
   });
 });
 
@@ -75,6 +83,25 @@ function animateKeyframes(element) {
     if (percentage >= 0 && percentage <= 1) {
       element.css("--scroll", percentage);
     }
+}
+
+function parallax(element) {
+  var elementTop = element.offset().top,
+    windowHeight = $(window).height(),
+    scrollTop = $(window).scrollTop(),
+    diff = scrollTop - elementTop,
+    pos = diff / element.attr("speed");
+
+  element.css("transform", "translateY(" + pos + "px)");
+}
+
+function setParallaxDepth(element) {
+  var speed = element.attr("speed");
+  if (speed) {
+    element.css("z-index", speed);
+  } else {
+    element.css("z-index", "1");
+  }
 }
 
 // Scroll to signup

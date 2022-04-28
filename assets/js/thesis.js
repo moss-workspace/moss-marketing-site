@@ -2,10 +2,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function () {
   checkInstagram();
-  $(".parallax").each(function () {
-    setParallaxDepth($(this));
-    parallax($(this));
-  });
 });
 
 // Scroll
@@ -13,10 +9,6 @@ $(document).ready(function () {
 $(window).scroll(function (event) {
   $(".stack").each(function () {
     stack($(this));
-  });
-
-  $(".parallax").each(function () {
-    parallax($(this));
   });
 
   toggleBackgroundColor();
@@ -45,25 +37,6 @@ function stack(element) {
     element.addClass("visible");
   } else {
     element.removeClass("visible");
-  }
-}
-
-function parallax(element) {
-  var elementTop = element.offset().top,
-    windowHeight = $(window).height(),
-    scrollTop = $(window).scrollTop(),
-    diff = scrollTop - elementTop,
-    pos = diff / element.attr("speed");
-
-  element.css("transform", "translateY(" + pos + "px)");
-}
-
-function setParallaxDepth(element) {
-  var speed = element.attr("speed");
-  if (speed) {
-    element.css("z-index", speed);
-  } else {
-    element.css("z-index", "1");
   }
 }
 
