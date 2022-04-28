@@ -10,12 +10,15 @@ $(document).ready(function () {
     });
     showCookiePrompt();
   }
+  
   $(".toast").click(function () {
     if ($(this).attr("id") !== "cookieprompt") {
       $(this).hide();
     }
   });
+
   chooseFooterImage();
+
   $(".parallax").each(function () {
     setParallaxDepth($(this));
     parallax($(this));
@@ -75,8 +78,6 @@ function animateKeyframes(element) {
       elementHeight = element.outerHeight(),
       windowTop = $(window).scrollTop(),
       windowHeight = $(window).height();
-
-    console.log(`eTop: ${elementTop}, eHeight: ${elementHeight}, wTop: ${windowTop}, wHeight: ${windowHeight}`)
 
     // 0% means element has come into view, 100% means element has left view.
     var percentage = (windowTop + windowHeight - elementTop) / (windowHeight + elementHeight);
