@@ -62,12 +62,12 @@ landing:
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/gpn-2002-000184.png"
+    - thumbnail: "/uploads/group-732.png"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/group-732.png"
+    - thumbnail: "/uploads/gpn-2002-000184.png"
       show_info: true
       custom_info: false
       name: ''
