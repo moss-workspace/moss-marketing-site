@@ -241,12 +241,12 @@ sections:
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/birdflight00unse_0100-2.png"
+    - thumbnail: "/uploads/birdflight00unse_0031-2-2.png"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/birdflight00unse_0031-2-2.png"
+    - thumbnail: "/uploads/birdflight00unse_0100-2.png"
       show_info: true
       custom_info: false
       name: ''
