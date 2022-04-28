@@ -44,139 +44,157 @@
         {% for section in page.sections %}
             {% assign template = section.template %}
             {% case template %}
-                {% when 'workspace-content' %}
-                    <section class="grid" {% if forloop.index == 1 %} id="gray-start" {% endif %}>
+            {% when 'workspace-content' %}
+                <section class="grid" {% if forloop.index == 1 %} id="gray-start" {% endif %}>
 
-                        {% if section.upper_illustration == "Brainstorm" %}
-                            <div class="illustration__wrapper col-12">
-                                {% for preview in section.brainstorm.previews %}
-                                    <div class="preview">
+                    {% if section.upper_illustration == "Brainstorm" %}
+                        <div class="illustration__wrapper col-12">
+                            {% for preview in section.brainstorm.previews %}
+                            <div class="preview illustration__brainstorm__preview parallax" 
+                            speed="{{ forloop.index 
+                                | replace: '1', '9' 
+                                | replace: '2', '6' 
+                                | replace: '3', '5' 
+                                | replace: '4', '3' }}">
+                                {% include preview_fast-load.html %}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+
+                    <div class="textblock__center">
+                        <h2>{{ section.header }}</h2>
+                        <h4>{{ section.subhead }}</h4>
+                    </div>
+                    <div class="large-demo col-10-2 col-md-12">
+                        VIDEO HERE
+                    </div>
+
+                    {% if section.middle_illustration == "Stack" %}
+                        <div class="illustration__wrapper col-6 col-md-12">
+                            <div class="illustration__stack">
+                                {% for preview in section.stack.previews %}
+                                    <div class="preview reveal" offset="{{ forloop.index | replace: '1', '.1' | replace: '2', '.15' | replace: '3', '.2' }}">
                                         {% include preview.html %}
                                     </div>
                                 {% endfor %}
                             </div>
-                        {% endif %}
-
-
-                        <div class="textblock__center">
-                            <h2>{{ section.header }}</h2>
-                            <h4>{{ section.subhead }}</h4>
                         </div>
-                        <div class="large-demo col-10-2 col-md-12">
-                            VIDEO HERE
-                        </div>
-
-                        {% if section.middle_illustration == "Stack" %}
-                            <div class="illustration__wrapper col-6 col-md-12">
-                                <div class="illustration__stack">
-                                    {% for preview in section.stack.previews %}
-                                        <div class="preview reveal" offset="{{ forloop.index | replace: '1', '.1' | replace: '2', '.15' | replace: '3', '.2' }}">
-                                            {% include preview.html %}
-                                        </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        {% elsif section.middle_illustration == "Collection" %}
-                            <div class="illustration__wrapper col-6 col-md-12">
-                                <div class="illustration__collection">
-                                    {{ section.collection.note }}
-                                    <div class="preview-grid">
-                                        {% if section.collection.pull_out_preview %}
-                                            {% for preview in section.collection.previews offset: 1 %}
-                                                <div class="preview animate-keyframes {% if forloop.last %}preview__grid-gap{% endif %}">
-                                                    {% include preview.html %}
-                                                </div>
-                                            {% endfor %}
-                                        {% else %}
-                                            {% for preview in section.collection.previews %}
-                                                <div class="preview">
-                                                    {% include preview.html %}
-                                                </div>
-                                            {% endfor %}
-                                        {% endif %}
-                                    </div>
+                    {% elsif section.middle_illustration == "Collection" %}
+                        <div class="illustration__wrapper col-6 col-md-12">
+                            <div class="illustration__collection">
+                                {{ section.collection.note }}
+                                <div class="preview-grid">
                                     {% if section.collection.pull_out_preview %}
-                                        <div class="illustration__collection__pullout preview">
-                                            {% assign preview = section.collection.previews | first %}
-                                            {% include preview.html %}
-                                        </div>
+                                        {% for preview in section.collection.previews offset: 1 %}
+                                            <div class="preview animate-keyframes {% if forloop.last %}preview__grid-gap{% endif %}">
+                                                {% include preview.html %}
+                                            </div>
+                                        {% endfor %}
+                                    {% else %}
+                                        {% for preview in section.collection.previews %}
+                                            <div class="preview">
+                                                {% include preview.html %}
+                                            </div>
+                                        {% endfor %}
                                     {% endif %}
                                 </div>
-                            </div>
-                        {% endif %}
-
-                            <div class="textblock__right">
-                                {% for block in section.text_blocks %}
-                                    <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
-                                    {% if forloop.index == section.text_blocks.size and section.show_button %}
-                                        <button class="button--white button--large">
-                                            {{ section.button_text }}
-                                        </button>
-                                    {% endif %}
-                                {% endfor %}
-                            </div>
-
-                            {% if section.lower_illustration == "Scattered" %}
-                                <div class="illustration__wrapper col-12">
-                                    {% for preview in section.scattered.previews %}
-                                        <div class="preview">
-                                            {% include preview.html %}
-                                        </div>
-                                    {% endfor %}
-                                </div>
-                            {% endif %}
-
-                        </section>
-                    {% when 'demo-carousel' %}
-                        <section id="gray-end">
-                            <div class="grid">
-                                <div class="textblock__center">
-                                    <h2>{{ section.header }}</h2>
-                                    {% for demo in section.demos %}
-                                        <button class="{% if forloop.index == 1%}active{% endif %} workspace__carousel__button button--white button--large" onclick="goToSlide({{forloop.index0}}, this)">
-                                            <img src="{{ demo.icon | relative_url }}"/>
-                                            <span>{{ demo.name }}</span>
-                                        </button>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            <div class="slick workspace__carousel">
-                                {% for demo in section.demos %}
-                                    <div class="workspace__carousel__item">
-                                        <img data-src="{{ demo.image | relative_url }}" loading="lazy"/>
-                                        <p>{{ demo.description }}</p>
+                                {% if section.collection.pull_out_preview %}
+                                    <div class="illustration__collection__pullout preview">
+                                        {% assign preview = section.collection.previews | first %}
+                                        {% include preview.html %}
                                     </div>
-                                {% endfor %}
+                                {% endif %}
                             </div>
-                        </section>
-                    {% when 'testimonial' %}
-                        <section class="grid">
-                            <div class="textblock__center">
-                                <h2>{{ section.quote }}</h2>
-                                <h4>{{ section.name }}</h4>
-                                <h4>{{ section.title }}</h4>
-                            </div>
-                            {% for preview in section.previews %}
-                                <div class="preview">
+                        </div>
+                    {% endif %}
+
+                    <div class="textblock__right">
+                        {% for block in section.text_blocks %}
+                            {% if forloop.last and section.lower_illustration == "Scattered" %}{% break %}{% endif %}
+                            <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
+                            {% if forloop.index == section.text_blocks.size and section.show_button %}
+                                <button class="button--white button--large">
+                                    {{ section.button_text }}
+                                </button>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    {% if section.lower_illustration == "Scattered" %}
+                        <div class="textblock__left">
+                            {% assign block = section.text_blocks | last %}
+                            <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
+                            {% if section.show_button %}
+                                <button class="button--white button--large">
+                                    {{ section.button_text }}
+                                </button>
+                            {% endif %}
+                        </div>
+                        <div class="illustration__wrapper col-12">
+                            {% for preview in section.scattered.previews %}
+                                <div class="preview illustration__scattered__preview parallax" 
+                                speed="{{ forloop.index 
+                                    | replace: '1', '8' 
+                                    | replace: '2', '2' 
+                                    | replace: '3', '6' }}">
                                     {% include preview.html %}
                                 </div>
                             {% endfor %}
-                        </section>
-                    {% when 'waitlist-cta' %}
-                        <section class="grid fullscreen">
-                            <div class="textblock__center">
-                                <h1>{{ section.header }}</h1>
-                                <h4>{{ section.subhead }}</h4>
-                            </div>
-                            <form class="signup-form input-button col-4-5 col-md-12" onsubmit="() => {return joinWaitlist();}">
-                                <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
-                                <button class="button--blue button--large button--full" type="submit">
-                                    {{ site.sign_up_field.button_text }}
+                        </div>
+                    {% endif %}
+                </section>
+            {% when 'demo-carousel' %}
+                <section id="gray-end">
+                    <div class="grid">
+                        <div class="textblock__center">
+                            <h2>{{ section.header }}</h2>
+                            {% for demo in section.demos %}
+                                <button class="{% if forloop.index == 1%}active{% endif %} workspace__carousel__button button--white button--large" onclick="goToSlide({{forloop.index0}}, this)">
+                                    <img src="{{ demo.icon | relative_url }}"/>
+                                    <span>{{ demo.name }}</span>
                                 </button>
-                            </form>
-                        </section>
-                    {% endcase %}
-            {% endfor %}
-            {% include footer.html %}</body>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="slick workspace__carousel">
+                        {% for demo in section.demos %}
+                            <div class="workspace__carousel__item">
+                                <img data-src="{{ demo.image | relative_url }}" loading="lazy"/>
+                                <p>{{ demo.description }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% when 'testimonial' %}
+                <section class="grid">
+                    <div class="textblock__center">
+                        <h2>{{ section.quote }}</h2>
+                        <h4>{{ section.name }}</h4>
+                        <h4>{{ section.title }}</h4>
+                    </div>
+                    {% for preview in section.previews %}
+                        <div class="preview">
+                            {% include preview.html %}
+                        </div>
+                    {% endfor %}
+                </section>
+            {% when 'waitlist-cta' %}
+                <section class="grid fullscreen">
+                    <div class="textblock__center">
+                        <h1>{{ section.header }}</h1>
+                        <h4>{{ section.subhead }}</h4>
+                    </div>
+                    <form class="signup-form input-button col-4-5 col-md-12" onsubmit="() => {return joinWaitlist();}">
+                        <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
+                        <button class="button--blue button--large button--full" type="submit">
+                            {{ site.sign_up_field.button_text }}
+                        </button>
+                    </form>
+                </section>
+            {% endcase %}
+        {% endfor %}
+        {% include footer.html %}</body>
     </body>
 </html>

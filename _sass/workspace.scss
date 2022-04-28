@@ -29,7 +29,6 @@
 // Landing
 ////////////////////////////////////////////////////////////////////////////////
 .landing {
-  // overflow-x: hidden;
   height: calc(100vh - 98px);
   @include break-below("md") {
     height: calc(100vh - 82px);
@@ -119,6 +118,29 @@
   position: relative;
 }
 
+.illustration__brainstorm__preview {
+  &:nth-of-type(1) {
+    width: 30%;
+    top: 0;
+    left: 10%;
+  }
+  &:nth-of-type(2) {
+    width: 30%;
+    top: 10%;
+    left: 15%;
+  }
+  &:nth-of-type(3) {
+    width: 20%;
+    bottom: 15%;
+    right: 0;
+  }
+  &:nth-of-type(4) {
+    width: 15%;
+    bottom: 20%;
+    right: -64px;
+  }
+}
+
 .illustration__stack {
   position: sticky;
   position: -webkit-sticky;
@@ -153,7 +175,7 @@
   .preview-grid {
     margin-left: -25%;
     width: 85%;
-    .preview {
+    .animate-keyframes {
       @include animate-keyframes(align-animation);
       @keyframes align-animation {
         0% {
@@ -172,6 +194,24 @@
     width: 30%;
     right: 0;
     top: 30vh;
+  }
+}
+
+.illustration__scattered__preview {
+  &:nth-of-type(1) {
+    width: 20%;
+    top: -10%;
+    right: 10%;
+  }
+  &:nth-of-type(2) {
+    width: 30%;
+    top: 50%;
+    left: 25%;
+  }
+  &:nth-of-type(3) {
+    width: 30%;
+    top: 70%;
+    right: 20%;
   }
 }
 
