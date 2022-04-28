@@ -8,6 +8,30 @@ fields:
     required: false
   label: Permalink
   description: The URL extension for this page
+- name: ui_images
+  type: field_group
+  config: {}
+  fields:
+  - name: note
+    type: file
+    config:
+      maxSize: 64
+    label: Note
+    description: Choose the context bar for notes
+  - name: cursor
+    type: file
+    config:
+      maxSize: 64
+    label: Cursor
+    description: Choose an image for the cursor animations
+  - name: pointer
+    type: file
+    config:
+      maxSize: 64
+    description: Choose an image for the pointer (pointy-hand mouse) animations
+    label: Pointer
+  label: UI images
+  description: Choose images for cursors, notes, etc.
 - name: landing
   type: field_group
   config: {}
