@@ -113,9 +113,36 @@
 
 // Illustrations
 ////////////////////////////////////////////////////////////////////////////////
+.note {
+  width: fit-content;
+  &__context-bar {
+    width: 120px;
+    margin-left: -10px;
+  }
+  &__text {
+    @extend .bold;
+    border: 1px $light-gray-4 solid;
+    padding: 3px;
+    color: $dark-gray-2;
+    border-radius: 2px;
+  }
+}
+
 .illustration__wrapper {
   height: 150vh;
   position: relative;
+  @include break-below("md") {
+    height: 100vh;
+  }
+  &.middle__illustration {
+    grid-row: 3 / span 2;
+    @include break-below("md") {
+      grid-row: span 1;
+    }
+    &__with-upper {
+      grid-row: 4 / span 2;
+    }
+  }
 }
 
 .illustration__brainstorm__preview {
@@ -148,7 +175,9 @@
   height: 0;
   padding-bottom: 100%;
   width: 100%;
-
+  @include break-below("md") {
+    top: 20vh;
+  }
   .preview {
     width: 50%;
     height: auto;

@@ -152,6 +152,12 @@ section {
   h4 {
     margin-bottom: 46px;
   }
+  .textblock {
+    align-self: flex-end;
+  }
+  .textblock:only-child {
+    align-self: center;
+  }
   @include break-below("md") {
     h1,
     h2 {
@@ -180,18 +186,18 @@ section {
   }
   &__left {
     @extend .col-4-2;
-    @extend .col-md-9;
   }
   &__right {
     @extend .col-4-8;
-    @extend .col-md-9-4;
     @include gap-vertical(400px);
   }
   &__left,
   &__right {
     @extend .textblock;
+    @extend .col-md-10-2;
     z-index: 800;
-    align-self: center;
+    align-self: flex-end;
+    // align-self: center;
     button {
       margin-top: 46px;
     }
@@ -201,6 +207,11 @@ section {
       }
     }
   }
+}
+
+.illustration__wrapper + .textblock__right {
+  margin-top: 46px;
+  align-self: auto;
 }
 
 // Cookie prompt

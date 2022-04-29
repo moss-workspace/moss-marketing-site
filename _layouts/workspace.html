@@ -71,8 +71,20 @@
                         VIDEO HERE
                     </div>
 
+                    <div class="textblock__right">
+                        {% for block in section.text_blocks %}
+                            {% if forloop.last %}{% break %}{% endif %}
+                            <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
+                            {% if forloop.index == section.text_blocks.size and section.show_button %}
+                                <button class="button--white button--large">
+                                    {{ section.button_text }}
+                                </button>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
                     {% if section.middle_illustration == "Stack" %}
-                        <div class="illustration__wrapper col-6 col-md-12">
+                        <div class="illustration__wrapper middle__illustration col-6 col-md-12">
                             <div class="illustration__stack">
                                 {% for preview in section.stack.previews %}
                                     <div class="preview reveal" offset="{{ forloop.index | replace: '1', '.1' | replace: '2', '.15' | replace: '3', '.2' }}">
@@ -82,9 +94,10 @@
                             </div>
                         </div>
                     {% elsif section.middle_illustration == "Collection" %}
-                        <div class="illustration__wrapper col-6 col-md-12">
+                        <div class="illustration__wrapper middle__illustration {% if section.upper_illustration != "None" %}middle__illustration__with-upper{% endif %} col-6 col-md-12">
                             <div class="illustration__collection">
-                                {{ section.collection.note }}
+                                {% assign text = section.collection.note %}
+                                {% include note.html %}
                                 <div class="preview-grid">
                                     {% if section.collection.pull_out_preview %}
                                         {% for preview in section.collection.previews offset: 1 %}
@@ -110,28 +123,17 @@
                         </div>
                     {% endif %}
 
-                    <div class="textblock__right">
-                        {% for block in section.text_blocks %}
-                            {% if forloop.last and section.lower_illustration == "Scattered" %}{% break %}{% endif %}
-                            <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
-                            {% if forloop.index == section.text_blocks.size and section.show_button %}
-                                <button class="button--white button--large">
-                                    {{ section.button_text }}
-                                </button>
-                            {% endif %}
-                        {% endfor %}
+                    <div class="textblock__right {% if section.lower_illustration == "Scattered" %}textblock__left{% endif %}">
+                        {% assign block = section.text_blocks | last %}
+                        <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
+                        {% if section.show_button %}
+                            <button class="button--white button--large">
+                                {{ section.button_text }}
+                            </button>
+                        {% endif %}
                     </div>
 
                     {% if section.lower_illustration == "Scattered" %}
-                        <div class="textblock__left">
-                            {% assign block = section.text_blocks | last %}
-                            <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
-                            {% if section.show_button %}
-                                <button class="button--white button--large">
-                                    {{ section.button_text }}
-                                </button>
-                            {% endif %}
-                        </div>
                         <div class="illustration__wrapper col-12">
                             {% for preview in section.scattered.previews %}
                                 <div class="preview illustration__scattered__preview parallax" 
