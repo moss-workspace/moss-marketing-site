@@ -82,11 +82,15 @@
                     </div>
 
                     {% if section.middle_illustration == "Stack" %}
-                        <div class="illustration__wrapper middle__illustration col-6 col-md-12">
+                        <div class="illustration__wrapper middle__illustration animation-trigger col-6 col-md-12">
                             <div class="illustration__stack">
                                 {% for preview in section.stack.previews %}
-                                    <div class="preview reveal" offset="{{ forloop.index | replace: '1', '.1' | replace: '2', '.15' | replace: '3', '.2' }}">
+                                    <div class="preview animation-target">
                                         {% include preview.html %}
+                                        {% if forloop.last %}
+                                            <img class="cursor cursor__default animation-target" data-src="{{ page.ui_images.cursor | relative_url }}" loading="lazy"/>
+                                            <img class="cursor cursor__pointer animation-target" data-src="{{ page.ui_images.pointer | relative_url }}" loading="lazy"/>
+                                        {% endif %}
                                     </div>
                                 {% endfor %}
                             </div>

@@ -265,14 +265,84 @@
     &:first-of-type {
       left: 15%;
       top: 15%;
+      @include animate-keyframes(stack-1-animation);
+      @keyframes stack-1-animation {
+        0%,
+        19.99% {
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        }
+      }
     }
     &:nth-of-type(2) {
       left: 25%;
       top: 25%;
+      @include animate-keyframes(stack-2-animation);
+      @keyframes stack-2-animation {
+        0%,
+        29.99% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+      }
     }
     &:nth-of-type(3) {
       left: 35%;
       top: 35%;
+      @include animate-keyframes(stack-3-animation);
+      @keyframes stack-3-animation {
+        0%,
+        39.99% {
+          opacity: 0;
+        }
+        40% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .cursor {
+    &__default {
+      @include animate-keyframes(stack-hover-animation);
+      @keyframes stack-hover-animation {
+        0%,
+        40% {
+          right: 50vw;
+          bottom: -50px;
+          opacity: 1;
+        }
+        45% {
+          bottom: 30px;
+          opacity: 1;
+        }
+        49.99% {
+          opacity: 1;
+        }
+        50%,
+        100% {
+          right: -10px;
+          bottom: -10px;
+          opacity: 0;
+        }
+      }
+    }
+    &__pointer {
+      right: -10px;
+      bottom: -10px;
+      @include animate-keyframes(stack-pointer-animation);
+      @keyframes stack-pointer-animation {
+        0%,
+        49.99% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -296,8 +366,8 @@
       margin-top: 0;
       width: 85%;
       .animation-target {
-        @include animate-keyframes(align-animation);
-        @keyframes align-animation {
+        @include animate-keyframes(collection-align-animation);
+        @keyframes collection-align-animation {
           0% {
             padding-top: 10vh;
             left: -15vw;
@@ -326,12 +396,12 @@
         top: 0;
         right: 0;
         box-shadow: none;
-        @include animate-keyframes(hide-animation);
+        @include animate-keyframes(collection-hide-animation);
       }
       .cursor {
         &__default {
-          @include animate-keyframes(hover-animation);
-          @keyframes hover-animation {
+          @include animate-keyframes(collection-hover-animation);
+          @keyframes collection-hover-animation {
             0%,
             20% {
               right: -100vw;
@@ -343,11 +413,7 @@
             49.99% {
               opacity: 1;
             }
-            50% {
-              right: 100px;
-              top: 15px;
-              opacity: 0;
-            }
+            50%,
             100% {
               right: 100px;
               top: 15px;
@@ -358,14 +424,14 @@
         &__pointer {
           right: 100px;
           top: 15px;
-          @include animate-keyframes(hide-animation);
+          @include animate-keyframes(collection-hide-animation);
         }
       }
     }
   }
 }
 
-@keyframes hide-animation {
+@keyframes collection-hide-animation {
   0%,
   49.99% {
     opacity: 0;
