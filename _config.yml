@@ -46,6 +46,7 @@ header:
     text: Join the waitlist
     url: ''
   menu_icon: "/uploads/sidebar.png"
+  menu_closed_icon: "/uploads/close.png"
 footer:
   link_sections:
   - name: About
