@@ -54,7 +54,6 @@ header {
     float: right;
     display: inline-flex;
     @include gap(8px);
-    width: 100%;
     max-width: 350px;
     justify-content: flex-end;
     a {
@@ -65,8 +64,23 @@ header {
         display: none;
       }
     }
-    @include break-below("md") {
+    .fullscreen-nav__button {
       display: none;
+    }
+    @include break-below("md") {
+      .header__button {
+        display: none;
+      }
+      .fullscreen-nav__button {
+        display: block;
+        .fullscreen-nav__icon-open,
+        .fullscreen-nav__icon-closed {
+          margin: 0;
+        }
+        .fullscreen-nav__icon-closed {
+          display: none;
+        }
+      }
     }
   }
   &.dark {
@@ -89,6 +103,33 @@ header {
     }
     button {
       @include button--white;
+    }
+  }
+}
+
+.fullscreen-nav {
+  position: fixed;
+  text-align: left;
+  padding: 100px 26px 26px 26px;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $white;
+  z-index: 850;
+  display: none;
+  @include gap-vertical(18px);
+  &__item {
+    display: flex;
+    align-items: center;
+    @include gap(18px);
+    h3 {
+      flex: 1;
+    }
+    &__icon {
+      height: 46px;
+      width: auto;
+      flex-shrink: 0;
     }
   }
 }

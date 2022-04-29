@@ -22,16 +22,29 @@
     <div class="header__right">
         {% for button in site.header.buttons %}
             {% if button.waitlist_button %}
-                <button class="header_waitlist-button button--gray-1 button--large" onclick="scrollToSignup();">
+                <button class="header__button header_waitlist-button button--gray-1 button--large" onclick="scrollToSignup();">
                     {{ button.text }}
                 </button>
             {% else %}
                 <a href="{{ button.url }}">
-                    <button class=" button--white button--borderless button--large">
+                    <button class="header__button button--white button--borderless button--large">
                         {{ button.text }}
                     </button>
                 </a>
             {% endif %}
         {% endfor %}
+        <button class="fullscreen-nav__button button--white button--borderless button--medium" onclick="toggleFullscreenNav()">
+            <img class="fullscreen-nav__icon-open" src="{{ site.header.menu_icon | relative_url }}"/>
+            <img class="fullscreen-nav__icon-closed" src="{{ site.header.menu_closed_icon | relative_url }}"/>
+        </button>
     </div>
 </header>
+
+<div class="fullscreen-nav">
+    {% for item in site.header.navigation %}
+        <a class="fullscreen-nav__item" href="{{ item.url }}">
+            <img class="fullscreen-nav__item__icon" src="{{ item.icon | relative_url }}"/>
+            <h3>{{ item.text }}</h3>
+        </a>
+    {% endfor %}
+</div>

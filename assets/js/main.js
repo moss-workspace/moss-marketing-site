@@ -15,12 +15,20 @@ $(document).ready(function () {
       $(this).hide();
     }
   });
+
   $(".parallax").each(function () {
     setParallaxDepth($(this));
     parallax($(this));
   });
-  chooseFooterImage();
 });
+
+// $(window).on("load", function() {
+//   $(".parallax").each(function () {
+//     setParallaxDepth($(this));
+//     parallax($(this));
+//   });
+//   chooseFooterImage();
+// });
 
 // Scroll
 ////////////////////////////////////////////////////////////////////////////////
@@ -42,7 +50,7 @@ $(window).scroll(function (event) {
   });
 });
 
-// Toggle header nav
+// Header nav
 ////////////////////////////////////////////////////////////////////////////////
 function toggleHeader() {
   var scrollTop = $(this).scrollTop();
@@ -52,6 +60,19 @@ function toggleHeader() {
     $("header").removeClass("down");
   }
   lastScrollTop = scrollTop;
+}
+
+function toggleFullscreenNav() {
+  $('.fullscreen-nav').toggle();
+  if ($('.fullscreen-nav').is(':visible')) {
+    $('body').css('overflow', 'hidden');
+    $('.fullscreen-nav__icon-closed').show();
+    $('.fullscreen-nav__icon-open').hide();
+  } else {
+    $('body').css('overflow', 'auto');
+    $('.fullscreen-nav__icon-closed').hide();
+    $('.fullscreen-nav__icon-open').show();
+  }
 }
 
 // Animations
