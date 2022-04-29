@@ -108,6 +108,9 @@ function setParallaxDepth(element) {
   } else {
     element.css("z-index", "1");
   }
+  if (element.width() < 125) {
+    element.find('.preview__info').hide();
+  }
 }
 
 // Scroll to signup

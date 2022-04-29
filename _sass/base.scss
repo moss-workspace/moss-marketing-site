@@ -89,6 +89,10 @@ p {
 
 // Layout
 ////////////////////////////////////////////////////////////////////////////////
+.signup-form {
+  z-index: 10;
+}
+
 section {
   display: block;
   position: relative;
@@ -143,6 +147,7 @@ section {
 }
 
 .textblock {
+  z-index: 10;
   h1 {
     margin-bottom: 14px;
   }
