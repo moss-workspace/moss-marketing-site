@@ -15,14 +15,6 @@ $(document).ready(function () {
       $(this).hide();
     }
   });
-  // Call this twice to be sure
-  $(".parallax").each(function () {
-    setParallaxDepth($(this));
-    parallax($(this));
-  });
-});
-
-$(window).on("load", function() {
   $(".parallax").each(function () {
     setParallaxDepth($(this));
     parallax($(this));
