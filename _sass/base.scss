@@ -89,6 +89,26 @@ p {
 
 // Layout
 ////////////////////////////////////////////////////////////////////////////////
+h1 {
+  margin-bottom: 14px;
+}
+h2 {
+  margin-bottom: 26px;
+}
+h4 {
+  margin-bottom: 46px;
+}
+
+@include break-below("md") {
+  h1,
+  h2 {
+    margin-bottom: 18px;
+  }
+  h4 {
+    margin-bottom: 36px;
+  }
+}
+
 .signup-form {
   z-index: 10;
 }
@@ -111,11 +131,19 @@ section {
   }
   &.fullscreen {
     height: 100vh;
-    .textblock {
-      align-self: flex-end;
+    grid-template-rows: 1fr auto 1fr;
+    &.title-only {
+      grid-template-rows: 1fr 1fr;
     }
-    .textblock:only-child {
-      align-self: center;
+    h1,
+    h2 {
+      align-self: flex-end;
+      @extend .col-10-2;
+      @extend .col-md-12;
+    }
+    h4 {
+      @extend .col-6-4;
+      @extend .col-md-12;
     }
     @include break-below("md") {
       height: calc(100vh - 82px);
@@ -148,46 +176,11 @@ section {
 
 .textblock {
   z-index: 10;
-  h1 {
-    margin-bottom: 14px;
-  }
-  h2 {
-    margin-bottom: 26px;
-  }
-  h4 {
-    margin-bottom: 46px;
-  }
-  .textblock {
-    align-self: flex-end;
-  }
-  .textblock:only-child {
-    align-self: center;
-  }
-  @include break-below("md") {
-    h1,
-    h2 {
-      margin-bottom: 18px;
-    }
-    h4 {
-      margin-bottom: 36px;
-    }
-  }
   &__center {
     @extend .textblock;
-    z-index: 800;
     text-align: center;
     @extend .col-8-3;
     @extend .col-md-12;
-    h4 {
-      width: 80%;
-      margin-right: auto;
-      margin-left: auto;
-    }
-    @include break-below("md") {
-      h4 {
-        width: 100%;
-      }
-    }
   }
   &__left {
     @extend .col-4-2;

@@ -27,10 +27,8 @@
                     {% include preview_first-load.html %}
                 </div>
             {% endfor %}
-            <div class="textblock__center">
-                <h1>{{ page.landing.header }}</h1>
-                <h4>{{ page.landing.subhead }}</h4>
-            </div>
+            <h1 class="textblock__center">{{ page.landing.header }}</h1>
+            <h4 class="textblock__center">{{ page.landing.subhead }}</h4>
             <div class="signup-form col-4-5 col-md-12" style="text-align: center;">
                 {% include signup_form.html %}
                 {% if page.landing.show_video_link %}
@@ -150,8 +148,8 @@
             {% when 'demo-carousel' %}
                 <section id="gray-end">
                     <div class="grid">
-                        <div class="textblock__center">
-                            <h2>{{ section.header }}</h2>
+                        <h2 class="textblock__center">{{ section.header }}</h2>
+                        <div class="col-12 workspace__carousel__buttons">
                             {% for demo in section.demos %}
                                 <button class="{% if forloop.index == 1%}active{% endif %} workspace__carousel__button button--white button--large" onclick="goToSlide({{forloop.index0}}, this)">
                                     <img src="{{ demo.icon | relative_url }}"/>
@@ -184,10 +182,8 @@
                 </section>
             {% when 'waitlist-cta' %}
                 <section class="grid fullscreen">
-                    <div class="textblock__center">
-                        <h1>{{ section.header }}</h1>
-                        <h4>{{ section.subhead }}</h4>
-                    </div>
+                    <h1 class="textblock__center">{{ section.header }}</h1>
+                    <h4 class="textblock__center">{{ section.subhead }}</h4>
                     <form class="signup-form input-button col-4-5 col-md-12" onsubmit="() => {return joinWaitlist();}">
                         <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
                         <button class="button--blue button--large button--full" type="submit">

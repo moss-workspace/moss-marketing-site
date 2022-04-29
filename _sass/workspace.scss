@@ -315,6 +315,10 @@
 
 // Slick slider
 ////////////////////////////////////////////////////////////////////////////////
+.workspace__carousel__buttons {
+  text-align: center;
+}
+
 .workspace__carousel__button {
   margin-bottom: 8px;
   &.active {
