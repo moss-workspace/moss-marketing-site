@@ -1,5 +1,6 @@
 // Document Ready
 ////////////////////////////////////////////////////////////////////////////////
+var parallaxDepthHasBeenSet = false;
 $(document).ready(function () {
   var consent = getCookie("analytics-consent");
   if (consent == "" || consent == null) {
@@ -120,6 +121,7 @@ function setParallaxDepth(element) {
   if (element.width() < 125) {
     element.find('.preview__info').hide();
   }
+  parallaxDepthHasBeenSet = true;
 }
 
 // Scroll to signup

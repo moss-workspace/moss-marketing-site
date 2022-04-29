@@ -213,7 +213,8 @@
       grid-row: span 1;
     }
     &__with-upper {
-      grid-row: 4 / span 2;
+      height: 130vh;
+      grid-row: 4 / span 1;
     }
   }
 }
@@ -277,77 +278,88 @@
 }
 
 .illustration__collection {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 15vh;
+  position: absolute;
+  top: 5vh;
   width: 100%;
   .preview-grid {
-    margin-left: -25%;
-    width: 85%;
-    .animation-target {
-      @include animate-keyframes(align-animation);
-      @keyframes align-animation {
-        0% {
-          padding-top: 10vh;
-          left: -15vw;
-        }
-        10% {
-          padding-top: 10vh;
-          left: -15vw;
-        }
-        30% {
-          padding-top: 0;
-          left: 0;
-        }
-      }
-    }
+    margin-top: 15vh;
+    width: 70%;
   }
   &__pullout {
-    position: absolute;
-    width: 30%;
-    right: 0;
-    top: 30vh;
-    .contextbar {
-      float: right;
+    position: sticky;
+    position: -webkit-sticky;
+    .note {
+      margin-left: -5%;
     }
-    .contextbar__hovered {
-      position: absolute;
-      top: 0;
-      right: 0;
-      box-shadow: none;
-      @include animate-keyframes(hide-animation);
-    }
-    .cursor {
-      &__default {
-        @include animate-keyframes(hover-animation);
-        @keyframes hover-animation {
-          0%,
-          20% {
-            right: -100vw;
-            top: 200px;
+    .preview-grid {
+      margin-left: -25%;
+      margin-top: 0;
+      width: 85%;
+      .animation-target {
+        @include animate-keyframes(align-animation);
+        @keyframes align-animation {
+          0% {
+            padding-top: 10vh;
+            left: -15vw;
           }
-          45% {
-            top: 150px;
+          10% {
+            padding-top: 10vh;
+            left: -15vw;
           }
-          49.99% {
-            opacity: 1;
-          }
-          50% {
-            right: 100px;
-            top: 15px;
-            opacity: 0;
-          }
-          100% {
-            right: 100px;
-            top: 15px;
-            opacity: 0;
+          30% {
+            padding-top: 0;
+            left: 0;
           }
         }
       }
-      &__pointer {
-        right: 100px;
-        top: 15px;
+    }
+    &-preview {
+      position: absolute;
+      width: 30%;
+      right: 0;
+      top: 30vh;
+      .contextbar {
+        float: right;
+      }
+      .contextbar__hovered {
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-shadow: none;
         @include animate-keyframes(hide-animation);
+      }
+      .cursor {
+        &__default {
+          @include animate-keyframes(hover-animation);
+          @keyframes hover-animation {
+            0%,
+            20% {
+              right: -100vw;
+              top: 200px;
+            }
+            45% {
+              top: 40px;
+            }
+            49.99% {
+              opacity: 1;
+            }
+            50% {
+              right: 100px;
+              top: 15px;
+              opacity: 0;
+            }
+            100% {
+              right: 100px;
+              top: 15px;
+              opacity: 0;
+            }
+          }
+        }
+        &__pointer {
+          right: 100px;
+          top: 15px;
+          @include animate-keyframes(hide-animation);
+        }
       }
     }
   }

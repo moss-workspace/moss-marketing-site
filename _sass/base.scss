@@ -8,9 +8,13 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
   background-color: $white;
   font-style: normal;
   box-sizing: border-box;
+  overflow-x: hidden;
   @include fade-in;
   &.dark {
     background-color: $black;
@@ -194,8 +198,7 @@ section {
     @extend .textblock;
     @extend .col-md-10-2;
     z-index: 800;
-    align-self: flex-end;
-    // align-self: center;
+    align-self: center;
     button {
       margin-top: 46px;
     }

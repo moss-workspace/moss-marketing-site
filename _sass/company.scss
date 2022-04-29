@@ -43,8 +43,14 @@
 .company__email {
   background-color: $light-gray-0;
   text-align: center;
+  margin-left: 64px;
+  margin-right: 64px;
+  padding: 0;
   h2 {
     align-self: flex-end;
+  }
+  .input {
+    background-color: $white;
   }
   @include break-below("md") {
     display: block;

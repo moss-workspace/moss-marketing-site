@@ -18,7 +18,7 @@
                 {{ page.impact_header }}
             </h2>
             {% for section in page.impact_section %}
-                <div class="company__impact__section {% if forloop.index0 == 0 %} col-3-1 {% else %} col-3-{{ forloop.index0 | times: 5}} {% endif %} col-md-12">
+                <div class="company__impact__section col-3-{{ forloop.index | replace: '2', '5' | replace: '3', '9' }} col-md-12">
                     <img data-src="{{ section.illustration | relative_url }}" loading="lazy"/>
                     <h5 class="bold">{{ section.title }}</h5>
                     <h5>{{ section.body | newline_to_br }}</h5>
