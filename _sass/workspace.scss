@@ -173,14 +173,23 @@
   }
 }
 
-// Illustrations
+// UI elements
 ////////////////////////////////////////////////////////////////////////////////
+.contextbar {
+  height: 30px;
+  width: auto;
+  margin-bottom: 6px;
+  @include shadow-menu;
+}
+
+.cursor {
+  position: absolute;
+  width: 26px;
+  height: auto;
+}
+
 .note {
   width: fit-content;
-  &__context-bar {
-    width: 120px;
-    margin-left: -10px;
-  }
   &__text {
     @extend .bold;
     border: 1px $light-gray-4 solid;
@@ -190,6 +199,8 @@
   }
 }
 
+// Illustrations
+////////////////////////////////////////////////////////////////////////////////
 .illustration__wrapper {
   height: 150vh;
   position: relative;
@@ -273,14 +284,18 @@
   .preview-grid {
     margin-left: -25%;
     width: 85%;
-    .animate-keyframes {
+    .animation-target {
       @include animate-keyframes(align-animation);
       @keyframes align-animation {
         0% {
           padding-top: 10vh;
-          left: -10vw;
+          left: -15vw;
         }
-        15% {
+        10% {
+          padding-top: 10vh;
+          left: -15vw;
+        }
+        30% {
           padding-top: 0;
           left: 0;
         }
@@ -292,6 +307,59 @@
     width: 30%;
     right: 0;
     top: 30vh;
+    .contextbar {
+      float: right;
+    }
+    .contextbar__hovered {
+      position: absolute;
+      top: 0;
+      right: 0;
+      box-shadow: none;
+      @include animate-keyframes(hide-animation);
+    }
+    .cursor {
+      &__default {
+        @include animate-keyframes(hover-animation);
+        @keyframes hover-animation {
+          0%,
+          20% {
+            right: -100vw;
+            top: 200px;
+          }
+          45% {
+            top: 150px;
+          }
+          49.99% {
+            opacity: 1;
+          }
+          50% {
+            right: 100px;
+            top: 15px;
+            opacity: 0;
+          }
+          100% {
+            right: 100px;
+            top: 15px;
+            opacity: 0;
+          }
+        }
+      }
+      &__pointer {
+        right: 100px;
+        top: 15px;
+        @include animate-keyframes(hide-animation);
+      }
+    }
+  }
+}
+
+@keyframes hide-animation {
+  0%,
+  49.99% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 

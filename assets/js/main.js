@@ -37,7 +37,7 @@ $(window).scroll(function (event) {
     reveal($(this));
   });
 
-  $(".animate-keyframes").each(function () {
+  $(".animation-trigger").each(function () {
     animateKeyframes($(this));
   });
 
@@ -96,7 +96,7 @@ function animateKeyframes(element) {
     // 0% means element has come into view, 100% means element has left view.
     var percentage = (windowTop + windowHeight - elementTop) / (windowHeight + elementHeight);
     if (percentage >= 0 && percentage <= 1) {
-      element.css("--scroll", percentage);
+      element.find(".animation-target").css("--scroll", percentage);
     }
 }
 

@@ -92,14 +92,14 @@
                             </div>
                         </div>
                     {% elsif section.middle_illustration == "Collection" %}
-                        <div class="illustration__wrapper middle__illustration {% if section.upper_illustration != "None" %}middle__illustration__with-upper{% endif %} col-6 col-md-12">
+                        <div class="illustration__wrapper middle__illustration animation-trigger {% if section.upper_illustration != "None" %}middle__illustration__with-upper{% endif %} col-6 col-md-12">
                             <div class="illustration__collection">
                                 {% assign text = section.collection.note %}
                                 {% include note.html %}
                                 <div class="preview-grid">
                                     {% if section.collection.pull_out_preview %}
                                         {% for preview in section.collection.previews offset: 1 %}
-                                            <div class="preview animate-keyframes {% if forloop.last %}preview__grid-gap{% endif %}">
+                                            <div class="preview animation-target {% if forloop.last %}preview__grid-gap{% endif %}">
                                                 {% include preview.html %}
                                             </div>
                                         {% endfor %}
@@ -113,6 +113,10 @@
                                 </div>
                                 {% if section.collection.pull_out_preview %}
                                     <div class="illustration__collection__pullout preview">
+                                        <img class="contextbar contextbar__default animation-target" data-src="{{ section.collection.context_bar | relative_url }}" loading="lazy"/>
+                                        <img class="contextbar contextbar__hovered animation-target" data-src="{{ section.collection.context_bar_hovered | relative_url }}" loading="lazy"/>
+                                        <img class="cursor cursor__default animation-target" data-src="{{ page.ui_images.cursor | relative_url }}" loading="lazy"/>
+                                        <img class="cursor cursor__pointer animation-target" data-src="{{ page.ui_images.pointer | relative_url }}" loading="lazy"/>
                                         {% assign preview = section.collection.previews | first %}
                                         {% include preview.html %}
                                     </div>
