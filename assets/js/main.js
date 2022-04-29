@@ -16,19 +16,15 @@ $(document).ready(function () {
     }
   });
 
+  chooseFooterImage();
+});
+
+$(".preview__first-load").on("load", function() {
   $(".parallax").each(function () {
     setParallaxDepth($(this));
     parallax($(this));
   });
 });
-
-// $(window).on("load", function() {
-//   $(".parallax").each(function () {
-//     setParallaxDepth($(this));
-//     parallax($(this));
-//   });
-//   chooseFooterImage();
-// });
 
 // Scroll
 ////////////////////////////////////////////////////////////////////////////////
