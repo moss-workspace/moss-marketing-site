@@ -383,7 +383,7 @@ sections:
   header: Try Moss early
   subhead: Join the waitlist for beta access.
 ui_images:
-  note: "/uploads/contextbar_note.png"
+  note: "/uploads/contextbar-2.png"
   cursor: "/uploads/cursor-4x.png"
   pointer: "/uploads/pointer-4x.png"
 
