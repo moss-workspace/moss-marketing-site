@@ -179,17 +179,30 @@
                     </div>
                 </section>
             {% when 'testimonial' %}
-                <section class="grid">
-                    <div class="textblock__center">
-                        <h2>{{ section.quote }}</h2>
-                        <h4>{{ section.name }}</h4>
-                        <h4>{{ section.title }}</h4>
-                    </div>
+                <section class="grid testimonial__wrapper">
                     {% for preview in section.previews %}
-                        <div class="preview">
+                        <div class="preview parallax" speed="{{ forloop.index 
+                            | replace: '1', '9' 
+                            | replace: '2', '9' 
+                            | replace: '3', '6' 
+                            | replace: '4', '3' 
+                            | replace: '5', '9' 
+                            | replace: '6', '4' 
+                            | replace: '7', '7' }}">
                             {% include preview.html %}
                         </div>
                     {% endfor %}
+                    <div class="testimonial__quote">
+                        {% assign text = section.quote %}
+                        {% include note.html %}
+                    </div>
+                    <div class="testimonial__author">
+                        <img data-src="{{ section.avatar | relative_url }}" loading="lazy"/>
+                        <div>
+                            <h5 class="bold">{{ section.name }}</h5>
+                            <h5>{{ section.title }}</h5>
+                        </div>
+                    </div>
                 </section>
             {% when 'waitlist-cta' %}
                 <section class="grid fullscreen">
