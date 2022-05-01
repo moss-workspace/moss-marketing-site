@@ -368,8 +368,8 @@ sections:
       to go. '
     image: "/uploads/preview-1.png"
 - template: testimonial
-  quote: Moss has completely transformed the way we work. Once you use it, you’ll
-    wonder why this hasn’t always existed.
+  quote: Moss is completely transforming the way we collaborate. Once you use it,
+    you'll wonder why it doesn't already exist.
   avatar: "/uploads/image-104.png"
   name: Mitch Paone
   title: Partner & Creative Director, DIA
