@@ -370,15 +370,45 @@ sections:
 - template: testimonial
   quote: Moss has completely transformed the way we work. Once you use it, you’ll
     wonder why this hasn’t always existed.
-  avatar: ''
+  avatar: "/uploads/image-104.png"
   name: Mitch Paone
   title: Partner & Creative Director, DIA
   previews:
-  - thumbnail: "/uploads/rv-an417_cubicl_p_20140509201519.jpg"
+  - thumbnail: "/uploads/12361866314_3234f0784b_b-2.png"
     show_info: true
-    custom_info: false
-    name: ''
+    custom_info: true
+    name: motion_ref
     icon: Image
+  - thumbnail: "/uploads/main-image-3.png"
+    show_info: true
+    custom_info: true
+    name: " "
+    icon: Image
+  - thumbnail: "/uploads/5c065fbe7fa44c0259000570-2.png"
+    show_info: true
+    custom_info: true
+    name: SQSP_OOH.psd
+    icon: PSD
+  - thumbnail: "/uploads/chaumont_wildposting01_2021-2.png"
+    show_info: true
+    custom_info: true
+    name: Chaumont_WildPosting_01_2021.psd
+    icon: PSD
+  - thumbnail: "/uploads/image-102.png"
+    show_info: true
+    custom_info: true
+    name: GAN_02_render.mp4
+    icon: Video
+  - thumbnail: "/uploads/image-103.png"
+    show_info: true
+    custom_info: true
+    name: " "
+    icon: Image
+  - thumbnail: "/uploads/screen-shot-2022-04-04-at-12-14-4.png"
+    show_info: true
+    custom_info: true
+    name: KLIM.mp4
+    icon: Video
 - template: waitlist-cta
   header: Try Moss early
   subhead: Join the waitlist for beta access.
