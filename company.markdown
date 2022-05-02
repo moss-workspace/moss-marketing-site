@@ -6,7 +6,32 @@ body: |-
   Creatives need tools built by people who care about how and why they work, not just what they produce.
 
   So we’re building Moss. For ourselves, but also for our community and our collective progress.
-previews: []
+previews:
+- thumbnail: "/uploads/image-2-4.png"
+  show_info: false
+  custom_info: false
+  name: ''
+  icon: Image
+- thumbnail: "/uploads/image-3-3.png"
+  show_info: true
+  custom_info: true
+  name: " "
+  icon: Image
+- thumbnail: "/uploads/image-1-3.png"
+  show_info: true
+  custom_info: true
+  name: " "
+  icon: Image
+- thumbnail: "/uploads/image-14.png"
+  show_info: true
+  custom_info: true
+  name: " "
+  icon: Image
+- thumbnail: "/uploads/weblink_final_210419.png"
+  show_info: false
+  custom_info: false
+  name: ''
+  icon: Image
 impact_header: 'How we measure our impact:'
 impact_section:
 - illustration: "/uploads/group-718.png"
