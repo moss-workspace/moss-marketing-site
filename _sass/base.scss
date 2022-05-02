@@ -29,6 +29,15 @@ body {
   }
   &.gray {
     background-color: $light-gray-1;
+    .preview__icon--link {
+      &:hover {
+        cursor: pointer;
+        background-color: $light-gray-2;
+      }
+      &:active {
+        background-color: $light-gray-3;
+      }
+    }
   }
 }
 
@@ -258,22 +267,11 @@ section {
       border-radius: 2px;
       display: inline-block;
       flex-shrink: 0;
-
-      &--link {
-        padding: 6px;
-      }
-      // @include break-below("md") {
-      //   width: 10px;
-      //   height: 10px;
-      // }
-      // @include break-below("xs") {
-      //   width: 8px;
-      //   height: 8px;
-      // }
       &--folder {
         padding-top: 6px;
       }
       &--link {
+        padding: 6px;
         float: right;
         @include fade-bg;
         &:hover {
@@ -299,7 +297,7 @@ section {
     page-break-inside: avoid;
     break-inside: avoid;
     &__grid-gap {
-      margin-top: 30vh;
+      margin-top: 100%;
     }
   }
 }

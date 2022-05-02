@@ -5,9 +5,10 @@
 // General
 ////////////////////////////////////////////////////////////////////////////////
 .large-demo {
-  background-color: red;
-  height: 800px; // placeholder value
   margin-bottom: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+  @include shadow-menu;
   @include break-below("md") {
     margin-bottom: 150px;
   }
@@ -205,7 +206,7 @@
   height: 150vh;
   position: relative;
   @include break-below("md") {
-    height: 100vh;
+    height: 80vh;
   }
   &.middle__illustration {
     grid-row: 3 / span 2;
@@ -258,6 +259,24 @@
   width: 100%;
   @include break-below("md") {
     top: 20vh;
+  }
+  &__final {
+    .preview__info {
+      .preview__icon--link {
+        pointer-events: none;
+        @include animate-keyframes(stack-link-animation);
+        @keyframes stack-link-animation {
+          0%,
+          49.99% {
+            background-color: transparent;
+          }
+          50%,
+          100% {
+            background-color: $light-gray-2;
+          }
+        }
+      }
+    }
   }
   .preview {
     width: 50%;
@@ -351,8 +370,11 @@
   position: absolute;
   top: 5vh;
   width: 100%;
+  @include break-below("md") {
+    top: 10vh;
+  }
   .preview-grid {
-    margin-top: 15vh;
+    margin-top: 20vh;
     width: 70%;
   }
   &__pullout {
@@ -360,11 +382,20 @@
     position: -webkit-sticky;
     .note {
       margin-left: -5%;
+      @include break-below("md") {
+        margin-left: 0;
+        margin-top: 5vh;
+      }
     }
     .preview-grid {
       margin-left: -25%;
       margin-top: 0;
       width: 85%;
+      @include break-below("md") {
+        margin-left: -20%;
+        margin-top: 5vw;
+        width: 70%;
+      }
       .animation-target {
         @include animate-keyframes(collection-align-animation);
         @keyframes collection-align-animation {

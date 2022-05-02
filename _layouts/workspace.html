@@ -66,7 +66,7 @@
                         <h4>{{ section.subhead }}</h4>
                     </div>
                     <div class="large-demo col-10-2 col-md-12">
-                        VIDEO HERE
+                        <img data-src="{{ section.video | relative_url }}" loading="lazy" />
                     </div>
 
                     <div class="textblock__right">
@@ -85,7 +85,7 @@
                         <div class="illustration__wrapper middle__illustration animation-trigger col-6 col-md-12">
                             <div class="illustration__stack">
                                 {% for preview in section.stack.previews %}
-                                    <div class="preview animation-target">
+                                    <div class="preview animation-target {% if forloop.last %}illustration__stack__final{% endif %}">
                                         {% include preview.html %}
                                         {% if forloop.last %}
                                             <img class="cursor cursor__default animation-target" data-src="{{ page.ui_images.cursor | relative_url }}" loading="lazy"/>
