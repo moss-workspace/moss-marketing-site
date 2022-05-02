@@ -5,10 +5,17 @@
         {% include cookie_prompt.html %}
         {% include header.html %}
 
-        <section class="grid">
+        <section class="grid company__info">
             <div class="textblock col-6 col-md-12">
                 <h2>{{ page.header }}</h2>
-                <h4>{{ page.body }}</h4>
+                <h5>{{ page.body | newline_to_br }}</h5>
+            </div>
+            <div class="company__illustration__wrapper col-6 col-md-12">
+                {% for preview in page.previews %}
+                    <div class="preview parallax" speed="{{ forloop.index | replace: '1', '9' | replace: '2', '9' | replace: '3', '6' | replace: '4', '7' | replace: '5', '9' }}">
+                        {% include preview_first-load.html %}
+                    </div>
+                {% endfor %}
             </div>
         </section>
 

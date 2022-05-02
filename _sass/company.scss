@@ -1,6 +1,86 @@
 @import "variables";
 @import "type";
 
+// Info
+////////////////////////////////////////////////////////////////////////////////
+.company__info {
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  .textblock {
+    h2 {
+      max-width: 600px;
+    }
+    h5 {
+      max-width: 425px;
+    }
+  }
+  .company__illustration__wrapper {
+    overflow: visible;
+    position: relative;
+    height: 120vh;
+    .preview {
+      &:nth-of-type(1) {
+        width: 40%;
+        right: -10%;
+        top: 8%;
+      }
+      &:nth-of-type(2) {
+        width: 30%;
+        left: 30%;
+        top: 5%;
+      }
+      &:nth-of-type(3) {
+        width: 50%;
+        right: 8%;
+        top: 22%;
+      }
+      &:nth-of-type(4) {
+        width: 18%;
+        left: 15%;
+        bottom: 40%;
+      }
+      &:nth-of-type(5) {
+        width: 75%;
+        right: -30%;
+        bottom: 10%;
+      }
+    }
+    @include break-below("md") {
+      height: 80vh;
+      .preview {
+        &:nth-of-type(1) {
+          width: 40%;
+          right: -10%;
+          top: 8%;
+        }
+        &:nth-of-type(2) {
+          width: 30%;
+          left: 30%;
+          top: 5%;
+        }
+        &:nth-of-type(3) {
+          width: 50%;
+          right: 8%;
+          top: 22%;
+        }
+        &:nth-of-type(4) {
+          width: 18%;
+          left: 15%;
+          bottom: 40%;
+        }
+        &:nth-of-type(5) {
+          width: 75%;
+          right: -30%;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Impacr
+////////////////////////////////////////////////////////////////////////////////
 .company__impact__header {
   margin-bottom: 26px;
   @include break-below("md") {
@@ -40,6 +120,8 @@
   }
 }
 
+// Email
+////////////////////////////////////////////////////////////////////////////////
 .company__email {
   background-color: $light-gray-0;
   text-align: center;
