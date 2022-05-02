@@ -34,7 +34,16 @@
                 {% when 'workspace-content' %}
                     <section class="grid" {% if forloop.index == 1 %} id="gray-start" {% endif %}>
 
-                        {% if section.upper_illustration == "Brainstorm" %}
+                        {% if section.upper_illustration == "Drop" %}
+                            <div class="illustration__drop__wrapper animation-trigger">
+                                {% for icon in section.drop.icons %}
+                                    <div class="illustration__drop__item animation-target">
+                                        <img class="illustration__drop__icon" data-src="{{ icon | relative_url }}" loading="lazy"/>
+                                        <img class="cursor" data-src="{{ page.ui_images.pointer | relative_url }}" loading="lazy"/>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% elsif section.upper_illustration == "Brainstorm" %}
                             <div class="illustration__wrapper col-12">
                                 {% for preview in section.brainstorm.previews %}
                                     <div class="preview illustration__brainstorm__preview parallax" speed="{{ forloop.index | replace: '1', '9' | replace: '2', '6' | replace: '3', '5' | replace: '4', '3' }}">
@@ -82,8 +91,8 @@
                                         <div class="preview animation-target {% if forloop.last %}illustration__stack__final{% endif %}">
                                             {% include preview.html %}
                                             {% if forloop.last %}
-                                                <img class="cursor cursor__default animation-target" src="{{ page.ui_images.cursor | relative_url }}"/>
-                                                <img class="cursor cursor__pointer animation-target" src="{{ page.ui_images.pointer | relative_url }}"/>
+                                                <img class="cursor cursor__default animation-target" data-src="{{ page.ui_images.cursor | relative_url }}" loading="lazy"/>
+                                                <img class="cursor cursor__pointer animation-target" data-src="{{ page.ui_images.pointer | relative_url }}" loading="lazy"/>
                                             {% endif %}
                                         </div>
                                     {% endfor %}
@@ -115,8 +124,8 @@
                                         <div class="illustration__collection__pullout-preview preview">
                                             <img class="contextbar contextbar__default animation-target" data-src="{{ section.collection.context_bar | relative_url }}" loading="lazy"/>
                                             <img class="contextbar contextbar__hovered animation-target" data-src="{{ section.collection.context_bar_hovered | relative_url }}" loading="lazy"/>
-                                            <img class="cursor cursor__default animation-target" src="{{ page.ui_images.cursor | relative_url }}"/>
-                                            <img class="cursor cursor__pointer animation-target" src="{{ page.ui_images.pointer | relative_url }}"/>
+                                            <img class="cursor cursor__default animation-target" data-src="{{ page.ui_images.cursor | relative_url }}" loading="lazy"/>
+                                            <img class="cursor cursor__pointer animation-target" data-src="{{ page.ui_images.pointer | relative_url }}" loading="lazy"/>
                                             {% assign preview = section.collection.previews | first %}
                                             {% include preview.html %}
                                         </div>
