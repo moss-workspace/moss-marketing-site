@@ -48,14 +48,14 @@
                     {% if section.upper_illustration == "Brainstorm" %}
                         <div class="illustration__wrapper col-12">
                             {% for preview in section.brainstorm.previews %}
-                            <div class="preview illustration__brainstorm__preview parallax" 
-                            speed="{{ forloop.index 
-                                | replace: '1', '9' 
-                                | replace: '2', '6' 
-                                | replace: '3', '5' 
-                                | replace: '4', '3' }}">
-                                {% include preview_first-load.html %}
-                            </div>
+                                <div class="preview illustration__brainstorm__preview parallax" 
+                                speed="{{ forloop.index 
+                                    | replace: '1', '9' 
+                                    | replace: '2', '6' 
+                                    | replace: '3', '5' 
+                                    | replace: '4', '3' }}">
+                                    {% include preview_first-load.html %}
+                                </div>
                             {% endfor %}
                         </div>
                     {% endif %}
@@ -65,13 +65,23 @@
                         <h2>{{ section.header }}</h2>
                         <h4>{{ section.subhead }}</h4>
                     </div>
+
                     <div class="large-demo col-10-2 col-md-12">
-                        <img data-src="{{ section.video | relative_url }}" loading="lazy" />
+                        {% assign extension = section.video | slice: -3,3 %}
+                        {% if extension == 'mp4' %}
+                            <video>
+                                <source src="{{ section.video | relative_url }}" type="video/mp4" muted loop autoplay>
+                            </video>
+                        {% else %} 
+                            <img data-src="{{ section.video | relative_url }}" loading="lazy" />
+                        {% endif %}
                     </div>
 
                     <div class="textblock__right">
                         {% for block in section.text_blocks %}
-                            {% if forloop.last %}{% break %}{% endif %}
+                            {% if forloop.last %}
+                                {% break %}
+                            {% endif %}
                             <h5>{{ block.text_block | newline_to_br | markdownify | remove: '<p>' | remove: '</p>'  }}</h5>
                             {% if forloop.index == section.text_blocks.size and section.show_button %}
                                 <button class="button--white button--large">
@@ -96,8 +106,7 @@
                             </div>
                         </div>
                     {% elsif section.middle_illustration == "Collection" %}
-                        <div class="illustration__wrapper middle__illustration animation-trigger col-6 col-md-12
-                        {% if section.upper_illustration != "None" %}middle__illustration__with-upper{% endif %}">
+                        <div class="illustration__wrapper middle__illustration animation-trigger col-6 col-md-12 {% if section.upper_illustration != "None" %}middle__illustration__with-upper{% endif %}">
                             <div class="illustration__collection {% if section.collection.pull_out_preview %}illustration__collection__pullout{% endif %}">
                                 {% assign text = section.collection.note %}
                                 {% include note.html %}

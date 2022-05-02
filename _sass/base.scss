@@ -15,6 +15,8 @@ body {
   font-style: normal;
   box-sizing: border-box;
   overflow-x: hidden;
+  position: relative;
+  height: 100%;
   @include fade-in;
   &.dark {
     background-color: $black;
@@ -31,7 +33,6 @@ body {
     background-color: $light-gray-1;
     .preview__icon--link {
       &:hover {
-        cursor: pointer;
         background-color: $light-gray-2;
       }
       &:active {
@@ -49,9 +50,11 @@ strong {
   @extend .bold;
 }
 
-img {
+img,
+video {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .center {
@@ -251,7 +254,8 @@ section {
     padding: 0;
     width: 100%;
     align-items: center;
-    @include gap(6px);
+    margin-top: 3px;
+    @include gap(3px);
     .preview__name {
       display: inline-block;
       vertical-align: top;
@@ -260,18 +264,20 @@ section {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      font-size: rem(11px);
+      line-height: rem(12px);
     }
     .preview__icon {
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
       border-radius: 2px;
       display: inline-block;
       flex-shrink: 0;
       &--folder {
-        padding-top: 6px;
+        padding-top: 5px;
       }
       &--link {
-        padding: 6px;
+        padding: 5px;
         float: right;
         @include fade-bg;
         &:hover {
@@ -441,12 +447,12 @@ input {
 @mixin button--black {
   color: $light-gray-3;
   background-color: $black;
-  border: 1px solid $dark-gray-3;
+  border: 1px solid $dark-gray-2;
   &:hover {
-    background: $dark-gray-4;
+    background: $dark-gray-3;
   }
   &:active {
-    background: $dark-gray-3;
+    background: $dark-gray-2;
   }
 }
 
@@ -476,7 +482,7 @@ input {
 @mixin button--gray-1 {
   background: $light-gray-1;
   border: 1px solid $light-gray-3;
-  color: $dark-gray-3;
+  color: $dark-gray-2;
   &:hover {
     background: $light-gray-2;
   }
@@ -628,7 +634,7 @@ button {
   @include fade;
   background: $light-gray-0;
   box-shadow: none;
-  color: $dark-gray-3;
+  color: $dark-gray-2;
   box-sizing: border-box;
   border-radius: 2px;
   border: 1px solid $light-gray-2;
@@ -644,11 +650,11 @@ button {
   }
 
   &::placeholder {
-    color: $dark-gray-1;
+    color: $dark-gray-0;
   }
 
   &:disabled {
-    color: $dark-gray-1;
+    color: $dark-gray-0;
     cursor: not-allowed;
 
     &:hover,
