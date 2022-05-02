@@ -14,9 +14,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 .company__info {
   margin-top: 10vh !important;
-  overflow-x: hidden;
-  overflow-y: visible;
-  position: relative;
   .textblock {
     max-width: 1100px;
     margin-left: auto;
@@ -29,14 +26,13 @@
     }
   }
   .company__illustration__wrapper {
-    overflow: visible;
     position: relative;
     height: 120vh;
     .preview {
       &:nth-of-type(1) {
         width: 40%;
         right: -10%;
-        top: 8%;
+        top: 12%;
       }
       &:nth-of-type(2) {
         width: 30%;
@@ -63,29 +59,28 @@
       height: 80vh;
       .preview {
         &:nth-of-type(1) {
-          width: 40%;
+          width: 70%;
           right: -10%;
-          top: 8%;
+          top: 10%;
         }
         &:nth-of-type(2) {
-          width: 30%;
-          left: 30%;
-          top: 5%;
+          width: 50%;
+          left: -20%;
+          top: 40%;
         }
         &:nth-of-type(3) {
-          width: 50%;
-          right: 8%;
-          top: 22%;
+          width: 65%;
+          right: -15%;
+          top: 70%;
         }
         &:nth-of-type(4) {
-          width: 18%;
-          left: 15%;
-          bottom: 40%;
+          width: 20%;
+          right: 10%;
+          left: auto;
+          top: 40%;
         }
         &:nth-of-type(5) {
-          width: 75%;
-          right: -30%;
-          bottom: 0;
+          display: none;
         }
       }
     }
@@ -154,8 +149,7 @@
   }
   @include break-below("md") {
     display: block;
-    width: 100vw;
-    height: 200vw;
+    height: calc(200vw - 52px);
     margin-left: 26px;
     margin-right: 26px;
     h2,
