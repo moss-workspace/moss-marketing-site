@@ -446,5 +446,6 @@ ui_images:
   note: "/uploads/contextbar-2.png"
   cursor: "/uploads/cursor-4x.png"
   pointer: "/uploads/pointer-4x.png"
+  grab: "/uploads/drag-4x.png"
 
 ---
