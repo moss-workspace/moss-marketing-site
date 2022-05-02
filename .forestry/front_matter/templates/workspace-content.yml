@@ -44,11 +44,10 @@ fields:
   config: {}
   fields:
   - name: icons
-    type: include
+    type: image_gallery
     config: {}
-    template: previews
     label: Icons
-    description: Choose icons for the drop illustration.
+    description: Choose (square) icons for the drop illustration.
   showOnly:
     field: upper_illustration
     value: Drop
