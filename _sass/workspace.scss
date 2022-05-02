@@ -477,7 +477,7 @@
 
 .testimonial__author {
   @extend .col-4-7;
-  @extend .col-md-8-5;
+  @extend .col-md-10-3;
   margin-top: 200px;
   display: flex;
   align-items: center;
@@ -534,6 +534,43 @@
       width: 15vw;
       left: 15vw;
       bottom: 0;
+    }
+  }
+  @include break-below("md") {
+    .preview {
+      &:nth-of-type(1) {
+        width: 30vw;
+        right: 10vw;
+        top: 0;
+      }
+      &:nth-of-type(2) {
+        width: 25vw;
+        left: -5vw;
+        top: 15vh;
+      }
+      &:nth-of-type(3) {
+        width: 30vw;
+        left: 15vw;
+        top: 30vh;
+      }
+      &:nth-of-type(4) {
+        width: 20vw;
+        right: 0;
+        top: 50vh;
+      }
+      &:nth-of-type(5) {
+        display: none;
+      }
+      &:nth-of-type(6) {
+        width: 20vw;
+        left: 10vw;
+        bottom: 10vh;
+      }
+      &:nth-of-type(7) {
+        width: 40vw;
+        left: 20vw;
+        bottom: 0;
+      }
     }
   }
 }
