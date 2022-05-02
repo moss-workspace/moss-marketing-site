@@ -37,9 +37,14 @@ $( window ).resize(function() {
 ////////////////////////////////////////////////////////////////////////////////
 var lastScrollTop = 0;
 $(window).scroll(function (event) {
-  
-  toggleHeader();
-  
+  var scrollTop = $(this).scrollTop();
+
+  toggleHeader(scrollTop);
+
+  $(".video-trigger").each(function () {
+    toggleVideoPlay($(this), scrollTop);
+  });
+
   $(".reveal").each(function () {
     reveal($(this));
   });
@@ -51,18 +56,18 @@ $(window).scroll(function (event) {
   $(".parallax").each(function () {
     parallax($(this));
   });
+
+  lastScrollTop = scrollTop;
 });
 
 // Header nav
 ////////////////////////////////////////////////////////////////////////////////
-function toggleHeader() {
-  var scrollTop = $(this).scrollTop();
+function toggleHeader(scrollTop) {
   if (scrollTop < lastScrollTop) {
     $("header").addClass("down");
   } else {
     $("header").removeClass("down");
   }
-  lastScrollTop = scrollTop;
 }
 
 function toggleFullscreenNav() {
@@ -131,6 +136,26 @@ function togglePreviewInfo() {
       element.find('.preview__info').hide();
     }
   });
+}
+
+function toggleVideoPlay(element, scrollTop) {
+  var elementTop = element.offset().top,
+    elementHeight = element.outerHeight(),
+    windowTop = $(window).scrollTop(),
+    windowHeight = $(window).height();
+
+  var percentage = (windowTop + windowHeight - elementTop) / (windowHeight + elementHeight);
+  var video = element.find(".video-target").get(0);
+  if (scrollTop < lastScrollTop) {
+   if (percentage < 0.4) {
+      video.pause();
+      video.currentTime = 0;
+    } 
+  } else {
+    if (percentage >= 0.4 && video.currentTime === 0 ) {
+      video.play();
+    }
+  }
 }
 
 // Scroll to signup
