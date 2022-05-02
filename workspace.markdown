@@ -99,7 +99,7 @@ sections:
   show_button: true
   button_text: Learn more about tethering
   upper_illustration: None
-  video: "/uploads/new-workspace-2.png"
+  video: "/uploads/drop_it_in_01_compress.mp4"
   middle_illustration: Stack
   button_url: ''
   brainstorm:
