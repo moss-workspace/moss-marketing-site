@@ -1,13 +1,26 @@
 @import "variables";
 @import "type";
 
+// General
+////////////////////////////////////////////////////////////////////////////////
+.company__impact,
+.company__email {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // Info
 ////////////////////////////////////////////////////////////////////////////////
 .company__info {
+  margin-top: 10vh !important;
   overflow-x: hidden;
   overflow-y: visible;
   position: relative;
   .textblock {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
     h2 {
       max-width: 600px;
     }
@@ -79,7 +92,7 @@
   }
 }
 
-// Impacr
+// Impact
 ////////////////////////////////////////////////////////////////////////////////
 .company__impact__header {
   margin-bottom: 26px;
@@ -125,8 +138,8 @@
 .company__email {
   background-color: $light-gray-0;
   text-align: center;
-  margin-left: 64px;
-  margin-right: 64px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
   h2 {
     align-self: flex-end;
@@ -134,12 +147,17 @@
   .input {
     background-color: $white;
   }
+  // Special break point for max-width
+  @media (max-width: "1524px") {
+    margin-left: 64px;
+    margin-right: 64px;
+  }
   @include break-below("md") {
     display: block;
     width: 100vw;
     height: 200vw;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 26px;
+    margin-right: 26px;
     h2,
     .signup-form {
       margin: 0 14px;

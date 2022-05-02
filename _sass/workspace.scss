@@ -7,6 +7,9 @@
 .large-demo {
   margin: 200px 0;
   position: relative;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
   @include break-below("md") {
     margin: 150px 0;
   }
@@ -417,6 +420,10 @@
 }
 
 .illustration__stack {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -533,6 +540,10 @@
 }
 
 .illustration__collection {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
   position: absolute;
   top: 5vh;
   width: 100%;
@@ -560,7 +571,11 @@
     .preview-grid {
       margin-left: -25%;
       margin-top: 0;
-      width: 35vw;
+      position: relative;
+      width: 25vw;
+      @include break-below("lg") {
+        width: 35vw;
+      }
       @include break-below("md") {
         margin-left: -20%;
         margin-top: 5vw;
@@ -711,6 +726,9 @@
 .testimonial__quote {
   @extend .col-8-3;
   @extend .col-md-12;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
   align-self: flex-end;
   z-index: 800;
   .note {

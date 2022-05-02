@@ -5,13 +5,19 @@ $(document).ready( function() {
       slidesToShow: 1,
       arrows: false,
       centerMode: true,
-      centerPadding: '300px',
-      // autoplay: true,
+      centerPadding: '600px',
+      autoplay: true,
       autoplaySpeed: 4000,
       pauseOnFocus: true,
       pauseOnHover: true,
       focusOnSelect: true,
       responsive: [
+        {
+          breakpoint: 1400,
+          settings: {
+            centerPadding: '300px',
+          }
+        },
         {
           breakpoint: 800,
           settings: {

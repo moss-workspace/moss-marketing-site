@@ -25,6 +25,9 @@ body {
     h4 {
       color: $light-gray-2;
     }
+    .fullscreen-nav {
+      background-color: $black;
+    }
   }
   &.gray {
     background-color: $light-gray-1;
@@ -131,7 +134,7 @@ section {
   position: relative;
   margin-top: 400px;
   &:first-of-type {
-    margin-top: 150px;
+    margin-top: 25vh;
     &.fullscreen {
       margin-top: 0;
     }
@@ -164,9 +167,6 @@ section {
   }
   @include break-below("md") {
     margin-top: 300px;
-    &:first-of-type {
-      margin-top: 100px;
-    }
     &:last-of-type {
       margin-bottom: 150px;
     }
@@ -194,6 +194,9 @@ section {
     text-align: center;
     @extend .col-8-3;
     @extend .col-md-12;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
   }
   &__left {
     @extend .col-4-2;
@@ -204,6 +207,7 @@ section {
   }
   &__left,
   &__right {
+    max-width: 500px;
     @extend .textblock;
     @extend .col-md-10-2;
     z-index: 800;
