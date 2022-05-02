@@ -53,17 +53,19 @@
         <script async type="text/javascript" src="{{ '/assets/js/thesis.js' | relative_url }}"></script>
     {% elsif page.layout == "workspace" %}
         <script async type="text/javascript" src="{{ '/assets/js/workspace.js' | relative_url }}"></script>
-        <script async type="text/javascript" src="{{ '/assets/js/slick.min.js' | relative_url }}"></script>
+        <script defer type="text/javascript" src="{{ '/assets/js/slick.min.js' | relative_url }}"></script>
     {% endif %}
 
+    <!-- // TODO: uncomment for production! -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-                <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156611983-1"></script>
-    <temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156611983-1"></script>
+        <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
         dataLayer.push(arguments);
         }
         gtag("js", new Date());
         gtag("config", "UA-156611983-1");
-    </script></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp> -->
+    </script>
+    -->
 </head>

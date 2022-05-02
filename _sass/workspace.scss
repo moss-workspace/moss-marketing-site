@@ -50,12 +50,12 @@
   &:nth-of-type(3) {
     width: 9%;
     top: 30%;
-    left: 0;
+    left: -2%;
   }
   &:nth-of-type(4) {
     width: 5%;
     top: 40%;
-    left: 7%;
+    left: 5%;
   }
   &:nth-of-type(5) {
     width: 8%;
@@ -112,6 +112,9 @@
     width: 10%;
     top: -10%;
     right: 0;
+    .preview__icon--link {
+      display: none;
+    }
   }
   &:nth-of-type(9) {
     width: 6%;
@@ -137,6 +140,9 @@
     width: 12%;
     bottom: 20%;
     right: 0;
+    .preview__icon--link {
+      display: none;
+    }
   }
   &:nth-of-type(14) {
     width: 15%;
@@ -151,11 +157,17 @@
       width: 20%;
       top: 3%;
       right: 0;
+      .preview__icon--link {
+        display: none;
+      }
     }
     &:nth-of-type(10) {
       width: 22%;
       top: 11%;
       right: 0;
+      .preview__icon--link {
+        display: none;
+      }
     }
     &:nth-of-type(11) {
       display: none;
@@ -169,7 +181,10 @@
     &:nth-of-type(14) {
       width: 30%;
       bottom: 5%;
-      right: 0%;
+      right: 0;
+      .preview__icon--link {
+        display: none;
+      }
     }
   }
 }
@@ -288,7 +303,7 @@
         50%,
         100% {
           left: 80%;
-          top: 70%;
+          top: 60%;
         }
       }
     }
@@ -303,7 +318,7 @@
         50%,
         100% {
           right: 75%;
-          top: 85%;
+          top: 80%;
         }
       }
     }
@@ -318,7 +333,7 @@
         50%,
         100% {
           right: 15%;
-          top: 75%;
+          top: 70%;
         }
       }
     }
@@ -345,6 +360,9 @@
     width: 15%;
     bottom: 20%;
     right: -64px;
+    .preview__icon--link {
+      display: none;
+    }
   }
   @include break-below("md") {
     &:nth-of-type(3) {
@@ -504,11 +522,11 @@
     .preview-grid {
       margin-left: -25%;
       margin-top: 0;
-      width: 85%;
+      width: 35vw;
       @include break-below("md") {
         margin-left: -20%;
         margin-top: 5vw;
-        width: 70%;
+        width: 60vw;
       }
       @include animate-keyframes(collection-grid-animation);
       @keyframes collection-grid-animation {
@@ -710,6 +728,9 @@
       width: 25vw;
       right: 0;
       top: 35vh;
+      .preview__icon--link {
+        display: none;
+      }
     }
     &:nth-of-type(5) {
       width: 15vw;

@@ -1,41 +1,36 @@
 // Document Ready
 ////////////////////////////////////////////////////////////////////////////////
-var parallaxDepthHasBeenSet = false;
 $(document).ready(function () {
-  var consent = getCookie("analytics-consent");
-  if (consent == "" || consent == null) {
-    // prettier-ignore
-    gtag("consent", "default", {
-      'ad_storage': 'denied',
-      'analytics_storage': 'denied'
-    });
-    showCookiePrompt();
-  }
-  $(".toast").click(function () {
-    if ($(this).attr("id") !== "cookieprompt") {
-      $(this).hide();
-    }
-  });
-
-  setParallaxDepth($(this));
-  parallax($(this));
+  // TODO: uncomment for production!
+  // var consent = getCookie("analytics-consent");
+  // if (consent == "" || consent == null) {
+  //   // prettier-ignore
+  //   gtag("consent", "default", {
+  //     'ad_storage': 'denied',
+  //     'analytics_storage': 'denied'
+  //   });
+  //   showCookiePrompt();
+  // }
+  // $(".toast").click(function () {
+  //   if ($(this).attr("id") !== "cookieprompt") {
+  //     $(this).hide();
+  //   }
+  // });
 
   togglePreviewInfo();
   chooseFooterImage();
-});
-
-$(".preview__first-load").on("load", function() {
-  $(".parallax").each(function () {
-    setParallaxDepth($(this));
-    parallax($(this));
-  });
+  setTimeout(() => {
+    $(".parallax").each(function () {
+      setParallaxDepth($(this));
+      parallax($(this));
+    });
+  }, 10);
 });
 
 // Window resize
 ////////////////////////////////////////////////////////////////////////////////
 $( window ).resize(function() {
   togglePreviewInfo();
-  setParallaxDepth($(this));
 });
 
 // Scroll
@@ -126,14 +121,11 @@ function setParallaxDepth(element) {
   var speed = element.attr("speed");
   if (speed) {
     element.css("z-index", speed);
-  } else {
-    element.css("z-index", "1");
   }
-  parallaxDepthHasBeenSet = true;
 }
 
 function togglePreviewInfo() {
-  $(".parallax").each(function () {
+  $(".preview").each(function () {
     var element = $(this);
     if (element.width() < 125) {
       element.find('.preview__info').hide();
