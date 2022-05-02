@@ -99,7 +99,7 @@ sections:
   show_button: true
   button_text: Learn more about tethering
   upper_illustration: None
-  video: ''
+  video: "/uploads/new-workspace.png"
   middle_illustration: Stack
   button_url: ''
   brainstorm:
@@ -140,7 +140,7 @@ sections:
   header: Lay it out.
   subhead: "Never dig for a file again.\n\nOrganize your work visually, so you can
     spend less time chasing assets and more time following inspiration. "
-  video: ''
+  video: "/uploads/new-workspace.png"
   middle_illustration: Collection
   text_blocks:
   - text_block: Ditch traditional file management and tackle creative problems in
@@ -219,7 +219,7 @@ sections:
   upper_illustration: Brainstorm
   header: Find creative clarity.
   subhead: 'Connect the dots in one workspace for every tool, team, and iteration. '
-  video: ''
+  video: "/uploads/new-workspace.png"
   middle_illustration: Collection
   text_blocks:
   - text_block: Moss is collaborative by default and tool agnostic, allowing different
