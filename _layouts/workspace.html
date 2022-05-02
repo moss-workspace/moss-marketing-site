@@ -69,8 +69,8 @@
                     <div class="large-demo col-10-2 col-md-12">
                         {% assign extension = section.video | slice: -3,3 %}
                         {% if extension == 'mp4' %}
-                            <video>
-                                <source src="{{ section.video | relative_url }}" type="video/mp4" muted loop autoplay>
+                            <video muted loop autoplay>
+                                <source src="{{ section.video | relative_url }}" type="video/mp4">
                             </video>
                         {% else %} 
                             <img data-src="{{ section.video | relative_url }}" loading="lazy" />

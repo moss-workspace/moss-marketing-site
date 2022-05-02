@@ -8,6 +8,8 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  position: relative;
+  height: 100%;
 }
 
 body {
@@ -15,8 +17,6 @@ body {
   font-style: normal;
   box-sizing: border-box;
   overflow-x: hidden;
-  position: relative;
-  height: 100%;
   @include fade-in;
   &.dark {
     background-color: $black;
@@ -295,6 +295,7 @@ section {
 .preview-grid {
   column-count: 3;
   column-gap: 8px;
+  overflow: visible;
   .preview {
     position: relative;
     margin-bottom: 3px;
