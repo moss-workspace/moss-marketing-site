@@ -17,6 +17,10 @@ $(document).ready(function () {
     }
   });
 
+  setParallaxDepth($(this));
+  parallax($(this));
+
+  togglePreviewInfo();
   chooseFooterImage();
 });
 
@@ -25,6 +29,13 @@ $(".preview__first-load").on("load", function() {
     setParallaxDepth($(this));
     parallax($(this));
   });
+});
+
+// Window resize
+////////////////////////////////////////////////////////////////////////////////
+$( window ).resize(function() {
+  togglePreviewInfo();
+  setParallaxDepth($(this));
 });
 
 // Scroll
@@ -118,10 +129,16 @@ function setParallaxDepth(element) {
   } else {
     element.css("z-index", "1");
   }
-  if (element.width() < 125) {
-    element.find('.preview__info').hide();
-  }
   parallaxDepthHasBeenSet = true;
+}
+
+function togglePreviewInfo() {
+  $(".parallax").each(function () {
+    var element = $(this);
+    if (element.width() < 125) {
+      element.find('.preview__info').hide();
+    }
+  });
 }
 
 // Scroll to signup

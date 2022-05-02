@@ -344,7 +344,7 @@
       @keyframes stack-hover-animation {
         0%,
         40% {
-          right: 50vw;
+          right: 200%;
           bottom: -50px;
           opacity: 1;
         }
@@ -388,7 +388,7 @@
     top: 15vh;
   }
   .preview-grid {
-    margin-top: 20vh;
+    margin-top: 12vh;
     width: 70%;
     @include break-below("md") {
       margin-top: 10vh;
