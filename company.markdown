@@ -7,7 +7,7 @@ body: |-
 
   So we’re building Moss. For ourselves, but also for our community and our collective progress.
 previews:
-- thumbnail: "/uploads/image-2-4.png"
+- thumbnail: "/uploads/image-15.png"
   show_info: false
   custom_info: false
   name: ''
