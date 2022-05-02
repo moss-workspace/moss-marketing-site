@@ -30,6 +30,12 @@ fields:
       maxSize: 64
     description: Choose an image for the pointer (pointy-hand mouse) animations
     label: Pointer
+  - name: grab
+    type: file
+    config:
+      maxSize: 64
+    label: Grab
+    description: Choose an image for the grab hand animations
   label: UI images
   description: Choose images for cursors, notes, etc.
 - name: landing
