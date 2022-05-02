@@ -8,15 +8,12 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  position: relative;
-  height: 100%;
 }
 
 body {
+  overflow-x: hidden;
   background-color: $white;
   font-style: normal;
-  box-sizing: border-box;
-  overflow-x: hidden;
   @include fade-in;
   &.dark {
     background-color: $black;
@@ -33,10 +30,10 @@ body {
     background-color: $light-gray-1;
     .preview__icon--link {
       &:hover {
-        background-color: $light-gray-2;
+        background-color: $light-gray-2 !important;
       }
       &:active {
-        background-color: $light-gray-3;
+        background-color: $light-gray-3 !important;
       }
     }
   }
@@ -222,11 +219,6 @@ section {
   }
 }
 
-.illustration__wrapper + .textblock__right {
-  margin-top: 46px;
-  align-self: auto;
-}
-
 // Cookie prompt
 ////////////////////////////////////////////////////////////////////////////////
 #cookieprompt {
@@ -294,11 +286,11 @@ section {
 
 .preview-grid {
   column-count: 3;
-  column-gap: 8px;
+  column-gap: 14px;
   overflow: visible;
   .preview {
     position: relative;
-    margin-bottom: 3px;
+    margin-bottom: 8px;
     width: 100%;
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;

@@ -224,6 +224,11 @@
   }
 }
 
+.illustration__wrapper + .textblock__right {
+  margin-top: 46px;
+  align-self: auto;
+}
+
 .illustration__brainstorm__preview {
   &:nth-of-type(1) {
     width: 30%;
@@ -409,20 +414,27 @@
         margin-top: 5vw;
         width: 70%;
       }
-      .animation-target {
-        @include animate-keyframes(collection-align-animation);
-        @keyframes collection-align-animation {
-          0% {
-            padding-top: 10vh;
-            left: -15vw;
-          }
+      @include animate-keyframes(collection-grid-animation);
+      @keyframes collection-grid-animation {
+        0%,
+        10% {
+          margin-left: -45%;
+        }
+        30%,
+        100% {
+          margin-left: -25%;
+        }
+      }
+      .preview {
+        @include animate-keyframes(collection-preview-animation);
+        @keyframes collection-preview-animation {
+          0%,
           10% {
-            padding-top: 10vh;
-            left: -15vw;
+            padding-top: 50%;
           }
-          30% {
-            padding-top: 0;
-            left: 0;
+          30%,
+          100% {
+            padding-top: 0%;
           }
         }
       }
@@ -448,7 +460,7 @@
           @keyframes collection-hover-animation {
             0%,
             20% {
-              right: -100vw;
+              right: -50vw;
               top: 200px;
             }
             45% {
@@ -462,6 +474,28 @@
               right: 100px;
               top: 15px;
               opacity: 0;
+            }
+          }
+          @include break-below("md") {
+            @include animate-keyframes(collection-hover-small-animation);
+            @keyframes collection-hover-small-animation {
+              0%,
+              20% {
+                right: -26px;
+                top: 200px;
+              }
+              45% {
+                top: 40px;
+              }
+              49.99% {
+                opacity: 1;
+              }
+              50%,
+              100% {
+                right: 100px;
+                top: 15px;
+                opacity: 0;
+              }
             }
           }
         }
