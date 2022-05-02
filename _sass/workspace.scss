@@ -216,6 +216,9 @@
     &__with-upper {
       height: 130vh;
       grid-row: 4 / span 1;
+      @include break-below("md") {
+        grid-row: 5 / span 1;
+      }
     }
   }
 }
@@ -242,6 +245,11 @@
     right: -64px;
   }
   @include break-below("md") {
+    &:nth-of-type(3) {
+      width: 35%;
+      bottom: 20%;
+      right: 5%;
+    }
     &:nth-of-type(4) {
       width: 25%;
       bottom: 20%;
@@ -371,11 +379,15 @@
   top: 5vh;
   width: 100%;
   @include break-below("md") {
-    top: 10vh;
+    top: 15vh;
   }
   .preview-grid {
     margin-top: 20vh;
     width: 70%;
+    @include break-below("md") {
+      margin-top: 10vh;
+      width: 100%;
+    }
   }
   &__pullout {
     position: sticky;
@@ -487,6 +499,23 @@
     width: 30%;
     top: 70%;
     right: 20%;
+  }
+  @include break-below("md") {
+    &:nth-of-type(1) {
+      width: 30%;
+      top: 15%;
+      right: 10%;
+    }
+    &:nth-of-type(2) {
+      width: 40%;
+      top: 90%;
+      left: 20%;
+    }
+    &:nth-of-type(3) {
+      width: 35%;
+      top: 90%;
+      right: 20%;
+    }
   }
 }
 
