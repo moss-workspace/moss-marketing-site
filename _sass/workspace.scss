@@ -6,12 +6,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 .large-demo {
   margin: 200px 0;
-  border-radius: 4px;
-  // overflow: hidden;
   position: relative;
-  @include shadow-menu;
   @include break-below("md") {
     margin: 150px 0;
+  }
+  .demo-image,
+  video {
+    border-radius: 4px;
+    @include shadow-menu;
   }
 }
 
