@@ -98,7 +98,7 @@ sections:
       **RIP convert to JPG.**
   show_button: true
   button_text: Learn more about tethering
-  upper_illustration: None
+  upper_illustration: Drop
   video: "/uploads/drop_it_in_01_compress.mp4"
   middle_illustration: Stack
   button_url: ''
@@ -135,6 +135,30 @@ sections:
       custom_info: false
       name: ''
       icon: []
+  drop:
+    previews:
+    - thumbnail: "/uploads/psd.png"
+      show_info: true
+      name: ''
+      icon: Image
+    - show_info: true
+      name: ''
+      icon: Image
+    - show_info: true
+      name: ''
+      icon: Image
+    - show_info: true
+      name: ''
+      icon: Image
+    - show_info: true
+      name: ''
+      icon: Image
+    icons:
+    - "/uploads/psd-2.png"
+    - "/uploads/ai-1.png"
+    - "/uploads/folder-1.png"
+    - "/uploads/instagram-1.png"
+    - "/uploads/are-na.png"
 - template: workspace-content
   upper_illustration: None
   header: Lay it out.
@@ -215,6 +239,9 @@ sections:
     previews: []
   stack:
     previews: []
+  drop:
+    previews: []
+    icons: []
 - template: workspace-content
   upper_illustration: Brainstorm
   header: Find creative clarity.
@@ -329,6 +356,9 @@ sections:
       icon: []
   stack:
     previews: []
+  drop:
+    previews: []
+    icons: []
 - template: demo-carousel
   header: Jump right in.
   demos:
