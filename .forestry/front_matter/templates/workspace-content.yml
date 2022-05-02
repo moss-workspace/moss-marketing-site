@@ -10,6 +10,7 @@ fields:
     options:
     - None
     - Brainstorm
+    - Drop
     source:
       type: simple
       section: 
@@ -38,6 +39,20 @@ fields:
     value: Brainstorm
   label: Brainstorm
   description: Choose previews to display in the brainstorm illustration.
+- name: drop
+  type: field_group
+  config: {}
+  fields:
+  - name: icons
+    type: include
+    config: {}
+    template: previews
+    label: Icons
+    description: Choose icons for the drop illustration.
+  showOnly:
+    field: upper_illustration
+    value: Drop
+  label: Drop
 - name: header
   type: text
   config:
