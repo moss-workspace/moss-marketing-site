@@ -60,7 +60,7 @@
                         {% if section.upper_illustration == "Brainstorm" %}
                             <div class="large-demo-spacer col-12"></div>
                         {% else %}
-                            <div class="large-demo col-10-2 col-md-12  {% if section.upper_illustration == 'Drop' %}animation-trigger video-trigger{% endif %}">
+                            <div class="large-demo col-10-2 col-md-12  {% if section.upper_illustration == 'Drop' %}animation-trigger video-trigger drop-demo{% endif %}">
                                 {% if section.upper_illustration == "Drop" %}
                                     {% for icon in section.drop.icons %}
                                         <div class="illustration__drop__item animation-target">

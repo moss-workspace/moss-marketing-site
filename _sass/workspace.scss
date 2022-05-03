@@ -272,6 +272,10 @@
   align-self: auto;
 }
 
+.drop-demo + .textblock__right {
+  align-self: flex-end;
+}
+
 .illustration__drop {
   &__wrapper {
     width: 100vw;

@@ -42,6 +42,9 @@ body {
   }
   &.gray {
     background-color: $light-gray-1;
+    .fullscreen-nav {
+      background-color: $light-gray-1;
+    }
     header {
       &.down {
         background-color: $light-gray-1;
