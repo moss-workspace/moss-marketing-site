@@ -225,6 +225,16 @@
   }
 }
 
+.tooltip {
+  padding: 6px;
+  border-radius: 2px;
+  background-color: $dark-gray-3;
+  @include shadow-toast;
+  p {
+    color: $light-gray-3;
+  }
+}
+
 // Illustrations
 ////////////////////////////////////////////////////////////////////////////////
 .illustration__wrapper {
@@ -548,6 +558,21 @@
         50% {
           opacity: 1;
         }
+      }
+    }
+  }
+  .tooltip {
+    position: absolute;
+    bottom: -30px;
+    right: -35px;
+    @include animate-keyframes(stack-pointer-animation);
+    @keyframes stack-pointer-animation {
+      0%,
+      50% {
+        opacity: 0;
+      }
+      51% {
+        opacity: 1;
       }
     }
   }

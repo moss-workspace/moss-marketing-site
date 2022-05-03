@@ -90,6 +90,9 @@
                                         <div class="preview animation-target {% if forloop.last %}illustration__stack__final{% endif %}">
                                             {% include preview.html %}
                                             {% if forloop.last %}
+                                                <div class="tooltip animation-target">
+                                                    <p>{{ section.stack.tooltip }}</p>
+                                                </div>
                                                 <img class="cursor cursor__default animation-target" data-src="{{ page.ui_images.cursor | relative_url }}" loading="lazy"/>
                                                 <img class="cursor cursor__pointer animation-target" data-src="{{ page.ui_images.pointer | relative_url }}" loading="lazy"/>
                                             {% endif %}
