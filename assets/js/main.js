@@ -29,7 +29,7 @@ $(document).ready(function () {
 
 // Window resize
 ////////////////////////////////////////////////////////////////////////////////
-$( window ).resize(function() {
+$(window).resize(function () {
   togglePreviewInfo();
 });
 
@@ -73,15 +73,15 @@ function toggleHeader(scrollTop) {
 }
 
 function toggleFullscreenNav() {
-  $('.fullscreen-nav').toggle();
-  if ($('.fullscreen-nav').is(':visible')) {
-    $('body').css('overflow', 'hidden');
-    $('.fullscreen-nav__icon-closed').show();
-    $('.fullscreen-nav__icon-open').hide();
+  $(".fullscreen-nav").toggle();
+  if ($(".fullscreen-nav").is(":visible")) {
+    $("body").css("overflow", "hidden");
+    $(".fullscreen-nav__icon-closed").show();
+    $(".fullscreen-nav__icon-open").hide();
   } else {
-    $('body').css('overflow', 'auto');
-    $('.fullscreen-nav__icon-closed').hide();
-    $('.fullscreen-nav__icon-open').show();
+    $("body").css("overflow", "auto");
+    $(".fullscreen-nav__icon-closed").hide();
+    $(".fullscreen-nav__icon-open").show();
   }
 }
 
@@ -102,16 +102,17 @@ function reveal(element) {
 }
 
 function animateKeyframes(element) {
-    var elementTop = element.offset().top,
-      elementHeight = element.outerHeight(),
-      windowTop = $(window).scrollTop(),
-      windowHeight = $(window).height();
+  var elementTop = element.offset().top,
+    elementHeight = element.outerHeight(),
+    windowTop = $(window).scrollTop(),
+    windowHeight = $(window).height();
 
-    // 0% means element has come into view, 100% means element has left view.
-    var percentage = (windowTop + windowHeight - elementTop) / (windowHeight + elementHeight);
-    if (percentage >= 0 && percentage <= 1) {
-      element.find(".animation-target").css("--scroll", percentage);
-    }
+  // 0% means element has come into view, 100% means element has left view.
+  var percentage =
+    (windowTop + windowHeight - elementTop) / (windowHeight + elementHeight);
+  if (percentage >= 0 && percentage <= 1) {
+    element.find(".animation-target").css("--scroll", percentage);
+  }
 }
 
 function parallax(element) {
@@ -135,9 +136,9 @@ function togglePreviewInfo() {
   $(".preview").each(function () {
     var element = $(this);
     if (element.width() < 125) {
-      element.find('.preview__info').hide();
+      element.find(".preview__info").hide();
     } else {
-      element.find('.preview__info').show();
+      element.find(".preview__info").show();
     }
   });
 }
@@ -148,15 +149,16 @@ function toggleVideoPlay(element, scrollTop) {
     windowTop = $(window).scrollTop(),
     windowHeight = $(window).height();
 
-  var percentage = (windowTop + windowHeight - elementTop) / (windowHeight + elementHeight);
+  var percentage =
+    (windowTop + windowHeight - elementTop) / (windowHeight + elementHeight);
   var video = element.find(".video-target").get(0);
   if (scrollTop < lastScrollTop) {
-   if (percentage < 0.4) {
+    if (percentage < 0.4) {
       video.pause();
       video.currentTime = 0;
-    } 
+    }
   } else {
-    if (percentage >= 0.4 && video.currentTime === 0 ) {
+    if (percentage >= 0.4 && video.currentTime === 0) {
       video.play();
     }
   }
@@ -168,26 +170,26 @@ function scrollToSignup() {
   var bodyHeight = $("body").height(),
     scrollTop = $(window).scrollTop();
 
-   var distance = bodyHeight;
-   var closestSignup = null;
+  var distance = bodyHeight;
+  var closestSignup = null;
 
-  $(".signup-form").each(function() {
+  $(".signup-form").each(function () {
     var elementTop = $(this).offset().top;
-    var difference = Math.abs(scrollTop - elementTop)
+    var difference = Math.abs(scrollTop - elementTop);
     if (difference <= distance) {
-      distance = difference
-      closestSignup = $(this)
+      distance = difference;
+      closestSignup = $(this);
     }
-  })
+  });
 
   $("html, body").animate({ scrollTop: closestSignup.parent().offset().top });
-  closestSignup.find('input').first().focus()
+  closestSignup.find("input").first().focus();
 }
 
 // Footer image selection
 ////////////////////////////////////////////////////////////////////////////////
 function chooseFooterImage() {
-  var length = $('.footer__illustration').length;
+  var length = $(".footer__illustration").length;
   var random = Math.floor(Math.random() * length);
   $(".footer__illustration").eq(random).css("display", "block");
 }
