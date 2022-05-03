@@ -45,7 +45,6 @@ fields:
       - PSD
       - AI
       - Document
-      - Folder
       - Web
       source:
         type: simple
