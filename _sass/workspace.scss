@@ -252,7 +252,7 @@
     height: 80vh;
   }
   &.middle__illustration {
-    grid-row: 3 / span 2;
+    grid-row: 1 / span 2;
     @include break-below("md") {
       grid-row: span 1;
     }
@@ -261,7 +261,7 @@
       grid-row: 4 / span 1;
       @include break-below("md") {
         height: 100vh;
-        grid-row: 4 / span 1;
+        grid-row: 1 / span 1;
       }
     }
   }
@@ -284,6 +284,12 @@
 
 .slim-section {
   margin-top: 0;
+  .textblock__right:first-child {
+    align-self: flex-end;
+    &.textblock__right--top {
+      align-self: center;
+    }
+  }
 }
 
 .illustration__drop {
@@ -439,11 +445,10 @@
     }
     @include break-below("md") {
       &:first-of-type {
-        top: -10%;
         left: 0;
       }
       &:last-of-type {
-        bottom: 45%;
+        bottom: 40%;
         right: 12%;
       }
     }
@@ -451,12 +456,12 @@
   .illustration__brainstorm__preview {
     &:nth-of-type(2) {
       width: 30%;
-      top: 8%;
+      top: 25%;
       left: 10%;
     }
     &:nth-of-type(3) {
       width: 30%;
-      top: 16%;
+      top: 35%;
       left: 15%;
     }
     &:nth-of-type(4) {
@@ -475,12 +480,12 @@
     @include break-below("md") {
       &:nth-of-type(2) {
         width: 40%;
-        top: 5%;
+        top: 15%;
         left: 10%;
       }
       &:nth-of-type(3) {
         width: 40%;
-        top: 15%;
+        top: 20%;
         left: 20%;
       }
       &:nth-of-type(4) {
@@ -656,6 +661,9 @@
   &__pullout {
     position: sticky;
     position: -webkit-sticky;
+    @include break-below("md") {
+      top: 10vh;
+    }
     .note {
       margin-left: -5%;
       .contextbar {

@@ -80,10 +80,10 @@
                             </div>
                         {% endif %}
 
-                        </section>
-                        <section class="grid slim-section">
+                    </section>
+                    <section class="grid slim-section">
 
-                        <div class="textblock__right">
+                        <div class="textblock__right {% if section.middle_illustration == 'Collection' %}textblock__right--top{% endif %}                        ">
                             {% for block in section.text_blocks %}
                                 {% if forloop.last %}
                                     {% break %}
