@@ -46,6 +46,7 @@ fields:
       - AI
       - Document
       - Folder
+      - Web
       source:
         type: simple
         section: 
