@@ -442,6 +442,7 @@
     display: inline-block;
     margin-right: 16px;
     height: 70px;
+    width: auto;
     @include break-below("md") {
       height: 42px;
     }
