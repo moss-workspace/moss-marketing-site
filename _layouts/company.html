@@ -5,53 +5,55 @@
         {% include cookie_prompt.html %}
         {% include header.html %}
 
-        <section class="grid company__info">
-            <div class="textblock col-6 col-md-12">
-                <h2>{{ page.header }}</h2>
-                <h5>{{ page.body | newline_to_br }}</h5>
-            </div>
-            <div class="company__illustration__wrapper col-6 col-md-12">
-                {% for preview in page.previews %}
-                    <div class="preview parallax" speed="{{ forloop.index | replace: '1', '9' | replace: '2', '9' | replace: '3', '6' | replace: '4', '7' | replace: '5', '9' }}">
-                        {% include preview_first-load.html %}
+        <div class="company__wrapper">
+            <section class="grid company__info">
+                <div class="textblock col-6 col-md-12">
+                    <h2>{{ page.header }}</h2>
+                    <h5>{{ page.body | newline_to_br }}</h5>
+                </div>
+                <div class="company__illustration__wrapper col-6 col-md-12">
+                    {% for preview in page.previews %}
+                        <div class="preview parallax" speed="{{ forloop.index | replace: '1', '9' | replace: '2', '9' | replace: '3', '6' | replace: '4', '7' | replace: '5', '9' }}">
+                            {% include preview_first-load.html %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+
+            <section class="company__impact grid">
+                <h2 class="company__impact__header col-6 col-md-12">
+                    {{ page.impact_header }}
+                </h2>
+                {% for section in page.impact_section %}
+                    <div class="company__impact__section col-3-{{ forloop.index | replace: '2', '5' | replace: '3', '9' }} col-md-12">
+                        <img data-src="{{ section.illustration | relative_url }}" loading="lazy"/>
+                        <h5 class="bold">{{ section.title }}</h5>
+                        <h5>{{ section.body | newline_to_br }}</h5>
+                        {% if section.extra_info %}
+                            <div class="company__impact__extra-info">
+                                <a href="https://directories.onepercentfortheplanet.org/profile/moss-workspace-inc" target="_blank">
+                                    <img data-src="{{ section.image | relative_url }}" loading="lazy"/>
+                                </a>
+                                <p>{{ section.small_text }}</p>
+                            </div>
+                        {% endif %}
                     </div>
                 {% endfor %}
-            </div>
-        </section>
+            </section>
 
-
-        <section class="company__impact grid">
-            <h2 class="company__impact__header col-6 col-md-12">
-                {{ page.impact_header }}
-            </h2>
-            {% for section in page.impact_section %}
-                <div class="company__impact__section col-3-{{ forloop.index | replace: '2', '5' | replace: '3', '9' }} col-md-12">
-                    <img data-src="{{ section.illustration | relative_url }}" loading="lazy"/>
-                    <h5 class="bold">{{ section.title }}</h5>
-                    <h5>{{ section.body | newline_to_br }}</h5>
-                    {% if section.extra_info %}
-                        <div class="company__impact__extra-info">
-                            <a href="https://directories.onepercentfortheplanet.org/profile/moss-workspace-inc" target="_blank">
-                                <img data-src="{{ section.image | relative_url }}" loading="lazy"/>
-                            </a>
-                            <p>{{ section.small_text }}</p>
-                        </div>
-                    {% endif %}
+            <section class="company__email grid textblock">
+                <div class="company__email__image col-6 col-md-12">
+                    <img data-src="{{ page.email_illustration | relative_url }}" loading="lazy"/>
                 </div>
-            {% endfor %}
-        </section>
-
-        <section class="company__email grid textblock">
-            <div class="company__email__image col-6 col-md-12">
-                <img data-src="{{ page.email_illustration | relative_url }}" loading="lazy"/>
-            </div>
-            <h2 class="col-6 col-md-12">
-                {{ page.email_header }}
-            </h2>
-            <div class="signup-form col-4-8 col-md-12">
-                {% include signup_form.html %}
-            </div>
-        </section>
+                <h2 class="col-6 col-md-12">
+                    {{ page.email_header }}
+                </h2>
+                <div class="signup-form col-4-8 col-md-12">
+                    {% include signup_form.html %}
+                </div>
+            </section>
+        </div>
 
         {% include footer.html %}
     </body>

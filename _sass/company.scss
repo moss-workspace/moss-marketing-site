@@ -3,22 +3,21 @@
 
 // General
 ////////////////////////////////////////////////////////////////////////////////
+.company__wrapper {
+  overflow-x: hidden;
+}
+
 .company__impact,
 .company__email {
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
+  @include limit-width;
 }
 
 // Info
 ////////////////////////////////////////////////////////////////////////////////
 .company__info {
-  overflow-x: hidden;
   margin-top: 10vh !important;
+  @include limit-width;
   .textblock {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
     h2 {
       max-width: 600px;
     }
@@ -28,7 +27,7 @@
   }
   .company__illustration__wrapper {
     position: relative;
-    height: 120vh;
+    height: 80vh;
     .preview {
       &:nth-of-type(1) {
         width: 40%;
@@ -98,6 +97,7 @@
 }
 
 .company__impact__section {
+  grid-row: 2 / span 1;
   img {
     margin-bottom: 36px;
     @include break-below("md") {
@@ -111,6 +111,7 @@
     }
   }
   @include break-below("md") {
+    grid-row: inherit;
     margin-bottom: 150px;
     &:last-of-type {
       margin-bottom: 0;
@@ -134,19 +135,12 @@
 .company__email {
   background-color: $light-gray-0;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0;
   h2 {
     align-self: flex-end;
   }
   .input {
     background-color: $white;
-  }
-  // Special break point for max-width
-  @media (max-width: "1524px") {
-    margin-left: 64px;
-    margin-right: 64px;
   }
   @include break-below("md") {
     display: block;

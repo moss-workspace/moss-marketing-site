@@ -56,6 +56,7 @@ $breakpoints: (
   sm: 600px,
   md: 800px,
   lg: 1200px,
+  xl: 1568px,
 ) !default;
 
 @mixin break-below($breakpoint) {
@@ -66,6 +67,24 @@ $breakpoints: (
   } @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin limit-width {
+  max-width: 1568px;
+  margin-left: auto;
+  margin-right: auto;
+  &.grid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include break-below("xl") {
+    margin-left: 64px;
+    margin-right: 64px;
+  }
+  @include break-below("md") {
+    margin-left: 26px;
+    margin-right: 26px;
   }
 }
 

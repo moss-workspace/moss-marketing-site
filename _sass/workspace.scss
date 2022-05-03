@@ -283,6 +283,7 @@
 
 .slim-section {
   margin-top: 0;
+  @include limit-width;
   .textblock__right:first-child {
     align-self: flex-end;
     &.textblock__right--top {

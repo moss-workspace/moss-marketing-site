@@ -3,7 +3,7 @@
 footer {
   padding: 46px 0 64px 0;
   border-top: 1px solid $light-gray-3;
-
+  @include limit-width;
   .footer__illustration__wrapper {
     overflow: visible;
     position: relative;
@@ -14,11 +14,11 @@ footer {
     display: none; // Display is set randomly on load
     width: 50%;
     height: auto;
-    left: -10%;
+    left: -30%;
     top: 0;
     @include break-below("md") {
       width: 120%;
-      left: -30%;
+      left: -40%;
     }
   }
 
