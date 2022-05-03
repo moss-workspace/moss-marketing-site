@@ -63,7 +63,9 @@ $(window).scroll(function (event) {
 // Header nav
 ////////////////////////////////////////////////////////////////////////////////
 function toggleHeader(scrollTop) {
-  if (scrollTop < lastScrollTop) {
+  if (scrollTop == 0) {
+    $("header").removeClass("down");
+  } else if (scrollTop < lastScrollTop) {
     $("header").addClass("down");
   } else {
     $("header").removeClass("down");
