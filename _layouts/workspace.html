@@ -35,12 +35,16 @@
                     <section class="grid" {% if forloop.index == 1 %} id="gray-start" {% endif %}>
 
                         {% if section.upper_illustration == "Brainstorm" %}
-                            <div class="illustration__wrapper col-12">
+                            <div class="illustration__wrapper illustration__brainstorm__wrapper col-12">
+                                {% assign text = section.brainstorm.first_note %}
+                                {% include note.html %}
                                 {% for preview in section.brainstorm.previews %}
-                                    <div class="preview illustration__brainstorm__preview parallax" speed="{{ forloop.index | replace: '1', '9' | replace: '2', '6' | replace: '3', '5' | replace: '4', '3' }}">
-                                        {% include preview_first-load.html %}
+                                    <div class="preview illustration__brainstorm__preview parallax{% if forloop.index <= 2 %} reveal{% endif %}" offset="0.05" speed="{{ forloop.index | replace: '1', '9' | replace: '2', '6' | replace: '3', '8' | replace: '4', '7' }}">
+                                        {% include preview.html %}
                                     </div>
                                 {% endfor %}
+                                {% assign text = section.brainstorm.second_note %}
+                                {% include note.html %}
                             </div>
                         {% endif %}
 
@@ -50,24 +54,28 @@
                             <h4>{{ section.subhead | newline_to_br }}</h4>
                         </div>
 
-                        <div class="large-demo col-10-2 col-md-12  {% if section.upper_illustration == 'Drop' %}animation-trigger video-trigger{% endif %}">
-                            {% if section.upper_illustration == "Drop" %}
-                                {% for icon in section.drop.icons %}
-                                    <div class="illustration__drop__item animation-target">
-                                        <img class="illustration__drop__icon" data-src="{{ icon | relative_url }}" loading="lazy"/>
-                                        <img class="cursor" data-src="{{ page.ui_images.grab | relative_url }}" loading="lazy"/>
-                                    </div>
-                                {% endfor %}
-                            {% endif %}
-                            {% assign extension = section.video | slice: -3,3 %}
-                            {% if extension == 'mp4' %}
-                                <video {% if section.upper_illustration == "Drop" %} class="video-target" {% else %} autoplay loop {% endif %} muted>
-                                    <source src="{{ section.video | relative_url }}" type="video/mp4">
-                                </video>
-                            {% else %}
-                                <img class="demo-image" data-src="{{ section.video | relative_url }}" loading="lazy"/>
-                            {% endif %}
-                        </div>
+                        {% if section.upper_illustration == "Brainstorm" %}
+                            <div class="large-demo-spacer col-12"></div>
+                        {% else %}
+                            <div class="large-demo col-10-2 col-md-12  {% if section.upper_illustration == 'Drop' %}animation-trigger video-trigger{% endif %}">
+                                {% if section.upper_illustration == "Drop" %}
+                                    {% for icon in section.drop.icons %}
+                                        <div class="illustration__drop__item animation-target">
+                                            <img class="illustration__drop__icon" data-src="{{ icon | relative_url }}" loading="lazy"/>
+                                            <img class="cursor" data-src="{{ page.ui_images.grab | relative_url }}" loading="lazy"/>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                                {% assign extension = section.video | slice: -3,3 %}
+                                {% if extension == 'mp4' %}
+                                    <video {% if section.upper_illustration == "Drop" %} class="video-target" {% else %} autoplay loop {% endif %} muted>
+                                        <source src="{{ section.video | relative_url }}" type="video/mp4">
+                                    </video>
+                                {% else %}
+                                    <img class="demo-image" data-src="{{ section.video | relative_url }}" loading="lazy"/>
+                                {% endif %}
+                            </div>
+                        {% endif %}
 
                         <div class="textblock__right">
                             {% for block in section.text_blocks %}
