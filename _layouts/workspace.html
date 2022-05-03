@@ -216,7 +216,7 @@
                     <section class="grid fullscreen">
                         <h1 class="textblock__center">{{ section.header }}</h1>
                         <h4 class="textblock__center">{{ section.subhead }}</h4>
-                        <form class="signup-form input-button col-4-5 col-md-12" onsubmit="() => {return joinWaitlist();}">
+                        <form class="signup-form input-button col-4-5 col-md-12" onsubmit="return joinWaitlist();">
                             <input class="input input--large" placeholder="{{ site.sign_up_field.prompt }}" type="email" value="" name="EMAIL" required id="tagline-email"/>
                             <button class="button--blue button--large button--full" type="submit">
                                 {{ site.sign_up_field.button_text }}
