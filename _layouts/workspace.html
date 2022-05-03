@@ -201,7 +201,8 @@
                             {% include note.html %}
                         </div>
                         <div class="testimonial__author">
-                            <img data-src="{{ section.avatar | relative_url }}" loading="lazy"/>
+                            <img class="testimonial__author__cursor" data-src="{{ section.cursor | relative_url }}" loading="lazy"/>
+                            <img class="testimonial__author__avatar" data-src="{{ section.avatar | relative_url }}" loading="lazy"/>
                             <div>
                                 <h5 class="bold">{{ section.name }}</h5>
                                 <h5>{{ section.title }}</h5>
