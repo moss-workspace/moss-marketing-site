@@ -29,7 +29,7 @@ header:
   - icon: "/uploads/product_final_220503.png"
     text: Workspace
     url: "/"
-  - icon: "/uploads/globe_icon-1.png"
+  - icon: "/uploads/add_note.png"
     text: Thesis
     url: "/thesis"
   - icon: "/uploads/company_final_220503.png"
