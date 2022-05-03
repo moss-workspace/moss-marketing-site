@@ -71,7 +71,7 @@
                                 {% endif %}
                                 {% assign extension = section.video | slice: -3,3 %}
                                 {% if extension == 'mp4' %}
-                                    <video {% if section.upper_illustration == "Drop" %} class="video-target" {% else %} autoplay loop {% endif %} muted>
+                                    <video {% if section.upper_illustration == "Drop" %} class="video-target" {% else %} autoplay loop {% endif %} playsinline muted>
                                         <source src="{{ section.video | relative_url }}" type="video/mp4">
                                     </video>
                                 {% else %}
