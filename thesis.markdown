@@ -148,7 +148,7 @@ why_section:
   - "/uploads/group-2-2.png"
   - "/uploads/image-2-1.png"
   - "/uploads/image-12.png"
-  note: "/uploads/note.png"
+  note: "/uploads/obsessed_note.png"
   tag: "/uploads/approved_tag.png"
 final_section:
   title: Moss transforms the desktop from a rigid, siloed system into an open and
