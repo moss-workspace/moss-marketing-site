@@ -272,12 +272,17 @@
   align-self: auto;
 }
 
-#gray-start {
-  overflow-x: hidden
-}
-
 .drop-demo + .textblock__right {
   align-self: flex-end;
+}
+
+.overflowXHidden {
+  overflow-x: hidden;
+  margin-bottom: 0;
+}
+
+.slim-section {
+  margin-top: 0;
 }
 
 .illustration__drop {

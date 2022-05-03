@@ -35,7 +35,7 @@
             {% assign template = section.template %}
             {% case template %}
                 {% when 'workspace-content' %}
-                    <section class="grid" {% if forloop.index == 1 %} id="gray-start" {% endif %}>
+                    <section class="grid overflowXHidden" {% if forloop.index == 1 %} id="gray-start" {% endif %}>
 
                         {% if section.upper_illustration == "Brainstorm" %}
                             <div class="illustration__wrapper illustration__brainstorm__wrapper col-12">
@@ -79,6 +79,9 @@
                                 {% endif %}
                             </div>
                         {% endif %}
+
+                        </section>
+                        <section class="grid slim-section">
 
                         <div class="textblock__right">
                             {% for block in section.text_blocks %}
