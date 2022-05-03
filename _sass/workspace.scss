@@ -940,10 +940,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 .workspace__carousel__buttons {
   text-align: center;
+  @include gap(14px);
+  @include gap-vertical(14px);
+  @include break-below("md") {
+    @include gap(8px);
+    @include gap-vertical(14px);
+  }
 }
 
 .workspace__carousel__button {
-  margin-bottom: 8px;
+  @include shadow-toast;
   &.active {
     @extend .button--gray-1;
   }
