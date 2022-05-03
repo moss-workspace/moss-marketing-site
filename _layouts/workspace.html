@@ -42,7 +42,7 @@
                                 {% assign text = section.brainstorm.first_note %}
                                 {% include note.html %}
                                 {% for preview in section.brainstorm.previews %}
-                                    <div class="preview illustration__brainstorm__preview parallax{% if forloop.index <= 2 %} reveal{% endif %}" offset="0.05" speed="{{ forloop.index | replace: '1', '9' | replace: '2', '6' | replace: '3', '8' | replace: '4', '7' }}">
+                                    <div class="preview illustration__brainstorm__preview parallax{% if forloop.index <= 2 %} reveal{% endif %}" offset="{{ forloop.index | replace: '1', '0.05' | replace: '2', '0.2'}} " speed="{{ forloop.index | replace: '1', '9' | replace: '2', '6' | replace: '3', '8' | replace: '4', '7' }}">
                                         {% include preview.html %}
                                     </div>
                                 {% endfor %}
@@ -204,7 +204,8 @@
                             {% include note.html %}
                         </div>
                         <div class="testimonial__author">
-                            <img data-src="{{ section.avatar | relative_url }}" loading="lazy"/>
+                            <img class="testimonial__author__cursor" data-src="{{ section.cursor | relative_url }}" loading="lazy"/>
+                            <img class="testimonial__author__avatar" data-src="{{ section.avatar | relative_url }}" loading="lazy"/>
                             <div>
                                 <h5 class="bold">{{ section.name }}</h5>
                                 <h5>{{ section.title }}</h5>

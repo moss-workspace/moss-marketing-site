@@ -129,12 +129,26 @@ fields:
       maxSize: 64
     label: Menu icon
     description: Choose an image to use as the hamburger menu icon on mobile.
+  - name: menu_icon_light
+    type: file
+    config:
+      maxSize: 64
+    label: Menu icon light
+    description: Choose an image to use as the light version of the hamburger menu
+      icon on mobile.
   - name: menu_closed_icon
     type: file
     config:
       maxSize: 64
     label: Menu closed icon
     description: Choose an image to use as the close ( x ) menu icon on mobile.
+  - name: menu_closed_icon_light
+    type: file
+    config:
+      maxSize: 64
+    label: Menu closed icon light
+    description: Choose an image to use as the light version of the close ( x ) menu
+      icon on mobile.
   label: Header
   description: Choose how the site-wide header displays
 - name: footer

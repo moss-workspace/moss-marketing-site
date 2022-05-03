@@ -261,13 +261,14 @@
       grid-row: 4 / span 1;
       @include break-below("md") {
         height: 100vh;
-        grid-row: 5 / span 1;
+        grid-row: 4 / span 1;
       }
     }
   }
 }
 
-.illustration__wrapper + .textblock__right {
+.illustration__wrapper + .textblock__right,
+.illustration__wrapper + .textblock__left {
   margin-top: 46px;
   align-self: auto;
 }
@@ -421,6 +422,10 @@
   }
   .note {
     position: absolute;
+    &__text {
+      border: none;
+      font-weight: 300;
+    }
     .contextbar {
       display: none;
     }
@@ -525,7 +530,7 @@
     }
   }
   .preview {
-    width: 50%;
+    width: 60%;
     height: auto;
     &:first-of-type {
       left: 15%;
@@ -542,8 +547,8 @@
       }
     }
     &:nth-of-type(2) {
-      left: 25%;
-      top: 25%;
+      left: 20%;
+      top: 20%;
       @include animate-keyframes(stack-2-animation);
       @keyframes stack-2-animation {
         0%,
@@ -556,8 +561,8 @@
       }
     }
     &:nth-of-type(3) {
-      left: 35%;
-      top: 35%;
+      left: 25%;
+      top: 25%;
       @include animate-keyframes(stack-3-animation);
       @keyframes stack-3-animation {
         0%,
@@ -631,17 +636,19 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-
   position: absolute;
   top: 5vh;
   width: 100%;
-  @include break-below("md") {
-    top: 15vh;
+  .note {
+    margin-top: 8vh;
   }
   .preview-grid {
-    margin-top: 12vh;
+    margin-top: 20vh;
     width: 70%;
-    @include break-below("md") {
+  }
+  @include break-below("md") {
+    top: 0;
+    .preview-grid {
       margin-top: 10vh;
       width: 100%;
     }
@@ -811,7 +818,7 @@
   @include break-below("md") {
     &:nth-of-type(1) {
       width: 30%;
-      top: 15%;
+      top: 25%;
       right: 10%;
     }
     &:nth-of-type(2) {
@@ -853,15 +860,28 @@
   display: flex;
   align-items: center;
   align-self: flex-start;
-  img {
+  position: relative;
+  h5 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  &__avatar {
     margin-right: 8px;
     height: 46px;
     width: auto;
     border-radius: 100px;
   }
-  h5 {
-    font-size: 22px;
-    line-height: 26px;
+  &__cursor {
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    left: -14px;
+    top: -30px;
+    @include break-below("md") {
+      height: 30px;
+      width: 30px;
+      top: -20px;
+    }
   }
   @include break-below("md") {
     margin-top: 150px;

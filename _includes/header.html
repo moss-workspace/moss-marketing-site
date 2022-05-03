@@ -36,8 +36,14 @@
             {% endif %}
         {% endfor %}
         <button class="fullscreen-nav__button button--white button--borderless button--medium" onclick="toggleFullscreenNav()">
-            <img class="fullscreen-nav__icon-open" src="{{ site.header.menu_icon | relative_url }}"/>
-            <img class="fullscreen-nav__icon-closed" src="{{ site.header.menu_closed_icon | relative_url }}"/>
+            <div class="fullscreen-nav__icon__dark">            
+                <img class="fullscreen-nav__icon-open" src="{{ site.header.menu_icon | relative_url }}"/>
+                <img class="fullscreen-nav__icon-closed" src="{{ site.header.menu_closed_icon | relative_url }}"/>
+            </div>
+            <div class="fullscreen-nav__icon__light">            
+                <img class="fullscreen-nav__icon-open" src="{{ site.header.menu_icon_light | relative_url }}"/>
+                <img class="fullscreen-nav__icon-closed" src="{{ site.header.menu_closed_icon_light | relative_url }}"/>
+            </div>
         </button>
     </div>
 </header>

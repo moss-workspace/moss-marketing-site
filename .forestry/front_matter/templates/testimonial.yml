@@ -18,6 +18,12 @@ fields:
     maxSize: 64
   label: Avatar
   description: Avatar for the quoted person
+- name: cursor
+  type: file
+  config:
+    maxSize: 64
+  label: Cursor
+  description: Choose an image for the cursor next to the avatar
 - name: name
   type: text
   config:

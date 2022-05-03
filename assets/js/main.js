@@ -63,7 +63,9 @@ $(window).scroll(function (event) {
 // Header nav
 ////////////////////////////////////////////////////////////////////////////////
 function toggleHeader(scrollTop) {
-  if (scrollTop == 0) {
+  if  ($('.fullscreen-nav').is(':visible')) {
+    $("header").addClass("down");
+  } else if (scrollTop == 0) {
     $("header").removeClass("down");
   } else if (scrollTop < lastScrollTop) {
     $("header").addClass("down");
@@ -75,11 +77,13 @@ function toggleHeader(scrollTop) {
 function toggleFullscreenNav() {
   $('.fullscreen-nav').toggle();
   if ($('.fullscreen-nav').is(':visible')) {
-    $('body').css('overflow', 'hidden');
+    $('body').addClass('no-scroll');
+    $('body').bind('touchmove', function(e){e.preventDefault()})
     $('.fullscreen-nav__icon-closed').show();
     $('.fullscreen-nav__icon-open').hide();
   } else {
-    $('body').css('overflow', 'auto');
+    $('body').removeClass('no-scroll');
+    $('body').unbind('touchmove')
     $('.fullscreen-nav__icon-closed').hide();
     $('.fullscreen-nav__icon-open').show();
   }
