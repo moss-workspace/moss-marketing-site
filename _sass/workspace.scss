@@ -525,7 +525,7 @@
     }
   }
   .preview {
-    width: 50%;
+    width: 60%;
     height: auto;
     &:first-of-type {
       left: 15%;
@@ -542,8 +542,8 @@
       }
     }
     &:nth-of-type(2) {
-      left: 25%;
-      top: 25%;
+      left: 20%;
+      top: 20%;
       @include animate-keyframes(stack-2-animation);
       @keyframes stack-2-animation {
         0%,
@@ -556,8 +556,8 @@
       }
     }
     &:nth-of-type(3) {
-      left: 35%;
-      top: 35%;
+      left: 25%;
+      top: 25%;
       @include animate-keyframes(stack-3-animation);
       @keyframes stack-3-animation {
         0%,
