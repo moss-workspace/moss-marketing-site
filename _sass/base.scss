@@ -158,6 +158,10 @@ section {
     margin-top: 30vh;
     &.fullscreen {
       margin-top: 0;
+      height: calc(100vh - 196px);
+      @include break-below("md") {
+        height: calc(100vh - 164px);
+      }
     }
   }
   &:last-of-type {
@@ -192,9 +196,6 @@ section {
     h4 {
       @extend .col-6-4;
       @extend .col-md-12;
-    }
-    @include break-below("md") {
-      height: calc(100vh - 82px);
     }
   }
 }

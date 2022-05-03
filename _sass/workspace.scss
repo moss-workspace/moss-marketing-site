@@ -56,43 +56,43 @@
 .landing__left-preview {
   &:nth-of-type(1) {
     width: 40%;
-    top: 0;
+    top: 2%;
     left: -2%;
   }
   &:nth-of-type(2) {
-    width: 3%;
+    width: 2.5%;
     top: 20%;
     left: 22%;
   }
   &:nth-of-type(3) {
-    width: 9%;
-    top: 30%;
+    width: 10%;
+    top: 40%;
     left: -2%;
   }
   &:nth-of-type(4) {
     width: 5%;
-    top: 40%;
+    top: 45%;
     left: 5%;
   }
   &:nth-of-type(5) {
     width: 8%;
-    top: 75%;
-    left: 8%;
+    top: 80%;
+    left: 6%;
   }
   &:nth-of-type(6) {
-    width: 3%;
-    bottom: 15%;
-    left: 18%;
+    width: 2.5%;
+    bottom: 10%;
+    left: 16%;
   }
   &:nth-of-type(7) {
     width: 40%;
-    bottom: 2%;
+    bottom: -20%;
     left: -5%;
   }
   @include break-below("md") {
     &:nth-of-type(1) {
       width: 60%;
-      top: -2%;
+      top: 0%;
       left: 0;
     }
     &:nth-of-type(2) {
@@ -112,13 +112,13 @@
       display: none;
     }
     &:nth-of-type(6) {
-      width: 10%;
-      bottom: 25%;
-      left: 3%;
+      width: 8%;
+      bottom: 15%;
+      left: 2%;
     }
     &:nth-of-type(7) {
       width: 100%;
-      bottom: -5%;
+      bottom: -28%;
       left: -40%;
     }
   }
@@ -135,7 +135,7 @@
   }
   &:nth-of-type(9) {
     width: 6%;
-    top: 19%;
+    top: 17%;
     right: 3%;
   }
   &:nth-of-type(10) {
@@ -144,18 +144,18 @@
     right: 5%;
   }
   &:nth-of-type(11) {
-    width: 6%;
-    top: 60%;
+    width: 5%;
+    top: 62%;
     right: 18%;
   }
   &:nth-of-type(12) {
     width: 5%;
-    bottom: 0;
+    bottom: -30%;
     right: 12%;
   }
   &:nth-of-type(13) {
     width: 12%;
-    bottom: 20%;
+    bottom: 8%;
     right: 0;
     .preview__icon--link {
       display: none;
@@ -163,7 +163,7 @@
   }
   &:nth-of-type(14) {
     width: 15%;
-    bottom: 0;
+    bottom: -20%;
     right: 2%;
   }
   @include break-below("md") {
@@ -196,10 +196,10 @@
       display: none;
     }
     &:nth-of-type(14) {
-      width: 30%;
-      bottom: 5%;
+      width: 35%;
+      bottom: -4%;
       right: 0;
-      .preview__icon--link {
+      .preview__icon {
         display: none;
       }
     }

@@ -7,7 +7,7 @@
 
         <section class="grid fullscreen landing">
             {% for preview in page.landing.left_previews.previews %}
-                <div class="preview landing__left-preview parallax" speed="{{ forloop.index | replace: '1', '7' | replace: '2', '5' | replace: '5', '2' | replace: '6', '4' | replace: '7', '9' }}">
+                <div class="preview landing__left-preview parallax" speed="{{ forloop.index | replace: '1', '7' | replace: '2', '5' | replace: '5', '2.9' | replace: '6', '4' | replace: '7', '9' }}">
                     {% include preview_first-load.html %}
                 </div>
             {% endfor %}

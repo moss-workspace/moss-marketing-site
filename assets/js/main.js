@@ -16,7 +16,7 @@ $(document).ready(function () {
   //     $(this).hide();
   //   }
   // });
-
+  toggleHeader();
   togglePreviewInfo();
   chooseFooterImage();
   setTimeout(() => {
