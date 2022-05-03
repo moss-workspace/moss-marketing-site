@@ -8,14 +8,16 @@ header {
   z-index: 900;
   @include fade-in;
   @include transition(top, 0.2s, ease);
-  &.down {
-    top: 0;
-  }
+  background-color: transparent;
+  display: block;
   height: 46px;
   padding: 26px 64px;
   margin: 0;
   justify-content: space-between;
-  background-color: transparent !important;
+  &.down {
+    top: 0;
+    background-color: $white;
+  }
   @include break-below("md") {
     height: 30px;
     padding: 26px;

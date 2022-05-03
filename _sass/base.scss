@@ -28,6 +28,11 @@ body {
     .fullscreen-nav {
       background-color: $black;
     }
+    header {
+      &.down {
+        background-color: $black;
+      }
+    }
     .header__nav-text {
       color: $dark-gray-0;
       &.active {
@@ -37,6 +42,11 @@ body {
   }
   &.gray {
     background-color: $light-gray-1;
+    header {
+      &.down {
+        background-color: $light-gray-1;
+      }
+    }
     .preview__icon--link {
       &:hover {
         background-color: $light-gray-2 !important;
