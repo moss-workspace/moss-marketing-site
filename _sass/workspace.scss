@@ -267,13 +267,14 @@
   }
 }
 
-.illustration__wrapper + .textblock__right {
+.illustration__wrapper + .textblock__right,
+.illustration__wrapper + .textblock__left {
   margin-top: 46px;
   align-self: auto;
 }
 
 #gray-start {
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .drop-demo + .textblock__right {
@@ -812,7 +813,7 @@
   @include break-below("md") {
     &:nth-of-type(1) {
       width: 30%;
-      top: 15%;
+      top: 25%;
       right: 10%;
     }
     &:nth-of-type(2) {
