@@ -298,12 +298,12 @@
       @include animate-keyframes(drop-1-animation);
       @keyframes drop-1-animation {
         0% {
-          left: 2%;
-          top: -45%;
+          left: -30%;
+          top: -50%;
         }
         20% {
           left: 7%;
-          top: -40%;
+          top: -30%;
         }
         39.99% {
           opacity: 1;
@@ -320,17 +320,17 @@
       @include animate-keyframes(drop-2-animation);
       @keyframes drop-2-animation {
         0% {
-          left: -2%;
+          left: -30%;
           top: -30%;
         }
         20% {
           left: 3%;
-          top: -25%;
+          top: -10%;
         }
-        39.99% {
+        40.99% {
           opacity: 1;
         }
-        40%,
+        41%,
         100% {
           left: 10%;
           top: 15%;
@@ -342,20 +342,20 @@
       @include animate-keyframes(drop-3-animation);
       @keyframes drop-3-animation {
         0% {
-          left: 10%;
-          top: -15%;
+          left: -30%;
+          top: -10%;
         }
         20% {
           left: 15%;
-          top: -10%;
+          top: 5%;
         }
-        39.99% {
+        42.99% {
           opacity: 1;
         }
-        40%,
+        43%,
         100% {
-          left: 85%;
-          top: 20%;
+          left: 15%;
+          top: 30%;
           opacity: 0;
         }
       }
@@ -364,20 +364,20 @@
       @include animate-keyframes(drop-4-animation);
       @keyframes drop-4-animation {
         0% {
-          right: 5%;
-          top: -30%;
+          right: -30%;
+          top: -50%;
         }
         20% {
           right: 10%;
-          top: -25%;
+          top: -30%;
         }
-        39.99% {
+        41.99% {
           opacity: 1;
         }
-        40%,
+        42%,
         100% {
-          right: 70%;
-          top: 40%;
+          right: 20%;
+          top: 10%;
           opacity: 0;
         }
       }
@@ -386,17 +386,17 @@
       @include animate-keyframes(drop-5-animation);
       @keyframes drop-5-animation {
         0% {
-          right: 0;
+          right: -30%;
           top: -20%;
         }
         20% {
           right: 5%;
-          top: -15%;
+          top: -10%;
         }
-        39.99% {
+        42.99% {
           opacity: 1;
         }
-        40%,
+        43%,
         100% {
           right: 10%;
           top: 30%;
