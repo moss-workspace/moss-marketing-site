@@ -29,10 +29,10 @@ header:
   - icon: "/uploads/product_final_2205032b.png"
     text: Workspace
     url: "/"
-  - icon: "/uploads/add_note.png"
+  - icon: "/uploads/note_final_210419.png"
     text: Thesis
     url: "/thesis"
-  - icon: "/uploads/company_final_220503-1.png"
+  - icon: "/uploads/company_final_220503-2.png"
     text: Company
     url: "/company"
   buttons:
