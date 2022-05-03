@@ -276,6 +276,11 @@
   align-self: flex-end;
 }
 
+.drop-demo {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .illustration__drop {
   &__wrapper {
     width: 100vw;
