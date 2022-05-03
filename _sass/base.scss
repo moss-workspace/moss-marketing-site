@@ -256,7 +256,7 @@ section {
 ////////////////////////////////////////////////////////////////////////////////
 #cookieprompt {
   display: none;
-  padding-right: 3px;
+  height: 36px;
   bottom: 16px;
   &:hover,
   &:active {
@@ -433,11 +433,13 @@ input {
 // Default content
 ////////////////////////////////////////////////////////////////////////////////
 .default__content {
-  margin: 100px auto 0 auto;
+  margin: 100px auto 0 auto !important;
   min-height: 90vh;
   width: 80vw;
   max-width: 400px;
-
+  @include break-below("md") {
+    margin-top: 50px !important;
+  }
   h1 {
     margin-bottom: 26px;
   }
@@ -445,21 +447,18 @@ input {
   h3 {
     line-height: 20px;
   }
-
   a {
     color: inherit;
     &:hover {
       color: $black;
     }
   }
-
   .divider {
     background-color: $light-gray-2;
     height: 1px;
     border: none;
     margin-top: 62px;
   }
-
   .privacy__toggle__wrapper {
     width: 100%;
     margin-top: 12px;
@@ -617,6 +616,7 @@ button {
 
 // Button classes
 .button {
+  @extend button;
   &--white {
     @include button--white;
   }

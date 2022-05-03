@@ -1,15 +1,11 @@
-<div
-  id="cookieprompt"
-  class="toast button button--medium button--white button--borderless"
->
-  <p>
-    {{ site.privacy.cookie_prompt }} You can manage your preferences
-    <a href="{{ '/privacy' | relative_url }}">here</a>.
-  </p>
-  <button
-    class="button button--small button--gray-1"
-    onClick="handleCookieAccept()"
-  >
-    Accept
-  </button>
+<div class="toast button button--medium button--white button--borderless" id="cookieprompt">
+    <p>{{ site.privacy.cookie_prompt }}</p>
+    <button class="button--small button--gray-1" onclick="handleCookieAccept()">
+        Accept
+    </button>
+    <a href="{{ '/privacy' | relative_url }}">
+        <button class="button--small button--white" onclick="handleCookieAccept()">
+            Manage
+        </button>
+    </a>
 </div>

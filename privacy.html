@@ -3,33 +3,33 @@ permalink: /privacy
 layout: default
 ---
 
-<h1>
-  Privacy policy
-</h1>
-<h3>
-  {{ site.privacy.privacy_policy | newline_to_br }}
-</h3>
+<h2>
+    Privacy policy
+</h2>
+<h6>
+    {{ site.privacy.privacy_policy | newline_to_br }}
+</h6>
 
-<hr class="divider" />
+<hr class="divider"/>
 
 <div class="privacy__toggle__wrapper">
-  <h3 class="privacy__toggle__icon">
-    🍪
-  </h3>
-  <h3 class="privacy__toggle__text">
-    Allow cookies for anonymous analytics
-  </h3>
+    <h6 class="privacy__toggle__icon">
+        🍪
+    </h6>
+    <h6 class="privacy__toggle__text">
+        Allow cookies for anonymous analytics
+    </h6>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      var consent = getCookie("analytics-consent");
-      if (consent == "true") {
-        $("#privacy__toggle").addClass("on");
-      }
-    });
-  </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var consent = getCookie("analytics-consent");
+            if (consent === "true") {
+                $("#privacy__toggle").addClass("on");
+            }
+        });
+    </script>
 
-  <div id="privacy__toggle" class="toggle" onclick="toggleCookieConsent();">
-    <div class="toggle--circle"></div>
-  </div>
+    <div class="toggle" id="privacy__toggle" onclick="toggleCookieConsent();">
+        <div class="toggle--circle"></div>
+    </div>
 </div>

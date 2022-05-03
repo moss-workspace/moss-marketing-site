@@ -1,21 +1,21 @@
 // Document Ready
 ////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function () {
-  // TODO: uncomment for production!
-  // var consent = getCookie("analytics-consent");
-  // if (consent == "" || consent == null) {
-  //   // prettier-ignore
-  //   gtag("consent", "default", {
-  //     'ad_storage': 'denied',
-  //     'analytics_storage': 'denied'
-  //   });
-  //   showCookiePrompt();
-  // }
-  // $(".toast").click(function () {
-  //   if ($(this).attr("id") !== "cookieprompt") {
-  //     $(this).hide();
-  //   }
-  // });
+  var consent = getCookie("analytics-consent");
+  if (consent == "" || consent == null) {
+    // TODO: uncomment for production!
+    // prettier-ignore
+    // gtag("consent", "default", {
+    //   'ad_storage': 'denied',
+    //   'analytics_storage': 'denied'
+    // });
+    showCookiePrompt();
+  }
+  $(".toast").click(function () {
+    if ($(this).attr("id") !== "cookieprompt") {
+      $(this).hide();
+    }
+  });
   toggleHeader();
   togglePreviewInfo();
   chooseFooterImage();
@@ -218,7 +218,7 @@ function handleCookieAccept() {
 
 function toggleCookieConsent() {
   var consent = getCookie("analytics-consent");
-  if (consent == "true") {
+  if (consent === "true") {
     removeCookieConsent();
     $("#privacy__toggle").removeClass("on");
   } else {
@@ -232,18 +232,20 @@ function toggleCookieConsent() {
 
 function giveCookieConsent() {
   setCookie("analytics-consent", true, 365);
+  // TODO: uncomment for production!
   // prettier-ignore
-  gtag("consent", "update", {
-    'analytics_storage': 'granted'
-  });
+  // gtag("consent", "update", {
+  //   'analytics_storage': 'granted'
+  // });
 }
 
 function removeCookieConsent() {
   setCookie("analytics-consent", false, 365);
+  // TODO: uncomment for production!
   // prettier-ignore
-  gtag("consent", "update", {
-    'analytics_storage': 'denied'
-  });
+  // gtag("consent", "update", {
+  //   'analytics_storage': 'denied'
+  // });
 }
 
 // Cookie prompt
