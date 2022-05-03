@@ -609,7 +609,7 @@
     }
     .preview-grid {
       margin-left: -25%;
-      margin-top: 0;
+      margin-top: 5vh;
       position: relative;
       width: 25vw;
       @include break-below("lg") {

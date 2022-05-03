@@ -2,14 +2,33 @@
     {% assign image = preview.thumbnail %}
     {% assign name = preview.name %}
     {% assign info = preview.show_info %}
+    {% assign type = preview.icon %}
 {% else %}
     {% assign info = true %}
+    {% assign type = 'Image' %}
 {% endif %}
+
+{% case type %}
+    {% when 'Image' %}
+        {% assign icon = '/assets/icons/image-darkGray0.svg' %}
+    {% when 'Video' %}
+        {% assign icon = '/assets/icons/video-darkGray0.svg' %}
+    {% when 'PSD' %}
+        {% assign icon = '/assets/icons/psd.svg' %}
+    {% when 'AI' %}
+        {% assign icon = '/assets/icons/ai.svg' %}
+    {% when 'Document' %}
+        {% assign icon = '/assets/icons/file-darkGray0.svg' %}
+    {% when 'Web' %}
+        {% assign icon = '/assets/icons/web-darkGray0.svg' %}
+    {% else %}
+        {% assign icon = '/assets/icons/image-darkGray0.svg' %}
+{% endcase %}
 
 <img class="preview__image" data-src="{{ image | relative_url }}" alt="Moss preview" loading="lazy"/>
 {% if info %}
     <div class="preview__info">
-        <img class="preview__icon preview__icon--image" data-src="{{ '/assets/icons/file-image_darkGray2.svg' | relative_url }}" alt="image icon" loading="lazy"/>
+        <img class="preview__icon preview__icon--image" data-src="{{ icon | relative_url }}" alt="image icon" loading="lazy"/>
         <p class="preview__name">
             {% if name.size > 0 %}
                 {{ name }}
