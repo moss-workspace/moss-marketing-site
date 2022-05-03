@@ -181,7 +181,7 @@ sections:
     note: ''
     previews: []
   collection:
-    note: Selects
+    note: Sketches
     previews:
     - thumbnail: "/uploads/6779837555_40a7ba6b99_z-2.png"
       show_info: true
