@@ -105,6 +105,8 @@ sections:
   brainstorm:
     note: ''
     previews: []
+    first_note: ''
+    second_note: ''
   collection:
     note: ''
     previews: []
@@ -180,6 +182,8 @@ sections:
   brainstorm:
     note: ''
     previews: []
+    first_note: ''
+    second_note: ''
   collection:
     note: Sketches
     previews:
@@ -284,6 +288,8 @@ sections:
       custom_info: false
       name: ''
       icon: []
+    first_note: I’m thinking it’s like
+    second_note: with a little bit of…
   collection:
     note: Note here
     previews:
