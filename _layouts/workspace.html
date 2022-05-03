@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                         {% elsif section.middle_illustration == "Collection" %}
-                            <div class="illustration__wrapper middle__illustration animation-trigger col-6 col-md-12 {% if section.upper_illustration != 'None' %}middle__illustration__with-upper{% endif %}">
+                            <div class="illustration__wrapper middle__illustration animation-trigger col-6 col-md-12 {% if section.middle_illustration == 'Collection' and section.collection.pull_out_preview == false %}middle__illustration__no-sticky{% endif %}">
                                 <div class="illustration__collection {% if section.collection.pull_out_preview %}illustration__collection__pullout{% endif %}">
                                     {% assign text = section.collection.note %}
                                     {% include note.html %}

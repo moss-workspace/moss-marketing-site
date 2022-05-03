@@ -256,9 +256,8 @@
     @include break-below("md") {
       grid-row: span 1;
     }
-    &__with-upper {
+    &__no-sticky {
       height: 130vh;
-      grid-row: 4 / span 1;
       @include break-below("md") {
         height: 100vh;
         grid-row: 1 / span 1;
