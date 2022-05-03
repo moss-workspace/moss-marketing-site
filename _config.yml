@@ -20,7 +20,7 @@ exclude:
 - vendor/ruby/
 tagline: Where ideas grow
 header:
-  logo: "/uploads/moss_logo.png"
+  logo: "/uploads/moss_wordmark_site_rgb.png"
   logo_light: "/uploads/moss-wordmark-small-white_rgb.png"
   show_jobs_button: false
   jobs_button_text: "\U0001F469‍\U0001F4BB Join the team"
