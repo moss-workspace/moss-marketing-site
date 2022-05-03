@@ -586,6 +586,11 @@
   position: absolute;
   top: 5vh;
   width: 100%;
+  .note {
+    .contextbar {
+      display: none;
+    }
+  }
   @include break-below("md") {
     top: 15vh;
   }
@@ -602,6 +607,9 @@
     position: -webkit-sticky;
     .note {
       margin-left: -5%;
+      .contextbar {
+        display: block;
+      }
       @include break-below("md") {
         margin-left: 0;
         margin-top: 5vh;

@@ -47,7 +47,7 @@
 
                         <div class="textblock__center">
                             <h2>{{ section.header }}</h2>
-                            <h4>{{ section.subhead }}</h4>
+                            <h4>{{ section.subhead | newline_to_br }}</h4>
                         </div>
 
                         <div class="large-demo col-10-2 col-md-12  {% if section.upper_illustration == 'Drop' %}animation-trigger video-trigger{% endif %}">
