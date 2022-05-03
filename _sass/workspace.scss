@@ -608,35 +608,23 @@
       }
     }
     .preview-grid {
-      margin-left: -25%;
+      margin-left: -20%;
       margin-top: 5vh;
       position: relative;
-      width: 25vw;
+      width: 30vw;
       @include break-below("lg") {
         width: 35vw;
       }
       @include break-below("md") {
-        margin-left: -20%;
-        margin-top: 5vw;
-        width: 60vw;
-      }
-      @include animate-keyframes(collection-grid-animation);
-      @keyframes collection-grid-animation {
-        0%,
-        10% {
-          margin-left: -45%;
-        }
-        30%,
-        100% {
-          margin-left: -25%;
-        }
+        width: 70vw;
+        margin-left: -30%;
       }
       .preview {
         @include animate-keyframes(collection-preview-animation);
         @keyframes collection-preview-animation {
           0%,
           10% {
-            padding-top: 50%;
+            padding-top: 60%;
           }
           30%,
           100% {
@@ -647,11 +635,37 @@
     }
     &-preview {
       position: absolute;
-      width: 30%;
+      width: 20%;
       right: 0;
-      top: 30vh;
+      top: 40%;
+      @include break-below("md") {
+        width: 30%;
+        top: 60%;
+      }
       .contextbar {
         float: right;
+        @include animate-keyframes(collection-contextbar-animation);
+        @keyframes collection-contextbar-animation {
+          0%,
+          46.5% {
+            opacity: 0;
+          }
+          47% {
+            opacity: 1;
+          }
+        }
+        @include break-below("md") {
+          @include animate-keyframes(collection-contextbar-small-animation);
+          @keyframes collection-contextbar-small-animation {
+            0%,
+            40.5% {
+              opacity: 0;
+            }
+            41% {
+              opacity: 1;
+            }
+          }
+        }
       }
       .contextbar__hovered {
         position: absolute;
@@ -691,6 +705,7 @@
                 top: 200px;
               }
               45% {
+                right: 0;
                 top: 40px;
               }
               49.99% {

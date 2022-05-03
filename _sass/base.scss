@@ -304,6 +304,9 @@ section {
   column-count: 3;
   column-gap: 14px;
   overflow: visible;
+  @include break-below("md") {
+    column-gap: 6px;
+  }
   .preview {
     position: relative;
     margin-bottom: 8px;

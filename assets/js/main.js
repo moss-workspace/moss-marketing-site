@@ -134,6 +134,8 @@ function togglePreviewInfo() {
     var element = $(this);
     if (element.width() < 125) {
       element.find('.preview__info').hide();
+    } else {
+      element.find('.preview__info').show();
     }
   });
 }
