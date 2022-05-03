@@ -449,6 +449,7 @@ sections:
     custom_info: true
     name: KLIM.mp4
     icon: Video
+  cursor: "/uploads/quote-cursor.png"
 - template: waitlist-cta
   header: Try Moss early
   subhead: Join the waitlist for beta access.
