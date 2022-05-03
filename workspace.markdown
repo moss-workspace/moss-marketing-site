@@ -7,7 +7,7 @@ landing:
     ideas.
   show_video_link: true
   video_text: Watch the video
-  video_url: ''
+  video_url: https://vimeo.com/472490067/524a565895
   left_previews:
     previews:
     - thumbnail: "/uploads/frame-870.png"
@@ -82,6 +82,7 @@ landing:
       custom_info: true
       name: " "
       icon: PSD
+  video_icon: "/uploads/video_emoji.png"
 sections:
 - template: workspace-content
   header: Drop it in.
