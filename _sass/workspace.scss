@@ -734,7 +734,7 @@
             }
             50%,
             100% {
-              right: 100px;
+              right: 60px;
               top: 15px;
               opacity: 0;
             }
@@ -756,7 +756,7 @@
               }
               50%,
               100% {
-                right: 100px;
+                right: 60px;
                 top: 15px;
                 opacity: 0;
               }
@@ -764,7 +764,7 @@
           }
         }
         &__pointer {
-          right: 100px;
+          right: 60px;
           top: 15px;
           @include animate-keyframes(collection-hide-animation);
         }
