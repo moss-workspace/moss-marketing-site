@@ -382,6 +382,7 @@ input {
   float: right;
   width: 20px;
   border-radius: 100px;
+  height: 10px;
   background-color: $light-gray-4;
   padding: 1px;
   @include transition(background-color, 0.15s, ease);
@@ -438,6 +439,7 @@ input {
   width: 80vw;
   max-width: 400px;
   @include break-below("md") {
+    width: 90vw;
     margin-top: 50px !important;
   }
   h1 {
@@ -462,12 +464,14 @@ input {
   .privacy__toggle__wrapper {
     width: 100%;
     margin-top: 12px;
-    .privacy__toggle__icon,
+    display: flex;
+    align-items: center;
+    @include gap(8px);
     .privacy__toggle__text {
-      display: inline-block;
-      margin-right: 8px;
+      flex: 1;
     }
     .toggle {
+      flex-shrink: 0;
       float: right;
     }
   }
