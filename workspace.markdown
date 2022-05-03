@@ -234,8 +234,8 @@ sections:
       name: ''
       icon: []
     pull_out_preview: true
-    context_bar: "/uploads/contextbar-open.png"
-    context_bar_hovered: "/uploads/contextbar-open-hover.png"
+    context_bar: "/uploads/contextbar-open-2.png"
+    context_bar_hovered: "/uploads/contextbar-open-hover-2-png.png"
   reference:
     left_note: ''
     previews: []
