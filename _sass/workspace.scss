@@ -272,13 +272,12 @@
   align-self: auto;
 }
 
-.drop-demo + .textblock__right {
-  align-self: flex-end;
+#gray-start {
+  overflow-x: hidden
 }
 
-.drop-demo {
-  max-width: 100%;
-  overflow-x: hidden;
+.drop-demo + .textblock__right {
+  align-self: flex-end;
 }
 
 .illustration__drop {
