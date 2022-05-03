@@ -21,9 +21,12 @@
             <div class="signup-form col-4-5 col-md-12" style="text-align: center;">
                 {% include signup_form.html %}
                 {% if page.landing.show_video_link %}
-                    <button class="workspace__video-button button--white button--medium button--borderless">
-                        {{ page.landing.video_text }}
-                    </button>
+                    <a href="{{ page.landing.video_url }}" target="_blank">
+                        <button class="workspace__video-button button--white button--medium">
+                            <img src="{{ page.landing.video_icon | relative_url }}"/>
+                            <span>{{ page.landing.video_text }}</span>
+                        </button>
+                    </a>
                 {% endif %}
             </div>
         </section>

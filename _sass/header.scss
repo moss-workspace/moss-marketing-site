@@ -6,7 +6,7 @@ header {
   position: -webkit-sticky;
   top: -98px;
   z-index: 900;
-  @include transition(all 0.2s ease);
+  @include transition(all, 0.2s, ease);
   background-color: transparent;
   display: block;
   height: 46px;
