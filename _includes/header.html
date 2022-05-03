@@ -14,7 +14,9 @@
             <a href="{{ item.url }}">
                 <button class="button--large button--white button--borderless">
                     <img class="header__nav-icon" src="{{ item.icon | relative_url }}"/>
-                    <h3>{{ item.text }}</h3>
+                    {% assign text = item.text | downcase %}
+                    {% assign layout = page.layout | downcase %}
+                    <h3 class="header__nav-text{% if text == layout %} active{% endif %}">{{ item.text }}</h3>
                 </button>
             </a>
         {% endfor %}
@@ -44,7 +46,9 @@
     {% for item in site.header.navigation %}
         <a class="fullscreen-nav__item" href="{{ item.url }}">
             <img class="fullscreen-nav__item__icon" src="{{ item.icon | relative_url }}"/>
-            <h3>{{ item.text }}</h3>
+            {% assign text = item.text | downcase %}
+            {% assign layout = page.layout | downcase %}
+            <h3 class="header__nav-text{% if text == layout %} active{% endif %}">{{ item.text }}</h3>
         </a>
     {% endfor %}
 </div>

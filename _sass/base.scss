@@ -28,6 +28,12 @@ body {
     .fullscreen-nav {
       background-color: $black;
     }
+    .header__nav-text {
+      color: $dark-gray-0;
+      &.active {
+        color: $white;
+      }
+    }
   }
   &.gray {
     background-color: $light-gray-1;

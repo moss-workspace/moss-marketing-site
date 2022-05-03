@@ -110,6 +110,13 @@ header {
   }
 }
 
+.header__nav-text {
+  color: $dark-gray-0;
+  &.active {
+    color: $dark-gray-3;
+  }
+}
+
 .fullscreen-nav {
   position: fixed;
   text-align: left;
