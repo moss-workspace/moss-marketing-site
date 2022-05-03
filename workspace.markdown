@@ -168,7 +168,7 @@ sections:
   header: Lay it out.
   subhead: "Never dig for a file again.\n\nOrganize your work visually, so you can
     spend less time chasing assets and more time following inspiration. "
-  video: "/uploads/new-workspace-2.png"
+  video: "/uploads/sort_it_out_03_compress.mp4"
   middle_illustration: Collection
   text_blocks:
   - text_block: Ditch traditional file management and tackle creative problems in
