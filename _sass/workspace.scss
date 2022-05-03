@@ -975,13 +975,15 @@
     border-radius: 2px;
     @include fade;
   }
-  p {
+  h6 {
     opacity: 0;
     margin: 46px auto 0 auto;
     width: 80%;
     max-width: 700px;
     @include fade;
     @include break-below("md") {
+      font-size: rem(13px);
+      line-height: rem(14px);
       width: 100%;
       margin: 26px auto 0 auto;
     }
@@ -992,7 +994,7 @@
   img {
     @include shadow-menu;
   }
-  p {
+  h6 {
     opacity: 1;
   }
 }
