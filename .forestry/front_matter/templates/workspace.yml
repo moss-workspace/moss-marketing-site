@@ -62,6 +62,15 @@ fields:
     type: boolean
     label: Show video link
     description: Toggle whether or not to show the video link
+  - name: video_icon
+    type: file
+    config:
+      maxSize: 64
+    label: Video icon
+    description: Choose an icon or emoji for the video
+    showOnly:
+      field: show_video_link
+      value: true
   - name: video_text
     type: text
     config:
