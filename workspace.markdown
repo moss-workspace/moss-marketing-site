@@ -97,7 +97,7 @@ sections:
       Every asset you add to your workspace is shared instantly and stays tethered to its source, so your latest is at your fingertips and stays up to date for your entire team.
 
       **RIP convert to JPG.**
-  show_button: true
+  show_button: false
   button_text: Learn more about tethering
   upper_illustration: Drop
   video: "/uploads/drop_it_in_01_compress.mp4"
