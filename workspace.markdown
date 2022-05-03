@@ -135,6 +135,7 @@ sections:
       custom_info: false
       name: ''
       icon: []
+    tooltip: Reveal source
   drop:
     previews:
     - thumbnail: "/uploads/psd.png"
@@ -239,6 +240,7 @@ sections:
     previews: []
   stack:
     previews: []
+    tooltip: ''
   drop:
     previews: []
     icons: []
@@ -356,6 +358,7 @@ sections:
       icon: []
   stack:
     previews: []
+    tooltip: ''
   drop:
     previews: []
     icons: []
