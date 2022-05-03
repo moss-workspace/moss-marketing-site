@@ -68,6 +68,9 @@ header {
     .fullscreen-nav__button {
       display: none;
     }
+    .fullscreen-nav__icon__light {
+      display: none;
+    }
     @include break-below("md") {
       .header__button {
         display: none;
@@ -94,16 +97,11 @@ header {
     button {
       @include button--black;
     }
-  }
-  &.white {
-    .header__logo--dark {
-      display: block;
-    }
-    .header__logo--light {
+    .fullscreen-nav__icon__dark {
       display: none;
     }
-    button {
-      @include button--white;
+    .fullscreen-nav__icon__light {
+      display: block;
     }
   }
 }
@@ -113,6 +111,11 @@ header {
   &.active {
     color: $dark-gray-3;
   }
+}
+
+.fullscreen-nav__icon__light,
+.fullscreen-nav__icon__dark {
+  margin: 0;
 }
 
 .fullscreen-nav {
