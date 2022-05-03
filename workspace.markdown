@@ -291,7 +291,7 @@ sections:
     first_note: I’m thinking it’s like
     second_note: with a little bit of…
   collection:
-    note: Note here
+    note: let’s push it further
     previews:
     - thumbnail: "/uploads/gpn-2000-000919-3.png"
       show_info: true
