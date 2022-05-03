@@ -13,7 +13,13 @@ $(document).ready( function() {
       focusOnSelect: true,
       responsive: [
         {
-          breakpoint: 1400,
+          breakpoint: 2200,
+          settings: {
+            centerPadding: '400px',
+          }
+        },
+        {
+          breakpoint: 1800,
           settings: {
             centerPadding: '300px',
           }
