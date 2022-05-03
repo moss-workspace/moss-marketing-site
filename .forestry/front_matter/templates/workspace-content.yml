@@ -22,18 +22,24 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: note
+  - name: first_note
     type: text
     config:
       required: false
-    label: Note
-    description: Enter text for the note
+    label: First note
+    description: Enter text for the first note
   - name: previews
     type: include
     config: {}
     template: previews
     label: Previews
     description: Choose 4 previews for the illustration.
+  - name: second_note
+    type: text
+    config:
+      required: false
+    label: Second note
+    description: Enter text for the second note
   showOnly:
     field: upper_illustration
     value: Brainstorm
