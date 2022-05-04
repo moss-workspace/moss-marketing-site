@@ -258,8 +258,8 @@ sections:
   text_blocks:
   - text_block: Moss is collaborative by default and tool agnostic, allowing different
       artists, disciplines and creative inputs to iterate frictionlessly in one digital
-      space. Effortless access to your team and assets enables more efficient and
-      effective work.
+      space. Centralized access to your team and assets cultivates more efficient
+      and effective work.
   - text_block: With realtime updates, your workspace becomes a living, breathing
       ecosystem for team-wide projects and explorations. Seeing collective progress
       helps build creative momentum for everyone.
