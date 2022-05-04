@@ -188,7 +188,7 @@ sections:
   collection:
     note: Sketches
     previews:
-    - thumbnail: "/uploads/6779837555_40a7ba6b99_z-2.jpg"
+    - thumbnail: "/uploads/6779837555_40a7ba6b99_z-2-1.jpg"
       show_info: true
       custom_info: true
       name: Wing_concept_01bbb.psd
