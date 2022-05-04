@@ -165,7 +165,7 @@ sections:
     - "/uploads/are-na.png"
 - template: workspace-content
   upper_illustration: None
-  header: Lay it out.
+  header: Sort it out.
   subhead: "Never dig for a file again.\n\nOrganize your work visually, so you can
     spend less time chasing assets and more time following inspiration. "
   video: "/uploads/sort_it_out_05_recording_compress_final.mp4"
