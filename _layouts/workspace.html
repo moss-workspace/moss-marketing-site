@@ -171,19 +171,17 @@
                         {% endif %}
                     </section>
                 {% when 'demo-carousel' %}
-                    <section id="gray-end">
-                        <div class="grid">
-                            <h2 class="textblock__center">{{ section.header }}</h2>
-                            <div class="col-12 workspace__carousel__buttons">
-                                {% for demo in section.demos %}
-                                    <button class="{% if forloop.index == 1%}active{% endif %} workspace__carousel__button button--white button--large" onclick="goToSlide({{forloop.index0}}, this)">
-                                        <img src="{{ demo.icon | relative_url }}"/>
-                                        <span>{{ demo.name }}</span>
-                                    </button>
-                                {% endfor %}
-                            </div>
+                    <section class="carousel__section grid" id="gray-end">
+                        <h2 class="textblock__center">{{ section.header }}</h2>
+                        <div class="col-12 workspace__carousel__buttons">
+                            {% for demo in section.demos %}
+                                <button class="{% if forloop.index == 1%}active{% endif %} workspace__carousel__button button--white button--large" onclick="goToSlide({{forloop.index0}}, this)">
+                                    <img src="{{ demo.icon | relative_url }}"/>
+                                    <span>{{ demo.name }}</span>
+                                </button>
+                            {% endfor %}
                         </div>
-                        <div class="slick workspace__carousel">
+                        <div class="col-8-3 col-sm-12 slick workspace__carousel">
                             {% for demo in section.demos %}
                                 <div class="workspace__carousel__item">
                                     <img data-src="{{ demo.image | relative_url }}" loading="lazy"/>

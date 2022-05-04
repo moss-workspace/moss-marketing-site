@@ -1009,7 +1009,9 @@
 .workspace__carousel__item {
   text-align: center;
   img {
+    margin-top: 12px;
     border-radius: 2px;
+    @include shadow-menu;
     @include fade;
   }
   h6 {
@@ -1027,10 +1029,7 @@
   }
 }
 
-.slick-center {
-  img {
-    @include shadow-menu;
-  }
+.slick-active {
   h6 {
     opacity: 1;
   }
@@ -1038,18 +1037,11 @@
 
 // Manage margins between slides
 $margin: 9px;
-$margin-md: 7px;
 
 .slick-slide {
   margin: 0 $margin;
-  @include break-below("md") {
-    margin: 0 $margin-md;
-  }
 }
 
 .slick-list {
   margin: 0 -$margin;
-  @include break-below("md") {
-    margin: 0 -$margin-md;
-  }
 }

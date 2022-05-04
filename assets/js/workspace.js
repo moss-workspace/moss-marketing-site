@@ -4,33 +4,11 @@ $(document).ready( function() {
       infinite: true,
       slidesToShow: 1,
       arrows: false,
-      centerMode: true,
-      centerPadding: '600px',
       autoplay: true,
       autoplaySpeed: 4000,
       pauseOnFocus: true,
       pauseOnHover: true,
       focusOnSelect: true,
-      responsive: [
-        {
-          breakpoint: 2200,
-          settings: {
-            centerPadding: '400px',
-          }
-        },
-        {
-          breakpoint: 1800,
-          settings: {
-            centerPadding: '300px',
-          }
-        },
-        {
-          breakpoint: 800,
-          settings: {
-            centerPadding: '26px',
-          }
-        },
-      ]
     });
 })
 
