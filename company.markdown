@@ -34,7 +34,7 @@ previews:
   icon: Image
 impact_header: 'How we measure our impact:'
 impact_section:
-- illustration: "/uploads/group-718.png"
+- illustration: "/uploads/personal_impact_final_220502.jpg"
   title: For ourselves
   body: "We believe in providing accessible avenues for people to make great work
     by building an environment that cultivates the creative process, and by extension—the
@@ -42,7 +42,7 @@ impact_section:
   extra_info: false
   image: ''
   small_text: ''
-- illustration: "/uploads/group-718.png"
+- illustration: "/uploads/community_impact_final_220503.jpg"
   title: For our community
   body: We seek to break down cultural barriers by expanding your perspective beyond
     your most immediate circle of reference and collaborators, and to serve as a platform
@@ -50,7 +50,7 @@ impact_section:
   extra_info: false
   image: ''
   small_text: ''
-- illustration: "/uploads/group-718.png"
+- illustration: "/uploads/weblink_final_210419.jpg"
   title: 'For our environment '
   body: We minimize our own effect on the environment and contribute to groups fighting
     the degradation of the environment.
