@@ -71,8 +71,8 @@
                                 {% endif %}
                                 {% assign extension = section.video | slice: -3,3 %}
                                 {% if extension == 'mp4' %}
-                                    <video {% if forloop.first %} preload="auto" {% else %} preload="metadata" {% endif %} playsinline muted {% if section.upper_illustration == "Drop" %} class="video-target" {% else %} autoplay="autoplay" loop {% endif %}>
-                                        <source src="{{ section.video | relative_url }}" type="video/mp4">
+                                    <video playsinline muted {% if forloop.first %} preload="auto" {% else %} preload="metadata" {% endif %} {% if section.upper_illustration == "Drop" %} class="video-target" {% else %} autoplay="autoplay" loop {% endif %}>
+                                        <source src="{{ section.video | relative_url }}#t=0.1" type="video/mp4">
                                     </video>
                                 {% else %}
                                     <img class="demo-image" data-src="{{ section.video | relative_url }}" loading="lazy"/>
