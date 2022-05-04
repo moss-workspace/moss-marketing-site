@@ -154,13 +154,15 @@ function toggleVideoPlay(element, scrollTop) {
 
   var percentage = (windowTop + windowHeight - elementTop) / (windowHeight + elementHeight);
   var video = element.find(".video-target").get(0);
+  var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > video.HAVE_CURRENT_DATA;
+
   if (scrollTop < lastScrollTop) {
    if (percentage < 0.4) {
-      video.pause();
+    if (isPlaying) video.pause();
       video.currentTime = 0;
     } 
   } else {
-    if (percentage >= 0.4 && video.currentTime === 0 ) {
+    if (percentage >= 0.4 && video.currentTime === 0 && !isPlaying) {
       video.play();
     }
   }
