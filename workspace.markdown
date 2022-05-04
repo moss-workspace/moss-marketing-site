@@ -125,14 +125,14 @@ sections:
     previews:
     - thumbnail: "/uploads/group-7128.jpg"
       show_info: true
-      custom_info: false
+      custom_info: true
       name: ''
-      icon: []
+      icon: Web
     - thumbnail: "/uploads/a1c89-0146-1-3.jpg"
       show_info: true
-      custom_info: false
-      name: ''
-      icon: []
+      custom_info: true
+      name: " "
+      icon: Video
     - thumbnail: "/uploads/mnh-usnment00669031_ornithoptera_goliath_m_d-2.jpg"
       show_info: true
       custom_info: false
