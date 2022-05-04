@@ -123,17 +123,17 @@ sections:
     previews: []
   stack:
     previews:
-    - thumbnail: "/uploads/group-718.jpg"
+    - thumbnail: "/uploads/_group-718.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/ac89-0146-1-3.jpg"
+    - thumbnail: "/uploads/_ac89-0146-1-3.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/nmnh-usnment00669031_ornithoptera_goliath_m_d-2.jpg"
+    - thumbnail: "/uploads/_nmnh-usnment00669031_ornithoptera_goliath_m_d-2.jpg"
       show_info: true
       custom_info: false
       name: ''
