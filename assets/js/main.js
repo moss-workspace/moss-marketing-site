@@ -157,7 +157,7 @@ function setParallaxDepth(element) {
 function togglePreviewInfo() {
   $(".preview").each(function () {
     var element = $(this);
-    if (element.width() < 125) {
+    if (element.width() < 100) {
       element.find('.preview__info').hide();
     } else {
       element.find('.preview__info').show();

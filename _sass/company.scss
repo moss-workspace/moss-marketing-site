@@ -52,7 +52,7 @@
       &:nth-of-type(5) {
         width: 75%;
         right: -30%;
-        bottom: 10%;
+        bottom: -10%;
       }
     }
     @include break-below("md") {
