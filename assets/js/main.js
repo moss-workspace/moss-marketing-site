@@ -27,6 +27,27 @@ $(document).ready(function () {
   }, 10);
 });
 
+// Mobile video initializer
+////////////////////////////////////////////////////////////////////////////////
+var videosInitialized = false;
+document.body.addEventListener('touchstart', function() {
+  if (!videosInitialized) {
+    $('video').each( function() {
+      var video = $(this).get(0);
+      var playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.then(_ => {
+          if ($(this).attr('autoplay') != 'autoplay') {
+            video.pause();
+            video.currentTime = 0
+          }
+        })
+        videosInitialized = true;
+      }
+    })
+  }
+})
+
 // Window resize
 ////////////////////////////////////////////////////////////////////////////////
 $( window ).resize(function() {
@@ -154,17 +175,21 @@ function toggleVideoPlay(element, scrollTop) {
 
   var percentage = (windowTop + windowHeight - elementTop) / (windowHeight + elementHeight);
   var video = element.find(".video-target").get(0);
-  var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > video.HAVE_CURRENT_DATA;
 
   if (scrollTop < lastScrollTop) {
-   if (percentage < 0.4) {
-    if (isPlaying) video.pause();
-      video.currentTime = 0;
-    } 
-  } else {
-    if (percentage >= 0.4 && video.currentTime === 0 && !isPlaying) {
-      video.play();
+    if (percentage < 0.4) {
+      var playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.then(_ => {
+          if ($(this).attr('autoplay') != 'autoplay') {
+            video.pause();
+            video.currentTime = 0
+          }
+        })
+      }
     }
+  } else if (percentage >= 0.4 && video.currentTime === 0) {
+    video.play();
   }
 }
 
