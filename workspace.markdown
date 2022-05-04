@@ -294,42 +294,42 @@ sections:
   collection:
     note: let’s push it further
     previews:
-    - thumbnail: "/uploads/gpn-2000-000919-3.png"
+    - thumbnail: "/uploads/gpn-2000-000919-3.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: Image
-    - thumbnail: "/uploads/gpn-2000-000443-3.png"
+    - thumbnail: "/uploads/gpn-2000-000443-3.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: Image
-    - thumbnail: "/uploads/ac89-7046.png"
+    - thumbnail: "/uploads/ac89-7046.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: Image
-    - thumbnail: "/uploads/ac86-7042-2.png"
+    - thumbnail: "/uploads/ac86-7042-2.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: Image
-    - thumbnail: "/uploads/4035686342_a9cc28c2bb-1.png"
+    - thumbnail: "/uploads/4035686342_a9cc28c2bb-1.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: Image
-    - thumbnail: "/uploads/ac89-7001-1.png"
+    - thumbnail: "/uploads/ac89-7001-1.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: Image
-    - thumbnail: "/uploads/1679073202.png"
+    - thumbnail: "/uploads/1679073202-1.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: Image
-    - thumbnail: "/uploads/ac89-7046-1.png"
+    - thumbnail: "/uploads/ac89-7046-1.jpg"
       show_info: true
       custom_info: false
       name: ''
