@@ -27,7 +27,7 @@ previews:
   custom_info: true
   name: " "
   icon: Image
-- thumbnail: "/uploads/weblink_final_210419.png"
+- thumbnail: "/uploads/sprout_large-2.png"
   show_info: false
   custom_info: false
   name: ''
