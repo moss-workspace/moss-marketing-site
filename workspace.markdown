@@ -40,7 +40,7 @@ landing:
       custom_info: false
       name: ''
       icon: Image
-    - thumbnail: "/uploads/balloon_01_alpha.png"
+    - thumbnail: "/uploads/balloon_01_alpha_compress.png"
       show_info: false
       custom_info: false
       name: ''
