@@ -12,8 +12,8 @@ landing:
     previews:
     - thumbnail: "/uploads/frame-870.png"
       show_info: true
-      custom_info: false
-      name: ''
+      custom_info: true
+      name: " "
       icon: Image
     - thumbnail: "/uploads/master-pnp-ppmsca-43500-43572u-3.png"
       show_info: true
@@ -22,8 +22,8 @@ landing:
       icon: AI
     - thumbnail: "/uploads/dandelion_bluesky.jpg"
       show_info: true
-      custom_info: false
-      name: ''
+      custom_info: true
+      name: " "
       icon: Image
     - thumbnail: "/uploads/dandelion00watt_0003-copy-1.png"
       show_info: true
