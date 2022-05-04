@@ -378,35 +378,35 @@ sections:
     description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
       space—Moss’ infinite canvas gives you room to take your idea wherever it wants
       to go. '
-    image: "/uploads/preview-1.png"
+    image: "/uploads/research-and-discovery.jpg"
   - name: Creative exploration
     video: ''
     description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
       space—Moss’ infinite canvas gives you room to take your idea wherever it wants
       to go. '
     icon: "/uploads/globe-1.png"
-    image: "/uploads/preview-1.png"
+    image: "/uploads/creative-exploration.jpg"
   - icon: "/uploads/globe-2.png"
     name: Sharing WIP
     video: ''
     description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
       space—Moss’ infinite canvas gives you room to take your idea wherever it wants
       to go. '
-    image: "/uploads/preview-1.png"
+    image: "/uploads/sharing-wip.jpg"
   - icon: "/uploads/globe-3.png"
     name: Check-ins and feedback
     video: ''
     description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
       space—Moss’ infinite canvas gives you room to take your idea wherever it wants
       to go. '
-    image: "/uploads/preview-1.png"
+    image: "/uploads/check-ins-and-feedback.jpg"
   - icon: "/uploads/globe-4.png"
     name: Getting up to speed
     video: ''
     description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
       space—Moss’ infinite canvas gives you room to take your idea wherever it wants
       to go. '
-    image: "/uploads/preview-1.png"
+    image: "/uploads/getting-up-to-speed.jpg"
 - template: testimonial
   quote: Moss is completely transforming the way we collaborate. Once you use it,
     you'll wonder why it doesn't already exist.
