@@ -269,12 +269,12 @@ sections:
   brainstorm:
     note: I’m thinking it’s like
     previews:
-    - thumbnail: "/uploads/nmnh-usnment00669031_ornithoptera_goliath_m_d-5.png"
+    - thumbnail: "/uploads/nmnh-usnment00669031_ornithoptera_goliath_m_d-5.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/nmnh-usnment00669031_ornithoptera_goliath_m_d-4.png"
+    - thumbnail: "/uploads/nmnh-usnment00669031_ornithoptera_goliath_m_d-4.jpg"
       show_info: true
       custom_info: false
       name: ''
@@ -284,7 +284,7 @@ sections:
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/birdflight00unse_0100-2.png"
+    - thumbnail: "/uploads/birdflight00unse_0100-2.jpg"
       show_info: true
       custom_info: false
       name: ''
