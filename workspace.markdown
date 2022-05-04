@@ -72,12 +72,12 @@ landing:
       custom_info: true
       name: " "
       icon: Image
-    - thumbnail: "/uploads/image-13.png"
+    - thumbnail: "/uploads/image-13.jpg"
       show_info: false
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/screen-shot-2022-04-26-at-4-18-2.png"
+    - thumbnail: "/uploads/screen-shot-2022-04-26-at-4-18-2.jpg"
       show_info: true
       custom_info: true
       name: " "
