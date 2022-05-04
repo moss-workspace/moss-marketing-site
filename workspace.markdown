@@ -126,7 +126,7 @@ sections:
     - thumbnail: "/uploads/group-7128.jpg"
       show_info: true
       custom_info: true
-      name: ''
+      name: " "
       icon: Web
     - thumbnail: "/uploads/a1c89-0146-1-3.jpg"
       show_info: true
