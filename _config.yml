@@ -56,8 +56,8 @@ footer:
       open_in_new_tab: false
     - icon: "/uploads/team.png"
       text: Careers
-      url: ''
-      open_in_new_tab: false
+      url: https://www.notion.so/m0ss/Careers-at-Moss-2d78ef3ea6754f038cc118dd242f4ad4
+      open_in_new_tab: true
     - icon: "/uploads/mail.png"
       text: Email us
       url: mailto:team@mossworkspace.com
