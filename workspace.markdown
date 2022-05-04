@@ -57,7 +57,7 @@ landing:
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/gpn-2000-001422.png"
+    - thumbnail: "/uploads/gpn-2000-001422.jpg"
       show_info: false
       custom_info: false
       name: ''
