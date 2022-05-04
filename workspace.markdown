@@ -414,37 +414,37 @@ sections:
   name: Mitch Paone
   title: Partner & Creative Director, DIA
   previews:
-  - thumbnail: "/uploads/12361866314_3234f0784b_b-2.png"
+  - thumbnail: "/uploads/12361866314_3234f0784b_b-2.jpg"
     show_info: true
     custom_info: true
     name: motion_ref
     icon: Image
-  - thumbnail: "/uploads/main-image-3.png"
+  - thumbnail: "/uploads/main-image-3.jpg"
     show_info: true
     custom_info: true
     name: " "
     icon: Image
-  - thumbnail: "/uploads/5c065fbe7fa44c0259000570-2.png"
+  - thumbnail: "/uploads/5c065fbe7fa44c0259000570-2.jpg"
     show_info: true
     custom_info: true
     name: SQSP_OOH.psd
     icon: PSD
-  - thumbnail: "/uploads/chaumont_wildposting01_2021-2.png"
+  - thumbnail: "/uploads/chaumont_wildposting01_2021-2.jpg"
     show_info: true
     custom_info: true
     name: Chaumont_WildPosting_01_2021.psd
     icon: PSD
-  - thumbnail: "/uploads/image-102.png"
+  - thumbnail: "/uploads/image-102.jpg"
     show_info: true
     custom_info: true
     name: GAN_02_render.mp4
     icon: Video
-  - thumbnail: "/uploads/image-103.png"
+  - thumbnail: "/uploads/image-105.jpg"
     show_info: true
     custom_info: true
     name: " "
     icon: Image
-  - thumbnail: "/uploads/screen-shot-2022-04-04-at-12-14-4.png"
+  - thumbnail: "/uploads/screen-shot-2022-04-04-at-12-14-4.jpg"
     show_info: true
     custom_info: true
     name: KLIM.mp4
