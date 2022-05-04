@@ -20,7 +20,7 @@ landing:
       custom_info: true
       name: " "
       icon: AI
-    - thumbnail: "/uploads/2-89958.png"
+    - thumbnail: "/uploads/dandelion_bluesky.jpg"
       show_info: true
       custom_info: false
       name: ''
@@ -30,7 +30,7 @@ landing:
       custom_info: true
       name: ''
       icon: PSD
-    - thumbnail: "/uploads/frame-869.png"
+    - thumbnail: "/uploads/sketch_alpha.png"
       show_info: false
       custom_info: false
       name: ''
@@ -40,7 +40,7 @@ landing:
       custom_info: false
       name: ''
       icon: Image
-    - thumbnail: "/uploads/screen-shot-2022-04-26-at-5-00-1.png"
+    - thumbnail: "/uploads/balloon_01_alpha.png"
       show_info: false
       custom_info: false
       name: ''
