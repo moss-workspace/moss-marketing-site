@@ -50,39 +50,39 @@ footer:
   link_sections:
   - name: About
     links:
-    - icon: "/uploads/globe-4.png"
+    - icon: "/uploads/default_logo.png"
       text: Company
-      url: https://mossworkspace.com/company/
+      url: "/company"
       open_in_new_tab: false
-    - icon: "/uploads/globe-4.png"
+    - icon: "/uploads/team.png"
       text: Careers
       url: ''
       open_in_new_tab: false
-    - icon: ''
+    - icon: "/uploads/mail.png"
       text: Email us
       url: mailto:team@mossworkspace.com
       open_in_new_tab: false
-    - icon: ''
+    - icon: "/uploads/document.png"
       text: Privacy policy
       url: "/privacy"
       open_in_new_tab: false
   - name: Resources
     links:
-    - icon: ''
+    - icon: "/uploads/note-1.png"
       text: Thesis
       url: "/thesis"
       open_in_new_tab: false
-    - icon: ''
+    - icon: "/uploads/video.png"
       text: Watch the video
       url: https://vimeo.com/472490067/524a565895
       open_in_new_tab: true
   - name: Social
     links:
-    - icon: ''
+    - icon: "/uploads/twitter.png"
       text: Twitter
       url: https://twitter.com/mossworkspace
       open_in_new_tab: true
-    - icon: ''
+    - icon: "/uploads/instagram-2.png"
       text: Instagram
       url: https://www.instagram.com/mossworkspace/
       open_in_new_tab: true
