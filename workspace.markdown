@@ -188,47 +188,47 @@ sections:
   collection:
     note: Sketches
     previews:
-    - thumbnail: "/uploads/6779837555_40a7ba6b99_z-2.png"
+    - thumbnail: "/uploads/6779837555_40a7ba6b99_z-2.jpg"
       show_info: true
       custom_info: true
       name: Wing_concept_01bbb.psd
       icon: PSD
-    - thumbnail: "/uploads/1983_00188.png"
+    - thumbnail: "/uploads/1983_00188.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/1952_29926-2.png"
+    - thumbnail: "/uploads/1952_29926-2.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/nmnh-eo_401020_postman_heliconius_melpomene_aglaope_001-2.png"
+    - thumbnail: "/uploads/nmnh-eo_401020_postman_heliconius_melpomene_aglaope_001-2.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/dp274286-2.png"
+    - thumbnail: "/uploads/dp274286-2.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/16434225968_a1b7ba6100_h2-2.png"
+    - thumbnail: "/uploads/16434225968_a1b7ba6100_h2-2.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/unnamed-2.png"
+    - thumbnail: "/uploads/unnamed-2.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/28239819060_981d1049c7_3k-2.png"
+    - thumbnail: "/uploads/28239819060_981d1049c7_3k-2.jpg"
       show_info: true
       custom_info: false
       name: ''
       icon: []
-    - thumbnail: "/uploads/nmnh-usment_00870779_ommatius_gwenae_scarbrough_wing_edro-000001-2.png"
+    - thumbnail: "/uploads/nmnh-usment_00870779_ommatius_gwenae_scarbrough_wing_edro-000001-2.jpg"
       show_info: true
       custom_info: false
       name: ''
