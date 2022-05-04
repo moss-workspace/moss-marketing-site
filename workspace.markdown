@@ -403,9 +403,10 @@ sections:
   - icon: "/uploads/old-key_1f5dd-fe0f.png"
     name: Getting up to speed
     video: ''
-    description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
-      space—Moss’ infinite canvas gives you room to take your idea wherever it wants
-      to go. '
+    description: 'Sync up with any project in minutes. While the latest deck provides
+      a static point in time, Moss shows the evolution of an entire project at a glance.
+      New collaborators joining your team can onboard themselves autonomously and
+      with ease. '
     image: "/uploads/getting-up-to-speed.jpg"
 - template: testimonial
   quote: Moss is completely transforming the way we collaborate. Once you use it,
