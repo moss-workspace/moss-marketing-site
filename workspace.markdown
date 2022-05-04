@@ -372,7 +372,7 @@ sections:
 - template: demo-carousel
   header: Jump right in.
   demos:
-  - icon: "/uploads/artist-palette_1f3a8.png"
+  - icon: "/uploads/artist-palette_1f3a8-1.png"
     name: Research and discovery
     video: ''
     description: 'Less downloading, more discovery. Open up your input and make gathering
@@ -384,9 +384,9 @@ sections:
     video: ''
     description: 'Bucket your ideas & assets in an open, flexible space—Moss’ infinite
       canvas gives you room to take your idea wherever it wants to go. '
-    icon: "/uploads/globe-1.png"
+    icon: "/uploads/world-map_1f5fa-fe0f.png"
     image: "/uploads/creative-exploration.jpg"
-  - icon: "/uploads/globe-2.png"
+  - icon: "/uploads/open-file-folder_1f4c2.png"
     name: Sharing WIP
     video: ''
     description: 'Because Moss was built to emulate the creative studio, sharing your
@@ -394,14 +394,14 @@ sections:
       make check-ins feel less like a formal presentation and more like sliding your
       chair over. '
     image: "/uploads/sharing-wip.jpg"
-  - icon: "/uploads/globe-3.png"
+  - icon: "/uploads/pencil_270f-fe0f.png"
     name: Check-ins and feedback
     video: ''
     description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
       space—Moss’ infinite canvas gives you room to take your idea wherever it wants
       to go. '
     image: "/uploads/check-ins-and-feedback.jpg"
-  - icon: "/uploads/globe-4.png"
+  - icon: "/uploads/old-key_1f5dd-fe0f.png"
     name: Getting up to speed
     video: ''
     description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
