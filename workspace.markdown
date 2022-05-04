@@ -382,17 +382,17 @@ sections:
     image: "/uploads/research-and-discovery.jpg"
   - name: Creative exploration
     video: ''
-    description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
-      space—Moss’ infinite canvas gives you room to take your idea wherever it wants
-      to go. '
+    description: 'Bucket your ideas & assets in an open, flexible space—Moss’ infinite
+      canvas gives you room to take your idea wherever it wants to go. '
     icon: "/uploads/globe-1.png"
     image: "/uploads/creative-exploration.jpg"
   - icon: "/uploads/globe-2.png"
     name: Sharing WIP
     video: ''
-    description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
-      space—Moss’ infinite canvas gives you room to take your idea wherever it wants
-      to go. '
+    description: 'Because Moss was built to emulate the creative studio, sharing your
+      work becomes a natural extension of the experience. More transparent workflows
+      make check-ins feel less like a formal presentation and more like sliding your
+      chair over. '
     image: "/uploads/sharing-wip.jpg"
   - icon: "/uploads/globe-3.png"
     name: Check-ins and feedback
