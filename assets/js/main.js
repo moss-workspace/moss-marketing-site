@@ -19,12 +19,10 @@ $(document).ready(function () {
   toggleHeader();
   togglePreviewInfo();
   chooseFooterImage();
-  setTimeout(() => {
-    $(".parallax").each(function () {
-      setParallaxDepth($(this));
-      parallax($(this));
-    });
-  }, 10);
+  $(".parallax").each(function () {
+    setParallaxDepth($(this));
+    parallax($(this));
+  });
 });
 
 // Mobile video initializer
