@@ -100,7 +100,7 @@ sections:
   show_button: false
   button_text: Learn more about tethering
   upper_illustration: Drop
-  video: "/uploads/drop_it_in_01_compress.mp4"
+  video: "/uploads/drop_it_in_01_megacompressed.mp4"
   middle_illustration: Stack
   button_url: ''
   brainstorm:
