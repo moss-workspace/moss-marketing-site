@@ -397,9 +397,8 @@ sections:
   - icon: "/uploads/pencil_270f-fe0f.png"
     name: Check-ins and feedback
     video: ''
-    description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
-      space—Moss’ infinite canvas gives you room to take your idea wherever it wants
-      to go. '
+    description: 'Unlike iterating in a deck, notes in Moss are tied directly to live
+      assets. Leave feedback, make changes, and iterate, all in realtime. '
     image: "/uploads/check-ins-and-feedback.jpg"
   - icon: "/uploads/old-key_1f5dd-fe0f.png"
     name: Getting up to speed
