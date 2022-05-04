@@ -186,7 +186,7 @@ function toggleVideoPlay(element, scrollTop) {
         })
       }
     }
-  } else if (percentage >= 0.4 && video.currentTime === 0) {
+  } else if (percentage >= 0.4 && video.currentTime <= 0.1) {
     video.play();
   }
 }
