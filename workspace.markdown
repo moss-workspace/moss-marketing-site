@@ -135,9 +135,9 @@ sections:
       icon: Video
     - thumbnail: "/uploads/mnh-usnment00669031_ornithoptera_goliath_m_d-2.jpg"
       show_info: true
-      custom_info: false
-      name: ''
-      icon: []
+      custom_info: true
+      name: " "
+      icon: PSD
     tooltip: Reveal source
   drop:
     previews:
