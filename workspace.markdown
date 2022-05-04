@@ -372,12 +372,13 @@ sections:
 - template: demo-carousel
   header: Jump right in.
   demos:
-  - icon: "/uploads/globe.png"
+  - icon: "/uploads/artist-palette_1f3a8.png"
     name: Research and discovery
     video: ''
-    description: 'No more ‘Selects’ folder. Bucket your ideas & assets in a fluid
-      space—Moss’ infinite canvas gives you room to take your idea wherever it wants
-      to go. '
+    description: 'Less downloading, more discovery. Open up your input and make gathering
+      reference as easy as pasting a URL With tethering, every reference you add stays
+      connected to its source, so context will always be preserved for you and your
+      team. '
     image: "/uploads/research-and-discovery.jpg"
   - name: Creative exploration
     video: ''
