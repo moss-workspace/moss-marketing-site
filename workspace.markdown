@@ -47,7 +47,7 @@ landing:
       icon: []
   right_previews:
     previews:
-    - thumbnail: "/uploads/ac89-7062.png"
+    - thumbnail: "/uploads/ac89-7062.jpg"
       show_info: true
       custom_info: true
       name: " "
