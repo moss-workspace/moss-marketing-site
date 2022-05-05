@@ -100,7 +100,7 @@ $column-count: 12;
   @each $breakpoint, $width in $breakpoints {
     .col-#{$breakpoint}-#{$i} {
       @media (max-width: $width) {
-        grid-column: span #{$i} !important; // TODO: ugly hack to get around specificty
+        grid-column: span #{$i} !important;
       }
     }
   }

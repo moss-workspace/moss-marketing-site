@@ -3,12 +3,11 @@
 $(document).ready(function () {
   var consent = getCookie("analytics-consent");
   if (consent == "" || consent == null) {
-    // TODO: uncomment for production!
     // prettier-ignore
-    // gtag("consent", "default", {
-    //   'ad_storage': 'denied',
-    //   'analytics_storage': 'denied'
-    // });
+    gtag("consent", "default", {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+    });
     showCookiePrompt();
   }
   $(".toast").click(function () {
@@ -257,20 +256,18 @@ function toggleCookieConsent() {
 
 function giveCookieConsent() {
   setCookie("analytics-consent", true, 365);
-  // TODO: uncomment for production!
   // prettier-ignore
-  // gtag("consent", "update", {
-  //   'analytics_storage': 'granted'
-  // });
+  gtag("consent", "update", {
+    'analytics_storage': 'granted'
+  });
 }
 
 function removeCookieConsent() {
   setCookie("analytics-consent", false, 365);
-  // TODO: uncomment for production!
   // prettier-ignore
-  // gtag("consent", "update", {
-  //   'analytics_storage': 'denied'
-  // });
+  gtag("consent", "update", {
+    'analytics_storage': 'denied'
+  });
 }
 
 // Cookie prompt
