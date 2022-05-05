@@ -171,8 +171,8 @@ sections:
   video: "/uploads/sort_it_out_05_recording_compress_final.mp4"
   middle_illustration: Collection
   text_blocks:
-  - text_block: Ditch traditional file management and tackle creative problems in
-      a freeform, distraction-free space that works the way you do.
+  - text_block: Ditch antiquated file management and tackle creative problems in a
+      freeform, distraction-free space that works the way you do.
   - text_block: |-
       With Moss, intuitive organization keeps you in flow without constantly digging to track down your compositions.
 
