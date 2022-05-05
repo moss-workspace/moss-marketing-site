@@ -44,8 +44,8 @@ impact_section:
   small_text: ''
 - illustration: "/uploads/community_impact_final_220503.jpg"
   title: For our community
-  body: We seek to break down cultural barriers by expanding your perspective beyond
-    your most immediate circle of reference and collaborators, and to serve as a platform
+  body: We seek to break down cultural barriers by expanding our perspective beyond
+    our most immediate circle of reference and collaborators, and to serve as a platform
     for overlooked and unheard voices.
   extra_info: false
   image: ''
