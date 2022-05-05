@@ -37,8 +37,8 @@ impact_section:
 - illustration: "/uploads/personal_impact_final_220502.jpg"
   title: For ourselves
   body: "We believe in providing accessible avenues for people to make great work
-    by building an environment that cultivates the creative process, and by extension—the
-    mental well-being of the people who dedicate themselves to it. \n"
+    by building an environment that cultivates the creative process, and, by extension,
+    the mental well-being of the people who dedicate themselves to it. \n"
   extra_info: false
   image: ''
   small_text: ''
