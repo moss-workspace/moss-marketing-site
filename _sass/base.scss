@@ -238,7 +238,8 @@ section {
   &__right {
     max-width: 500px;
     @extend .textblock;
-    @extend .col-md-10-2;
+    @extend .col-sm-12;
+    @extend .col-md-8-3;
     z-index: 800;
     align-self: center;
     button {

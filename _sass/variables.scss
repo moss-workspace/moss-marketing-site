@@ -97,13 +97,6 @@ $column-count: 12;
   .col-#{$i} {
     grid-column: span #{$i};
   }
-  @each $breakpoint, $width in $breakpoints {
-    .col-#{$breakpoint}-#{$i} {
-      @media (max-width: $width) {
-        grid-column: span #{$i} !important;
-      }
-    }
-  }
 }
 
 @for $i from 1 through $column-count {
@@ -111,11 +104,22 @@ $column-count: 12;
     .col-#{$i}-#{$j} {
       grid-column: #{$j} / span #{$i};
     }
-    @each $breakpoint in map-keys($breakpoints) {
-      .col-#{$breakpoint}-#{$i}-#{$j} {
-        @include break-below($breakpoint) {
-          grid-column: #{$j} / span #{$i} !important;
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include break-below($breakpoint) {
+    @for $i from 1 through $column-count {
+      @for $j from 1 through $column-count {
+        .col-#{$breakpoint}-#{$i}-#{$j} {
+          grid-column: #{$j} / span #{$i};
         }
+      }
+    }
+
+    @for $i from 1 through $column-count {
+      .col-#{$breakpoint}-#{$i} {
+        grid-column: span #{$i} !important;
       }
     }
   }

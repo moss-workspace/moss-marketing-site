@@ -654,6 +654,7 @@
   @include break-below("md") {
     top: 0;
     .preview-grid {
+      max-width: 600px;
       margin-top: 10vh;
       width: 100%;
     }
@@ -830,14 +831,21 @@
       right: 10%;
     }
     &:nth-of-type(2) {
-      width: 40%;
-      top: 90%;
+      width: 30%;
+      top: 80%;
       left: 20%;
     }
     &:nth-of-type(3) {
       width: 35%;
       top: 90%;
       right: 20%;
+    }
+  }
+  @include break-below("sm") {
+    &:nth-of-type(2) {
+      width: 40%;
+      top: 90%;
+      left: 20%;
     }
   }
 }
