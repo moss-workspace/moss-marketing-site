@@ -55,7 +55,7 @@
         bottom: -10%;
       }
     }
-    @include break-below("md") {
+    @include break-below("sm") {
       height: 80vh;
       .preview {
         &:nth-of-type(1) {
@@ -91,7 +91,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 .company__impact__header {
   margin-bottom: 26px;
-  @include break-below("md") {
+  @include break-below("sm") {
     margin-bottom: 18px;
   }
 }
@@ -101,17 +101,17 @@
   grid-row: 2 / span 1;
   img {
     margin-bottom: 36px;
-    @include break-below("md") {
+    @include break-below("sm") {
       margin-bottom: 26px;
     }
   }
   .bold {
     margin-bottom: 26px;
-    @include break-below("md") {
+    @include break-below("sm") {
       margin-bottom: 18px;
     }
   }
-  @include break-below("md") {
+  @include break-below("sm") {
     grid-row: inherit;
     margin-bottom: 150px;
     &:last-of-type {
@@ -143,7 +143,7 @@
   .input {
     background-color: $white;
   }
-  @include break-below("md") {
+  @include break-below("sm") {
     display: block;
     height: calc(200vw - 52px);
     margin-left: 26px;
@@ -158,7 +158,7 @@
 .company__email__image {
   overflow: hidden;
   grid-row: span 2;
-  @include break-below("md") {
+  @include break-below("sm") {
     grid-row: span 1;
     margin-bottom: 25vw;
   }
