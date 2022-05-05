@@ -32,7 +32,7 @@ previews:
   custom_info: false
   name: ''
   icon: Image
-impact_header: 'How we measure our impact:'
+impact_header: Our standards
 impact_section:
 - illustration: "/uploads/personal_impact_final_220502.jpg"
   title: For ourselves
