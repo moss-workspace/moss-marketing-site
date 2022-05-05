@@ -17,9 +17,12 @@ header {
     top: 0;
     background-color: $white;
   }
-  @include break-below("md") {
-    height: 30px;
+  @include break-below("header") {
     padding: 26px;
+  }
+  @include break-below("md") {
+    justify-content: space-between;
+    height: 30px;
     top: -82px;
   }
   .header__left {
@@ -29,7 +32,7 @@ header {
       height: 46px;
       width: auto;
       padding-right: 8px;
-      @include break-below("md") {
+      @include break-below("header") {
         height: 30px;
       }
     }
@@ -47,6 +50,17 @@ header {
       width: 36px;
       height: 36px;
     }
+    @include break-below("header") {
+      @include gap(3px);
+      button {
+        font-size: rem(26px);
+        @include button--medium;
+      }
+      .header__nav-icon {
+        width: 26px;
+        height: 26px;
+      }
+    }
     @include break-below("md") {
       display: none;
     }
@@ -57,13 +71,13 @@ header {
     @include gap(8px);
     max-width: 350px;
     justify-content: flex-end;
+    @include break-below("header") {
+      .header__button {
+        @include button--medium;
+      }
+    }
     a {
       text-decoration: none;
-    }
-    &__signin {
-      @include break-below("xs") {
-        display: none;
-      }
     }
     .fullscreen-nav__button {
       display: none;
