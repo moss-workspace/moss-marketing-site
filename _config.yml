@@ -38,7 +38,7 @@ header:
   buttons:
   - waitlist_button: false
     text: Sign in
-    url: app.beta.mossworkspace.com
+    url: https://app.preview.mossworkspace.com/
   - waitlist_button: true
     text: Join the waitlist
     url: ''
