@@ -37,15 +37,15 @@ impact_section:
 - illustration: "/uploads/personal_impact_final_220502.jpg"
   title: For ourselves
   body: "We believe in providing accessible avenues for people to make great work
-    by building an environment that cultivates the creative process, and by extension—the
-    mental well-being of the people who dedicate themselves to it. \n"
+    by building an environment that cultivates the creative process, and, by extension,
+    the mental well-being of the people who dedicate themselves to it. \n"
   extra_info: false
   image: ''
   small_text: ''
 - illustration: "/uploads/community_impact_final_220503.jpg"
   title: For our community
-  body: We seek to break down cultural barriers by expanding your perspective beyond
-    your most immediate circle of reference and collaborators, and to serve as a platform
+  body: We seek to break down cultural barriers by expanding our perspective beyond
+    our most immediate circle of reference and collaborators, and to serve as a platform
     for overlooked and unheard voices.
   extra_info: false
   image: ''
