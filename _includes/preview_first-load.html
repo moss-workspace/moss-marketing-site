@@ -26,10 +26,10 @@
 {% endcase %}
 
 
-<img class="preview__image preview__first-load" src="{{ image | relative_url }}" alt="Moss preview"/>
+<img class="preview__image preview__first-load" src="{{ image | relative_url }}"/>
 {% if info %}
     <div class="preview__info">
-        <img class="preview__icon preview__icon--image" data-src="{{ icon | relative_url }}" alt="image icon" loading="lazy"/>
+        <img class="preview__icon preview__icon--image" data-src="{{ icon | relative_url }}" loading="lazy"/>
         <p class="preview__name">
             {% if name.size > 0 %}
                 {{ name }}
@@ -37,6 +37,6 @@
                 {{ image | split: '/' | last }}
             {% endif %}
         </p>
-        <img class="preview__icon preview__icon--link" src="{{ '/assets/icons/link-linked_blue.svg' | relative_url }}" alt="link icon">
+        <img class="preview__icon preview__icon--link" src="{{ '/assets/icons/link-linked_blue.svg' | relative_url }}">
     </div>
 {% endif %}
