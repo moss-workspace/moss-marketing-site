@@ -37,8 +37,8 @@ header:
     url: "/company"
   buttons:
   - waitlist_button: false
-    text: Sign in
-    url: https://app.preview.mossworkspace.com/
+    text: Log in
+    url: https://app.mossworkspace.com/login
   - waitlist_button: true
     text: Join the waitlist
     url: ''
