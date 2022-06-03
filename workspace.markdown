@@ -28,7 +28,7 @@ landing:
     - thumbnail: "/uploads/dandelion00watt_0003-copy-1.png"
       show_info: true
       custom_info: true
-      name: ''
+      name: " "
       icon: PSD
     - thumbnail: "/uploads/sketch_alpha.png"
       show_info: false
