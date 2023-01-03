@@ -7,18 +7,20 @@
 
     <!-- Title -->
     <title>
-        {{ site.title }}
-        &#124;
-        {{ site.tagline }}
+        {{ site.title }} &#124; {{ site.tagline }}
     </title>
 
     <!-- Description -->
     <meta name="description" content="{{ site.description }}"/>
 
-    <!-- Thumbnail image -->
-    <meta property="og:image" content="{{ site.thumbnail_image | relative_url }}"/>
-    <meta content="Moss | Where ideas grow" property="og:site_name"/>
-    <meta content="Moss website homepage" name="twitter:image:alt"/>
+    <!-- Social meta -->
+    <meta property="og:title" content="{{ site.title }} &#124; {{ site.tagline }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="{{ site.description }}"/>
+    <meta property="og:image" content="{{ site.thumbnail_image | absolute_url }}"/>
+    <meta property="og:url" content="{{ site.url }}"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:alt" content="Moss website homepage"/>
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}"/>
