@@ -25,8 +25,8 @@ header:
   show_jobs_button: false
   jobs_button_text: "\U0001F469‍\U0001F4BB Join the team"
   jobs_button_url: "/"
-  show_download_button: false
-  download_button_text: Download Moss
+  show_download_button: true
+  download_button_text: Download the beta
   download_button_url: https://app.mossworkspace.com/download
   navigation:
   - icon: "/uploads/product_final_2205032b.png"
