@@ -58,6 +58,6 @@ impact_section:
   image: "/uploads/1ftp_darkgray-2.png"
   small_text: We donate 1% of all sales to environmental causes.
 email_illustration: "/uploads/moss_email_illus.jpg"
-email_header: Get updates
+email_header: Stay in the loop
 
 ---
