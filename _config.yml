@@ -42,9 +42,6 @@ header:
   - waitlist_button: false
     text: Log in
     url: https://app.mossworkspace.com/login
-  - waitlist_button: true
-    text: Join the waitlist
-    url: ''
   menu_icon: "/uploads/menu-dark.png"
   menu_closed_icon: "/uploads/close.png"
   menu_icon_light: "/uploads/menu-light.png"
