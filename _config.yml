@@ -1,23 +1,24 @@
 ---
 title: Moss
 email: team@mossworkspace.com
-description: Inspiration meets organization in a new visual workspace built for better
+description:
+  Inspiration meets organization in a new visual workspace built for better
   ideas.
 baseurl: "/"
 url: mossworkspace.com
 twitter_username: jekyllrb
 github_username: jekyll
 exclude:
-- ".sass-cache/"
-- ".jekyll-cache/"
-- gemfiles/
-- Gemfile
-- Gemfile.lock
-- node_modules/
-- vendor/bundle/
-- vendor/cache/
-- vendor/gems/
-- vendor/ruby/
+  - ".sass-cache/"
+  - ".jekyll-cache/"
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 tagline: Where ideas grow
 header:
   logo: "/uploads/moss_wordmark_site_rgb.png"
@@ -25,78 +26,82 @@ header:
   show_jobs_button: false
   jobs_button_text: "\U0001F469‍\U0001F4BB Join the team"
   jobs_button_url: "/"
+  show_download_button: false
+  download_button_text: "Download Moss"
+  download_button_url: https://app.mossworkspace.com/download
   navigation:
-  - icon: "/uploads/product_final_2205032b.png"
-    text: Workspace
-    url: "/"
-  - icon: "/uploads/note_final_210419.png"
-    text: Thesis
-    url: "/thesis"
-  - icon: "/uploads/company_final_220503-2.png"
-    text: Company
-    url: "/company"
+    - icon: "/uploads/product_final_2205032b.png"
+      text: Workspace
+      url: "/"
+    - icon: "/uploads/note_final_210419.png"
+      text: Thesis
+      url: "/thesis"
+    - icon: "/uploads/company_final_220503-2.png"
+      text: Company
+      url: "/company"
   buttons:
-  - waitlist_button: false
-    text: Log in
-    url: https://app.mossworkspace.com/login
-  - waitlist_button: true
-    text: Join the waitlist
-    url: ''
+    - waitlist_button: false
+      text: Log in
+      url: https://app.mossworkspace.com/login
+    - waitlist_button: true
+      text: Join the waitlist
+      url: ""
   menu_icon: "/uploads/menu-dark.png"
   menu_closed_icon: "/uploads/close.png"
   menu_icon_light: "/uploads/menu-light.png"
   menu_closed_icon_light: "/uploads/menu-close-light.png"
 footer:
   link_sections:
-  - name: About
-    links:
-    - icon: "/uploads/default_logo.png"
-      text: Company
-      url: "/company"
-      open_in_new_tab: false
-    - icon: "/uploads/team.png"
-      text: Careers
-      url: https://www.notion.so/m0ss/Careers-at-Moss-2d78ef3ea6754f038cc118dd242f4ad4
-      open_in_new_tab: true
-    - icon: "/uploads/mail.png"
-      text: Email us
-      url: mailto:team@mossworkspace.com
-      open_in_new_tab: false
-    - icon: "/uploads/document.png"
-      text: Privacy policy
-      url: "/privacy"
-      open_in_new_tab: false
-  - name: Resources
-    links:
-    - icon: "/uploads/note-1.png"
-      text: Thesis
-      url: "/thesis"
-      open_in_new_tab: false
-    - icon: "/uploads/video.png"
-      text: Watch the video
-      url: https://vimeo.com/472490067/524a565895
-      open_in_new_tab: true
-  - name: Social
-    links:
-    - icon: "/uploads/twitter.png"
-      text: Twitter
-      url: https://twitter.com/mossworkspace
-      open_in_new_tab: true
-    - icon: "/uploads/instagram-2.png"
-      text: Instagram
-      url: https://www.instagram.com/mossworkspace/
-      open_in_new_tab: true
-    - icon: "/uploads/discord.png"
-      text: Discord
-      url: https://discord.com/invite/QjyGeCvD2A
-      open_in_new_tab: true
+    - name: About
+      links:
+        - icon: "/uploads/default_logo.png"
+          text: Company
+          url: "/company"
+          open_in_new_tab: false
+        - icon: "/uploads/team.png"
+          text: Careers
+          url: https://www.notion.so/m0ss/Careers-at-Moss-2d78ef3ea6754f038cc118dd242f4ad4
+          open_in_new_tab: true
+        - icon: "/uploads/mail.png"
+          text: Email us
+          url: mailto:team@mossworkspace.com
+          open_in_new_tab: false
+        - icon: "/uploads/document.png"
+          text: Privacy policy
+          url: "/privacy"
+          open_in_new_tab: false
+    - name: Resources
+      links:
+        - icon: "/uploads/note-1.png"
+          text: Thesis
+          url: "/thesis"
+          open_in_new_tab: false
+        - icon: "/uploads/video.png"
+          text: Watch the video
+          url: https://vimeo.com/472490067/524a565895
+          open_in_new_tab: true
+    - name: Social
+      links:
+        - icon: "/uploads/twitter.png"
+          text: Twitter
+          url: https://twitter.com/mossworkspace
+          open_in_new_tab: true
+        - icon: "/uploads/instagram-2.png"
+          text: Instagram
+          url: https://www.instagram.com/mossworkspace/
+          open_in_new_tab: true
+        - icon: "/uploads/discord.png"
+          text: Discord
+          url: https://discord.com/invite/QjyGeCvD2A
+          open_in_new_tab: true
   illustrations:
-  - "/uploads/image-26dots-3-small-png.png"
-  - "/uploads/dots-1-1.png"
-  - "/uploads/image-11.png"
+    - "/uploads/image-26dots-3-small-png.png"
+    - "/uploads/dots-1-1.png"
+    - "/uploads/image-11.png"
 privacy:
   cookie_prompt: This site uses cookies.
-  privacy_policy: The site uses Google Analytics. Google Analytics cookies helps to
+  privacy_policy:
+    The site uses Google Analytics. Google Analytics cookies helps to
     distinguish between different users and understand how often a particular user
     visits the site, how the user got to the site, and the user’s activity on the
     site. Google developed two resources – <a href="https://policies.google.com/technologies/partner-sites">How

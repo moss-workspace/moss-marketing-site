@@ -19,7 +19,15 @@
             <h1 class="textblock__center">{{ page.landing.header }}</h1>
             <h4 class="textblock__center">{{ page.landing.subhead }}</h4>
             <div class="signup-form col-4-5 col-md-12" style="text-align: center;">
-                {% include signup_form.html %}
+                {% if site.header.show_download_button %}
+                    <a href="{{ site.header.download_button_url }}" target="_blank">
+                        <button class="button--blue button--large">
+                            {{ site.header.download_button_text }}
+                        </button>
+                    </a>
+                {% else %}
+                    {% include signup_form.html %}
+                {% endif %}
                 {% if page.landing.show_video_link %}
                     <a href="{{ page.landing.video_url }}" target="_blank">
                         <button class="workspace__video-button button--white button--medium">

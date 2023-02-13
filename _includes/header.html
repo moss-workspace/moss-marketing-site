@@ -35,6 +35,13 @@
                 </a>
             {% endif %}
         {% endfor %}
+        {% if site.header.show_download_button %}
+            <a href="{{ site.header.download_button_url }}" target="_blank">
+                <button class="header__button header_waitlist-button button--gray-1 button--large">
+                    {{ site.header.download_button_text }}
+                </button>
+            </a>
+        {% endif %}
         <button class="fullscreen-nav__button button--white button--borderless button--medium" onclick="toggleFullscreenNav()">
             <div class="fullscreen-nav__icon__dark">            
                 <img class="fullscreen-nav__icon-open" src="{{ site.header.menu_icon | relative_url }}"/>
