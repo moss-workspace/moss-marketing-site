@@ -452,8 +452,8 @@ sections:
     icon: Video
   cursor: "/uploads/quote-cursor.png"
 - template: waitlist-cta
-  header: Try Moss early
-  subhead: Join the waitlist for beta access.
+  header: Stay in the loop
+  subhead: Join our newsletter for updates on the beta.
 ui_images:
   note: "/uploads/contextbar-2.png"
   cursor: "/uploads/cursor-4x.png"
