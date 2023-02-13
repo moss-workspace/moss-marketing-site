@@ -149,6 +149,29 @@ fields:
     label: Menu closed icon light
     description: Choose an image to use as the light version of the close ( x ) menu
       icon on mobile.
+  - name: show_download_button
+    type: boolean
+    label: Show download button
+    description: Show the button that links to the download page
+  - name: download_button_text
+    type: text
+    config:
+      required: false
+    label: Download button text
+    description: Text for the download button
+    hidden: false
+    showOnly:
+      field: show_download_button
+      value: true
+  - name: download_button_url
+    type: text
+    config:
+      required: false
+    label: Download button url
+    description: The url the download button should link to
+    showOnly:
+      field: show_download_button
+      value: true
   label: Header
   description: Choose how the site-wide header displays
 - name: footer
