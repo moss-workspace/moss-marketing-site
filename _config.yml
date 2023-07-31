@@ -25,7 +25,7 @@ header:
   show_jobs_button: false
   jobs_button_text: "\U0001F469‍\U0001F4BB Join the team"
   jobs_button_url: "/"
-  show_download_button: true
+  show_download_button: false
   download_button_text: Download the beta
   download_button_url: https://app.mossworkspace.com/download
   navigation:
@@ -39,9 +39,9 @@ header:
     text: Company
     url: "/company"
   buttons:
-  - waitlist_button: false
-    text: Log in
-    url: https://app.mossworkspace.com/login
+  - waitlist_button: true
+    text: Get updates
+    url:
   menu_icon: "/uploads/menu-dark.png"
   menu_closed_icon: "/uploads/close.png"
   menu_icon_light: "/uploads/menu-light.png"
